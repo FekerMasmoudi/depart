@@ -1,0 +1,164 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="depart">
+      <h2 data-cy="departDetailsHeading"><span jhiTranslate="departdbApp.depart.detail.title">Depart</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ depart.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.depart.deccent">Deccent</span></dt>
+        <dd>
+          <span>{{ depart.deccent }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.depart.decagenc">Decagenc</span></dt>
+        <dd>
+          <span>{{ depart.decagenc }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.depart.decserv">Decserv</span></dt>
+        <dd>
+          <span>{{ depart.decserv }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.depart.decoper">Decoper</span></dt>
+        <dd>
+          <span>{{ depart.decoper }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.depart.decsean">Decsean</span></dt>
+        <dd>
+          <span>{{ depart.decsean }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.depart.dedated">Dedated</span></dt>
+        <dd>
+          <span>{{ depart.dedated | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.depart.denumdp">Denumdp</span></dt>
+        <dd>
+          <span>{{ depart.denumdp }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.depart.matric">Matric</span></dt>
+        <dd>
+          <span>{{ depart.matric }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.depart.matric1">Matric 1</span></dt>
+        <dd>
+          <span>{{ depart.matric1 }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.depart.cdmac">Cdmac</span></dt>
+        <dd>
+          <span>{{ depart.cdmac }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.depart.deheups">Deheups</span></dt>
+        <dd>
+          <span>{{ depart.deheups | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.depart.deheufs">Deheufs</span></dt>
+        <dd>
+          <span>{{ depart.deheufs | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.depart.denbrro">Denbrro</span></dt>
+        <dd>
+          <span>{{ depart.denbrro }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.depart.deheuaa">Deheuaa</span></dt>
+        <dd>
+          <span>{{ depart.deheuaa | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.depart.deheudr">Deheudr</span></dt>
+        <dd>
+          <span>{{ depart.deheudr | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.depart.deheupd">Deheupd</span></dt>
+        <dd>
+          <span>{{ depart.deheupd | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.depart.deampli">Deampli</span></dt>
+        <dd>
+          <span>{{ depart.deampli | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.depart.obsind">Obsind</span></dt>
+        <dd>
+          <span>{{ depart.obsind }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.depart.vldroul">Vldroul</span></dt>
+        <dd>
+          <span>{{ depart.vldroul }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.depart.deetat">Deetat</span></dt>
+        <dd>
+          <span>{{ depart.deetat }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.depart.deannul">Deannul</span></dt>
+        <dd>
+          <span>{{ depart.deannul }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.depart.decclot">Decclot</span></dt>
+        <dd>
+          <span>{{ depart.decclot }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.depart.execute">Execute</span></dt>
+        <dd>
+          <span>{{ depart.execute }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.depart.motifa">Motifa</span></dt>
+        <dd>
+          <span>{{ depart.motifa }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.depart.observ">Observ</span></dt>
+        <dd>
+          <span>{{ depart.observ }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.depart.recettes">Recettes</span></dt>
+        <dd>
+          <span>{{ depart.recettes }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.depart.nbrevoy">Nbrevoy</span></dt>
+        <dd>
+          <span>{{ depart.nbrevoy }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.depart.decmotifch">Decmotifch</span></dt>
+        <dd>
+          <span>{{ depart.decmotifch }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.depart.decmotifre">Decmotifre</span></dt>
+        <dd>
+          <span>{{ depart.decmotifre }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.depart.cd1">Cd 1</span></dt>
+        <dd>
+          <span>{{ depart.cd1 }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.depart.cd2">Cd 2</span></dt>
+        <dd>
+          <span>{{ depart.cd2 }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.depart.cd3">Cd 3</span></dt>
+        <dd>
+          <span>{{ depart.cd3 }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.depart.decmotifcha">Decmotifcha</span></dt>
+        <dd>
+          <span>{{ depart.decmotifcha }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.depart.decmotifrea">Decmotifrea</span></dt>
+        <dd>
+          <span>{{ depart.decmotifrea }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/depart', depart.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

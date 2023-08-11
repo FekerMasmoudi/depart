@@ -1,0 +1,40 @@
+{
+  "applications": "*",
+  "changelogDate": "20230811081250",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "fonc_agent",
+  "fields": [
+    {
+      "fieldName": "cdfonc",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "matric",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "nom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "prenom",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dateff",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "valide",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "FoncAgent",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

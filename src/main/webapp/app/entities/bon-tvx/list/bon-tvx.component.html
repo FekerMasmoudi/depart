@@ -1,0 +1,407 @@
+<div>
+  <h2 id="page-heading" data-cy="BonTvxHeading">
+    <span jhiTranslate="departdbApp.bonTvx.home.title">Bon Tvxes</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span jhiTranslate="departdbApp.bonTvx.home.refreshListLabel">Refresh list</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-bon-tvx"
+        [routerLink]="['/bon-tvx/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="departdbApp.bonTvx.home.createLabel"> Create a new Bon Tvx </span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <div class="alert alert-warning" id="no-result" *ngIf="bonTvxes?.length === 0">
+    <span jhiTranslate="departdbApp.bonTvx.home.notFound">No Bon Tvxes found</span>
+  </div>
+
+  <div class="table-responsive table-entities" id="entities" *ngIf="bonTvxes && bonTvxes.length > 0">
+    <table class="table table-striped" aria-describedby="page-heading">
+      <thead>
+        <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" (sortChange)="navigateToWithComponentValues()">
+          <th scope="col" jhiSortBy="id">
+            <div class="d-flex">
+              <span jhiTranslate="global.field.id">ID</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="cdexerc">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.cdexerc">Cdexerc</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="numbt">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.numbt">Numbt</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="cdtier">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.cdtier">Cdtier</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="cdmac">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.cdmac">Cdmac</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="maccdmac">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.maccdmac">Maccdmac</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="cdserv">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.cdserv">Cdserv</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="decagen">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.decagen">Decagen</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="dradecagen">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.dradecagen">Dradecagen</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="cdorga">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.cdorga">Cdorga</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="refbt">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.refbt">Refbt</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="datbt">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.datbt">Datbt</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="datdt">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.datdt">Datdt</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="datft">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.datft">Datft</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="vld">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.vld">Vld</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="typtvx">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.typtvx">Typtvx</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="heurdb">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.heurdb">Heurdb</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="heurfi">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.heurfi">Heurfi</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="observ">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.observ">Observ</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="datsrt">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.datsrt">Datsrt</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="heursr">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.heursr">Heursr</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="obstest">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.obstest">Obstest</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="indexdep">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.indexdep">Indexdep</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="indexarr">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.indexarr">Indexarr</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="immatex">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.immatex">Immatex</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="nomchauff">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.nomchauff">Nomchauff</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="numpermis">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.numpermis">Numpermis</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="etab">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.etab">Etab</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="compteur">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.compteur">Compteur</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="cptorg">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.cptorg">Cptorg</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="cdtyptr">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.cdtyptr">Cdtyptr</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="decstat">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.decstat">Decstat</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="testeur">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.testeur">Testeur</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="motifdep">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.motifdep">Motifdep</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="cdtypmnt">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.cdtypmnt">Cdtypmnt</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="datsorprev">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.datsorprev">Datsorprev</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="datmnqdu">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.datmnqdu">Datmnqdu</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="datmnqau">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.datmnqau">Datmnqau</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="datentant">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.datentant">Datentant</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="codstat">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.codstat">Codstat</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="datvld">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.datvld">Datvld</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="observ1">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.observ1">Observ 1</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="testeur1">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.testeur1">Testeur 1</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="validag">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.validag">Validag</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="datsais">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.bonTvx.datsais">Datsais</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let bonTvx of bonTvxes; trackBy: trackId" data-cy="entityTable">
+          <td>
+            <a [routerLink]="['/bon-tvx', bonTvx.id, 'view']">{{ bonTvx.id }}</a>
+          </td>
+          <td>{{ bonTvx.cdexerc }}</td>
+          <td>{{ bonTvx.numbt }}</td>
+          <td>{{ bonTvx.cdtier }}</td>
+          <td>{{ bonTvx.cdmac }}</td>
+          <td>{{ bonTvx.maccdmac }}</td>
+          <td>{{ bonTvx.cdserv }}</td>
+          <td>{{ bonTvx.decagen }}</td>
+          <td>{{ bonTvx.dradecagen }}</td>
+          <td>{{ bonTvx.cdorga }}</td>
+          <td>{{ bonTvx.refbt }}</td>
+          <td>{{ bonTvx.datbt | formatMediumDate }}</td>
+          <td>{{ bonTvx.datdt | formatMediumDate }}</td>
+          <td>{{ bonTvx.datft | formatMediumDate }}</td>
+          <td>{{ bonTvx.vld }}</td>
+          <td>{{ bonTvx.typtvx }}</td>
+          <td>{{ bonTvx.heurdb | formatMediumDate }}</td>
+          <td>{{ bonTvx.heurfi | formatMediumDate }}</td>
+          <td>{{ bonTvx.observ }}</td>
+          <td>{{ bonTvx.datsrt | formatMediumDate }}</td>
+          <td>{{ bonTvx.heursr | formatMediumDate }}</td>
+          <td>{{ bonTvx.obstest }}</td>
+          <td>{{ bonTvx.indexdep }}</td>
+          <td>{{ bonTvx.indexarr }}</td>
+          <td>{{ bonTvx.immatex }}</td>
+          <td>{{ bonTvx.nomchauff }}</td>
+          <td>{{ bonTvx.numpermis }}</td>
+          <td>{{ bonTvx.etab }}</td>
+          <td>{{ bonTvx.compteur }}</td>
+          <td>{{ bonTvx.cptorg }}</td>
+          <td>{{ bonTvx.cdtyptr }}</td>
+          <td>{{ bonTvx.decstat }}</td>
+          <td>{{ bonTvx.testeur }}</td>
+          <td>{{ bonTvx.motifdep }}</td>
+          <td>{{ bonTvx.cdtypmnt }}</td>
+          <td>{{ bonTvx.datsorprev | formatMediumDate }}</td>
+          <td>{{ bonTvx.datmnqdu | formatMediumDate }}</td>
+          <td>{{ bonTvx.datmnqau | formatMediumDate }}</td>
+          <td>{{ bonTvx.datentant | formatMediumDate }}</td>
+          <td>{{ bonTvx.codstat }}</td>
+          <td>{{ bonTvx.datvld | formatMediumDate }}</td>
+          <td>{{ bonTvx.observ1 }}</td>
+          <td>{{ bonTvx.testeur1 }}</td>
+          <td>{{ bonTvx.validag }}</td>
+          <td>{{ bonTvx.datsais | formatMediumDate }}</td>
+          <td class="text-end">
+            <div class="btn-group">
+              <button
+                type="submit"
+                [routerLink]="['/bon-tvx', bonTvx.id, 'view']"
+                class="btn btn-info btn-sm"
+                data-cy="entityDetailsButton"
+              >
+                <fa-icon icon="eye"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+              </button>
+
+              <button
+                type="submit"
+                [routerLink]="['/bon-tvx', bonTvx.id, 'edit']"
+                class="btn btn-primary btn-sm"
+                data-cy="entityEditButton"
+              >
+                <fa-icon icon="pencil-alt"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+              </button>
+
+              <button type="submit" (click)="delete(bonTvx)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                <fa-icon icon="times"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="bonTvxes && bonTvxes.length > 0">
+    <div class="d-flex justify-content-center">
+      <jhi-item-count [params]="{ page: page, totalItems: totalItems, itemsPerPage: itemsPerPage }"></jhi-item-count>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <ngb-pagination
+        [collectionSize]="totalItems"
+        [page]="page"
+        [pageSize]="itemsPerPage"
+        [maxSize]="5"
+        [rotate]="true"
+        [boundaryLinks]="true"
+        (pageChange)="navigateToPage($event)"
+      ></ngb-pagination>
+    </div>
+  </div>
+</div>

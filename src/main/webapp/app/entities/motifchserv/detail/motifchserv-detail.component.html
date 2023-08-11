@@ -1,0 +1,44 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="motifchserv">
+      <h2 data-cy="motifchservDetailsHeading"><span jhiTranslate="departdbApp.motifchserv.detail.title">Motifchserv</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ motifchserv.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.motifchserv.decmotif">Decmotif</span></dt>
+        <dd>
+          <span>{{ motifchserv.decmotif }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.motifchserv.delmotif">Delmotif</span></dt>
+        <dd>
+          <span>{{ motifchserv.delmotif }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.motifchserv.x">X</span></dt>
+        <dd>
+          <span>{{ motifchserv.x }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.motifchserv.vs">Vs</span></dt>
+        <dd>
+          <span>{{ motifchserv.vs }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/motifchserv', motifchserv.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

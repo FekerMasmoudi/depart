@@ -1,0 +1,142 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-route-heading" data-cy="RouteCreateUpdateHeading" jhiTranslate="departdbApp.route.home.createOrEditLabel">
+        Create or edit a Route
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row mb-3" *ngIf="editForm.controls.id.value !== null">
+          <label class="form-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="text" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.route.agency_id" for="field_agency_id">Agency Id</label>
+          <input type="text" class="form-control" name="agency_id" id="field_agency_id" data-cy="agency_id" formControlName="agency_id" />
+          <div *ngIf="editForm.get('agency_id')!.invalid && (editForm.get('agency_id')!.dirty || editForm.get('agency_id')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('agency_id')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.route.route_short_name" for="field_route_short_name">Route Short Name</label>
+          <input
+            type="text"
+            class="form-control"
+            name="route_short_name"
+            id="field_route_short_name"
+            data-cy="route_short_name"
+            formControlName="route_short_name"
+          />
+          <div
+            *ngIf="
+              editForm.get('route_short_name')!.invalid &&
+              (editForm.get('route_short_name')!.dirty || editForm.get('route_short_name')!.touched)
+            "
+          >
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('route_short_name')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.route.route_long_name" for="field_route_long_name">Route Long Name</label>
+          <input
+            type="text"
+            class="form-control"
+            name="route_long_name"
+            id="field_route_long_name"
+            data-cy="route_long_name"
+            formControlName="route_long_name"
+          />
+          <div
+            *ngIf="
+              editForm.get('route_long_name')!.invalid &&
+              (editForm.get('route_long_name')!.dirty || editForm.get('route_long_name')!.touched)
+            "
+          >
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('route_long_name')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.route.route_desc" for="field_route_desc">Route Desc</label>
+          <input
+            type="text"
+            class="form-control"
+            name="route_desc"
+            id="field_route_desc"
+            data-cy="route_desc"
+            formControlName="route_desc"
+          />
+          <div *ngIf="editForm.get('route_desc')!.invalid && (editForm.get('route_desc')!.dirty || editForm.get('route_desc')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('route_desc')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.route.route_type" for="field_route_type">Route Type</label>
+          <input
+            type="text"
+            class="form-control"
+            name="route_type"
+            id="field_route_type"
+            data-cy="route_type"
+            formControlName="route_type"
+          />
+          <div *ngIf="editForm.get('route_type')!.invalid && (editForm.get('route_type')!.dirty || editForm.get('route_type')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('route_type')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

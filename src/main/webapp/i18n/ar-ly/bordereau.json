@@ -1,0 +1,52 @@
+{
+  "departdbApp": {
+    "bordereau": {
+      "home": {
+        "title": "Bordereaus",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Bordereau",
+        "createOrEditLabel": "Create or edit a Bordereau",
+        "notFound": "No Bordereaus found"
+      },
+      "created": "A new Bordereau is created with identifier {{ param }}",
+      "updated": "A Bordereau is updated with identifier {{ param }}",
+      "deleted": "A Bordereau is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Bordereau {{ id }}?"
+      },
+      "detail": {
+        "title": "Bordereau"
+      },
+      "id": "ID",
+      "deccent": "Deccent",
+      "decagenc": "Decagenc",
+      "exercice": "Exercice",
+      "denbord": "Denbord",
+      "det_deccent": "Det Deccent",
+      "det_decagenc": "Det Decagenc",
+      "decserv": "Decserv",
+      "cdmac": "Cdmac",
+      "decoper": "Decoper",
+      "decsean": "Decsean",
+      "dedated": "Dedated",
+      "denumdp": "Denumdp",
+      "matric": "Matric",
+      "matric1": "Matric 1",
+      "natbord": "Natbord",
+      "detadedb": "Detadedb",
+      "numb_pdat": "Numb Pdat",
+      "deheupsr": "Deheupsr",
+      "demnttn": "Demnttn",
+      "demntto": "Demntto",
+      "decetbr": "Decetbr",
+      "decetcs": "Decetcs",
+      "denumcs": "Denumcs",
+      "denumbr": "Denumbr",
+      "denumver": "Denumver",
+      "declote": "Declote",
+      "date_saisie": "Date Saisie",
+      "clorec": "Clorec",
+      "demntvers": "Demntvers"
+    }
+  }
+}

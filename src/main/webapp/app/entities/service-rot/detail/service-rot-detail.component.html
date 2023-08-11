@@ -1,0 +1,52 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="serviceRot">
+      <h2 data-cy="serviceRotDetailsHeading"><span jhiTranslate="departdbApp.serviceRot.detail.title">Service Rot</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ serviceRot.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.serviceRot.deccent">Deccent</span></dt>
+        <dd>
+          <span>{{ serviceRot.deccent }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.serviceRot.decagenc">Decagenc</span></dt>
+        <dd>
+          <span>{{ serviceRot.decagenc }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.serviceRot.decserv">Decserv</span></dt>
+        <dd>
+          <span>{{ serviceRot.decserv }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.serviceRot.codgrp">Codgrp</span></dt>
+        <dd>
+          <span>{{ serviceRot.codgrp }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.serviceRot.delserv">Delserv</span></dt>
+        <dd>
+          <span>{{ serviceRot.delserv }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.serviceRot.ordserv">Ordserv</span></dt>
+        <dd>
+          <span>{{ serviceRot.ordserv }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/service-rot', serviceRot.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

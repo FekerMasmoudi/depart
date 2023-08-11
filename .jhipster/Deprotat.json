@@ -1,0 +1,167 @@
+{
+  "applications": "*",
+  "changelogDate": "20230804103421",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "deprotat",
+  "fields": [
+    {
+      "fieldName": "deccent",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "decagenc",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "dedated",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "denumdp",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "decserv",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "decoper",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "decsean",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "numrotat",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "ligdeccent",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "ligdecagenc",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "denumli",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "decstat",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "decsta1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "matric",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "matric1",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "cdmac",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "hdeparte",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "hretoure",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "harralle",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "harrrete",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "rannul",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "km",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "motifa",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "observ",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "recettesvoy",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "nbrevoy",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "paye",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "cd1",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "cd2",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "cd3",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "decmotifcha",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "decmotifrea",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "idapex",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "plusmoins",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "a",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "r",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Deprotat",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

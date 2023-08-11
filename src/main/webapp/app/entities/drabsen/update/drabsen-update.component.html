@@ -1,0 +1,103 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-drabsen-heading" data-cy="DrabsenCreateUpdateHeading" jhiTranslate="departdbApp.drabsen.home.createOrEditLabel">
+        Create or edit a Drabsen
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row mb-3" *ngIf="editForm.controls.id.value !== null">
+          <label class="form-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="text" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.drabsen.cdtypab" for="field_cdtypab">Cdtypab</label>
+          <input type="text" class="form-control" name="cdtypab" id="field_cdtypab" data-cy="cdtypab" formControlName="cdtypab" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.drabsen.matric" for="field_matric">Matric</label>
+          <input type="number" class="form-control" name="matric" id="field_matric" data-cy="matric" formControlName="matric" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.drabsen.databs" for="field_databs">Databs</label>
+          <div class="input-group">
+            <input
+              id="field_databs"
+              data-cy="databs"
+              type="text"
+              class="form-control"
+              name="databs"
+              ngbDatepicker
+              #databsDp="ngbDatepicker"
+              formControlName="databs"
+            />
+            <button type="button" class="btn btn-secondary" (click)="databsDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.drabsen.numabs" for="field_numabs">Numabs</label>
+          <input type="number" class="form-control" name="numabs" id="field_numabs" data-cy="numabs" formControlName="numabs" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.drabsen.nbrabs" for="field_nbrabs">Nbrabs</label>
+          <input type="number" class="form-control" name="nbrabs" id="field_nbrabs" data-cy="nbrabs" formControlName="nbrabs" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.drabsen.validabs" for="field_validabs">Validabs</label>
+          <input type="number" class="form-control" name="validabs" id="field_validabs" data-cy="validabs" formControlName="validabs" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.drabsen.observaabs" for="field_observaabs">Observaabs</label>
+          <input
+            type="text"
+            class="form-control"
+            name="observaabs"
+            id="field_observaabs"
+            data-cy="observaabs"
+            formControlName="observaabs"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.drabsen.cd1" for="field_cd1">Cd 1</label>
+          <input type="number" class="form-control" name="cd1" id="field_cd1" data-cy="cd1" formControlName="cd1" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.drabsen.cd2" for="field_cd2">Cd 2</label>
+          <input type="number" class="form-control" name="cd2" id="field_cd2" data-cy="cd2" formControlName="cd2" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.drabsen.cd3" for="field_cd3">Cd 3</label>
+          <input type="number" class="form-control" name="cd3" id="field_cd3" data-cy="cd3" formControlName="cd3" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

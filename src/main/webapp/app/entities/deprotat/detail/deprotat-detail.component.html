@@ -1,0 +1,172 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="deprotat">
+      <h2 data-cy="deprotatDetailsHeading"><span jhiTranslate="departdbApp.deprotat.detail.title">Deprotat</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ deprotat.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.deprotat.deccent">Deccent</span></dt>
+        <dd>
+          <span>{{ deprotat.deccent }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.deprotat.decagenc">Decagenc</span></dt>
+        <dd>
+          <span>{{ deprotat.decagenc }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.deprotat.dedated">Dedated</span></dt>
+        <dd>
+          <span>{{ deprotat.dedated | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.deprotat.denumdp">Denumdp</span></dt>
+        <dd>
+          <span>{{ deprotat.denumdp }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.deprotat.decserv">Decserv</span></dt>
+        <dd>
+          <span>{{ deprotat.decserv }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.deprotat.decoper">Decoper</span></dt>
+        <dd>
+          <span>{{ deprotat.decoper }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.deprotat.decsean">Decsean</span></dt>
+        <dd>
+          <span>{{ deprotat.decsean }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.deprotat.numrotat">Numrotat</span></dt>
+        <dd>
+          <span>{{ deprotat.numrotat }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.deprotat.ligdeccent">Ligdeccent</span></dt>
+        <dd>
+          <span>{{ deprotat.ligdeccent }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.deprotat.ligdecagenc">Ligdecagenc</span></dt>
+        <dd>
+          <span>{{ deprotat.ligdecagenc }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.deprotat.denumli">Denumli</span></dt>
+        <dd>
+          <span>{{ deprotat.denumli }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.deprotat.decstat">Decstat</span></dt>
+        <dd>
+          <span>{{ deprotat.decstat }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.deprotat.decsta1">Decsta 1</span></dt>
+        <dd>
+          <span>{{ deprotat.decsta1 }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.deprotat.matric">Matric</span></dt>
+        <dd>
+          <span>{{ deprotat.matric }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.deprotat.matric1">Matric 1</span></dt>
+        <dd>
+          <span>{{ deprotat.matric1 }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.deprotat.cdmac">Cdmac</span></dt>
+        <dd>
+          <span>{{ deprotat.cdmac }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.deprotat.hdeparte">Hdeparte</span></dt>
+        <dd>
+          <span>{{ deprotat.hdeparte | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.deprotat.hretoure">Hretoure</span></dt>
+        <dd>
+          <span>{{ deprotat.hretoure | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.deprotat.harralle">Harralle</span></dt>
+        <dd>
+          <span>{{ deprotat.harralle | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.deprotat.harrrete">Harrrete</span></dt>
+        <dd>
+          <span>{{ deprotat.harrrete | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.deprotat.rannul">Rannul</span></dt>
+        <dd>
+          <span>{{ deprotat.rannul }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.deprotat.km">Km</span></dt>
+        <dd>
+          <span>{{ deprotat.km }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.deprotat.motifa">Motifa</span></dt>
+        <dd>
+          <span>{{ deprotat.motifa }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.deprotat.observ">Observ</span></dt>
+        <dd>
+          <span>{{ deprotat.observ }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.deprotat.recettesvoy">Recettesvoy</span></dt>
+        <dd>
+          <span>{{ deprotat.recettesvoy }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.deprotat.nbrevoy">Nbrevoy</span></dt>
+        <dd>
+          <span>{{ deprotat.nbrevoy }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.deprotat.paye">Paye</span></dt>
+        <dd>
+          <span>{{ deprotat.paye }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.deprotat.cd1">Cd 1</span></dt>
+        <dd>
+          <span>{{ deprotat.cd1 }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.deprotat.cd2">Cd 2</span></dt>
+        <dd>
+          <span>{{ deprotat.cd2 }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.deprotat.cd3">Cd 3</span></dt>
+        <dd>
+          <span>{{ deprotat.cd3 }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.deprotat.decmotifcha">Decmotifcha</span></dt>
+        <dd>
+          <span>{{ deprotat.decmotifcha }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.deprotat.decmotifrea">Decmotifrea</span></dt>
+        <dd>
+          <span>{{ deprotat.decmotifrea }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.deprotat.idapex">Idapex</span></dt>
+        <dd>
+          <span>{{ deprotat.idapex }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.deprotat.plusmoins">Plusmoins</span></dt>
+        <dd>
+          <span>{{ deprotat.plusmoins }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.deprotat.a">A</span></dt>
+        <dd>
+          <span>{{ deprotat.a }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.deprotat.r">R</span></dt>
+        <dd>
+          <span>{{ deprotat.r }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/deprotat', deprotat.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

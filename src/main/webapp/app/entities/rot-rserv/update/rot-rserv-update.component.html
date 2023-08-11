@@ -1,0 +1,245 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-rot-rserv-heading" data-cy="RotRservCreateUpdateHeading" jhiTranslate="departdbApp.rotRserv.home.createOrEditLabel">
+        Create or edit a Rot Rserv
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.rotRserv.deccent" for="field_deccent">Deccent</label>
+          <input type="number" class="form-control" name="deccent" id="field_deccent" data-cy="deccent" formControlName="deccent" />
+          <div *ngIf="editForm.get('deccent')!.invalid && (editForm.get('deccent')!.dirty || editForm.get('deccent')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('deccent')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+            <small
+              class="form-text text-danger"
+              [hidden]="!editForm.get('deccent')?.errors?.number"
+              jhiTranslate="entity.validation.number"
+            >
+              This field should be a number.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.rotRserv.decagenc" for="field_decagenc">Decagenc</label>
+          <input type="number" class="form-control" name="decagenc" id="field_decagenc" data-cy="decagenc" formControlName="decagenc" />
+          <div *ngIf="editForm.get('decagenc')!.invalid && (editForm.get('decagenc')!.dirty || editForm.get('decagenc')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('decagenc')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+            <small
+              class="form-text text-danger"
+              [hidden]="!editForm.get('decagenc')?.errors?.number"
+              jhiTranslate="entity.validation.number"
+            >
+              This field should be a number.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.rotRserv.dedated" for="field_dedated">Dedated</label>
+          <div class="input-group">
+            <input
+              id="field_dedated"
+              data-cy="dedated"
+              type="text"
+              class="form-control"
+              name="dedated"
+              ngbDatepicker
+              #dedatedDp="ngbDatepicker"
+              formControlName="dedated"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dedatedDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+          </div>
+          <div *ngIf="editForm.get('dedated')!.invalid && (editForm.get('dedated')!.dirty || editForm.get('dedated')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('dedated')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.rotRserv.matric" for="field_matric">Matric</label>
+          <input type="number" class="form-control" name="matric" id="field_matric" data-cy="matric" formControlName="matric" />
+          <div *ngIf="editForm.get('matric')!.invalid && (editForm.get('matric')!.dirty || editForm.get('matric')!.touched)">
+            <small class="form-text text-danger" *ngIf="editForm.get('matric')?.errors?.required" jhiTranslate="entity.validation.required">
+              This field is required.
+            </small>
+            <small class="form-text text-danger" [hidden]="!editForm.get('matric')?.errors?.number" jhiTranslate="entity.validation.number">
+              This field should be a number.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.rotRserv.heurdeb" for="field_heurdeb">Heurdeb</label>
+          <div class="d-flex">
+            <input
+              id="field_heurdeb"
+              data-cy="heurdeb"
+              type="datetime-local"
+              class="form-control"
+              name="heurdeb"
+              formControlName="heurdeb"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+          <div *ngIf="editForm.get('heurdeb')!.invalid && (editForm.get('heurdeb')!.dirty || editForm.get('heurdeb')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('heurdeb')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+            <small
+              class="form-text text-danger"
+              [hidden]="!editForm.get('heurdeb')?.errors?.datetimelocal"
+              jhiTranslate="entity.validation.datetimelocal"
+            >
+              This field should be a date and time.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.rotRserv.heurfin" for="field_heurfin">Heurfin</label>
+          <div class="d-flex">
+            <input
+              id="field_heurfin"
+              data-cy="heurfin"
+              type="datetime-local"
+              class="form-control"
+              name="heurfin"
+              formControlName="heurfin"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+          <div *ngIf="editForm.get('heurfin')!.invalid && (editForm.get('heurfin')!.dirty || editForm.get('heurfin')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('heurfin')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+            <small
+              class="form-text text-danger"
+              [hidden]="!editForm.get('heurfin')?.errors?.datetimelocal"
+              jhiTranslate="entity.validation.datetimelocal"
+            >
+              This field should be a date and time.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.rotRserv.statut" for="field_statut">Statut</label>
+          <input type="text" class="form-control" name="statut" id="field_statut" data-cy="statut" formControlName="statut" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.rotRserv.lieedeb" for="field_lieedeb">Lieedeb</label>
+          <div class="d-flex">
+            <input
+              id="field_lieedeb"
+              data-cy="lieedeb"
+              type="datetime-local"
+              class="form-control"
+              name="lieedeb"
+              formControlName="lieedeb"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.rotRserv.lieefin" for="field_lieefin">Lieefin</label>
+          <div class="d-flex">
+            <input
+              id="field_lieefin"
+              data-cy="lieefin"
+              type="datetime-local"
+              class="form-control"
+              name="lieefin"
+              formControlName="lieefin"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.rotRserv.program" for="field_program">Program</label>
+          <input type="text" class="form-control" name="program" id="field_program" data-cy="program" formControlName="program" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.rotRserv.cd1" for="field_cd1">Cd 1</label>
+          <input type="number" class="form-control" name="cd1" id="field_cd1" data-cy="cd1" formControlName="cd1" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.rotRserv.cd2" for="field_cd2">Cd 2</label>
+          <input type="number" class="form-control" name="cd2" id="field_cd2" data-cy="cd2" formControlName="cd2" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.rotRserv.cd3" for="field_cd3">Cd 3</label>
+          <input type="number" class="form-control" name="cd3" id="field_cd3" data-cy="cd3" formControlName="cd3" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.rotRserv.id" for="field_id">Id</label>
+          <input
+            type="text"
+            class="form-control"
+            name="id"
+            id="field_id"
+            data-cy="id"
+            formControlName="id"
+            [readonly]="editForm.get('id')!.value != null"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.rotRserv.annul" for="field_annul">Annul</label>
+          <input type="text" class="form-control" name="annul" id="field_annul" data-cy="annul" formControlName="annul" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

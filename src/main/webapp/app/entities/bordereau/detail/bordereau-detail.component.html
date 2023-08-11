@@ -1,0 +1,144 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="bordereau">
+      <h2 data-cy="bordereauDetailsHeading"><span jhiTranslate="departdbApp.bordereau.detail.title">Bordereau</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ bordereau.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bordereau.deccent">Deccent</span></dt>
+        <dd>
+          <span>{{ bordereau.deccent }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bordereau.decagenc">Decagenc</span></dt>
+        <dd>
+          <span>{{ bordereau.decagenc }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bordereau.exercice">Exercice</span></dt>
+        <dd>
+          <span>{{ bordereau.exercice }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bordereau.denbord">Denbord</span></dt>
+        <dd>
+          <span>{{ bordereau.denbord }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bordereau.det_deccent">Det Deccent</span></dt>
+        <dd>
+          <span>{{ bordereau.det_deccent }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bordereau.det_decagenc">Det Decagenc</span></dt>
+        <dd>
+          <span>{{ bordereau.det_decagenc }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bordereau.decserv">Decserv</span></dt>
+        <dd>
+          <span>{{ bordereau.decserv }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bordereau.cdmac">Cdmac</span></dt>
+        <dd>
+          <span>{{ bordereau.cdmac }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bordereau.decoper">Decoper</span></dt>
+        <dd>
+          <span>{{ bordereau.decoper }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bordereau.decsean">Decsean</span></dt>
+        <dd>
+          <span>{{ bordereau.decsean }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bordereau.dedated">Dedated</span></dt>
+        <dd>
+          <span>{{ bordereau.dedated | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bordereau.denumdp">Denumdp</span></dt>
+        <dd>
+          <span>{{ bordereau.denumdp }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bordereau.matric">Matric</span></dt>
+        <dd>
+          <span>{{ bordereau.matric }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bordereau.matric1">Matric 1</span></dt>
+        <dd>
+          <span>{{ bordereau.matric1 }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bordereau.natbord">Natbord</span></dt>
+        <dd>
+          <span>{{ bordereau.natbord }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bordereau.detadedb">Detadedb</span></dt>
+        <dd>
+          <span>{{ bordereau.detadedb | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bordereau.numb_pdat">Numb Pdat</span></dt>
+        <dd>
+          <span>{{ bordereau.numb_pdat }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bordereau.deheupsr">Deheupsr</span></dt>
+        <dd>
+          <span>{{ bordereau.deheupsr | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bordereau.demnttn">Demnttn</span></dt>
+        <dd>
+          <span>{{ bordereau.demnttn }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bordereau.demntto">Demntto</span></dt>
+        <dd>
+          <span>{{ bordereau.demntto }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bordereau.decetbr">Decetbr</span></dt>
+        <dd>
+          <span>{{ bordereau.decetbr }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bordereau.decetcs">Decetcs</span></dt>
+        <dd>
+          <span>{{ bordereau.decetcs }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bordereau.denumcs">Denumcs</span></dt>
+        <dd>
+          <span>{{ bordereau.denumcs }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bordereau.denumbr">Denumbr</span></dt>
+        <dd>
+          <span>{{ bordereau.denumbr }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bordereau.denumver">Denumver</span></dt>
+        <dd>
+          <span>{{ bordereau.denumver }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bordereau.declote">Declote</span></dt>
+        <dd>
+          <span>{{ bordereau.declote }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bordereau.date_saisie">Date Saisie</span></dt>
+        <dd>
+          <span>{{ bordereau.date_saisie | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bordereau.clorec">Clorec</span></dt>
+        <dd>
+          <span>{{ bordereau.clorec }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bordereau.demntvers">Demntvers</span></dt>
+        <dd>
+          <span>{{ bordereau.demntvers }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/bordereau', bordereau.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

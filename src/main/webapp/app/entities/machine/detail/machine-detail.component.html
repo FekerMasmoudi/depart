@@ -1,0 +1,216 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="machine">
+      <h2 data-cy="machineDetailsHeading"><span jhiTranslate="departdbApp.machine.detail.title">Machine</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ machine.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.cdmac">Cdmac</span></dt>
+        <dd>
+          <span>{{ machine.cdmac }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.cdmod">Cdmod</span></dt>
+        <dd>
+          <span>{{ machine.cdmod }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.cdmarque">Cdmarque</span></dt>
+        <dd>
+          <span>{{ machine.cdmarque }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.lbmac">Lbmac</span></dt>
+        <dd>
+          <span>{{ machine.lbmac }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.refmac">Refmac</span></dt>
+        <dd>
+          <span>{{ machine.refmac }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.serie">Serie</span></dt>
+        <dd>
+          <span>{{ machine.serie }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.datfab">Datfab</span></dt>
+        <dd>
+          <span>{{ machine.datfab | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.datacq">Datacq</span></dt>
+        <dd>
+          <span>{{ machine.datacq | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.datmes">Datmes</span></dt>
+        <dd>
+          <span>{{ machine.datmes | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.valacq">Valacq</span></dt>
+        <dd>
+          <span>{{ machine.valacq }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.obs">Obs</span></dt>
+        <dd>
+          <span>{{ machine.obs }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.numplan">Numplan</span></dt>
+        <dd>
+          <span>{{ machine.numplan }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.cdlipro">Cdlipro</span></dt>
+        <dd>
+          <span>{{ machine.cdlipro }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.immat">Immat</span></dt>
+        <dd>
+          <span>{{ machine.immat }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.marque">Marque</span></dt>
+        <dd>
+          <span>{{ machine.marque }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.typev">Typev</span></dt>
+        <dd>
+          <span>{{ machine.typev }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.numser">Numser</span></dt>
+        <dd>
+          <span>{{ machine.numser }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.puiss">Puiss</span></dt>
+        <dd>
+          <span>{{ machine.puiss }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.nrj">Nrj</span></dt>
+        <dd>
+          <span>{{ machine.nrj }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.genre">Genre</span></dt>
+        <dd>
+          <span>{{ machine.genre }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.cylind">Cylind</span></dt>
+        <dd>
+          <span>{{ machine.cylind }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.pdsvid">Pdsvid</span></dt>
+        <dd>
+          <span>{{ machine.pdsvid }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.charge">Charge</span></dt>
+        <dd>
+          <span>{{ machine.charge }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.plcass">Plcass</span></dt>
+        <dd>
+          <span>{{ machine.plcass }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.plcdeb">Plcdeb</span></dt>
+        <dd>
+          <span>{{ machine.plcdeb }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.cpt">Cpt</span></dt>
+        <dd>
+          <span>{{ machine.cpt }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.cptmnt">Cptmnt</span></dt>
+        <dd>
+          <span>{{ machine.cptmnt }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.actif">Actif</span></dt>
+        <dd>
+          <span>{{ machine.actif }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.datact">Datact</span></dt>
+        <dd>
+          <span>{{ machine.datact | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.cdcatvh">Cdcatvh</span></dt>
+        <dd>
+          <span>{{ machine.cdcatvh }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.taux">Taux</span></dt>
+        <dd>
+          <span>{{ machine.taux }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.kmmoy">Kmmoy</span></dt>
+        <dd>
+          <span>{{ machine.kmmoy }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.codstat">Codstat</span></dt>
+        <dd>
+          <span>{{ machine.codstat }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.edition">Edition</span></dt>
+        <dd>
+          <span>{{ machine.edition }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.valassur">Valassur</span></dt>
+        <dd>
+          <span>{{ machine.valassur }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.valamort">Valamort</span></dt>
+        <dd>
+          <span>{{ machine.valamort }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.consommodel">Consommodel</span></dt>
+        <dd>
+          <span>{{ machine.consommodel }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.decetat">Decetat</span></dt>
+        <dd>
+          <span>{{ machine.decetat }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.codtypvoit">Codtypvoit</span></dt>
+        <dd>
+          <span>{{ machine.codtypvoit }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.cdtyp">Cdtyp</span></dt>
+        <dd>
+          <span>{{ machine.cdtyp }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.cdnat">Cdnat</span></dt>
+        <dd>
+          <span>{{ machine.cdnat }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.typbv">Typbv</span></dt>
+        <dd>
+          <span>{{ machine.typbv }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.cdtypbv">Cdtypbv</span></dt>
+        <dd>
+          <span>{{ machine.cdtypbv }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.pneu">Pneu</span></dt>
+        <dd>
+          <span>{{ machine.pneu }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.gps">Gps</span></dt>
+        <dd>
+          <span>{{ machine.gps }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.marquebv">Marquebv</span></dt>
+        <dd>
+          <span>{{ machine.marquebv }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.machine.typboite">Typboite</span></dt>
+        <dd>
+          <span>{{ machine.typboite }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/machine', machine.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

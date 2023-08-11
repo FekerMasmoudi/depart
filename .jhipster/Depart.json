@@ -1,0 +1,159 @@
+{
+  "applications": "*",
+  "changelogDate": "20230804093443",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "depart",
+  "fields": [
+    {
+      "fieldName": "deccent",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "decagenc",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "decserv",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "decoper",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "decsean",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "dedated",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "denumdp",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "matric",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "matric1",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "cdmac",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "deheups",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "deheufs",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "denbrro",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "deheuaa",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "deheudr",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "deheupd",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "deampli",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "obsind",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "vldroul",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "deetat",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "deannul",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "decclot",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "execute",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "motifa",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "observ",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "recettes",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "nbrevoy",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "decmotifch",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "decmotifre",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "cd1",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "cd2",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "cd3",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "decmotifcha",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "decmotifrea",
+      "fieldType": "Integer"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Depart",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

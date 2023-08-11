@@ -1,0 +1,187 @@
+<div>
+  <h2 id="page-heading" data-cy="ModifHeading">
+    <span jhiTranslate="departdbApp.modif.home.title">Modifs</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span jhiTranslate="departdbApp.modif.home.refreshListLabel">Refresh list</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-modif"
+        [routerLink]="['/modif/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="departdbApp.modif.home.createLabel"> Create a new Modif </span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <div class="alert alert-warning" id="no-result" *ngIf="modifs?.length === 0">
+    <span jhiTranslate="departdbApp.modif.home.notFound">No Modifs found</span>
+  </div>
+
+  <div class="table-responsive table-entities" id="entities" *ngIf="modifs && modifs.length > 0">
+    <table class="table table-striped" aria-describedby="page-heading">
+      <thead>
+        <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" (sortChange)="navigateToWithComponentValues()">
+          <th scope="col" jhiSortBy="id">
+            <div class="d-flex">
+              <span jhiTranslate="global.field.id">ID</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="deccent">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.modif.deccent">Deccent</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="decagenc">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.modif.decagenc">Decagenc</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="dedated">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.modif.dedated">Dedated</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="denumdp">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.modif.denumdp">Denumdp</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="decserv">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.modif.decserv">Decserv</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="decoper">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.modif.decoper">Decoper</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="decsean">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.modif.decsean">Decsean</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="numrotat">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.modif.numrotat">Numrotat</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="matric">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.modif.matric">Matric</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="cd1">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.modif.cd1">Cd 1</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="decmotif">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.modif.decmotif">Decmotif</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="heur">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.modif.heur">Heur</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="chre">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.modif.chre">Chre</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="typ">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.modif.typ">Typ</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let modif of modifs; trackBy: trackId" data-cy="entityTable">
+          <td>
+            <a [routerLink]="['/modif', modif.id, 'view']">{{ modif.id }}</a>
+          </td>
+          <td>{{ modif.deccent }}</td>
+          <td>{{ modif.decagenc }}</td>
+          <td>{{ modif.dedated | formatMediumDate }}</td>
+          <td>{{ modif.denumdp }}</td>
+          <td>{{ modif.decserv }}</td>
+          <td>{{ modif.decoper }}</td>
+          <td>{{ modif.decsean }}</td>
+          <td>{{ modif.numrotat }}</td>
+          <td>{{ modif.matric }}</td>
+          <td>{{ modif.cd1 }}</td>
+          <td>{{ modif.decmotif }}</td>
+          <td>{{ modif.heur | formatMediumDate }}</td>
+          <td>{{ modif.chre }}</td>
+          <td>{{ modif.typ }}</td>
+          <td class="text-end">
+            <div class="btn-group">
+              <button type="submit" [routerLink]="['/modif', modif.id, 'view']" class="btn btn-info btn-sm" data-cy="entityDetailsButton">
+                <fa-icon icon="eye"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+              </button>
+
+              <button type="submit" [routerLink]="['/modif', modif.id, 'edit']" class="btn btn-primary btn-sm" data-cy="entityEditButton">
+                <fa-icon icon="pencil-alt"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+              </button>
+
+              <button type="submit" (click)="delete(modif)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                <fa-icon icon="times"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="modifs && modifs.length > 0">
+    <div class="d-flex justify-content-center">
+      <jhi-item-count [params]="{ page: page, totalItems: totalItems, itemsPerPage: itemsPerPage }"></jhi-item-count>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <ngb-pagination
+        [collectionSize]="totalItems"
+        [page]="page"
+        [pageSize]="itemsPerPage"
+        [maxSize]="5"
+        [rotate]="true"
+        [boundaryLinks]="true"
+        (pageChange)="navigateToPage($event)"
+      ></ngb-pagination>
+    </div>
+  </div>
+</div>

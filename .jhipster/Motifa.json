@@ -1,0 +1,25 @@
+{
+  "applications": "*",
+  "changelogDate": "20230811081300",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "motifa",
+  "fields": [
+    {
+      "fieldName": "decmotif",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "libmotif",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Motifa",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

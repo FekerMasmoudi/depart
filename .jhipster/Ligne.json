@@ -1,0 +1,117 @@
+{
+  "applications": "*",
+  "changelogDate": "20230804111947",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "ligne",
+  "fields": [
+    {
+      "fieldName": "deccent",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "decagenc",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "denumli",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dectyli",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dectyta",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "denomli",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dectyeq",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "denbrkm",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "detparc",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "dedural",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "dedurrt",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "detrjva",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "detrjvr",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "depiste",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "statlig",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lig",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lig1",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "valide",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "denumli2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "kml",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "any"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "mimtype",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "filename",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "charset",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastupdate",
+      "fieldType": "ZonedDateTime"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Ligne",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

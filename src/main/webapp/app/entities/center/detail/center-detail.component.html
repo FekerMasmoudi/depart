@@ -1,0 +1,44 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="center">
+      <h2 data-cy="centerDetailsHeading"><span jhiTranslate="departdbApp.center.detail.title">Center</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ center.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.center.deccent">Deccent</span></dt>
+        <dd>
+          <span>{{ center.deccent }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.center.delcent">Delcent</span></dt>
+        <dd>
+          <span>{{ center.delcent }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.center.deadrce">Deadrce</span></dt>
+        <dd>
+          <span>{{ center.deadrce }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.center.deobser">Deobser</span></dt>
+        <dd>
+          <span>{{ center.deobser }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/center', center.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

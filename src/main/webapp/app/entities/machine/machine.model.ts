@@ -1,0 +1,54 @@
+import dayjs from 'dayjs/esm';
+
+export interface IMachine {
+  id: string;
+  cdmac?: string | null;
+  cdmod?: string | null;
+  cdmarque?: string | null;
+  lbmac?: string | null;
+  refmac?: string | null;
+  serie?: string | null;
+  datfab?: dayjs.Dayjs | null;
+  datacq?: dayjs.Dayjs | null;
+  datmes?: dayjs.Dayjs | null;
+  valacq?: number | null;
+  obs?: string | null;
+  numplan?: string | null;
+  cdlipro?: string | null;
+  immat?: string | null;
+  marque?: string | null;
+  typev?: string | null;
+  numser?: string | null;
+  puiss?: string | null;
+  nrj?: string | null;
+  genre?: string | null;
+  cylind?: number | null;
+  pdsvid?: number | null;
+  charge?: number | null;
+  plcass?: number | null;
+  plcdeb?: number | null;
+  cpt?: number | null;
+  cptmnt?: number | null;
+  actif?: number | null;
+  datact?: dayjs.Dayjs | null;
+  cdcatvh?: string | null;
+  taux?: number | null;
+  kmmoy?: number | null;
+  codstat?: number | null;
+  edition?: string | null;
+  valassur?: number | null;
+  valamort?: number | null;
+  consommodel?: number | null;
+  decetat?: string | null;
+  codtypvoit?: string | null;
+  cdtyp?: string | null;
+  cdnat?: number | null;
+  typbv?: string | null;
+  cdtypbv?: string | null;
+  pneu?: string | null;
+  gps?: string | null;
+  marquebv?: string | null;
+  typboite?: string | null;
+}
+
+export type NewMachine = Omit<IMachine, 'id'> & { id: null };

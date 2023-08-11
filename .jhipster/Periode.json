@@ -1,0 +1,36 @@
+{
+  "applications": "*",
+  "changelogDate": "20230811081256",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "periode",
+  "fields": [
+    {
+      "fieldName": "decoper",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "denoper",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "primaire",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "startdate",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "enddate",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Periode",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

@@ -1,0 +1,72 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="affectagent">
+      <h2 data-cy="affectagentDetailsHeading"><span jhiTranslate="departdbApp.affectagent.detail.title">Affectagent</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ affectagent.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.affectagent.deccent">Deccent</span></dt>
+        <dd>
+          <span>{{ affectagent.deccent }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.affectagent.decagenc">Decagenc</span></dt>
+        <dd>
+          <span>{{ affectagent.decagenc }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.affectagent.decserv">Decserv</span></dt>
+        <dd>
+          <span>{{ affectagent.decserv }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.affectagent.decoper">Decoper</span></dt>
+        <dd>
+          <span>{{ affectagent.decoper }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.affectagent.decsean">Decsean</span></dt>
+        <dd>
+          <span>{{ affectagent.decsean }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.affectagent.cdmois">Cdmois</span></dt>
+        <dd>
+          <span>{{ affectagent.cdmois }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.affectagent.cdsocie">Cdsocie</span></dt>
+        <dd>
+          <span>{{ affectagent.cdsocie }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.affectagent.decexer">Decexer</span></dt>
+        <dd>
+          <span>{{ affectagent.decexer }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.affectagent.matric">Matric</span></dt>
+        <dd>
+          <span>{{ affectagent.matric }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.affectagent.matric2">Matric 2</span></dt>
+        <dd>
+          <span>{{ affectagent.matric2 }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.affectagent.cdmac">Cdmac</span></dt>
+        <dd>
+          <span>{{ affectagent.cdmac }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/affectagent', affectagent.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

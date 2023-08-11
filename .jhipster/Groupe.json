@@ -1,0 +1,43 @@
+{
+  "applications": "*",
+  "changelogDate": "20230811081255",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "groupe",
+  "fields": [
+    {
+      "fieldName": "deccent",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "decagenc",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "codgrp",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "libgrp",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dectyli",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "libgrpfr",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Groupe",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

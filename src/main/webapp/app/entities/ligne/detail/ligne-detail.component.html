@@ -1,0 +1,131 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="ligne">
+      <h2 data-cy="ligneDetailsHeading"><span jhiTranslate="departdbApp.ligne.detail.title">Ligne</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ ligne.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.ligne.deccent">Deccent</span></dt>
+        <dd>
+          <span>{{ ligne.deccent }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.ligne.decagenc">Decagenc</span></dt>
+        <dd>
+          <span>{{ ligne.decagenc }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.ligne.denumli">Denumli</span></dt>
+        <dd>
+          <span>{{ ligne.denumli }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.ligne.dectyli">Dectyli</span></dt>
+        <dd>
+          <span>{{ ligne.dectyli }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.ligne.dectyta">Dectyta</span></dt>
+        <dd>
+          <span>{{ ligne.dectyta }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.ligne.denomli">Denomli</span></dt>
+        <dd>
+          <span>{{ ligne.denomli }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.ligne.dectyeq">Dectyeq</span></dt>
+        <dd>
+          <span>{{ ligne.dectyeq }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.ligne.denbrkm">Denbrkm</span></dt>
+        <dd>
+          <span>{{ ligne.denbrkm }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.ligne.detparc">Detparc</span></dt>
+        <dd>
+          <span>{{ ligne.detparc }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.ligne.dedural">Dedural</span></dt>
+        <dd>
+          <span>{{ ligne.dedural }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.ligne.dedurrt">Dedurrt</span></dt>
+        <dd>
+          <span>{{ ligne.dedurrt }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.ligne.detrjva">Detrjva</span></dt>
+        <dd>
+          <span>{{ ligne.detrjva }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.ligne.detrjvr">Detrjvr</span></dt>
+        <dd>
+          <span>{{ ligne.detrjvr }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.ligne.depiste">Depiste</span></dt>
+        <dd>
+          <span>{{ ligne.depiste }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.ligne.statlig">Statlig</span></dt>
+        <dd>
+          <span>{{ ligne.statlig }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.ligne.lig">Lig</span></dt>
+        <dd>
+          <span>{{ ligne.lig }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.ligne.lig1">Lig 1</span></dt>
+        <dd>
+          <span>{{ ligne.lig1 }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.ligne.valide">Valide</span></dt>
+        <dd>
+          <span>{{ ligne.valide }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.ligne.denumli2">Denumli 2</span></dt>
+        <dd>
+          <span>{{ ligne.denumli2 }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.ligne.kml">Kml</span></dt>
+        <dd>
+          <div *ngIf="ligne.kml">
+            <a (click)="openFile(ligne.kml, ligne.kmlContentType)" jhiTranslate="entity.action.open">Open</a>
+            {{ ligne.kmlContentType }}, {{ byteSize(ligne.kml) }}
+          </div>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.ligne.description">Description</span></dt>
+        <dd>
+          <span>{{ ligne.description }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.ligne.mimtype">Mimtype</span></dt>
+        <dd>
+          <span>{{ ligne.mimtype }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.ligne.filename">Filename</span></dt>
+        <dd>
+          <span>{{ ligne.filename }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.ligne.charset">Charset</span></dt>
+        <dd>
+          <span>{{ ligne.charset }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.ligne.lastupdate">Lastupdate</span></dt>
+        <dd>
+          <span>{{ ligne.lastupdate | formatMediumDatetime }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/ligne', ligne.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

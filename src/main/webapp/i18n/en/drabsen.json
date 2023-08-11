@@ -1,0 +1,33 @@
+{
+  "departdbApp": {
+    "drabsen": {
+      "home": {
+        "title": "Drabsens",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Drabsen",
+        "createOrEditLabel": "Create or edit a Drabsen",
+        "notFound": "No Drabsens found"
+      },
+      "created": "A new Drabsen is created with identifier {{ param }}",
+      "updated": "A Drabsen is updated with identifier {{ param }}",
+      "deleted": "A Drabsen is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Drabsen {{ id }}?"
+      },
+      "detail": {
+        "title": "Drabsen"
+      },
+      "id": "ID",
+      "cdtypab": "Cdtypab",
+      "matric": "Matric",
+      "databs": "Databs",
+      "numabs": "Numabs",
+      "nbrabs": "Nbrabs",
+      "validabs": "Validabs",
+      "observaabs": "Observaabs",
+      "cd1": "Cd 1",
+      "cd2": "Cd 2",
+      "cd3": "Cd 3"
+    }
+  }
+}

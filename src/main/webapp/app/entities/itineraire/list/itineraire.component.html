@@ -1,0 +1,183 @@
+<div>
+  <h2 id="page-heading" data-cy="ItineraireHeading">
+    <span jhiTranslate="departdbApp.itineraire.home.title">Itineraires</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span jhiTranslate="departdbApp.itineraire.home.refreshListLabel">Refresh list</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-itineraire"
+        [routerLink]="['/itineraire/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="departdbApp.itineraire.home.createLabel"> Create a new Itineraire </span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <div class="alert alert-warning" id="no-result" *ngIf="itineraires?.length === 0">
+    <span jhiTranslate="departdbApp.itineraire.home.notFound">No Itineraires found</span>
+  </div>
+
+  <div class="table-responsive table-entities" id="entities" *ngIf="itineraires && itineraires.length > 0">
+    <table class="table table-striped" aria-describedby="page-heading">
+      <thead>
+        <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" (sortChange)="navigateToWithComponentValues()">
+          <th scope="col" jhiSortBy="id">
+            <div class="d-flex">
+              <span jhiTranslate="global.field.id">ID</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="deccent">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.itineraire.deccent">Deccent</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="decagenc">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.itineraire.decagenc">Decagenc</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="denumli">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.itineraire.denumli">Denumli</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="decstat">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.itineraire.decstat">Decstat</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="denumlg">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.itineraire.denumlg">Denumlg</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="dekmsta">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.itineraire.dekmsta">Dekmsta</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="dedurtr">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.itineraire.dedurtr">Dedurtr</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="deescale">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.itineraire.deescale">Deescale</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="embra">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.itineraire.embra">Embra</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="section">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.itineraire.section">Section</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="sens">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.itineraire.sens">Sens</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="dectyst">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.itineraire.dectyst">Dectyst</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let itineraire of itineraires; trackBy: trackId" data-cy="entityTable">
+          <td>
+            <a [routerLink]="['/itineraire', itineraire.id, 'view']">{{ itineraire.id }}</a>
+          </td>
+          <td>{{ itineraire.deccent }}</td>
+          <td>{{ itineraire.decagenc }}</td>
+          <td>{{ itineraire.denumli }}</td>
+          <td>{{ itineraire.decstat }}</td>
+          <td>{{ itineraire.denumlg }}</td>
+          <td>{{ itineraire.dekmsta }}</td>
+          <td>{{ itineraire.dedurtr }}</td>
+          <td>{{ itineraire.deescale }}</td>
+          <td>{{ itineraire.embra }}</td>
+          <td>{{ itineraire.section }}</td>
+          <td>{{ itineraire.sens }}</td>
+          <td>{{ itineraire.dectyst }}</td>
+          <td class="text-end">
+            <div class="btn-group">
+              <button
+                type="submit"
+                [routerLink]="['/itineraire', itineraire.id, 'view']"
+                class="btn btn-info btn-sm"
+                data-cy="entityDetailsButton"
+              >
+                <fa-icon icon="eye"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+              </button>
+
+              <button
+                type="submit"
+                [routerLink]="['/itineraire', itineraire.id, 'edit']"
+                class="btn btn-primary btn-sm"
+                data-cy="entityEditButton"
+              >
+                <fa-icon icon="pencil-alt"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+              </button>
+
+              <button type="submit" (click)="delete(itineraire)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                <fa-icon icon="times"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="itineraires && itineraires.length > 0">
+    <div class="d-flex justify-content-center">
+      <jhi-item-count [params]="{ page: page, totalItems: totalItems, itemsPerPage: itemsPerPage }"></jhi-item-count>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <ngb-pagination
+        [collectionSize]="totalItems"
+        [page]="page"
+        [pageSize]="itemsPerPage"
+        [maxSize]="5"
+        [rotate]="true"
+        [boundaryLinks]="true"
+        (pageChange)="navigateToPage($event)"
+      ></ngb-pagination>
+    </div>
+  </div>
+</div>

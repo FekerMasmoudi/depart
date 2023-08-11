@@ -1,0 +1,192 @@
+{
+  "applications": "*",
+  "changelogDate": "20230811081252",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "bon_tvx",
+  "fields": [
+    {
+      "fieldName": "cdexerc",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "numbt",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "cdtier",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "cdmac",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "maccdmac",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "cdserv",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "decagen",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "dradecagen",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "cdorga",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "refbt",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "datbt",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "datdt",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "datft",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "vld",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "typtvx",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "heurdb",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "heurfi",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "observ",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "datsrt",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "heursr",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "obstest",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "indexdep",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "indexarr",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "immatex",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nomchauff",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "numpermis",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "etab",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "compteur",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "cptorg",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "cdtyptr",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "decstat",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "testeur",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "motifdep",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "cdtypmnt",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "datsorprev",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "datmnqdu",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "datmnqau",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "datentant",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "codstat",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "datvld",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "observ1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "testeur1",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "validag",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "datsais",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "BonTvx",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

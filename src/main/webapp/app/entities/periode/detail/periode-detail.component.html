@@ -1,0 +1,48 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="periode">
+      <h2 data-cy="periodeDetailsHeading"><span jhiTranslate="departdbApp.periode.detail.title">Periode</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ periode.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.periode.decoper">Decoper</span></dt>
+        <dd>
+          <span>{{ periode.decoper }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.periode.denoper">Denoper</span></dt>
+        <dd>
+          <span>{{ periode.denoper }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.periode.primaire">Primaire</span></dt>
+        <dd>
+          <span>{{ periode.primaire }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.periode.startdate">Startdate</span></dt>
+        <dd>
+          <span>{{ periode.startdate }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.periode.enddate">Enddate</span></dt>
+        <dd>
+          <span>{{ periode.enddate }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/periode', periode.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

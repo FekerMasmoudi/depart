@@ -1,0 +1,382 @@
+
+   
+
+   entity Center{
+   deccent   Integer required, 
+	delcent String, 
+	deadrce String, 
+	deobser String
+}
+entity Agence {
+	deccent   Integer required, 
+	decagenc   Integer required, 
+	delagenc String, 
+	defaultagenc String 
+	}
+    entity FoncAgent{
+    cdfonc String, 
+	matric   Integer, 
+    nom String, 
+	prenom String,
+	dateff  LocalDate, 
+	valide String 
+    }
+     entity Machine 
+    {
+    cdmac String, 
+	cdmod String, 
+	cdmarque String, 
+	lbmac String, 
+	refmac String, 
+	serie String, 
+	datfab  LocalDate, 
+	datacq  LocalDate, 
+	datmes  LocalDate, 
+	valacq   Integer, 
+	obs String, 
+	numplan String, 
+	cdlipro String, 
+	immat String, 
+	marque String, 
+	typev String, 
+	numser String, 
+	puiss String, 
+	nrj   String, 
+	genre String, 
+	cylind   Integer, 
+	pdsvid   Integer, 
+	charge   Integer, 
+	plcass   Integer, 
+	plcdeb   Integer, 
+	cpt   Integer, 
+	cptmnt   Integer, 
+	actif   Integer, 
+	datact  LocalDate, 
+	cdcatvh String, 
+	taux   Integer, 
+	kmmoy   Integer, 
+	codstat   Integer, 
+	edition String , 
+	valassur   Integer, 
+	valamort   Integer, 
+	consommodel   Integer, 
+	decetat String, 
+	codtypvoit String, 
+	cdtyp String, 
+	cdnat   Integer, 
+	typbv String, 
+	cdtypbv String, 
+	pneu String, 
+	gps String, 
+	marquebv String, 
+	typboite String
+    }
+    
+    entity BonTvx{
+    cdexerc   Integer, 
+	numbt   Integer, 
+	cdtier String, 
+	cdmac String, 
+	maccdmac String, 
+	cdserv String, 
+	decagen   Integer, 
+	dradecagen   Integer, 
+	cdorga String, 
+	refbt String, 
+	datbt  LocalDate, 
+	datdt  LocalDate, 
+	datft  LocalDate, 
+	vld String, 
+	typtvx String, 
+	heurdb  LocalDate, 
+	heurfi  LocalDate, 
+	observ String, 
+	datsrt  LocalDate, 
+	heursr  LocalDate, 
+	obstest String, 
+	indexdep   Integer, 
+	indexarr   Integer, 
+	immatex String, 
+	nomchauff String, 
+	numpermis String, 
+	etab String, 
+	compteur   Integer, 
+	cptorg   Integer, 
+	cdtyptr String, 
+	decstat String, 
+	testeur   Integer, 
+	motifdep String, 
+	cdtypmnt String, 
+	datsorprev  LocalDate, 
+	datmnqdu  LocalDate, 
+	datmnqau  LocalDate, 
+	datentant  LocalDate, 
+	codstat String, 
+	datvld  LocalDate, 
+	observ1 String, 
+	testeur1   Integer, 
+	validag   Integer, 
+	datsais  LocalDate
+ }  
+ entity CentVehic{
+    cdmac String, 
+	dateff  LocalDate, 
+	deccent   Integer, 
+	decagenc   Integer
+}
+	entity TypStat {
+	 dectyst String required, 
+	 deltyst String, 
+	}
+ entity Station{
+    decstat String required, 
+	dectyst String, 
+	decrout String, 
+	delstat String, 
+	delstatfr String, 
+	lattitude String, 
+	longitude String, 
+	valide String
+    }  
+
+entity  Ligne{
+    deccent   Integer, 
+	decagenc   Integer, 
+	denumli String, 
+	dectyli String, 
+	dectyta String, 
+	denomli String, 
+	dectyeq String, 
+	denbrkm   Integer, 
+	detparc   Integer, 
+	dedural   Integer, 
+	dedurrt   Integer, 
+	detrjva   Integer, 
+	detrjvr   Integer, 
+	depiste   Integer, 
+	statlig String, 
+	lig     String, 
+	lig1   Integer, 
+	valide String, 
+	denumli2 String, 
+	kml Blob, 
+	description String, 
+	mimtype String, 
+	filename String, 
+	charset String, 
+	lastupdate   ZonedDateTime 
+    }
+ entity Itineraire{
+        deccent   Integer, 
+	decagenc   Integer required, 
+	denumli String required, 
+	decstat String required, 
+	denumlg   Integer required, 
+	dekmsta   Integer, 
+	dedurtr   Integer, 
+	deescale   Integer, 
+	embra String, 
+	section   Integer, 
+	sens String, 
+	dectyst String
+    }
+entity Groupe{
+    deccent   Integer required, 
+	decagenc   Integer required, 
+	codgrp   Integer required, 
+	libgrp String, 
+	dectyli String, 
+	libgrpfr String
+	}
+entity Periode{
+    decoper String, 
+	denoper String, 
+	primaire String, 
+	startdate String, 
+	enddate String 
+    }
+entity AffecAgent{
+    deccent   Integer, 
+	decagenc   Integer, 
+	decserv   Integer, 
+	decoper String, 
+	decsean String, 
+	cdsocie String, 
+	decexer   Integer, 
+	cdmois    Integer, 
+	matric    Integer, 
+	matric2   Integer, 
+	cdmac   String
+}    
+entity  ServiceRot {
+	deccent   Integer required, 
+	decagenc   Integer required, 
+	decserv   Integer required, 
+	codgrp   Integer required, 
+	delserv String, 
+	ordserv   Integer
+	}
+    entity RhAgent{
+        matric   Integer, 
+	decjour String, 
+	dateffrh  LocalDate, 
+	decoper String, 
+	deccent   Integer, 
+	decagenc   Integer
+    }
+entity  Motifa{
+	decmotif   Integer required, 
+	libmotif String
+   
+
+	}
+entity Motifchserv{		
+    decmotif   Integer required, 
+	delmotif String, 
+	x String, 
+	vs String
+	}
+entity Trafic {
+	deccent   Integer required, 
+	decagenc   Integer required, 
+	dedated  LocalDate required, 
+	ancien   Integer, 
+	vldtrafic String, 
+	clotrafic String
+
+	}
+entity RotRserv{
+	deccent   Integer required, 
+	decagenc   Integer required, 
+	dedated  LocalDate required, 
+	matric   Integer required, 
+	heurdeb    ZonedDateTime  required, 
+	heurfin   ZonedDateTime  required, 
+	statut   String, 
+	lieedeb   ZonedDateTime ,
+	lieefin   ZonedDateTime , 
+	program  String, 
+	cd1   Integer, 
+	cd2   Integer, 
+	cd3   Integer, 
+	id  String, 
+	annul String
+
+	}
+entity Depart{
+	deccent   Integer required, 
+	decagenc   Integer required, 
+	decserv    Integer required, 
+	decoper  String  required,
+	decsean  String required, 
+	dedated   LocalDate required, 
+	denumdp   Integer required, 
+	matric    Integer, 
+	matric1    Integer, 
+	cdmac    Integer, 
+	deheups  ZonedDateTime, 
+	deheufs  ZonedDateTime, 
+	denbrro    Integer, 
+	deheuaa   ZonedDateTime , 
+	deheudr   ZonedDateTime , 
+	deheupd   ZonedDateTime , 
+	deampli   ZonedDateTime , 
+	obsind String, 
+	vldroul String, 
+	deetat String, 
+	deannul String, 
+	decclot String, 
+	execute String, 
+	motifa String , 
+	observ String, 
+	recettes Float, 
+	nbrevoy   Integer, 
+	decmotifch   Integer, 
+	decmotifre   Integer, 
+	cd1   Integer, 
+	cd2   Integer, 
+	cd3   Integer, 
+	decmotifcha   Integer, 
+	decmotifrea   Integer
+	}
+	
+entity  Deprotat{
+	deccent   Integer required, 
+	decagenc   Integer required, 
+	dedated  LocalDate required, 
+	denumdp   Integer required, 
+	decserv   Integer required, 
+	decoper String required, 
+	decsean String required, 
+	numrotat   Integer, 
+	ligdeccent   Integer, 
+	ligdecagenc   Integer, 
+	denumli String, 
+	decstat String, 
+	decsta1 String, 
+	matric   Integer, 
+	matric1   Integer, 
+	cdmac String, 
+	hdeparte   ZonedDateTime , 
+	hretoure   ZonedDateTime , 
+	harralle   ZonedDateTime , 
+	harrrete   ZonedDateTime , 
+	rannul    String, 
+	km       Integer, 
+	motifa   Integer, 
+	observ  String, 
+	recettesvoy   Integer, 
+	nbrevoy   Integer, 
+	paye   Integer, 
+	cd1   Integer, 
+	cd2   Integer, 
+	cd3   Integer, 
+	decmotifcha   Integer, 
+	decmotifrea   Integer, 
+	idapex   Integer, 
+	plusmoins String, 
+	a String, 
+	r String
+  
+}
+
+entity Modif{
+        deccent   Integer, 
+	decagenc   Integer, 
+	dedated  LocalDate, 
+	denumdp   Integer, 
+	decserv   Integer, 
+	decoper String, 
+	decsean String, 
+	numrotat   Integer, 
+	matric   Integer, 
+	cd1   Integer, 
+	decmotif   Integer, 
+	heur  LocalDate, 
+	chre String ,
+	typ String
+}
+
+entity Drtypab{
+        cdtypab String, 
+	lbtypab String, 
+	dabsjt String, 
+	dabsjp String 
+}
+entity Drabsen{
+        cdtypab String, 
+	matric   Integer, 
+	databs  LocalDate, 
+	numabs   Integer, 
+	nbrabs   Integer, 
+	validabs   Integer, 
+	observaabs String, 
+	cd1   Integer, 
+	cd2   Integer, 
+	cd3   Integer
+}
+
+use mapstruct, serviceClass, pagination for *
+
+
+
