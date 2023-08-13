@@ -1,0 +1,36 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="typStat">
+      <h2 data-cy="typStatDetailsHeading"><span jhiTranslate="departdbApp.typStat.detail.title">Typ Stat</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ typStat.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.typStat.dectyst">Dectyst</span></dt>
+        <dd>
+          <span>{{ typStat.dectyst }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.typStat.deltyst">Deltyst</span></dt>
+        <dd>
+          <span>{{ typStat.deltyst }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/typ-stat', typStat.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

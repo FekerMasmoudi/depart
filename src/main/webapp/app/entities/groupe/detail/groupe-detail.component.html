@@ -1,0 +1,52 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="groupe">
+      <h2 data-cy="groupeDetailsHeading"><span jhiTranslate="departdbApp.groupe.detail.title">Groupe</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ groupe.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.groupe.deccent">Deccent</span></dt>
+        <dd>
+          <span>{{ groupe.deccent }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.groupe.decagenc">Decagenc</span></dt>
+        <dd>
+          <span>{{ groupe.decagenc }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.groupe.codgrp">Codgrp</span></dt>
+        <dd>
+          <span>{{ groupe.codgrp }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.groupe.libgrp">Libgrp</span></dt>
+        <dd>
+          <span>{{ groupe.libgrp }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.groupe.dectyli">Dectyli</span></dt>
+        <dd>
+          <span>{{ groupe.dectyli }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.groupe.libgrpfr">Libgrpfr</span></dt>
+        <dd>
+          <span>{{ groupe.libgrpfr }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/groupe', groupe.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

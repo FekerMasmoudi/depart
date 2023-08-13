@@ -1,0 +1,120 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-service-rot-heading" data-cy="ServiceRotCreateUpdateHeading" jhiTranslate="departdbApp.serviceRot.home.createOrEditLabel">
+        Create or edit a Service Rot
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row mb-3" *ngIf="editForm.controls.id.value !== null">
+          <label class="form-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="text" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.serviceRot.deccent" for="field_deccent">Deccent</label>
+          <input type="number" class="form-control" name="deccent" id="field_deccent" data-cy="deccent" formControlName="deccent" />
+          <div *ngIf="editForm.get('deccent')!.invalid && (editForm.get('deccent')!.dirty || editForm.get('deccent')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('deccent')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+            <small
+              class="form-text text-danger"
+              [hidden]="!editForm.get('deccent')?.errors?.number"
+              jhiTranslate="entity.validation.number"
+            >
+              This field should be a number.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.serviceRot.decagenc" for="field_decagenc">Decagenc</label>
+          <input type="number" class="form-control" name="decagenc" id="field_decagenc" data-cy="decagenc" formControlName="decagenc" />
+          <div *ngIf="editForm.get('decagenc')!.invalid && (editForm.get('decagenc')!.dirty || editForm.get('decagenc')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('decagenc')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+            <small
+              class="form-text text-danger"
+              [hidden]="!editForm.get('decagenc')?.errors?.number"
+              jhiTranslate="entity.validation.number"
+            >
+              This field should be a number.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.serviceRot.decserv" for="field_decserv">Decserv</label>
+          <input type="number" class="form-control" name="decserv" id="field_decserv" data-cy="decserv" formControlName="decserv" />
+          <div *ngIf="editForm.get('decserv')!.invalid && (editForm.get('decserv')!.dirty || editForm.get('decserv')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('decserv')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+            <small
+              class="form-text text-danger"
+              [hidden]="!editForm.get('decserv')?.errors?.number"
+              jhiTranslate="entity.validation.number"
+            >
+              This field should be a number.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.serviceRot.codgrp" for="field_codgrp">Codgrp</label>
+          <input type="number" class="form-control" name="codgrp" id="field_codgrp" data-cy="codgrp" formControlName="codgrp" />
+          <div *ngIf="editForm.get('codgrp')!.invalid && (editForm.get('codgrp')!.dirty || editForm.get('codgrp')!.touched)">
+            <small class="form-text text-danger" *ngIf="editForm.get('codgrp')?.errors?.required" jhiTranslate="entity.validation.required">
+              This field is required.
+            </small>
+            <small class="form-text text-danger" [hidden]="!editForm.get('codgrp')?.errors?.number" jhiTranslate="entity.validation.number">
+              This field should be a number.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.serviceRot.delserv" for="field_delserv">Delserv</label>
+          <input type="text" class="form-control" name="delserv" id="field_delserv" data-cy="delserv" formControlName="delserv" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.serviceRot.ordserv" for="field_ordserv">Ordserv</label>
+          <input type="number" class="form-control" name="ordserv" id="field_ordserv" data-cy="ordserv" formControlName="ordserv" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

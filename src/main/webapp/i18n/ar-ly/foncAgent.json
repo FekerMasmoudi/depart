@@ -1,0 +1,29 @@
+{
+  "departdbApp": {
+    "foncAgent": {
+      "home": {
+        "title": "Fonc Agents",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Fonc Agent",
+        "createOrEditLabel": "Create or edit a Fonc Agent",
+        "notFound": "No Fonc Agents found"
+      },
+      "created": "A new Fonc Agent is created with identifier {{ param }}",
+      "updated": "A Fonc Agent is updated with identifier {{ param }}",
+      "deleted": "A Fonc Agent is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Fonc Agent {{ id }}?"
+      },
+      "detail": {
+        "title": "Fonc Agent"
+      },
+      "id": "ID",
+      "cdfonc": "Cdfonc",
+      "matric": "Matric",
+      "nom": "Nom",
+      "prenom": "Prenom",
+      "dateff": "Dateff",
+      "valide": "Valide"
+    }
+  }
+}

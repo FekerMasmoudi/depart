@@ -1,0 +1,49 @@
+{
+  "applications": "*",
+  "changelogDate": "20230804104138",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "station",
+  "fields": [
+    {
+      "fieldName": "decstat",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "dectyst",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "decrout",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "delstat",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "delstatfr",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lattitude",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "longitude",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "valide",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Station",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

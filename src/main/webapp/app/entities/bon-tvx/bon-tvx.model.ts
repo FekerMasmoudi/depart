@@ -1,0 +1,51 @@
+import dayjs from 'dayjs/esm';
+
+export interface IBonTvx {
+  id: string;
+  cdexerc?: number | null;
+  numbt?: number | null;
+  cdtier?: string | null;
+  cdmac?: string | null;
+  maccdmac?: string | null;
+  cdserv?: string | null;
+  decagen?: number | null;
+  dradecagen?: number | null;
+  cdorga?: string | null;
+  refbt?: string | null;
+  datbt?: dayjs.Dayjs | null;
+  datdt?: dayjs.Dayjs | null;
+  datft?: dayjs.Dayjs | null;
+  vld?: string | null;
+  typtvx?: string | null;
+  heurdb?: dayjs.Dayjs | null;
+  heurfi?: dayjs.Dayjs | null;
+  observ?: string | null;
+  datsrt?: dayjs.Dayjs | null;
+  heursr?: dayjs.Dayjs | null;
+  obstest?: string | null;
+  indexdep?: number | null;
+  indexarr?: number | null;
+  immatex?: string | null;
+  nomchauff?: string | null;
+  numpermis?: string | null;
+  etab?: string | null;
+  compteur?: number | null;
+  cptorg?: number | null;
+  cdtyptr?: string | null;
+  decstat?: string | null;
+  testeur?: number | null;
+  motifdep?: string | null;
+  cdtypmnt?: string | null;
+  datsorprev?: dayjs.Dayjs | null;
+  datmnqdu?: dayjs.Dayjs | null;
+  datmnqau?: dayjs.Dayjs | null;
+  datentant?: dayjs.Dayjs | null;
+  codstat?: string | null;
+  datvld?: dayjs.Dayjs | null;
+  observ1?: string | null;
+  testeur1?: number | null;
+  validag?: number | null;
+  datsais?: dayjs.Dayjs | null;
+}
+
+export type NewBonTvx = Omit<IBonTvx, 'id'> & { id: null };

@@ -1,0 +1,327 @@
+<div>
+  <h2 id="page-heading" data-cy="DepartHeading">
+    <span jhiTranslate="departdbApp.depart.home.title">Departs</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span jhiTranslate="departdbApp.depart.home.refreshListLabel">Refresh list</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-depart"
+        [routerLink]="['/depart/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="departdbApp.depart.home.createLabel"> Create a new Depart </span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <div class="alert alert-warning" id="no-result" *ngIf="departs?.length === 0">
+    <span jhiTranslate="departdbApp.depart.home.notFound">No Departs found</span>
+  </div>
+
+  <div class="table-responsive table-entities" id="entities" *ngIf="departs && departs.length > 0">
+    <table class="table table-striped" aria-describedby="page-heading">
+      <thead>
+        <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" (sortChange)="navigateToWithComponentValues()">
+          <th scope="col" jhiSortBy="id">
+            <div class="d-flex">
+              <span jhiTranslate="global.field.id">ID</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="deccent">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.depart.deccent">Deccent</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="decagenc">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.depart.decagenc">Decagenc</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="decserv">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.depart.decserv">Decserv</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="decoper">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.depart.decoper">Decoper</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="decsean">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.depart.decsean">Decsean</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="dedated">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.depart.dedated">Dedated</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="denumdp">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.depart.denumdp">Denumdp</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="matric">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.depart.matric">Matric</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="matric1">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.depart.matric1">Matric 1</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="cdmac">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.depart.cdmac">Cdmac</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="deheups">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.depart.deheups">Deheups</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="deheufs">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.depart.deheufs">Deheufs</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="denbrro">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.depart.denbrro">Denbrro</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="deheuaa">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.depart.deheuaa">Deheuaa</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="deheudr">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.depart.deheudr">Deheudr</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="deheupd">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.depart.deheupd">Deheupd</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="deampli">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.depart.deampli">Deampli</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="obsind">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.depart.obsind">Obsind</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="vldroul">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.depart.vldroul">Vldroul</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="deetat">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.depart.deetat">Deetat</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="deannul">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.depart.deannul">Deannul</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="decclot">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.depart.decclot">Decclot</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="execute">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.depart.execute">Execute</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="motifa">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.depart.motifa">Motifa</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="observ">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.depart.observ">Observ</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="recettes">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.depart.recettes">Recettes</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="nbrevoy">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.depart.nbrevoy">Nbrevoy</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="decmotifch">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.depart.decmotifch">Decmotifch</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="decmotifre">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.depart.decmotifre">Decmotifre</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="cd1">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.depart.cd1">Cd 1</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="cd2">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.depart.cd2">Cd 2</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="cd3">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.depart.cd3">Cd 3</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="decmotifcha">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.depart.decmotifcha">Decmotifcha</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="decmotifrea">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.depart.decmotifrea">Decmotifrea</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let depart of departs; trackBy: trackId" data-cy="entityTable">
+          <td>
+            <a [routerLink]="['/depart', depart.id, 'view']">{{ depart.id }}</a>
+          </td>
+          <td>{{ depart.deccent }}</td>
+          <td>{{ depart.decagenc }}</td>
+          <td>{{ depart.decserv }}</td>
+          <td>{{ depart.decoper }}</td>
+          <td>{{ depart.decsean }}</td>
+          <td>{{ depart.dedated | formatMediumDate }}</td>
+          <td>{{ depart.denumdp }}</td>
+          <td>{{ depart.matric }}</td>
+          <td>{{ depart.matric1 }}</td>
+          <td>{{ depart.cdmac }}</td>
+          <td>{{ depart.deheups | formatMediumDatetime }}</td>
+          <td>{{ depart.deheufs | formatMediumDatetime }}</td>
+          <td>{{ depart.denbrro }}</td>
+          <td>{{ depart.deheuaa | formatMediumDatetime }}</td>
+          <td>{{ depart.deheudr | formatMediumDatetime }}</td>
+          <td>{{ depart.deheupd | formatMediumDatetime }}</td>
+          <td>{{ depart.deampli | formatMediumDatetime }}</td>
+          <td>{{ depart.obsind }}</td>
+          <td>{{ depart.vldroul }}</td>
+          <td>{{ depart.deetat }}</td>
+          <td>{{ depart.deannul }}</td>
+          <td>{{ depart.decclot }}</td>
+          <td>{{ depart.execute }}</td>
+          <td>{{ depart.motifa }}</td>
+          <td>{{ depart.observ }}</td>
+          <td>{{ depart.recettes }}</td>
+          <td>{{ depart.nbrevoy }}</td>
+          <td>{{ depart.decmotifch }}</td>
+          <td>{{ depart.decmotifre }}</td>
+          <td>{{ depart.cd1 }}</td>
+          <td>{{ depart.cd2 }}</td>
+          <td>{{ depart.cd3 }}</td>
+          <td>{{ depart.decmotifcha }}</td>
+          <td>{{ depart.decmotifrea }}</td>
+          <td class="text-end">
+            <div class="btn-group">
+              <button type="submit" [routerLink]="['/depart', depart.id, 'view']" class="btn btn-info btn-sm" data-cy="entityDetailsButton">
+                <fa-icon icon="eye"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+              </button>
+
+              <button type="submit" [routerLink]="['/depart', depart.id, 'edit']" class="btn btn-primary btn-sm" data-cy="entityEditButton">
+                <fa-icon icon="pencil-alt"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+              </button>
+
+              <button type="submit" (click)="delete(depart)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                <fa-icon icon="times"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="departs && departs.length > 0">
+    <div class="d-flex justify-content-center">
+      <jhi-item-count [params]="{ page: page, totalItems: totalItems, itemsPerPage: itemsPerPage }"></jhi-item-count>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <ngb-pagination
+        [collectionSize]="totalItems"
+        [page]="page"
+        [pageSize]="itemsPerPage"
+        [maxSize]="5"
+        [rotate]="true"
+        [boundaryLinks]="true"
+        (pageChange)="navigateToPage($event)"
+      ></ngb-pagination>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="trafic">
+      <h2 data-cy="traficDetailsHeading"><span jhiTranslate="departdbApp.trafic.detail.title">Trafic</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ trafic.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.trafic.deccent">Deccent</span></dt>
+        <dd>
+          <span>{{ trafic.deccent }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.trafic.decagenc">Decagenc</span></dt>
+        <dd>
+          <span>{{ trafic.decagenc }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.trafic.dedated">Dedated</span></dt>
+        <dd>
+          <span>{{ trafic.dedated | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.trafic.ancien">Ancien</span></dt>
+        <dd>
+          <span>{{ trafic.ancien }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.trafic.vldtrafic">Vldtrafic</span></dt>
+        <dd>
+          <span>{{ trafic.vldtrafic }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.trafic.clotrafic">Clotrafic</span></dt>
+        <dd>
+          <span>{{ trafic.clotrafic }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/trafic', trafic.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

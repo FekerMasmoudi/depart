@@ -1,0 +1,202 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-ligne-heading" data-cy="LigneCreateUpdateHeading" jhiTranslate="departdbApp.ligne.home.createOrEditLabel">
+        Create or edit a Ligne
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row mb-3" *ngIf="editForm.controls.id.value !== null">
+          <label class="form-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="text" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.ligne.deccent" for="field_deccent">Deccent</label>
+          <input type="number" class="form-control" name="deccent" id="field_deccent" data-cy="deccent" formControlName="deccent" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.ligne.decagenc" for="field_decagenc">Decagenc</label>
+          <input type="number" class="form-control" name="decagenc" id="field_decagenc" data-cy="decagenc" formControlName="decagenc" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.ligne.denumli" for="field_denumli">Denumli</label>
+          <input type="text" class="form-control" name="denumli" id="field_denumli" data-cy="denumli" formControlName="denumli" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.ligne.dectyli" for="field_dectyli">Dectyli</label>
+          <input type="text" class="form-control" name="dectyli" id="field_dectyli" data-cy="dectyli" formControlName="dectyli" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.ligne.dectyta" for="field_dectyta">Dectyta</label>
+          <input type="text" class="form-control" name="dectyta" id="field_dectyta" data-cy="dectyta" formControlName="dectyta" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.ligne.denomli" for="field_denomli">Denomli</label>
+          <input type="text" class="form-control" name="denomli" id="field_denomli" data-cy="denomli" formControlName="denomli" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.ligne.dectyeq" for="field_dectyeq">Dectyeq</label>
+          <input type="text" class="form-control" name="dectyeq" id="field_dectyeq" data-cy="dectyeq" formControlName="dectyeq" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.ligne.denbrkm" for="field_denbrkm">Denbrkm</label>
+          <input type="number" class="form-control" name="denbrkm" id="field_denbrkm" data-cy="denbrkm" formControlName="denbrkm" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.ligne.detparc" for="field_detparc">Detparc</label>
+          <input type="number" class="form-control" name="detparc" id="field_detparc" data-cy="detparc" formControlName="detparc" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.ligne.dedural" for="field_dedural">Dedural</label>
+          <input type="number" class="form-control" name="dedural" id="field_dedural" data-cy="dedural" formControlName="dedural" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.ligne.dedurrt" for="field_dedurrt">Dedurrt</label>
+          <input type="number" class="form-control" name="dedurrt" id="field_dedurrt" data-cy="dedurrt" formControlName="dedurrt" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.ligne.detrjva" for="field_detrjva">Detrjva</label>
+          <input type="number" class="form-control" name="detrjva" id="field_detrjva" data-cy="detrjva" formControlName="detrjva" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.ligne.detrjvr" for="field_detrjvr">Detrjvr</label>
+          <input type="number" class="form-control" name="detrjvr" id="field_detrjvr" data-cy="detrjvr" formControlName="detrjvr" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.ligne.depiste" for="field_depiste">Depiste</label>
+          <input type="number" class="form-control" name="depiste" id="field_depiste" data-cy="depiste" formControlName="depiste" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.ligne.statlig" for="field_statlig">Statlig</label>
+          <input type="text" class="form-control" name="statlig" id="field_statlig" data-cy="statlig" formControlName="statlig" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.ligne.lig" for="field_lig">Lig</label>
+          <input type="text" class="form-control" name="lig" id="field_lig" data-cy="lig" formControlName="lig" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.ligne.lig1" for="field_lig1">Lig 1</label>
+          <input type="number" class="form-control" name="lig1" id="field_lig1" data-cy="lig1" formControlName="lig1" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.ligne.valide" for="field_valide">Valide</label>
+          <input type="text" class="form-control" name="valide" id="field_valide" data-cy="valide" formControlName="valide" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.ligne.denumli2" for="field_denumli2">Denumli 2</label>
+          <input type="text" class="form-control" name="denumli2" id="field_denumli2" data-cy="denumli2" formControlName="denumli2" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.ligne.kml" for="field_kml">Kml</label>
+          <div>
+            <div *ngIf="editForm.get('kml')!.value" class="form-text text-danger clearfix">
+              <a
+                class="pull-start"
+                (click)="openFile(editForm.get('kml')!.value!, editForm.get('kmlContentType')!.value!)"
+                jhiTranslate="entity.action.open"
+                >Open</a
+              ><br />
+              <span class="pull-start">{{ editForm.get('kmlContentType')!.value }}, {{ byteSize(editForm.get('kml')!.value!) }}</span>
+              <button
+                type="button"
+                (click)="editForm.patchValue({ kml: undefined, kmlContentType: undefined })"
+                class="btn btn-secondary btn-xs pull-end"
+              >
+                <fa-icon icon="times"></fa-icon>
+              </button>
+            </div>
+            <input
+              type="file"
+              id="file_kml"
+              data-cy="kml"
+              (change)="setFileData($event, 'kml', false)"
+              jhiTranslate="entity.action.addblob"
+            />
+          </div>
+          <input type="hidden" class="form-control" name="kml" id="field_kml" data-cy="kml" formControlName="kml" />
+          <input type="hidden" class="form-control" name="kmlContentType" id="field_kmlContentType" formControlName="kmlContentType" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.ligne.description" for="field_description">Description</label>
+          <input
+            type="text"
+            class="form-control"
+            name="description"
+            id="field_description"
+            data-cy="description"
+            formControlName="description"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.ligne.mimtype" for="field_mimtype">Mimtype</label>
+          <input type="text" class="form-control" name="mimtype" id="field_mimtype" data-cy="mimtype" formControlName="mimtype" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.ligne.filename" for="field_filename">Filename</label>
+          <input type="text" class="form-control" name="filename" id="field_filename" data-cy="filename" formControlName="filename" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.ligne.charset" for="field_charset">Charset</label>
+          <input type="text" class="form-control" name="charset" id="field_charset" data-cy="charset" formControlName="charset" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.ligne.lastupdate" for="field_lastupdate">Lastupdate</label>
+          <div class="d-flex">
+            <input
+              id="field_lastupdate"
+              data-cy="lastupdate"
+              type="datetime-local"
+              class="form-control"
+              name="lastupdate"
+              formControlName="lastupdate"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

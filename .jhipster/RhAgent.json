@@ -1,0 +1,40 @@
+{
+  "applications": "*",
+  "changelogDate": "20230811081259",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "rh_agent",
+  "fields": [
+    {
+      "fieldName": "matric",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "decjour",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dateffrh",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "decoper",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "deccent",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "decagenc",
+      "fieldType": "Integer"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "RhAgent",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

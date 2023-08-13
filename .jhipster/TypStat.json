@@ -1,0 +1,25 @@
+{
+  "applications": "*",
+  "changelogDate": "20230811081254",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "typ_stat",
+  "fields": [
+    {
+      "fieldName": "dectyst",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "deltyst",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "TypStat",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

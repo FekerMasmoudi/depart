@@ -1,0 +1,84 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="modif">
+      <h2 data-cy="modifDetailsHeading"><span jhiTranslate="departdbApp.modif.detail.title">Modif</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ modif.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.modif.deccent">Deccent</span></dt>
+        <dd>
+          <span>{{ modif.deccent }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.modif.decagenc">Decagenc</span></dt>
+        <dd>
+          <span>{{ modif.decagenc }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.modif.dedated">Dedated</span></dt>
+        <dd>
+          <span>{{ modif.dedated | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.modif.denumdp">Denumdp</span></dt>
+        <dd>
+          <span>{{ modif.denumdp }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.modif.decserv">Decserv</span></dt>
+        <dd>
+          <span>{{ modif.decserv }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.modif.decoper">Decoper</span></dt>
+        <dd>
+          <span>{{ modif.decoper }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.modif.decsean">Decsean</span></dt>
+        <dd>
+          <span>{{ modif.decsean }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.modif.numrotat">Numrotat</span></dt>
+        <dd>
+          <span>{{ modif.numrotat }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.modif.matric">Matric</span></dt>
+        <dd>
+          <span>{{ modif.matric }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.modif.cd1">Cd 1</span></dt>
+        <dd>
+          <span>{{ modif.cd1 }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.modif.decmotif">Decmotif</span></dt>
+        <dd>
+          <span>{{ modif.decmotif }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.modif.heur">Heur</span></dt>
+        <dd>
+          <span>{{ modif.heur | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.modif.chre">Chre</span></dt>
+        <dd>
+          <span>{{ modif.chre }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.modif.typ">Typ</span></dt>
+        <dd>
+          <span>{{ modif.typ }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/modif', modif.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

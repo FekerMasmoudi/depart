@@ -1,0 +1,67 @@
+{
+  "departdbApp": {
+    "bonTvx": {
+      "home": {
+        "title": "Bon Tvxes",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Bon Tvx",
+        "createOrEditLabel": "Create or edit a Bon Tvx",
+        "notFound": "No Bon Tvxes found"
+      },
+      "created": "A new Bon Tvx is created with identifier {{ param }}",
+      "updated": "A Bon Tvx is updated with identifier {{ param }}",
+      "deleted": "A Bon Tvx is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Bon Tvx {{ id }}?"
+      },
+      "detail": {
+        "title": "Bon Tvx"
+      },
+      "id": "ID",
+      "cdexerc": "Cdexerc",
+      "numbt": "Numbt",
+      "cdtier": "Cdtier",
+      "cdmac": "Cdmac",
+      "maccdmac": "Maccdmac",
+      "cdserv": "Cdserv",
+      "decagen": "Decagen",
+      "dradecagen": "Dradecagen",
+      "cdorga": "Cdorga",
+      "refbt": "Refbt",
+      "datbt": "Datbt",
+      "datdt": "Datdt",
+      "datft": "Datft",
+      "vld": "Vld",
+      "typtvx": "Typtvx",
+      "heurdb": "Heurdb",
+      "heurfi": "Heurfi",
+      "observ": "Observ",
+      "datsrt": "Datsrt",
+      "heursr": "Heursr",
+      "obstest": "Obstest",
+      "indexdep": "Indexdep",
+      "indexarr": "Indexarr",
+      "immatex": "Immatex",
+      "nomchauff": "Nomchauff",
+      "numpermis": "Numpermis",
+      "etab": "Etab",
+      "compteur": "Compteur",
+      "cptorg": "Cptorg",
+      "cdtyptr": "Cdtyptr",
+      "decstat": "Decstat",
+      "testeur": "Testeur",
+      "motifdep": "Motifdep",
+      "cdtypmnt": "Cdtypmnt",
+      "datsorprev": "Datsorprev",
+      "datmnqdu": "Datmnqdu",
+      "datmnqau": "Datmnqau",
+      "datentant": "Datentant",
+      "codstat": "Codstat",
+      "datvld": "Datvld",
+      "observ1": "Observ 1",
+      "testeur1": "Testeur 1",
+      "validag": "Validag",
+      "datsais": "Datsais"
+    }
+  }
+}

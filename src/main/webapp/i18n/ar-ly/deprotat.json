@@ -1,0 +1,59 @@
+{
+  "departdbApp": {
+    "deprotat": {
+      "home": {
+        "title": "Deprotats",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Deprotat",
+        "createOrEditLabel": "Create or edit a Deprotat",
+        "notFound": "No Deprotats found"
+      },
+      "created": "A new Deprotat is created with identifier {{ param }}",
+      "updated": "A Deprotat is updated with identifier {{ param }}",
+      "deleted": "A Deprotat is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Deprotat {{ id }}?"
+      },
+      "detail": {
+        "title": "Deprotat"
+      },
+      "id": "ID",
+      "deccent": "Deccent",
+      "decagenc": "Decagenc",
+      "dedated": "Dedated",
+      "denumdp": "Denumdp",
+      "decserv": "Decserv",
+      "decoper": "Decoper",
+      "decsean": "Decsean",
+      "numrotat": "Numrotat",
+      "ligdeccent": "Ligdeccent",
+      "ligdecagenc": "Ligdecagenc",
+      "denumli": "Denumli",
+      "decstat": "Decstat",
+      "decsta1": "Decsta 1",
+      "matric": "Matric",
+      "matric1": "Matric 1",
+      "cdmac": "Cdmac",
+      "hdeparte": "Hdeparte",
+      "hretoure": "Hretoure",
+      "harralle": "Harralle",
+      "harrrete": "Harrrete",
+      "rannul": "Rannul",
+      "km": "Km",
+      "motifa": "Motifa",
+      "observ": "Observ",
+      "recettesvoy": "Recettesvoy",
+      "nbrevoy": "Nbrevoy",
+      "paye": "Paye",
+      "cd1": "Cd 1",
+      "cd2": "Cd 2",
+      "cd3": "Cd 3",
+      "decmotifcha": "Decmotifcha",
+      "decmotifrea": "Decmotifrea",
+      "idapex": "Idapex",
+      "plusmoins": "Plusmoins",
+      "a": "A",
+      "r": "R"
+    }
+  }
+}

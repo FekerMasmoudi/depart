@@ -1,0 +1,392 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-deprotat-heading" data-cy="DeprotatCreateUpdateHeading" jhiTranslate="departdbApp.deprotat.home.createOrEditLabel">
+        Create or edit a Deprotat
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row mb-3" *ngIf="editForm.controls.id.value !== null">
+          <label class="form-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="text" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.deprotat.deccent" for="field_deccent">Deccent</label>
+          <input type="number" class="form-control" name="deccent" id="field_deccent" data-cy="deccent" formControlName="deccent" />
+          <div *ngIf="editForm.get('deccent')!.invalid && (editForm.get('deccent')!.dirty || editForm.get('deccent')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('deccent')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+            <small
+              class="form-text text-danger"
+              [hidden]="!editForm.get('deccent')?.errors?.number"
+              jhiTranslate="entity.validation.number"
+            >
+              This field should be a number.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.deprotat.decagenc" for="field_decagenc">Decagenc</label>
+          <input type="number" class="form-control" name="decagenc" id="field_decagenc" data-cy="decagenc" formControlName="decagenc" />
+          <div *ngIf="editForm.get('decagenc')!.invalid && (editForm.get('decagenc')!.dirty || editForm.get('decagenc')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('decagenc')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+            <small
+              class="form-text text-danger"
+              [hidden]="!editForm.get('decagenc')?.errors?.number"
+              jhiTranslate="entity.validation.number"
+            >
+              This field should be a number.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.deprotat.dedated" for="field_dedated">Dedated</label>
+          <div class="input-group">
+            <input
+              id="field_dedated"
+              data-cy="dedated"
+              type="text"
+              class="form-control"
+              name="dedated"
+              ngbDatepicker
+              #dedatedDp="ngbDatepicker"
+              formControlName="dedated"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dedatedDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+          </div>
+          <div *ngIf="editForm.get('dedated')!.invalid && (editForm.get('dedated')!.dirty || editForm.get('dedated')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('dedated')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.deprotat.denumdp" for="field_denumdp">Denumdp</label>
+          <input type="number" class="form-control" name="denumdp" id="field_denumdp" data-cy="denumdp" formControlName="denumdp" />
+          <div *ngIf="editForm.get('denumdp')!.invalid && (editForm.get('denumdp')!.dirty || editForm.get('denumdp')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('denumdp')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+            <small
+              class="form-text text-danger"
+              [hidden]="!editForm.get('denumdp')?.errors?.number"
+              jhiTranslate="entity.validation.number"
+            >
+              This field should be a number.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.deprotat.decserv" for="field_decserv">Decserv</label>
+          <input type="number" class="form-control" name="decserv" id="field_decserv" data-cy="decserv" formControlName="decserv" />
+          <div *ngIf="editForm.get('decserv')!.invalid && (editForm.get('decserv')!.dirty || editForm.get('decserv')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('decserv')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+            <small
+              class="form-text text-danger"
+              [hidden]="!editForm.get('decserv')?.errors?.number"
+              jhiTranslate="entity.validation.number"
+            >
+              This field should be a number.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.deprotat.decoper" for="field_decoper">Decoper</label>
+          <input type="text" class="form-control" name="decoper" id="field_decoper" data-cy="decoper" formControlName="decoper" />
+          <div *ngIf="editForm.get('decoper')!.invalid && (editForm.get('decoper')!.dirty || editForm.get('decoper')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('decoper')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.deprotat.decsean" for="field_decsean">Decsean</label>
+          <input type="text" class="form-control" name="decsean" id="field_decsean" data-cy="decsean" formControlName="decsean" />
+          <div *ngIf="editForm.get('decsean')!.invalid && (editForm.get('decsean')!.dirty || editForm.get('decsean')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('decsean')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.deprotat.numrotat" for="field_numrotat">Numrotat</label>
+          <input type="number" class="form-control" name="numrotat" id="field_numrotat" data-cy="numrotat" formControlName="numrotat" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.deprotat.ligdeccent" for="field_ligdeccent">Ligdeccent</label>
+          <input
+            type="number"
+            class="form-control"
+            name="ligdeccent"
+            id="field_ligdeccent"
+            data-cy="ligdeccent"
+            formControlName="ligdeccent"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.deprotat.ligdecagenc" for="field_ligdecagenc">Ligdecagenc</label>
+          <input
+            type="number"
+            class="form-control"
+            name="ligdecagenc"
+            id="field_ligdecagenc"
+            data-cy="ligdecagenc"
+            formControlName="ligdecagenc"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.deprotat.denumli" for="field_denumli">Denumli</label>
+          <input type="text" class="form-control" name="denumli" id="field_denumli" data-cy="denumli" formControlName="denumli" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.deprotat.decstat" for="field_decstat">Decstat</label>
+          <input type="text" class="form-control" name="decstat" id="field_decstat" data-cy="decstat" formControlName="decstat" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.deprotat.decsta1" for="field_decsta1">Decsta 1</label>
+          <input type="text" class="form-control" name="decsta1" id="field_decsta1" data-cy="decsta1" formControlName="decsta1" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.deprotat.matric" for="field_matric">Matric</label>
+          <input type="number" class="form-control" name="matric" id="field_matric" data-cy="matric" formControlName="matric" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.deprotat.matric1" for="field_matric1">Matric 1</label>
+          <input type="number" class="form-control" name="matric1" id="field_matric1" data-cy="matric1" formControlName="matric1" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.deprotat.cdmac" for="field_cdmac">Cdmac</label>
+          <input type="text" class="form-control" name="cdmac" id="field_cdmac" data-cy="cdmac" formControlName="cdmac" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.deprotat.hdeparte" for="field_hdeparte">Hdeparte</label>
+          <div class="d-flex">
+            <input
+              id="field_hdeparte"
+              data-cy="hdeparte"
+              type="datetime-local"
+              class="form-control"
+              name="hdeparte"
+              formControlName="hdeparte"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.deprotat.hretoure" for="field_hretoure">Hretoure</label>
+          <div class="d-flex">
+            <input
+              id="field_hretoure"
+              data-cy="hretoure"
+              type="datetime-local"
+              class="form-control"
+              name="hretoure"
+              formControlName="hretoure"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.deprotat.harralle" for="field_harralle">Harralle</label>
+          <div class="d-flex">
+            <input
+              id="field_harralle"
+              data-cy="harralle"
+              type="datetime-local"
+              class="form-control"
+              name="harralle"
+              formControlName="harralle"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.deprotat.harrrete" for="field_harrrete">Harrrete</label>
+          <div class="d-flex">
+            <input
+              id="field_harrrete"
+              data-cy="harrrete"
+              type="datetime-local"
+              class="form-control"
+              name="harrrete"
+              formControlName="harrrete"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.deprotat.rannul" for="field_rannul">Rannul</label>
+          <input type="text" class="form-control" name="rannul" id="field_rannul" data-cy="rannul" formControlName="rannul" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.deprotat.km" for="field_km">Km</label>
+          <input type="number" class="form-control" name="km" id="field_km" data-cy="km" formControlName="km" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.deprotat.motifa" for="field_motifa">Motifa</label>
+          <input type="number" class="form-control" name="motifa" id="field_motifa" data-cy="motifa" formControlName="motifa" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.deprotat.observ" for="field_observ">Observ</label>
+          <input type="text" class="form-control" name="observ" id="field_observ" data-cy="observ" formControlName="observ" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.deprotat.recettesvoy" for="field_recettesvoy">Recettesvoy</label>
+          <input
+            type="number"
+            class="form-control"
+            name="recettesvoy"
+            id="field_recettesvoy"
+            data-cy="recettesvoy"
+            formControlName="recettesvoy"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.deprotat.nbrevoy" for="field_nbrevoy">Nbrevoy</label>
+          <input type="number" class="form-control" name="nbrevoy" id="field_nbrevoy" data-cy="nbrevoy" formControlName="nbrevoy" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.deprotat.paye" for="field_paye">Paye</label>
+          <input type="number" class="form-control" name="paye" id="field_paye" data-cy="paye" formControlName="paye" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.deprotat.cd1" for="field_cd1">Cd 1</label>
+          <input type="number" class="form-control" name="cd1" id="field_cd1" data-cy="cd1" formControlName="cd1" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.deprotat.cd2" for="field_cd2">Cd 2</label>
+          <input type="number" class="form-control" name="cd2" id="field_cd2" data-cy="cd2" formControlName="cd2" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.deprotat.cd3" for="field_cd3">Cd 3</label>
+          <input type="number" class="form-control" name="cd3" id="field_cd3" data-cy="cd3" formControlName="cd3" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.deprotat.decmotifcha" for="field_decmotifcha">Decmotifcha</label>
+          <input
+            type="number"
+            class="form-control"
+            name="decmotifcha"
+            id="field_decmotifcha"
+            data-cy="decmotifcha"
+            formControlName="decmotifcha"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.deprotat.decmotifrea" for="field_decmotifrea">Decmotifrea</label>
+          <input
+            type="number"
+            class="form-control"
+            name="decmotifrea"
+            id="field_decmotifrea"
+            data-cy="decmotifrea"
+            formControlName="decmotifrea"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.deprotat.idapex" for="field_idapex">Idapex</label>
+          <input type="number" class="form-control" name="idapex" id="field_idapex" data-cy="idapex" formControlName="idapex" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.deprotat.plusmoins" for="field_plusmoins">Plusmoins</label>
+          <input type="text" class="form-control" name="plusmoins" id="field_plusmoins" data-cy="plusmoins" formControlName="plusmoins" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.deprotat.a" for="field_a">A</label>
+          <input type="text" class="form-control" name="a" id="field_a" data-cy="a" formControlName="a" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.deprotat.r" for="field_r">R</label>
+          <input type="text" class="form-control" name="r" id="field_r" data-cy="r" formControlName="r" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

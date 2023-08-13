@@ -1,0 +1,82 @@
+{
+  "applications": "*",
+  "changelogDate": "20230811081303",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "rot_rserv",
+  "fields": [
+    {
+      "fieldName": "deccent",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "decagenc",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "dedated",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "matric",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "heurdeb",
+      "fieldType": "ZonedDateTime",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "heurfin",
+      "fieldType": "ZonedDateTime",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "statut",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lieedeb",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "lieefin",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "program",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "cd1",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "cd2",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "cd3",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "id",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "annul",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "RotRserv",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

@@ -1,0 +1,32 @@
+{
+  "applications": "*",
+  "changelogDate": "20230811081253",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "cent_vehic",
+  "fields": [
+    {
+      "fieldName": "cdmac",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dateff",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "deccent",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "decagenc",
+      "fieldType": "Integer"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "CentVehic",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

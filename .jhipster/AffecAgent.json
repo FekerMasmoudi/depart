@@ -1,0 +1,60 @@
+{
+  "applications": "*",
+  "changelogDate": "20230811081257",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "affec_agent",
+  "fields": [
+    {
+      "fieldName": "deccent",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "decagenc",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "decserv",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "decoper",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "decsean",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "cdsocie",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "decexer",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "cdmois",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "matric",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "matric2",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "cdmac",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "AffecAgent",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

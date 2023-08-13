@@ -1,0 +1,34 @@
+{
+  "applications": "*",
+  "changelogDate": "20230804112656",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "agence",
+  "fields": [
+    {
+      "fieldName": "deccent",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "decagenc",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "delagenc",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "defaultagenc",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Agence",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

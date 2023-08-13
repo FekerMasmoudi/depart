@@ -1,0 +1,44 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="drtypab">
+      <h2 data-cy="drtypabDetailsHeading"><span jhiTranslate="departdbApp.drtypab.detail.title">Drtypab</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ drtypab.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.drtypab.cdtypab">Cdtypab</span></dt>
+        <dd>
+          <span>{{ drtypab.cdtypab }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.drtypab.lbtypab">Lbtypab</span></dt>
+        <dd>
+          <span>{{ drtypab.lbtypab }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.drtypab.dabsjt">Dabsjt</span></dt>
+        <dd>
+          <span>{{ drtypab.dabsjt }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.drtypab.dabsjp">Dabsjp</span></dt>
+        <dd>
+          <span>{{ drtypab.dabsjp }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/drtypab', drtypab.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

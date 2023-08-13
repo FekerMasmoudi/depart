@@ -1,0 +1,29 @@
+{
+  "departdbApp": {
+    "trafic": {
+      "home": {
+        "title": "Trafics",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Trafic",
+        "createOrEditLabel": "Create or edit a Trafic",
+        "notFound": "No Trafics found"
+      },
+      "created": "A new Trafic is created with identifier {{ param }}",
+      "updated": "A Trafic is updated with identifier {{ param }}",
+      "deleted": "A Trafic is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Trafic {{ id }}?"
+      },
+      "detail": {
+        "title": "Trafic"
+      },
+      "id": "ID",
+      "deccent": "Deccent",
+      "decagenc": "Decagenc",
+      "dedated": "Dedated",
+      "ancien": "Ancien",
+      "vldtrafic": "Vldtrafic",
+      "clotrafic": "Clotrafic"
+    }
+  }
+}

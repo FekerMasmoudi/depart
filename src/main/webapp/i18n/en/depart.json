@@ -1,0 +1,57 @@
+{
+  "departdbApp": {
+    "depart": {
+      "home": {
+        "title": "Departs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Depart",
+        "createOrEditLabel": "Create or edit a Depart",
+        "notFound": "No Departs found"
+      },
+      "created": "A new Depart is created with identifier {{ param }}",
+      "updated": "A Depart is updated with identifier {{ param }}",
+      "deleted": "A Depart is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Depart {{ id }}?"
+      },
+      "detail": {
+        "title": "Depart"
+      },
+      "id": "ID",
+      "deccent": "Deccent",
+      "decagenc": "Decagenc",
+      "decserv": "Decserv",
+      "decoper": "Decoper",
+      "decsean": "Decsean",
+      "dedated": "Dedated",
+      "denumdp": "Denumdp",
+      "matric": "Matric",
+      "matric1": "Matric 1",
+      "cdmac": "Cdmac",
+      "deheups": "Deheups",
+      "deheufs": "Deheufs",
+      "denbrro": "Denbrro",
+      "deheuaa": "Deheuaa",
+      "deheudr": "Deheudr",
+      "deheupd": "Deheupd",
+      "deampli": "Deampli",
+      "obsind": "Obsind",
+      "vldroul": "Vldroul",
+      "deetat": "Deetat",
+      "deannul": "Deannul",
+      "decclot": "Decclot",
+      "execute": "Execute",
+      "motifa": "Motifa",
+      "observ": "Observ",
+      "recettes": "Recettes",
+      "nbrevoy": "Nbrevoy",
+      "decmotifch": "Decmotifch",
+      "decmotifre": "Decmotifre",
+      "cd1": "Cd 1",
+      "cd2": "Cd 2",
+      "cd3": "Cd 3",
+      "decmotifcha": "Decmotifcha",
+      "decmotifrea": "Decmotifrea"
+    }
+  }
+}

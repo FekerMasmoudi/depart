@@ -1,0 +1,44 @@
+{
+  "applications": "*",
+  "changelogDate": "20230811081258",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "service_rot",
+  "fields": [
+    {
+      "fieldName": "deccent",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "decagenc",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "decserv",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "codgrp",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "delserv",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ordserv",
+      "fieldType": "Integer"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "ServiceRot",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

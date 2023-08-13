@@ -1,0 +1,52 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="foncAgent">
+      <h2 data-cy="foncAgentDetailsHeading"><span jhiTranslate="departdbApp.foncAgent.detail.title">Fonc Agent</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ foncAgent.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.foncAgent.cdfonc">Cdfonc</span></dt>
+        <dd>
+          <span>{{ foncAgent.cdfonc }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.foncAgent.matric">Matric</span></dt>
+        <dd>
+          <span>{{ foncAgent.matric }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.foncAgent.nom">Nom</span></dt>
+        <dd>
+          <span>{{ foncAgent.nom }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.foncAgent.prenom">Prenom</span></dt>
+        <dd>
+          <span>{{ foncAgent.prenom }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.foncAgent.dateff">Dateff</span></dt>
+        <dd>
+          <span>{{ foncAgent.dateff | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.foncAgent.valide">Valide</span></dt>
+        <dd>
+          <span>{{ foncAgent.valide }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/fonc-agent', foncAgent.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

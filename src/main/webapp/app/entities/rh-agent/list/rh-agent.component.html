@@ -1,0 +1,141 @@
+<div>
+  <h2 id="page-heading" data-cy="RhAgentHeading">
+    <span jhiTranslate="departdbApp.rhAgent.home.title">Rh Agents</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span jhiTranslate="departdbApp.rhAgent.home.refreshListLabel">Refresh list</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-rh-agent"
+        [routerLink]="['/rh-agent/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="departdbApp.rhAgent.home.createLabel"> Create a new Rh Agent </span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <div class="alert alert-warning" id="no-result" *ngIf="rhAgents?.length === 0">
+    <span jhiTranslate="departdbApp.rhAgent.home.notFound">No Rh Agents found</span>
+  </div>
+
+  <div class="table-responsive table-entities" id="entities" *ngIf="rhAgents && rhAgents.length > 0">
+    <table class="table table-striped" aria-describedby="page-heading">
+      <thead>
+        <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" (sortChange)="navigateToWithComponentValues()">
+          <th scope="col" jhiSortBy="id">
+            <div class="d-flex">
+              <span jhiTranslate="global.field.id">ID</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="matric">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.rhAgent.matric">Matric</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="decjour">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.rhAgent.decjour">Decjour</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="dateffrh">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.rhAgent.dateffrh">Dateffrh</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="decoper">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.rhAgent.decoper">Decoper</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="deccent">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.rhAgent.deccent">Deccent</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="decagenc">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.rhAgent.decagenc">Decagenc</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let rhAgent of rhAgents; trackBy: trackId" data-cy="entityTable">
+          <td>
+            <a [routerLink]="['/rh-agent', rhAgent.id, 'view']">{{ rhAgent.id }}</a>
+          </td>
+          <td>{{ rhAgent.matric }}</td>
+          <td>{{ rhAgent.decjour }}</td>
+          <td>{{ rhAgent.dateffrh | formatMediumDate }}</td>
+          <td>{{ rhAgent.decoper }}</td>
+          <td>{{ rhAgent.deccent }}</td>
+          <td>{{ rhAgent.decagenc }}</td>
+          <td class="text-end">
+            <div class="btn-group">
+              <button
+                type="submit"
+                [routerLink]="['/rh-agent', rhAgent.id, 'view']"
+                class="btn btn-info btn-sm"
+                data-cy="entityDetailsButton"
+              >
+                <fa-icon icon="eye"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+              </button>
+
+              <button
+                type="submit"
+                [routerLink]="['/rh-agent', rhAgent.id, 'edit']"
+                class="btn btn-primary btn-sm"
+                data-cy="entityEditButton"
+              >
+                <fa-icon icon="pencil-alt"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+              </button>
+
+              <button type="submit" (click)="delete(rhAgent)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                <fa-icon icon="times"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="rhAgents && rhAgents.length > 0">
+    <div class="d-flex justify-content-center">
+      <jhi-item-count [params]="{ page: page, totalItems: totalItems, itemsPerPage: itemsPerPage }"></jhi-item-count>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <ngb-pagination
+        [collectionSize]="totalItems"
+        [page]="page"
+        [pageSize]="itemsPerPage"
+        [maxSize]="5"
+        [rotate]="true"
+        [boundaryLinks]="true"
+        (pageChange)="navigateToPage($event)"
+      ></ngb-pagination>
+    </div>
+  </div>
+</div>

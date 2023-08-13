@@ -1,0 +1,417 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-bon-tvx-heading" data-cy="BonTvxCreateUpdateHeading" jhiTranslate="departdbApp.bonTvx.home.createOrEditLabel">
+        Create or edit a Bon Tvx
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row mb-3" *ngIf="editForm.controls.id.value !== null">
+          <label class="form-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="text" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.cdexerc" for="field_cdexerc">Cdexerc</label>
+          <input type="number" class="form-control" name="cdexerc" id="field_cdexerc" data-cy="cdexerc" formControlName="cdexerc" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.numbt" for="field_numbt">Numbt</label>
+          <input type="number" class="form-control" name="numbt" id="field_numbt" data-cy="numbt" formControlName="numbt" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.cdtier" for="field_cdtier">Cdtier</label>
+          <input type="text" class="form-control" name="cdtier" id="field_cdtier" data-cy="cdtier" formControlName="cdtier" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.cdmac" for="field_cdmac">Cdmac</label>
+          <input type="text" class="form-control" name="cdmac" id="field_cdmac" data-cy="cdmac" formControlName="cdmac" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.maccdmac" for="field_maccdmac">Maccdmac</label>
+          <input type="text" class="form-control" name="maccdmac" id="field_maccdmac" data-cy="maccdmac" formControlName="maccdmac" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.cdserv" for="field_cdserv">Cdserv</label>
+          <input type="text" class="form-control" name="cdserv" id="field_cdserv" data-cy="cdserv" formControlName="cdserv" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.decagen" for="field_decagen">Decagen</label>
+          <input type="number" class="form-control" name="decagen" id="field_decagen" data-cy="decagen" formControlName="decagen" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.dradecagen" for="field_dradecagen">Dradecagen</label>
+          <input
+            type="number"
+            class="form-control"
+            name="dradecagen"
+            id="field_dradecagen"
+            data-cy="dradecagen"
+            formControlName="dradecagen"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.cdorga" for="field_cdorga">Cdorga</label>
+          <input type="text" class="form-control" name="cdorga" id="field_cdorga" data-cy="cdorga" formControlName="cdorga" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.refbt" for="field_refbt">Refbt</label>
+          <input type="text" class="form-control" name="refbt" id="field_refbt" data-cy="refbt" formControlName="refbt" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.datbt" for="field_datbt">Datbt</label>
+          <div class="input-group">
+            <input
+              id="field_datbt"
+              data-cy="datbt"
+              type="text"
+              class="form-control"
+              name="datbt"
+              ngbDatepicker
+              #datbtDp="ngbDatepicker"
+              formControlName="datbt"
+            />
+            <button type="button" class="btn btn-secondary" (click)="datbtDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.datdt" for="field_datdt">Datdt</label>
+          <div class="input-group">
+            <input
+              id="field_datdt"
+              data-cy="datdt"
+              type="text"
+              class="form-control"
+              name="datdt"
+              ngbDatepicker
+              #datdtDp="ngbDatepicker"
+              formControlName="datdt"
+            />
+            <button type="button" class="btn btn-secondary" (click)="datdtDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.datft" for="field_datft">Datft</label>
+          <div class="input-group">
+            <input
+              id="field_datft"
+              data-cy="datft"
+              type="text"
+              class="form-control"
+              name="datft"
+              ngbDatepicker
+              #datftDp="ngbDatepicker"
+              formControlName="datft"
+            />
+            <button type="button" class="btn btn-secondary" (click)="datftDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.vld" for="field_vld">Vld</label>
+          <input type="text" class="form-control" name="vld" id="field_vld" data-cy="vld" formControlName="vld" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.typtvx" for="field_typtvx">Typtvx</label>
+          <input type="text" class="form-control" name="typtvx" id="field_typtvx" data-cy="typtvx" formControlName="typtvx" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.heurdb" for="field_heurdb">Heurdb</label>
+          <div class="input-group">
+            <input
+              id="field_heurdb"
+              data-cy="heurdb"
+              type="text"
+              class="form-control"
+              name="heurdb"
+              ngbDatepicker
+              #heurdbDp="ngbDatepicker"
+              formControlName="heurdb"
+            />
+            <button type="button" class="btn btn-secondary" (click)="heurdbDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.heurfi" for="field_heurfi">Heurfi</label>
+          <div class="input-group">
+            <input
+              id="field_heurfi"
+              data-cy="heurfi"
+              type="text"
+              class="form-control"
+              name="heurfi"
+              ngbDatepicker
+              #heurfiDp="ngbDatepicker"
+              formControlName="heurfi"
+            />
+            <button type="button" class="btn btn-secondary" (click)="heurfiDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.observ" for="field_observ">Observ</label>
+          <input type="text" class="form-control" name="observ" id="field_observ" data-cy="observ" formControlName="observ" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.datsrt" for="field_datsrt">Datsrt</label>
+          <div class="input-group">
+            <input
+              id="field_datsrt"
+              data-cy="datsrt"
+              type="text"
+              class="form-control"
+              name="datsrt"
+              ngbDatepicker
+              #datsrtDp="ngbDatepicker"
+              formControlName="datsrt"
+            />
+            <button type="button" class="btn btn-secondary" (click)="datsrtDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.heursr" for="field_heursr">Heursr</label>
+          <div class="input-group">
+            <input
+              id="field_heursr"
+              data-cy="heursr"
+              type="text"
+              class="form-control"
+              name="heursr"
+              ngbDatepicker
+              #heursrDp="ngbDatepicker"
+              formControlName="heursr"
+            />
+            <button type="button" class="btn btn-secondary" (click)="heursrDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.obstest" for="field_obstest">Obstest</label>
+          <input type="text" class="form-control" name="obstest" id="field_obstest" data-cy="obstest" formControlName="obstest" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.indexdep" for="field_indexdep">Indexdep</label>
+          <input type="number" class="form-control" name="indexdep" id="field_indexdep" data-cy="indexdep" formControlName="indexdep" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.indexarr" for="field_indexarr">Indexarr</label>
+          <input type="number" class="form-control" name="indexarr" id="field_indexarr" data-cy="indexarr" formControlName="indexarr" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.immatex" for="field_immatex">Immatex</label>
+          <input type="text" class="form-control" name="immatex" id="field_immatex" data-cy="immatex" formControlName="immatex" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.nomchauff" for="field_nomchauff">Nomchauff</label>
+          <input type="text" class="form-control" name="nomchauff" id="field_nomchauff" data-cy="nomchauff" formControlName="nomchauff" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.numpermis" for="field_numpermis">Numpermis</label>
+          <input type="text" class="form-control" name="numpermis" id="field_numpermis" data-cy="numpermis" formControlName="numpermis" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.etab" for="field_etab">Etab</label>
+          <input type="text" class="form-control" name="etab" id="field_etab" data-cy="etab" formControlName="etab" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.compteur" for="field_compteur">Compteur</label>
+          <input type="number" class="form-control" name="compteur" id="field_compteur" data-cy="compteur" formControlName="compteur" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.cptorg" for="field_cptorg">Cptorg</label>
+          <input type="number" class="form-control" name="cptorg" id="field_cptorg" data-cy="cptorg" formControlName="cptorg" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.cdtyptr" for="field_cdtyptr">Cdtyptr</label>
+          <input type="text" class="form-control" name="cdtyptr" id="field_cdtyptr" data-cy="cdtyptr" formControlName="cdtyptr" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.decstat" for="field_decstat">Decstat</label>
+          <input type="text" class="form-control" name="decstat" id="field_decstat" data-cy="decstat" formControlName="decstat" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.testeur" for="field_testeur">Testeur</label>
+          <input type="number" class="form-control" name="testeur" id="field_testeur" data-cy="testeur" formControlName="testeur" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.motifdep" for="field_motifdep">Motifdep</label>
+          <input type="text" class="form-control" name="motifdep" id="field_motifdep" data-cy="motifdep" formControlName="motifdep" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.cdtypmnt" for="field_cdtypmnt">Cdtypmnt</label>
+          <input type="text" class="form-control" name="cdtypmnt" id="field_cdtypmnt" data-cy="cdtypmnt" formControlName="cdtypmnt" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.datsorprev" for="field_datsorprev">Datsorprev</label>
+          <div class="input-group">
+            <input
+              id="field_datsorprev"
+              data-cy="datsorprev"
+              type="text"
+              class="form-control"
+              name="datsorprev"
+              ngbDatepicker
+              #datsorprevDp="ngbDatepicker"
+              formControlName="datsorprev"
+            />
+            <button type="button" class="btn btn-secondary" (click)="datsorprevDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.datmnqdu" for="field_datmnqdu">Datmnqdu</label>
+          <div class="input-group">
+            <input
+              id="field_datmnqdu"
+              data-cy="datmnqdu"
+              type="text"
+              class="form-control"
+              name="datmnqdu"
+              ngbDatepicker
+              #datmnqduDp="ngbDatepicker"
+              formControlName="datmnqdu"
+            />
+            <button type="button" class="btn btn-secondary" (click)="datmnqduDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.datmnqau" for="field_datmnqau">Datmnqau</label>
+          <div class="input-group">
+            <input
+              id="field_datmnqau"
+              data-cy="datmnqau"
+              type="text"
+              class="form-control"
+              name="datmnqau"
+              ngbDatepicker
+              #datmnqauDp="ngbDatepicker"
+              formControlName="datmnqau"
+            />
+            <button type="button" class="btn btn-secondary" (click)="datmnqauDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.datentant" for="field_datentant">Datentant</label>
+          <div class="input-group">
+            <input
+              id="field_datentant"
+              data-cy="datentant"
+              type="text"
+              class="form-control"
+              name="datentant"
+              ngbDatepicker
+              #datentantDp="ngbDatepicker"
+              formControlName="datentant"
+            />
+            <button type="button" class="btn btn-secondary" (click)="datentantDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.codstat" for="field_codstat">Codstat</label>
+          <input type="text" class="form-control" name="codstat" id="field_codstat" data-cy="codstat" formControlName="codstat" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.datvld" for="field_datvld">Datvld</label>
+          <div class="input-group">
+            <input
+              id="field_datvld"
+              data-cy="datvld"
+              type="text"
+              class="form-control"
+              name="datvld"
+              ngbDatepicker
+              #datvldDp="ngbDatepicker"
+              formControlName="datvld"
+            />
+            <button type="button" class="btn btn-secondary" (click)="datvldDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.observ1" for="field_observ1">Observ 1</label>
+          <input type="text" class="form-control" name="observ1" id="field_observ1" data-cy="observ1" formControlName="observ1" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.testeur1" for="field_testeur1">Testeur 1</label>
+          <input type="number" class="form-control" name="testeur1" id="field_testeur1" data-cy="testeur1" formControlName="testeur1" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.validag" for="field_validag">Validag</label>
+          <input type="number" class="form-control" name="validag" id="field_validag" data-cy="validag" formControlName="validag" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bonTvx.datsais" for="field_datsais">Datsais</label>
+          <div class="input-group">
+            <input
+              id="field_datsais"
+              data-cy="datsais"
+              type="text"
+              class="form-control"
+              name="datsais"
+              ngbDatepicker
+              #datsaisDp="ngbDatepicker"
+              formControlName="datsais"
+            />
+            <button type="button" class="btn btn-secondary" (click)="datsaisDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

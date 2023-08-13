@@ -1,0 +1,89 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-affec-agent-heading" data-cy="AffecAgentCreateUpdateHeading" jhiTranslate="departdbApp.affecAgent.home.createOrEditLabel">
+        Create or edit a Affec Agent
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row mb-3" *ngIf="editForm.controls.id.value !== null">
+          <label class="form-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="text" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.affecAgent.deccent" for="field_deccent">Deccent</label>
+          <input type="number" class="form-control" name="deccent" id="field_deccent" data-cy="deccent" formControlName="deccent" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.affecAgent.decagenc" for="field_decagenc">Decagenc</label>
+          <input type="number" class="form-control" name="decagenc" id="field_decagenc" data-cy="decagenc" formControlName="decagenc" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.affecAgent.decserv" for="field_decserv">Decserv</label>
+          <input type="number" class="form-control" name="decserv" id="field_decserv" data-cy="decserv" formControlName="decserv" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.affecAgent.decoper" for="field_decoper">Decoper</label>
+          <input type="text" class="form-control" name="decoper" id="field_decoper" data-cy="decoper" formControlName="decoper" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.affecAgent.decsean" for="field_decsean">Decsean</label>
+          <input type="text" class="form-control" name="decsean" id="field_decsean" data-cy="decsean" formControlName="decsean" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.affecAgent.cdsocie" for="field_cdsocie">Cdsocie</label>
+          <input type="text" class="form-control" name="cdsocie" id="field_cdsocie" data-cy="cdsocie" formControlName="cdsocie" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.affecAgent.decexer" for="field_decexer">Decexer</label>
+          <input type="number" class="form-control" name="decexer" id="field_decexer" data-cy="decexer" formControlName="decexer" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.affecAgent.cdmois" for="field_cdmois">Cdmois</label>
+          <input type="number" class="form-control" name="cdmois" id="field_cdmois" data-cy="cdmois" formControlName="cdmois" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.affecAgent.matric" for="field_matric">Matric</label>
+          <input type="number" class="form-control" name="matric" id="field_matric" data-cy="matric" formControlName="matric" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.affecAgent.matric2" for="field_matric2">Matric 2</label>
+          <input type="number" class="form-control" name="matric2" id="field_matric2" data-cy="matric2" formControlName="matric2" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.affecAgent.cdmac" for="field_cdmac">Cdmac</label>
+          <input type="text" class="form-control" name="cdmac" id="field_cdmac" data-cy="cdmac" formControlName="cdmac" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

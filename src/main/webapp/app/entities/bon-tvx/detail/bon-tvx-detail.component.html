@@ -1,0 +1,204 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="bonTvx">
+      <h2 data-cy="bonTvxDetailsHeading"><span jhiTranslate="departdbApp.bonTvx.detail.title">Bon Tvx</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ bonTvx.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.cdexerc">Cdexerc</span></dt>
+        <dd>
+          <span>{{ bonTvx.cdexerc }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.numbt">Numbt</span></dt>
+        <dd>
+          <span>{{ bonTvx.numbt }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.cdtier">Cdtier</span></dt>
+        <dd>
+          <span>{{ bonTvx.cdtier }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.cdmac">Cdmac</span></dt>
+        <dd>
+          <span>{{ bonTvx.cdmac }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.maccdmac">Maccdmac</span></dt>
+        <dd>
+          <span>{{ bonTvx.maccdmac }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.cdserv">Cdserv</span></dt>
+        <dd>
+          <span>{{ bonTvx.cdserv }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.decagen">Decagen</span></dt>
+        <dd>
+          <span>{{ bonTvx.decagen }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.dradecagen">Dradecagen</span></dt>
+        <dd>
+          <span>{{ bonTvx.dradecagen }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.cdorga">Cdorga</span></dt>
+        <dd>
+          <span>{{ bonTvx.cdorga }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.refbt">Refbt</span></dt>
+        <dd>
+          <span>{{ bonTvx.refbt }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.datbt">Datbt</span></dt>
+        <dd>
+          <span>{{ bonTvx.datbt | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.datdt">Datdt</span></dt>
+        <dd>
+          <span>{{ bonTvx.datdt | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.datft">Datft</span></dt>
+        <dd>
+          <span>{{ bonTvx.datft | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.vld">Vld</span></dt>
+        <dd>
+          <span>{{ bonTvx.vld }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.typtvx">Typtvx</span></dt>
+        <dd>
+          <span>{{ bonTvx.typtvx }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.heurdb">Heurdb</span></dt>
+        <dd>
+          <span>{{ bonTvx.heurdb | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.heurfi">Heurfi</span></dt>
+        <dd>
+          <span>{{ bonTvx.heurfi | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.observ">Observ</span></dt>
+        <dd>
+          <span>{{ bonTvx.observ }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.datsrt">Datsrt</span></dt>
+        <dd>
+          <span>{{ bonTvx.datsrt | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.heursr">Heursr</span></dt>
+        <dd>
+          <span>{{ bonTvx.heursr | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.obstest">Obstest</span></dt>
+        <dd>
+          <span>{{ bonTvx.obstest }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.indexdep">Indexdep</span></dt>
+        <dd>
+          <span>{{ bonTvx.indexdep }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.indexarr">Indexarr</span></dt>
+        <dd>
+          <span>{{ bonTvx.indexarr }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.immatex">Immatex</span></dt>
+        <dd>
+          <span>{{ bonTvx.immatex }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.nomchauff">Nomchauff</span></dt>
+        <dd>
+          <span>{{ bonTvx.nomchauff }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.numpermis">Numpermis</span></dt>
+        <dd>
+          <span>{{ bonTvx.numpermis }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.etab">Etab</span></dt>
+        <dd>
+          <span>{{ bonTvx.etab }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.compteur">Compteur</span></dt>
+        <dd>
+          <span>{{ bonTvx.compteur }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.cptorg">Cptorg</span></dt>
+        <dd>
+          <span>{{ bonTvx.cptorg }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.cdtyptr">Cdtyptr</span></dt>
+        <dd>
+          <span>{{ bonTvx.cdtyptr }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.decstat">Decstat</span></dt>
+        <dd>
+          <span>{{ bonTvx.decstat }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.testeur">Testeur</span></dt>
+        <dd>
+          <span>{{ bonTvx.testeur }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.motifdep">Motifdep</span></dt>
+        <dd>
+          <span>{{ bonTvx.motifdep }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.cdtypmnt">Cdtypmnt</span></dt>
+        <dd>
+          <span>{{ bonTvx.cdtypmnt }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.datsorprev">Datsorprev</span></dt>
+        <dd>
+          <span>{{ bonTvx.datsorprev | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.datmnqdu">Datmnqdu</span></dt>
+        <dd>
+          <span>{{ bonTvx.datmnqdu | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.datmnqau">Datmnqau</span></dt>
+        <dd>
+          <span>{{ bonTvx.datmnqau | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.datentant">Datentant</span></dt>
+        <dd>
+          <span>{{ bonTvx.datentant | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.codstat">Codstat</span></dt>
+        <dd>
+          <span>{{ bonTvx.codstat }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.datvld">Datvld</span></dt>
+        <dd>
+          <span>{{ bonTvx.datvld | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.observ1">Observ 1</span></dt>
+        <dd>
+          <span>{{ bonTvx.observ1 }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.testeur1">Testeur 1</span></dt>
+        <dd>
+          <span>{{ bonTvx.testeur1 }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.validag">Validag</span></dt>
+        <dd>
+          <span>{{ bonTvx.validag }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.bonTvx.datsais">Datsais</span></dt>
+        <dd>
+          <span>{{ bonTvx.datsais | formatMediumDate }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/bon-tvx', bonTvx.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

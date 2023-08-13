@@ -1,0 +1,428 @@
+<div>
+  <h2 id="page-heading" data-cy="MachineHeading">
+    <span jhiTranslate="departdbApp.machine.home.title">Machines</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span jhiTranslate="departdbApp.machine.home.refreshListLabel">Refresh list</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-machine"
+        [routerLink]="['/machine/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="departdbApp.machine.home.createLabel"> Create a new Machine </span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <div class="alert alert-warning" id="no-result" *ngIf="machines?.length === 0">
+    <span jhiTranslate="departdbApp.machine.home.notFound">No Machines found</span>
+  </div>
+
+  <div class="table-responsive table-entities" id="entities" *ngIf="machines && machines.length > 0">
+    <table class="table table-striped" aria-describedby="page-heading">
+      <thead>
+        <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" (sortChange)="navigateToWithComponentValues()">
+          <th scope="col" jhiSortBy="id">
+            <div class="d-flex">
+              <span jhiTranslate="global.field.id">ID</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="cdmac">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.cdmac">Cdmac</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="cdmod">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.cdmod">Cdmod</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="cdmarque">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.cdmarque">Cdmarque</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="lbmac">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.lbmac">Lbmac</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="refmac">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.refmac">Refmac</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="serie">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.serie">Serie</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="datfab">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.datfab">Datfab</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="datacq">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.datacq">Datacq</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="datmes">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.datmes">Datmes</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="valacq">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.valacq">Valacq</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="obs">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.obs">Obs</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="numplan">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.numplan">Numplan</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="cdlipro">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.cdlipro">Cdlipro</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="immat">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.immat">Immat</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="marque">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.marque">Marque</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="typev">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.typev">Typev</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="numser">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.numser">Numser</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="puiss">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.puiss">Puiss</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="nrj">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.nrj">Nrj</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="genre">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.genre">Genre</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="cylind">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.cylind">Cylind</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="pdsvid">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.pdsvid">Pdsvid</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="charge">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.charge">Charge</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="plcass">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.plcass">Plcass</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="plcdeb">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.plcdeb">Plcdeb</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="cpt">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.cpt">Cpt</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="cptmnt">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.cptmnt">Cptmnt</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="actif">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.actif">Actif</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="datact">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.datact">Datact</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="cdcatvh">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.cdcatvh">Cdcatvh</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="taux">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.taux">Taux</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="kmmoy">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.kmmoy">Kmmoy</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="codstat">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.codstat">Codstat</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="edition">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.edition">Edition</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="valassur">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.valassur">Valassur</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="valamort">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.valamort">Valamort</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="consommodel">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.consommodel">Consommodel</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="decetat">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.decetat">Decetat</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="codtypvoit">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.codtypvoit">Codtypvoit</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="cdtyp">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.cdtyp">Cdtyp</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="cdnat">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.cdnat">Cdnat</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="typbv">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.typbv">Typbv</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="cdtypbv">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.cdtypbv">Cdtypbv</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="pneu">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.pneu">Pneu</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="gps">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.gps">Gps</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="marquebv">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.marquebv">Marquebv</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="typboite">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.machine.typboite">Typboite</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let machine of machines; trackBy: trackId" data-cy="entityTable">
+          <td>
+            <a [routerLink]="['/machine', machine.id, 'view']">{{ machine.id }}</a>
+          </td>
+          <td>{{ machine.cdmac }}</td>
+          <td>{{ machine.cdmod }}</td>
+          <td>{{ machine.cdmarque }}</td>
+          <td>{{ machine.lbmac }}</td>
+          <td>{{ machine.refmac }}</td>
+          <td>{{ machine.serie }}</td>
+          <td>{{ machine.datfab | formatMediumDate }}</td>
+          <td>{{ machine.datacq | formatMediumDate }}</td>
+          <td>{{ machine.datmes | formatMediumDate }}</td>
+          <td>{{ machine.valacq }}</td>
+          <td>{{ machine.obs }}</td>
+          <td>{{ machine.numplan }}</td>
+          <td>{{ machine.cdlipro }}</td>
+          <td>{{ machine.immat }}</td>
+          <td>{{ machine.marque }}</td>
+          <td>{{ machine.typev }}</td>
+          <td>{{ machine.numser }}</td>
+          <td>{{ machine.puiss }}</td>
+          <td>{{ machine.nrj }}</td>
+          <td>{{ machine.genre }}</td>
+          <td>{{ machine.cylind }}</td>
+          <td>{{ machine.pdsvid }}</td>
+          <td>{{ machine.charge }}</td>
+          <td>{{ machine.plcass }}</td>
+          <td>{{ machine.plcdeb }}</td>
+          <td>{{ machine.cpt }}</td>
+          <td>{{ machine.cptmnt }}</td>
+          <td>{{ machine.actif }}</td>
+          <td>{{ machine.datact | formatMediumDate }}</td>
+          <td>{{ machine.cdcatvh }}</td>
+          <td>{{ machine.taux }}</td>
+          <td>{{ machine.kmmoy }}</td>
+          <td>{{ machine.codstat }}</td>
+          <td>{{ machine.edition }}</td>
+          <td>{{ machine.valassur }}</td>
+          <td>{{ machine.valamort }}</td>
+          <td>{{ machine.consommodel }}</td>
+          <td>{{ machine.decetat }}</td>
+          <td>{{ machine.codtypvoit }}</td>
+          <td>{{ machine.cdtyp }}</td>
+          <td>{{ machine.cdnat }}</td>
+          <td>{{ machine.typbv }}</td>
+          <td>{{ machine.cdtypbv }}</td>
+          <td>{{ machine.pneu }}</td>
+          <td>{{ machine.gps }}</td>
+          <td>{{ machine.marquebv }}</td>
+          <td>{{ machine.typboite }}</td>
+          <td class="text-end">
+            <div class="btn-group">
+              <button
+                type="submit"
+                [routerLink]="['/machine', machine.id, 'view']"
+                class="btn btn-info btn-sm"
+                data-cy="entityDetailsButton"
+              >
+                <fa-icon icon="eye"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+              </button>
+
+              <button
+                type="submit"
+                [routerLink]="['/machine', machine.id, 'edit']"
+                class="btn btn-primary btn-sm"
+                data-cy="entityEditButton"
+              >
+                <fa-icon icon="pencil-alt"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+              </button>
+
+              <button type="submit" (click)="delete(machine)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                <fa-icon icon="times"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="machines && machines.length > 0">
+    <div class="d-flex justify-content-center">
+      <jhi-item-count [params]="{ page: page, totalItems: totalItems, itemsPerPage: itemsPerPage }"></jhi-item-count>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <ngb-pagination
+        [collectionSize]="totalItems"
+        [page]="page"
+        [pageSize]="itemsPerPage"
+        [maxSize]="5"
+        [rotate]="true"
+        [boundaryLinks]="true"
+        (pageChange)="navigateToPage($event)"
+      ></ngb-pagination>
+    </div>
+  </div>
+</div>

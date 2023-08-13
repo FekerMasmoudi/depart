@@ -1,0 +1,76 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-rh-agent-heading" data-cy="RhAgentCreateUpdateHeading" jhiTranslate="departdbApp.rhAgent.home.createOrEditLabel">
+        Create or edit a Rh Agent
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row mb-3" *ngIf="editForm.controls.id.value !== null">
+          <label class="form-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="text" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.rhAgent.matric" for="field_matric">Matric</label>
+          <input type="number" class="form-control" name="matric" id="field_matric" data-cy="matric" formControlName="matric" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.rhAgent.decjour" for="field_decjour">Decjour</label>
+          <input type="text" class="form-control" name="decjour" id="field_decjour" data-cy="decjour" formControlName="decjour" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.rhAgent.dateffrh" for="field_dateffrh">Dateffrh</label>
+          <div class="input-group">
+            <input
+              id="field_dateffrh"
+              data-cy="dateffrh"
+              type="text"
+              class="form-control"
+              name="dateffrh"
+              ngbDatepicker
+              #dateffrhDp="ngbDatepicker"
+              formControlName="dateffrh"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dateffrhDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.rhAgent.decoper" for="field_decoper">Decoper</label>
+          <input type="text" class="form-control" name="decoper" id="field_decoper" data-cy="decoper" formControlName="decoper" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.rhAgent.deccent" for="field_deccent">Deccent</label>
+          <input type="number" class="form-control" name="deccent" id="field_deccent" data-cy="deccent" formControlName="deccent" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.rhAgent.decagenc" for="field_decagenc">Decagenc</label>
+          <input type="number" class="form-control" name="decagenc" id="field_decagenc" data-cy="decagenc" formControlName="decagenc" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

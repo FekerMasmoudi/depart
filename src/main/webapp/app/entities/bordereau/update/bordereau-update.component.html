@@ -1,0 +1,609 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-bordereau-heading" data-cy="BordereauCreateUpdateHeading" jhiTranslate="departdbApp.bordereau.home.createOrEditLabel">
+        Create or edit a Bordereau
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row mb-3" *ngIf="editForm.controls.id.value !== null">
+          <label class="form-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="text" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bordereau.deccent" for="field_deccent">Deccent</label>
+          <input type="number" class="form-control" name="deccent" id="field_deccent" data-cy="deccent" formControlName="deccent" />
+          <div *ngIf="editForm.get('deccent')!.invalid && (editForm.get('deccent')!.dirty || editForm.get('deccent')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('deccent')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+            <small
+              class="form-text text-danger"
+              [hidden]="!editForm.get('deccent')?.errors?.number"
+              jhiTranslate="entity.validation.number"
+            >
+              This field should be a number.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bordereau.decagenc" for="field_decagenc">Decagenc</label>
+          <input type="number" class="form-control" name="decagenc" id="field_decagenc" data-cy="decagenc" formControlName="decagenc" />
+          <div *ngIf="editForm.get('decagenc')!.invalid && (editForm.get('decagenc')!.dirty || editForm.get('decagenc')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('decagenc')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+            <small
+              class="form-text text-danger"
+              [hidden]="!editForm.get('decagenc')?.errors?.number"
+              jhiTranslate="entity.validation.number"
+            >
+              This field should be a number.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bordereau.exercice" for="field_exercice">Exercice</label>
+          <input type="number" class="form-control" name="exercice" id="field_exercice" data-cy="exercice" formControlName="exercice" />
+          <div *ngIf="editForm.get('exercice')!.invalid && (editForm.get('exercice')!.dirty || editForm.get('exercice')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('exercice')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+            <small
+              class="form-text text-danger"
+              [hidden]="!editForm.get('exercice')?.errors?.number"
+              jhiTranslate="entity.validation.number"
+            >
+              This field should be a number.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bordereau.denbord" for="field_denbord">Denbord</label>
+          <input type="number" class="form-control" name="denbord" id="field_denbord" data-cy="denbord" formControlName="denbord" />
+          <div *ngIf="editForm.get('denbord')!.invalid && (editForm.get('denbord')!.dirty || editForm.get('denbord')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('denbord')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+            <small
+              class="form-text text-danger"
+              [hidden]="!editForm.get('denbord')?.errors?.number"
+              jhiTranslate="entity.validation.number"
+            >
+              This field should be a number.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bordereau.det_deccent" for="field_det_deccent">Det Deccent</label>
+          <input
+            type="number"
+            class="form-control"
+            name="det_deccent"
+            id="field_det_deccent"
+            data-cy="det_deccent"
+            formControlName="det_deccent"
+          />
+          <div *ngIf="editForm.get('det_deccent')!.invalid && (editForm.get('det_deccent')!.dirty || editForm.get('det_deccent')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('det_deccent')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+            <small
+              class="form-text text-danger"
+              [hidden]="!editForm.get('det_deccent')?.errors?.number"
+              jhiTranslate="entity.validation.number"
+            >
+              This field should be a number.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bordereau.det_decagenc" for="field_det_decagenc">Det Decagenc</label>
+          <input
+            type="number"
+            class="form-control"
+            name="det_decagenc"
+            id="field_det_decagenc"
+            data-cy="det_decagenc"
+            formControlName="det_decagenc"
+          />
+          <div
+            *ngIf="editForm.get('det_decagenc')!.invalid && (editForm.get('det_decagenc')!.dirty || editForm.get('det_decagenc')!.touched)"
+          >
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('det_decagenc')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+            <small
+              class="form-text text-danger"
+              [hidden]="!editForm.get('det_decagenc')?.errors?.number"
+              jhiTranslate="entity.validation.number"
+            >
+              This field should be a number.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bordereau.decserv" for="field_decserv">Decserv</label>
+          <input type="number" class="form-control" name="decserv" id="field_decserv" data-cy="decserv" formControlName="decserv" />
+          <div *ngIf="editForm.get('decserv')!.invalid && (editForm.get('decserv')!.dirty || editForm.get('decserv')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('decserv')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+            <small
+              class="form-text text-danger"
+              [hidden]="!editForm.get('decserv')?.errors?.number"
+              jhiTranslate="entity.validation.number"
+            >
+              This field should be a number.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bordereau.cdmac" for="field_cdmac">Cdmac</label>
+          <input type="text" class="form-control" name="cdmac" id="field_cdmac" data-cy="cdmac" formControlName="cdmac" />
+          <div *ngIf="editForm.get('cdmac')!.invalid && (editForm.get('cdmac')!.dirty || editForm.get('cdmac')!.touched)">
+            <small class="form-text text-danger" *ngIf="editForm.get('cdmac')?.errors?.required" jhiTranslate="entity.validation.required">
+              This field is required.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bordereau.decoper" for="field_decoper">Decoper</label>
+          <input type="text" class="form-control" name="decoper" id="field_decoper" data-cy="decoper" formControlName="decoper" />
+          <div *ngIf="editForm.get('decoper')!.invalid && (editForm.get('decoper')!.dirty || editForm.get('decoper')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('decoper')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bordereau.decsean" for="field_decsean">Decsean</label>
+          <input type="text" class="form-control" name="decsean" id="field_decsean" data-cy="decsean" formControlName="decsean" />
+          <div *ngIf="editForm.get('decsean')!.invalid && (editForm.get('decsean')!.dirty || editForm.get('decsean')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('decsean')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bordereau.dedated" for="field_dedated">Dedated</label>
+          <div class="input-group">
+            <input
+              id="field_dedated"
+              data-cy="dedated"
+              type="text"
+              class="form-control"
+              name="dedated"
+              ngbDatepicker
+              #dedatedDp="ngbDatepicker"
+              formControlName="dedated"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dedatedDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+          </div>
+          <div *ngIf="editForm.get('dedated')!.invalid && (editForm.get('dedated')!.dirty || editForm.get('dedated')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('dedated')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bordereau.denumdp" for="field_denumdp">Denumdp</label>
+          <input type="number" class="form-control" name="denumdp" id="field_denumdp" data-cy="denumdp" formControlName="denumdp" />
+          <div *ngIf="editForm.get('denumdp')!.invalid && (editForm.get('denumdp')!.dirty || editForm.get('denumdp')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('denumdp')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+            <small
+              class="form-text text-danger"
+              [hidden]="!editForm.get('denumdp')?.errors?.number"
+              jhiTranslate="entity.validation.number"
+            >
+              This field should be a number.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bordereau.matric" for="field_matric">Matric</label>
+          <input type="number" class="form-control" name="matric" id="field_matric" data-cy="matric" formControlName="matric" />
+          <div *ngIf="editForm.get('matric')!.invalid && (editForm.get('matric')!.dirty || editForm.get('matric')!.touched)">
+            <small class="form-text text-danger" *ngIf="editForm.get('matric')?.errors?.required" jhiTranslate="entity.validation.required">
+              This field is required.
+            </small>
+            <small class="form-text text-danger" [hidden]="!editForm.get('matric')?.errors?.number" jhiTranslate="entity.validation.number">
+              This field should be a number.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bordereau.matric1" for="field_matric1">Matric 1</label>
+          <input type="number" class="form-control" name="matric1" id="field_matric1" data-cy="matric1" formControlName="matric1" />
+          <div *ngIf="editForm.get('matric1')!.invalid && (editForm.get('matric1')!.dirty || editForm.get('matric1')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('matric1')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+            <small
+              class="form-text text-danger"
+              [hidden]="!editForm.get('matric1')?.errors?.number"
+              jhiTranslate="entity.validation.number"
+            >
+              This field should be a number.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bordereau.natbord" for="field_natbord">Natbord</label>
+          <input type="text" class="form-control" name="natbord" id="field_natbord" data-cy="natbord" formControlName="natbord" />
+          <div *ngIf="editForm.get('natbord')!.invalid && (editForm.get('natbord')!.dirty || editForm.get('natbord')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('natbord')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bordereau.detadedb" for="field_detadedb">Detadedb</label>
+          <div class="input-group">
+            <input
+              id="field_detadedb"
+              data-cy="detadedb"
+              type="text"
+              class="form-control"
+              name="detadedb"
+              ngbDatepicker
+              #detadedbDp="ngbDatepicker"
+              formControlName="detadedb"
+            />
+            <button type="button" class="btn btn-secondary" (click)="detadedbDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+          </div>
+          <div *ngIf="editForm.get('detadedb')!.invalid && (editForm.get('detadedb')!.dirty || editForm.get('detadedb')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('detadedb')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bordereau.numb_pdat" for="field_numb_pdat">Numb Pdat</label>
+          <input type="number" class="form-control" name="numb_pdat" id="field_numb_pdat" data-cy="numb_pdat" formControlName="numb_pdat" />
+          <div *ngIf="editForm.get('numb_pdat')!.invalid && (editForm.get('numb_pdat')!.dirty || editForm.get('numb_pdat')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('numb_pdat')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+            <small
+              class="form-text text-danger"
+              [hidden]="!editForm.get('numb_pdat')?.errors?.number"
+              jhiTranslate="entity.validation.number"
+            >
+              This field should be a number.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bordereau.deheupsr" for="field_deheupsr">Deheupsr</label>
+          <div class="input-group">
+            <input
+              id="field_deheupsr"
+              data-cy="deheupsr"
+              type="text"
+              class="form-control"
+              name="deheupsr"
+              ngbDatepicker
+              #deheupsrDp="ngbDatepicker"
+              formControlName="deheupsr"
+            />
+            <button type="button" class="btn btn-secondary" (click)="deheupsrDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+          </div>
+          <div *ngIf="editForm.get('deheupsr')!.invalid && (editForm.get('deheupsr')!.dirty || editForm.get('deheupsr')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('deheupsr')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bordereau.demnttn" for="field_demnttn">Demnttn</label>
+          <input type="number" class="form-control" name="demnttn" id="field_demnttn" data-cy="demnttn" formControlName="demnttn" />
+          <div *ngIf="editForm.get('demnttn')!.invalid && (editForm.get('demnttn')!.dirty || editForm.get('demnttn')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('demnttn')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+            <small
+              class="form-text text-danger"
+              [hidden]="!editForm.get('demnttn')?.errors?.number"
+              jhiTranslate="entity.validation.number"
+            >
+              This field should be a number.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bordereau.demntto" for="field_demntto">Demntto</label>
+          <input type="number" class="form-control" name="demntto" id="field_demntto" data-cy="demntto" formControlName="demntto" />
+          <div *ngIf="editForm.get('demntto')!.invalid && (editForm.get('demntto')!.dirty || editForm.get('demntto')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('demntto')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+            <small
+              class="form-text text-danger"
+              [hidden]="!editForm.get('demntto')?.errors?.number"
+              jhiTranslate="entity.validation.number"
+            >
+              This field should be a number.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bordereau.decetbr" for="field_decetbr">Decetbr</label>
+          <input type="text" class="form-control" name="decetbr" id="field_decetbr" data-cy="decetbr" formControlName="decetbr" />
+          <div *ngIf="editForm.get('decetbr')!.invalid && (editForm.get('decetbr')!.dirty || editForm.get('decetbr')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('decetbr')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bordereau.decetcs" for="field_decetcs">Decetcs</label>
+          <input type="text" class="form-control" name="decetcs" id="field_decetcs" data-cy="decetcs" formControlName="decetcs" />
+          <div *ngIf="editForm.get('decetcs')!.invalid && (editForm.get('decetcs')!.dirty || editForm.get('decetcs')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('decetcs')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bordereau.denumcs" for="field_denumcs">Denumcs</label>
+          <input type="number" class="form-control" name="denumcs" id="field_denumcs" data-cy="denumcs" formControlName="denumcs" />
+          <div *ngIf="editForm.get('denumcs')!.invalid && (editForm.get('denumcs')!.dirty || editForm.get('denumcs')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('denumcs')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+            <small
+              class="form-text text-danger"
+              [hidden]="!editForm.get('denumcs')?.errors?.number"
+              jhiTranslate="entity.validation.number"
+            >
+              This field should be a number.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bordereau.denumbr" for="field_denumbr">Denumbr</label>
+          <input type="number" class="form-control" name="denumbr" id="field_denumbr" data-cy="denumbr" formControlName="denumbr" />
+          <div *ngIf="editForm.get('denumbr')!.invalid && (editForm.get('denumbr')!.dirty || editForm.get('denumbr')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('denumbr')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+            <small
+              class="form-text text-danger"
+              [hidden]="!editForm.get('denumbr')?.errors?.number"
+              jhiTranslate="entity.validation.number"
+            >
+              This field should be a number.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bordereau.denumver" for="field_denumver">Denumver</label>
+          <input type="number" class="form-control" name="denumver" id="field_denumver" data-cy="denumver" formControlName="denumver" />
+          <div *ngIf="editForm.get('denumver')!.invalid && (editForm.get('denumver')!.dirty || editForm.get('denumver')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('denumver')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+            <small
+              class="form-text text-danger"
+              [hidden]="!editForm.get('denumver')?.errors?.number"
+              jhiTranslate="entity.validation.number"
+            >
+              This field should be a number.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bordereau.declote" for="field_declote">Declote</label>
+          <input type="text" class="form-control" name="declote" id="field_declote" data-cy="declote" formControlName="declote" />
+          <div *ngIf="editForm.get('declote')!.invalid && (editForm.get('declote')!.dirty || editForm.get('declote')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('declote')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bordereau.date_saisie" for="field_date_saisie">Date Saisie</label>
+          <div class="input-group">
+            <input
+              id="field_date_saisie"
+              data-cy="date_saisie"
+              type="text"
+              class="form-control"
+              name="date_saisie"
+              ngbDatepicker
+              #date_saisieDp="ngbDatepicker"
+              formControlName="date_saisie"
+            />
+            <button type="button" class="btn btn-secondary" (click)="date_saisieDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+          <div *ngIf="editForm.get('date_saisie')!.invalid && (editForm.get('date_saisie')!.dirty || editForm.get('date_saisie')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('date_saisie')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bordereau.clorec" for="field_clorec">Clorec</label>
+          <input type="text" class="form-control" name="clorec" id="field_clorec" data-cy="clorec" formControlName="clorec" />
+          <div *ngIf="editForm.get('clorec')!.invalid && (editForm.get('clorec')!.dirty || editForm.get('clorec')!.touched)">
+            <small class="form-text text-danger" *ngIf="editForm.get('clorec')?.errors?.required" jhiTranslate="entity.validation.required">
+              This field is required.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.bordereau.demntvers" for="field_demntvers">Demntvers</label>
+          <input type="number" class="form-control" name="demntvers" id="field_demntvers" data-cy="demntvers" formControlName="demntvers" />
+          <div *ngIf="editForm.get('demntvers')!.invalid && (editForm.get('demntvers')!.dirty || editForm.get('demntvers')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('demntvers')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+            <small
+              class="form-text text-danger"
+              [hidden]="!editForm.get('demntvers')?.errors?.number"
+              jhiTranslate="entity.validation.number"
+            >
+              This field should be a number.
+            </small>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

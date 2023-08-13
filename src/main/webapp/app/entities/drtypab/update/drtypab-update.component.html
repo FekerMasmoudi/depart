@@ -1,0 +1,54 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-drtypab-heading" data-cy="DrtypabCreateUpdateHeading" jhiTranslate="departdbApp.drtypab.home.createOrEditLabel">
+        Create or edit a Drtypab
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row mb-3" *ngIf="editForm.controls.id.value !== null">
+          <label class="form-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="text" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.drtypab.cdtypab" for="field_cdtypab">Cdtypab</label>
+          <input type="text" class="form-control" name="cdtypab" id="field_cdtypab" data-cy="cdtypab" formControlName="cdtypab" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.drtypab.lbtypab" for="field_lbtypab">Lbtypab</label>
+          <input type="text" class="form-control" name="lbtypab" id="field_lbtypab" data-cy="lbtypab" formControlName="lbtypab" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.drtypab.dabsjt" for="field_dabsjt">Dabsjt</label>
+          <input type="text" class="form-control" name="dabsjt" id="field_dabsjt" data-cy="dabsjt" formControlName="dabsjt" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.drtypab.dabsjp" for="field_dabsjp">Dabsjp</label>
+          <input type="text" class="form-control" name="dabsjp" id="field_dabsjp" data-cy="dabsjp" formControlName="dabsjp" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

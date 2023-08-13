@@ -1,0 +1,43 @@
+{
+  "applications": "*",
+  "changelogDate": "20230811081302",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "trafic",
+  "fields": [
+    {
+      "fieldName": "deccent",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "decagenc",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "dedated",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "ancien",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "vldtrafic",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "clotrafic",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Trafic",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

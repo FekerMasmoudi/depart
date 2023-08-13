@@ -1,0 +1,37 @@
+{
+  "departdbApp": {
+    "modif": {
+      "home": {
+        "title": "Modifs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Modif",
+        "createOrEditLabel": "Create or edit a Modif",
+        "notFound": "No Modifs found"
+      },
+      "created": "A new Modif is created with identifier {{ param }}",
+      "updated": "A Modif is updated with identifier {{ param }}",
+      "deleted": "A Modif is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Modif {{ id }}?"
+      },
+      "detail": {
+        "title": "Modif"
+      },
+      "id": "ID",
+      "deccent": "Deccent",
+      "decagenc": "Decagenc",
+      "dedated": "Dedated",
+      "denumdp": "Denumdp",
+      "decserv": "Decserv",
+      "decoper": "Decoper",
+      "decsean": "Decsean",
+      "numrotat": "Numrotat",
+      "matric": "Matric",
+      "cd1": "Cd 1",
+      "decmotif": "Decmotif",
+      "heur": "Heur",
+      "chre": "Chre",
+      "typ": "Typ"
+    }
+  }
+}

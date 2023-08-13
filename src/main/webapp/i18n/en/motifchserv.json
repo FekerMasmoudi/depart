@@ -1,0 +1,27 @@
+{
+  "departdbApp": {
+    "motifchserv": {
+      "home": {
+        "title": "Motifchservs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Motifchserv",
+        "createOrEditLabel": "Create or edit a Motifchserv",
+        "notFound": "No Motifchservs found"
+      },
+      "created": "A new Motifchserv is created with identifier {{ param }}",
+      "updated": "A Motifchserv is updated with identifier {{ param }}",
+      "deleted": "A Motifchserv is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Motifchserv {{ id }}?"
+      },
+      "detail": {
+        "title": "Motifchserv"
+      },
+      "id": "ID",
+      "decmotif": "Decmotif",
+      "delmotif": "Delmotif",
+      "x": "X",
+      "vs": "Vs"
+    }
+  }
+}

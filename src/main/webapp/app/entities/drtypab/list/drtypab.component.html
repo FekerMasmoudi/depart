@@ -1,0 +1,127 @@
+<div>
+  <h2 id="page-heading" data-cy="DrtypabHeading">
+    <span jhiTranslate="departdbApp.drtypab.home.title">Drtypabs</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span jhiTranslate="departdbApp.drtypab.home.refreshListLabel">Refresh list</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-drtypab"
+        [routerLink]="['/drtypab/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="departdbApp.drtypab.home.createLabel"> Create a new Drtypab </span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <div class="alert alert-warning" id="no-result" *ngIf="drtypabs?.length === 0">
+    <span jhiTranslate="departdbApp.drtypab.home.notFound">No Drtypabs found</span>
+  </div>
+
+  <div class="table-responsive table-entities" id="entities" *ngIf="drtypabs && drtypabs.length > 0">
+    <table class="table table-striped" aria-describedby="page-heading">
+      <thead>
+        <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" (sortChange)="navigateToWithComponentValues()">
+          <th scope="col" jhiSortBy="id">
+            <div class="d-flex">
+              <span jhiTranslate="global.field.id">ID</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="cdtypab">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.drtypab.cdtypab">Cdtypab</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="lbtypab">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.drtypab.lbtypab">Lbtypab</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="dabsjt">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.drtypab.dabsjt">Dabsjt</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="dabsjp">
+            <div class="d-flex">
+              <span jhiTranslate="departdbApp.drtypab.dabsjp">Dabsjp</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let drtypab of drtypabs; trackBy: trackId" data-cy="entityTable">
+          <td>
+            <a [routerLink]="['/drtypab', drtypab.id, 'view']">{{ drtypab.id }}</a>
+          </td>
+          <td>{{ drtypab.cdtypab }}</td>
+          <td>{{ drtypab.lbtypab }}</td>
+          <td>{{ drtypab.dabsjt }}</td>
+          <td>{{ drtypab.dabsjp }}</td>
+          <td class="text-end">
+            <div class="btn-group">
+              <button
+                type="submit"
+                [routerLink]="['/drtypab', drtypab.id, 'view']"
+                class="btn btn-info btn-sm"
+                data-cy="entityDetailsButton"
+              >
+                <fa-icon icon="eye"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+              </button>
+
+              <button
+                type="submit"
+                [routerLink]="['/drtypab', drtypab.id, 'edit']"
+                class="btn btn-primary btn-sm"
+                data-cy="entityEditButton"
+              >
+                <fa-icon icon="pencil-alt"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+              </button>
+
+              <button type="submit" (click)="delete(drtypab)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                <fa-icon icon="times"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="drtypabs && drtypabs.length > 0">
+    <div class="d-flex justify-content-center">
+      <jhi-item-count [params]="{ page: page, totalItems: totalItems, itemsPerPage: itemsPerPage }"></jhi-item-count>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <ngb-pagination
+        [collectionSize]="totalItems"
+        [page]="page"
+        [pageSize]="itemsPerPage"
+        [maxSize]="5"
+        [rotate]="true"
+        [boundaryLinks]="true"
+        (pageChange)="navigateToPage($event)"
+      ></ngb-pagination>
+    </div>
+  </div>
+</div>

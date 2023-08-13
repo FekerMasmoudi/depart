@@ -1,0 +1,144 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-itineraire-heading" data-cy="ItineraireCreateUpdateHeading" jhiTranslate="departdbApp.itineraire.home.createOrEditLabel">
+        Create or edit a Itineraire
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row mb-3" *ngIf="editForm.controls.id.value !== null">
+          <label class="form-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="text" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.itineraire.deccent" for="field_deccent">Deccent</label>
+          <input type="number" class="form-control" name="deccent" id="field_deccent" data-cy="deccent" formControlName="deccent" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.itineraire.decagenc" for="field_decagenc">Decagenc</label>
+          <input type="number" class="form-control" name="decagenc" id="field_decagenc" data-cy="decagenc" formControlName="decagenc" />
+          <div *ngIf="editForm.get('decagenc')!.invalid && (editForm.get('decagenc')!.dirty || editForm.get('decagenc')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('decagenc')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+            <small
+              class="form-text text-danger"
+              [hidden]="!editForm.get('decagenc')?.errors?.number"
+              jhiTranslate="entity.validation.number"
+            >
+              This field should be a number.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.itineraire.denumli" for="field_denumli">Denumli</label>
+          <input type="text" class="form-control" name="denumli" id="field_denumli" data-cy="denumli" formControlName="denumli" />
+          <div *ngIf="editForm.get('denumli')!.invalid && (editForm.get('denumli')!.dirty || editForm.get('denumli')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('denumli')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.itineraire.decstat" for="field_decstat">Decstat</label>
+          <input type="text" class="form-control" name="decstat" id="field_decstat" data-cy="decstat" formControlName="decstat" />
+          <div *ngIf="editForm.get('decstat')!.invalid && (editForm.get('decstat')!.dirty || editForm.get('decstat')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('decstat')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.itineraire.denumlg" for="field_denumlg">Denumlg</label>
+          <input type="number" class="form-control" name="denumlg" id="field_denumlg" data-cy="denumlg" formControlName="denumlg" />
+          <div *ngIf="editForm.get('denumlg')!.invalid && (editForm.get('denumlg')!.dirty || editForm.get('denumlg')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('denumlg')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+            <small
+              class="form-text text-danger"
+              [hidden]="!editForm.get('denumlg')?.errors?.number"
+              jhiTranslate="entity.validation.number"
+            >
+              This field should be a number.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.itineraire.dekmsta" for="field_dekmsta">Dekmsta</label>
+          <input type="number" class="form-control" name="dekmsta" id="field_dekmsta" data-cy="dekmsta" formControlName="dekmsta" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.itineraire.dedurtr" for="field_dedurtr">Dedurtr</label>
+          <input type="number" class="form-control" name="dedurtr" id="field_dedurtr" data-cy="dedurtr" formControlName="dedurtr" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.itineraire.deescale" for="field_deescale">Deescale</label>
+          <input type="number" class="form-control" name="deescale" id="field_deescale" data-cy="deescale" formControlName="deescale" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.itineraire.embra" for="field_embra">Embra</label>
+          <input type="text" class="form-control" name="embra" id="field_embra" data-cy="embra" formControlName="embra" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.itineraire.section" for="field_section">Section</label>
+          <input type="number" class="form-control" name="section" id="field_section" data-cy="section" formControlName="section" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.itineraire.sens" for="field_sens">Sens</label>
+          <input type="text" class="form-control" name="sens" id="field_sens" data-cy="sens" formControlName="sens" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.itineraire.dectyst" for="field_dectyst">Dectyst</label>
+          <input type="text" class="form-control" name="dectyst" id="field_dectyst" data-cy="dectyst" formControlName="dectyst" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

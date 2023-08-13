@@ -1,0 +1,72 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="affecAgent">
+      <h2 data-cy="affecAgentDetailsHeading"><span jhiTranslate="departdbApp.affecAgent.detail.title">Affec Agent</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ affecAgent.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.affecAgent.deccent">Deccent</span></dt>
+        <dd>
+          <span>{{ affecAgent.deccent }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.affecAgent.decagenc">Decagenc</span></dt>
+        <dd>
+          <span>{{ affecAgent.decagenc }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.affecAgent.decserv">Decserv</span></dt>
+        <dd>
+          <span>{{ affecAgent.decserv }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.affecAgent.decoper">Decoper</span></dt>
+        <dd>
+          <span>{{ affecAgent.decoper }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.affecAgent.decsean">Decsean</span></dt>
+        <dd>
+          <span>{{ affecAgent.decsean }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.affecAgent.cdsocie">Cdsocie</span></dt>
+        <dd>
+          <span>{{ affecAgent.cdsocie }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.affecAgent.decexer">Decexer</span></dt>
+        <dd>
+          <span>{{ affecAgent.decexer }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.affecAgent.cdmois">Cdmois</span></dt>
+        <dd>
+          <span>{{ affecAgent.cdmois }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.affecAgent.matric">Matric</span></dt>
+        <dd>
+          <span>{{ affecAgent.matric }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.affecAgent.matric2">Matric 2</span></dt>
+        <dd>
+          <span>{{ affecAgent.matric2 }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.affecAgent.cdmac">Cdmac</span></dt>
+        <dd>
+          <span>{{ affecAgent.cdmac }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/affec-agent', affecAgent.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

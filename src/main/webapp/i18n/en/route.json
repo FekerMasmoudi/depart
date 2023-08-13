@@ -1,0 +1,28 @@
+{
+  "departdbApp": {
+    "route": {
+      "home": {
+        "title": "Routes",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Route",
+        "createOrEditLabel": "Create or edit a Route",
+        "notFound": "No Routes found"
+      },
+      "created": "A new Route is created with identifier {{ param }}",
+      "updated": "A Route is updated with identifier {{ param }}",
+      "deleted": "A Route is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Route {{ id }}?"
+      },
+      "detail": {
+        "title": "Route"
+      },
+      "id": "ID",
+      "agency_id": "Agency Id",
+      "route_short_name": "Route Short Name",
+      "route_long_name": "Route Long Name",
+      "route_desc": "Route Desc",
+      "route_type": "Route Type"
+    }
+  }
+}

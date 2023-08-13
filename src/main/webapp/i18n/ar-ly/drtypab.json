@@ -1,0 +1,27 @@
+{
+  "departdbApp": {
+    "drtypab": {
+      "home": {
+        "title": "Drtypabs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Drtypab",
+        "createOrEditLabel": "Create or edit a Drtypab",
+        "notFound": "No Drtypabs found"
+      },
+      "created": "A new Drtypab is created with identifier {{ param }}",
+      "updated": "A Drtypab is updated with identifier {{ param }}",
+      "deleted": "A Drtypab is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Drtypab {{ id }}?"
+      },
+      "detail": {
+        "title": "Drtypab"
+      },
+      "id": "ID",
+      "cdtypab": "Cdtypab",
+      "lbtypab": "Lbtypab",
+      "dabsjt": "Dabsjt",
+      "dabsjp": "Dabsjp"
+    }
+  }
+}

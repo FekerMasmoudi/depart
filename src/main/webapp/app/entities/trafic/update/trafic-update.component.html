@@ -1,0 +1,117 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-trafic-heading" data-cy="TraficCreateUpdateHeading" jhiTranslate="departdbApp.trafic.home.createOrEditLabel">
+        Create or edit a Trafic
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row mb-3" *ngIf="editForm.controls.id.value !== null">
+          <label class="form-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="text" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.trafic.deccent" for="field_deccent">Deccent</label>
+          <input type="number" class="form-control" name="deccent" id="field_deccent" data-cy="deccent" formControlName="deccent" />
+          <div *ngIf="editForm.get('deccent')!.invalid && (editForm.get('deccent')!.dirty || editForm.get('deccent')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('deccent')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+            <small
+              class="form-text text-danger"
+              [hidden]="!editForm.get('deccent')?.errors?.number"
+              jhiTranslate="entity.validation.number"
+            >
+              This field should be a number.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.trafic.decagenc" for="field_decagenc">Decagenc</label>
+          <input type="number" class="form-control" name="decagenc" id="field_decagenc" data-cy="decagenc" formControlName="decagenc" />
+          <div *ngIf="editForm.get('decagenc')!.invalid && (editForm.get('decagenc')!.dirty || editForm.get('decagenc')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('decagenc')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+            <small
+              class="form-text text-danger"
+              [hidden]="!editForm.get('decagenc')?.errors?.number"
+              jhiTranslate="entity.validation.number"
+            >
+              This field should be a number.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.trafic.dedated" for="field_dedated">Dedated</label>
+          <div class="input-group">
+            <input
+              id="field_dedated"
+              data-cy="dedated"
+              type="text"
+              class="form-control"
+              name="dedated"
+              ngbDatepicker
+              #dedatedDp="ngbDatepicker"
+              formControlName="dedated"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dedatedDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+          </div>
+          <div *ngIf="editForm.get('dedated')!.invalid && (editForm.get('dedated')!.dirty || editForm.get('dedated')!.touched)">
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('dedated')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.trafic.ancien" for="field_ancien">Ancien</label>
+          <input type="number" class="form-control" name="ancien" id="field_ancien" data-cy="ancien" formControlName="ancien" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.trafic.vldtrafic" for="field_vldtrafic">Vldtrafic</label>
+          <input type="text" class="form-control" name="vldtrafic" id="field_vldtrafic" data-cy="vldtrafic" formControlName="vldtrafic" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.trafic.clotrafic" for="field_clotrafic">Clotrafic</label>
+          <input type="text" class="form-control" name="clotrafic" id="field_clotrafic" data-cy="clotrafic" formControlName="clotrafic" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

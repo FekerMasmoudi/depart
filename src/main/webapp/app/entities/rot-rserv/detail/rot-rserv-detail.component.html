@@ -1,0 +1,84 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="rotRserv">
+      <h2 data-cy="rotRservDetailsHeading"><span jhiTranslate="departdbApp.rotRserv.detail.title">Rot Rserv</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="departdbApp.rotRserv.deccent">Deccent</span></dt>
+        <dd>
+          <span>{{ rotRserv.deccent }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.rotRserv.decagenc">Decagenc</span></dt>
+        <dd>
+          <span>{{ rotRserv.decagenc }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.rotRserv.dedated">Dedated</span></dt>
+        <dd>
+          <span>{{ rotRserv.dedated | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.rotRserv.matric">Matric</span></dt>
+        <dd>
+          <span>{{ rotRserv.matric }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.rotRserv.heurdeb">Heurdeb</span></dt>
+        <dd>
+          <span>{{ rotRserv.heurdeb | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.rotRserv.heurfin">Heurfin</span></dt>
+        <dd>
+          <span>{{ rotRserv.heurfin | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.rotRserv.statut">Statut</span></dt>
+        <dd>
+          <span>{{ rotRserv.statut }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.rotRserv.lieedeb">Lieedeb</span></dt>
+        <dd>
+          <span>{{ rotRserv.lieedeb | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.rotRserv.lieefin">Lieefin</span></dt>
+        <dd>
+          <span>{{ rotRserv.lieefin | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.rotRserv.program">Program</span></dt>
+        <dd>
+          <span>{{ rotRserv.program }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.rotRserv.cd1">Cd 1</span></dt>
+        <dd>
+          <span>{{ rotRserv.cd1 }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.rotRserv.cd2">Cd 2</span></dt>
+        <dd>
+          <span>{{ rotRserv.cd2 }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.rotRserv.cd3">Cd 3</span></dt>
+        <dd>
+          <span>{{ rotRserv.cd3 }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.rotRserv.id">Id</span></dt>
+        <dd>
+          <span>{{ rotRserv.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.rotRserv.annul">Annul</span></dt>
+        <dd>
+          <span>{{ rotRserv.annul }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/rot-rserv', rotRserv.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

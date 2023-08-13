@@ -1,0 +1,204 @@
+{
+  "applications": "*",
+  "changelogDate": "20230811081251",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "machine",
+  "fields": [
+    {
+      "fieldName": "cdmac",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "cdmod",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "cdmarque",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lbmac",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "refmac",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "serie",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "datfab",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "datacq",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "datmes",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "valacq",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "obs",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "numplan",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "cdlipro",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "immat",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "marque",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "typev",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "numser",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "puiss",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nrj",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "genre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "cylind",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "pdsvid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "charge",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "plcass",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "plcdeb",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "cpt",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "cptmnt",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "actif",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "datact",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "cdcatvh",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "taux",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "kmmoy",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "codstat",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "edition",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "valassur",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "valamort",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "consommodel",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "decetat",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "codtypvoit",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "cdtyp",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "cdnat",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "typbv",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "cdtypbv",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "pneu",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "gps",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "marquebv",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "typboite",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Machine",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

@@ -1,0 +1,48 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="route">
+      <h2 data-cy="routeDetailsHeading"><span jhiTranslate="departdbApp.route.detail.title">Route</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ route.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.route.agency_id">Agency Id</span></dt>
+        <dd>
+          <span>{{ route.agency_id }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.route.route_short_name">Route Short Name</span></dt>
+        <dd>
+          <span>{{ route.route_short_name }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.route.route_long_name">Route Long Name</span></dt>
+        <dd>
+          <span>{{ route.route_long_name }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.route.route_desc">Route Desc</span></dt>
+        <dd>
+          <span>{{ route.route_desc }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.route.route_type">Route Type</span></dt>
+        <dd>
+          <span>{{ route.route_type }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/route', route.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

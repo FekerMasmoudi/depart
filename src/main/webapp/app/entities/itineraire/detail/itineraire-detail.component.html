@@ -1,0 +1,76 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="itineraire">
+      <h2 data-cy="itineraireDetailsHeading"><span jhiTranslate="departdbApp.itineraire.detail.title">Itineraire</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ itineraire.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.itineraire.deccent">Deccent</span></dt>
+        <dd>
+          <span>{{ itineraire.deccent }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.itineraire.decagenc">Decagenc</span></dt>
+        <dd>
+          <span>{{ itineraire.decagenc }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.itineraire.denumli">Denumli</span></dt>
+        <dd>
+          <span>{{ itineraire.denumli }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.itineraire.decstat">Decstat</span></dt>
+        <dd>
+          <span>{{ itineraire.decstat }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.itineraire.denumlg">Denumlg</span></dt>
+        <dd>
+          <span>{{ itineraire.denumlg }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.itineraire.dekmsta">Dekmsta</span></dt>
+        <dd>
+          <span>{{ itineraire.dekmsta }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.itineraire.dedurtr">Dedurtr</span></dt>
+        <dd>
+          <span>{{ itineraire.dedurtr }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.itineraire.deescale">Deescale</span></dt>
+        <dd>
+          <span>{{ itineraire.deescale }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.itineraire.embra">Embra</span></dt>
+        <dd>
+          <span>{{ itineraire.embra }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.itineraire.section">Section</span></dt>
+        <dd>
+          <span>{{ itineraire.section }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.itineraire.sens">Sens</span></dt>
+        <dd>
+          <span>{{ itineraire.sens }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.itineraire.dectyst">Dectyst</span></dt>
+        <dd>
+          <span>{{ itineraire.dectyst }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/itineraire', itineraire.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

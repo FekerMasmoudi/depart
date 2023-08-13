@@ -1,0 +1,48 @@
+{
+  "departdbApp": {
+    "ligne": {
+      "home": {
+        "title": "Lignes",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Ligne",
+        "createOrEditLabel": "Create or edit a Ligne",
+        "notFound": "No Lignes found"
+      },
+      "created": "A new Ligne is created with identifier {{ param }}",
+      "updated": "A Ligne is updated with identifier {{ param }}",
+      "deleted": "A Ligne is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Ligne {{ id }}?"
+      },
+      "detail": {
+        "title": "Ligne"
+      },
+      "id": "ID",
+      "deccent": "Deccent",
+      "decagenc": "Decagenc",
+      "denumli": "Denumli",
+      "dectyli": "Dectyli",
+      "dectyta": "Dectyta",
+      "denomli": "Denomli",
+      "dectyeq": "Dectyeq",
+      "denbrkm": "Denbrkm",
+      "detparc": "Detparc",
+      "dedural": "Dedural",
+      "dedurrt": "Dedurrt",
+      "detrjva": "Detrjva",
+      "detrjvr": "Detrjvr",
+      "depiste": "Depiste",
+      "statlig": "Statlig",
+      "lig": "Lig",
+      "lig1": "Lig 1",
+      "valide": "Valide",
+      "denumli2": "Denumli 2",
+      "kml": "Kml",
+      "description": "Description",
+      "mimtype": "Mimtype",
+      "filename": "Filename",
+      "charset": "Charset",
+      "lastupdate": "Lastupdate"
+    }
+  }
+}

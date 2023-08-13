@@ -1,0 +1,72 @@
+{
+  "applications": "*",
+  "changelogDate": "20230811081304",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "modif",
+  "fields": [
+    {
+      "fieldName": "deccent",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "decagenc",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "dedated",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "denumdp",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "decserv",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "decoper",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "decsean",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "numrotat",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "matric",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "cd1",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "decmotif",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "heur",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "chre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "typ",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Modif",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

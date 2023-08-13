@@ -1,0 +1,25 @@
+{
+  "departdbApp": {
+    "motifa": {
+      "home": {
+        "title": "Motifas",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Motifa",
+        "createOrEditLabel": "Create or edit a Motifa",
+        "notFound": "No Motifas found"
+      },
+      "created": "A new Motifa is created with identifier {{ param }}",
+      "updated": "A Motifa is updated with identifier {{ param }}",
+      "deleted": "A Motifa is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Motifa {{ id }}?"
+      },
+      "detail": {
+        "title": "Motifa"
+      },
+      "id": "ID",
+      "decmotif": "Decmotif",
+      "libmotif": "Libmotif"
+    }
+  }
+}

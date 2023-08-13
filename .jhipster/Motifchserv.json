@@ -1,0 +1,33 @@
+{
+  "applications": "*",
+  "changelogDate": "20230811081301",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "motifchserv",
+  "fields": [
+    {
+      "fieldName": "decmotif",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "delmotif",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "x",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "vs",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Motifchserv",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

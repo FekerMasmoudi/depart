@@ -1,0 +1,44 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="agence">
+      <h2 data-cy="agenceDetailsHeading"><span jhiTranslate="departdbApp.agence.detail.title">Agence</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ agence.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.agence.deccent">Deccent</span></dt>
+        <dd>
+          <span>{{ agence.deccent }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.agence.decagenc">Decagenc</span></dt>
+        <dd>
+          <span>{{ agence.decagenc }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.agence.delagenc">Delagenc</span></dt>
+        <dd>
+          <span>{{ agence.delagenc }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.agence.defaultagenc">Defaultagenc</span></dt>
+        <dd>
+          <span>{{ agence.defaultagenc }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/agence', agence.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

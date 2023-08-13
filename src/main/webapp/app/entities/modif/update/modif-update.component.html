@@ -1,0 +1,128 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-modif-heading" data-cy="ModifCreateUpdateHeading" jhiTranslate="departdbApp.modif.home.createOrEditLabel">
+        Create or edit a Modif
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row mb-3" *ngIf="editForm.controls.id.value !== null">
+          <label class="form-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="text" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.modif.deccent" for="field_deccent">Deccent</label>
+          <input type="number" class="form-control" name="deccent" id="field_deccent" data-cy="deccent" formControlName="deccent" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.modif.decagenc" for="field_decagenc">Decagenc</label>
+          <input type="number" class="form-control" name="decagenc" id="field_decagenc" data-cy="decagenc" formControlName="decagenc" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.modif.dedated" for="field_dedated">Dedated</label>
+          <div class="input-group">
+            <input
+              id="field_dedated"
+              data-cy="dedated"
+              type="text"
+              class="form-control"
+              name="dedated"
+              ngbDatepicker
+              #dedatedDp="ngbDatepicker"
+              formControlName="dedated"
+            />
+            <button type="button" class="btn btn-secondary" (click)="dedatedDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.modif.denumdp" for="field_denumdp">Denumdp</label>
+          <input type="number" class="form-control" name="denumdp" id="field_denumdp" data-cy="denumdp" formControlName="denumdp" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.modif.decserv" for="field_decserv">Decserv</label>
+          <input type="number" class="form-control" name="decserv" id="field_decserv" data-cy="decserv" formControlName="decserv" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.modif.decoper" for="field_decoper">Decoper</label>
+          <input type="text" class="form-control" name="decoper" id="field_decoper" data-cy="decoper" formControlName="decoper" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.modif.decsean" for="field_decsean">Decsean</label>
+          <input type="text" class="form-control" name="decsean" id="field_decsean" data-cy="decsean" formControlName="decsean" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.modif.numrotat" for="field_numrotat">Numrotat</label>
+          <input type="number" class="form-control" name="numrotat" id="field_numrotat" data-cy="numrotat" formControlName="numrotat" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.modif.matric" for="field_matric">Matric</label>
+          <input type="number" class="form-control" name="matric" id="field_matric" data-cy="matric" formControlName="matric" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.modif.cd1" for="field_cd1">Cd 1</label>
+          <input type="number" class="form-control" name="cd1" id="field_cd1" data-cy="cd1" formControlName="cd1" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.modif.decmotif" for="field_decmotif">Decmotif</label>
+          <input type="number" class="form-control" name="decmotif" id="field_decmotif" data-cy="decmotif" formControlName="decmotif" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.modif.heur" for="field_heur">Heur</label>
+          <div class="input-group">
+            <input
+              id="field_heur"
+              data-cy="heur"
+              type="text"
+              class="form-control"
+              name="heur"
+              ngbDatepicker
+              #heurDp="ngbDatepicker"
+              formControlName="heur"
+            />
+            <button type="button" class="btn btn-secondary" (click)="heurDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.modif.chre" for="field_chre">Chre</label>
+          <input type="text" class="form-control" name="chre" id="field_chre" data-cy="chre" formControlName="chre" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.modif.typ" for="field_typ">Typ</label>
+          <input type="text" class="form-control" name="typ" id="field_typ" data-cy="typ" formControlName="typ" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,70 @@
+{
+  "departdbApp": {
+    "machine": {
+      "home": {
+        "title": "Machines",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Machine",
+        "createOrEditLabel": "Create or edit a Machine",
+        "notFound": "No Machines found"
+      },
+      "created": "A new Machine is created with identifier {{ param }}",
+      "updated": "A Machine is updated with identifier {{ param }}",
+      "deleted": "A Machine is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Machine {{ id }}?"
+      },
+      "detail": {
+        "title": "Machine"
+      },
+      "id": "ID",
+      "cdmac": "Cdmac",
+      "cdmod": "Cdmod",
+      "cdmarque": "Cdmarque",
+      "lbmac": "Lbmac",
+      "refmac": "Refmac",
+      "serie": "Serie",
+      "datfab": "Datfab",
+      "datacq": "Datacq",
+      "datmes": "Datmes",
+      "valacq": "Valacq",
+      "obs": "Obs",
+      "numplan": "Numplan",
+      "cdlipro": "Cdlipro",
+      "immat": "Immat",
+      "marque": "Marque",
+      "typev": "Typev",
+      "numser": "Numser",
+      "puiss": "Puiss",
+      "nrj": "Nrj",
+      "genre": "Genre",
+      "cylind": "Cylind",
+      "pdsvid": "Pdsvid",
+      "charge": "Charge",
+      "plcass": "Plcass",
+      "plcdeb": "Plcdeb",
+      "cpt": "Cpt",
+      "cptmnt": "Cptmnt",
+      "actif": "Actif",
+      "datact": "Datact",
+      "cdcatvh": "Cdcatvh",
+      "taux": "Taux",
+      "kmmoy": "Kmmoy",
+      "codstat": "Codstat",
+      "edition": "Edition",
+      "valassur": "Valassur",
+      "valamort": "Valamort",
+      "consommodel": "Consommodel",
+      "decetat": "Decetat",
+      "codtypvoit": "Codtypvoit",
+      "cdtyp": "Cdtyp",
+      "cdnat": "Cdnat",
+      "typbv": "Typbv",
+      "cdtypbv": "Cdtypbv",
+      "pneu": "Pneu",
+      "gps": "Gps",
+      "marquebv": "Marquebv",
+      "typboite": "Typboite"
+    }
+  }
+}

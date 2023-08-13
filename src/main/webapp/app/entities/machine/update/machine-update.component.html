@@ -1,0 +1,331 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-machine-heading" data-cy="MachineCreateUpdateHeading" jhiTranslate="departdbApp.machine.home.createOrEditLabel">
+        Create or edit a Machine
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row mb-3" *ngIf="editForm.controls.id.value !== null">
+          <label class="form-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="text" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.cdmac" for="field_cdmac">Cdmac</label>
+          <input type="text" class="form-control" name="cdmac" id="field_cdmac" data-cy="cdmac" formControlName="cdmac" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.cdmod" for="field_cdmod">Cdmod</label>
+          <input type="text" class="form-control" name="cdmod" id="field_cdmod" data-cy="cdmod" formControlName="cdmod" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.cdmarque" for="field_cdmarque">Cdmarque</label>
+          <input type="text" class="form-control" name="cdmarque" id="field_cdmarque" data-cy="cdmarque" formControlName="cdmarque" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.lbmac" for="field_lbmac">Lbmac</label>
+          <input type="text" class="form-control" name="lbmac" id="field_lbmac" data-cy="lbmac" formControlName="lbmac" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.refmac" for="field_refmac">Refmac</label>
+          <input type="text" class="form-control" name="refmac" id="field_refmac" data-cy="refmac" formControlName="refmac" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.serie" for="field_serie">Serie</label>
+          <input type="text" class="form-control" name="serie" id="field_serie" data-cy="serie" formControlName="serie" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.datfab" for="field_datfab">Datfab</label>
+          <div class="input-group">
+            <input
+              id="field_datfab"
+              data-cy="datfab"
+              type="text"
+              class="form-control"
+              name="datfab"
+              ngbDatepicker
+              #datfabDp="ngbDatepicker"
+              formControlName="datfab"
+            />
+            <button type="button" class="btn btn-secondary" (click)="datfabDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.datacq" for="field_datacq">Datacq</label>
+          <div class="input-group">
+            <input
+              id="field_datacq"
+              data-cy="datacq"
+              type="text"
+              class="form-control"
+              name="datacq"
+              ngbDatepicker
+              #datacqDp="ngbDatepicker"
+              formControlName="datacq"
+            />
+            <button type="button" class="btn btn-secondary" (click)="datacqDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.datmes" for="field_datmes">Datmes</label>
+          <div class="input-group">
+            <input
+              id="field_datmes"
+              data-cy="datmes"
+              type="text"
+              class="form-control"
+              name="datmes"
+              ngbDatepicker
+              #datmesDp="ngbDatepicker"
+              formControlName="datmes"
+            />
+            <button type="button" class="btn btn-secondary" (click)="datmesDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.valacq" for="field_valacq">Valacq</label>
+          <input type="number" class="form-control" name="valacq" id="field_valacq" data-cy="valacq" formControlName="valacq" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.obs" for="field_obs">Obs</label>
+          <input type="text" class="form-control" name="obs" id="field_obs" data-cy="obs" formControlName="obs" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.numplan" for="field_numplan">Numplan</label>
+          <input type="text" class="form-control" name="numplan" id="field_numplan" data-cy="numplan" formControlName="numplan" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.cdlipro" for="field_cdlipro">Cdlipro</label>
+          <input type="text" class="form-control" name="cdlipro" id="field_cdlipro" data-cy="cdlipro" formControlName="cdlipro" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.immat" for="field_immat">Immat</label>
+          <input type="text" class="form-control" name="immat" id="field_immat" data-cy="immat" formControlName="immat" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.marque" for="field_marque">Marque</label>
+          <input type="text" class="form-control" name="marque" id="field_marque" data-cy="marque" formControlName="marque" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.typev" for="field_typev">Typev</label>
+          <input type="text" class="form-control" name="typev" id="field_typev" data-cy="typev" formControlName="typev" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.numser" for="field_numser">Numser</label>
+          <input type="text" class="form-control" name="numser" id="field_numser" data-cy="numser" formControlName="numser" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.puiss" for="field_puiss">Puiss</label>
+          <input type="text" class="form-control" name="puiss" id="field_puiss" data-cy="puiss" formControlName="puiss" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.nrj" for="field_nrj">Nrj</label>
+          <input type="text" class="form-control" name="nrj" id="field_nrj" data-cy="nrj" formControlName="nrj" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.genre" for="field_genre">Genre</label>
+          <input type="text" class="form-control" name="genre" id="field_genre" data-cy="genre" formControlName="genre" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.cylind" for="field_cylind">Cylind</label>
+          <input type="number" class="form-control" name="cylind" id="field_cylind" data-cy="cylind" formControlName="cylind" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.pdsvid" for="field_pdsvid">Pdsvid</label>
+          <input type="number" class="form-control" name="pdsvid" id="field_pdsvid" data-cy="pdsvid" formControlName="pdsvid" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.charge" for="field_charge">Charge</label>
+          <input type="number" class="form-control" name="charge" id="field_charge" data-cy="charge" formControlName="charge" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.plcass" for="field_plcass">Plcass</label>
+          <input type="number" class="form-control" name="plcass" id="field_plcass" data-cy="plcass" formControlName="plcass" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.plcdeb" for="field_plcdeb">Plcdeb</label>
+          <input type="number" class="form-control" name="plcdeb" id="field_plcdeb" data-cy="plcdeb" formControlName="plcdeb" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.cpt" for="field_cpt">Cpt</label>
+          <input type="number" class="form-control" name="cpt" id="field_cpt" data-cy="cpt" formControlName="cpt" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.cptmnt" for="field_cptmnt">Cptmnt</label>
+          <input type="number" class="form-control" name="cptmnt" id="field_cptmnt" data-cy="cptmnt" formControlName="cptmnt" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.actif" for="field_actif">Actif</label>
+          <input type="number" class="form-control" name="actif" id="field_actif" data-cy="actif" formControlName="actif" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.datact" for="field_datact">Datact</label>
+          <div class="input-group">
+            <input
+              id="field_datact"
+              data-cy="datact"
+              type="text"
+              class="form-control"
+              name="datact"
+              ngbDatepicker
+              #datactDp="ngbDatepicker"
+              formControlName="datact"
+            />
+            <button type="button" class="btn btn-secondary" (click)="datactDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.cdcatvh" for="field_cdcatvh">Cdcatvh</label>
+          <input type="text" class="form-control" name="cdcatvh" id="field_cdcatvh" data-cy="cdcatvh" formControlName="cdcatvh" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.taux" for="field_taux">Taux</label>
+          <input type="number" class="form-control" name="taux" id="field_taux" data-cy="taux" formControlName="taux" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.kmmoy" for="field_kmmoy">Kmmoy</label>
+          <input type="number" class="form-control" name="kmmoy" id="field_kmmoy" data-cy="kmmoy" formControlName="kmmoy" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.codstat" for="field_codstat">Codstat</label>
+          <input type="number" class="form-control" name="codstat" id="field_codstat" data-cy="codstat" formControlName="codstat" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.edition" for="field_edition">Edition</label>
+          <input type="text" class="form-control" name="edition" id="field_edition" data-cy="edition" formControlName="edition" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.valassur" for="field_valassur">Valassur</label>
+          <input type="number" class="form-control" name="valassur" id="field_valassur" data-cy="valassur" formControlName="valassur" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.valamort" for="field_valamort">Valamort</label>
+          <input type="number" class="form-control" name="valamort" id="field_valamort" data-cy="valamort" formControlName="valamort" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.consommodel" for="field_consommodel">Consommodel</label>
+          <input
+            type="number"
+            class="form-control"
+            name="consommodel"
+            id="field_consommodel"
+            data-cy="consommodel"
+            formControlName="consommodel"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.decetat" for="field_decetat">Decetat</label>
+          <input type="text" class="form-control" name="decetat" id="field_decetat" data-cy="decetat" formControlName="decetat" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.codtypvoit" for="field_codtypvoit">Codtypvoit</label>
+          <input
+            type="text"
+            class="form-control"
+            name="codtypvoit"
+            id="field_codtypvoit"
+            data-cy="codtypvoit"
+            formControlName="codtypvoit"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.cdtyp" for="field_cdtyp">Cdtyp</label>
+          <input type="text" class="form-control" name="cdtyp" id="field_cdtyp" data-cy="cdtyp" formControlName="cdtyp" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.cdnat" for="field_cdnat">Cdnat</label>
+          <input type="number" class="form-control" name="cdnat" id="field_cdnat" data-cy="cdnat" formControlName="cdnat" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.typbv" for="field_typbv">Typbv</label>
+          <input type="text" class="form-control" name="typbv" id="field_typbv" data-cy="typbv" formControlName="typbv" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.cdtypbv" for="field_cdtypbv">Cdtypbv</label>
+          <input type="text" class="form-control" name="cdtypbv" id="field_cdtypbv" data-cy="cdtypbv" formControlName="cdtypbv" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.pneu" for="field_pneu">Pneu</label>
+          <input type="text" class="form-control" name="pneu" id="field_pneu" data-cy="pneu" formControlName="pneu" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.gps" for="field_gps">Gps</label>
+          <input type="text" class="form-control" name="gps" id="field_gps" data-cy="gps" formControlName="gps" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.marquebv" for="field_marquebv">Marquebv</label>
+          <input type="text" class="form-control" name="marquebv" id="field_marquebv" data-cy="marquebv" formControlName="marquebv" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.machine.typboite" for="field_typboite">Typboite</label>
+          <input type="text" class="form-control" name="typboite" id="field_typboite" data-cy="typboite" formControlName="typboite" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

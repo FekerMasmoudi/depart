@@ -1,0 +1,27 @@
+{
+  "departdbApp": {
+    "centVehic": {
+      "home": {
+        "title": "Cent Vehics",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Cent Vehic",
+        "createOrEditLabel": "Create or edit a Cent Vehic",
+        "notFound": "No Cent Vehics found"
+      },
+      "created": "A new Cent Vehic is created with identifier {{ param }}",
+      "updated": "A Cent Vehic is updated with identifier {{ param }}",
+      "deleted": "A Cent Vehic is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Cent Vehic {{ id }}?"
+      },
+      "detail": {
+        "title": "Cent Vehic"
+      },
+      "id": "ID",
+      "cdmac": "Cdmac",
+      "dateff": "Dateff",
+      "deccent": "Deccent",
+      "decagenc": "Decagenc"
+    }
+  }
+}

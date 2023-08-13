@@ -1,0 +1,29 @@
+{
+  "departdbApp": {
+    "serviceRot": {
+      "home": {
+        "title": "Service Rots",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Service Rot",
+        "createOrEditLabel": "Create or edit a Service Rot",
+        "notFound": "No Service Rots found"
+      },
+      "created": "A new Service Rot is created with identifier {{ param }}",
+      "updated": "A Service Rot is updated with identifier {{ param }}",
+      "deleted": "A Service Rot is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Service Rot {{ id }}?"
+      },
+      "detail": {
+        "title": "Service Rot"
+      },
+      "id": "ID",
+      "deccent": "Deccent",
+      "decagenc": "Decagenc",
+      "decserv": "Decserv",
+      "codgrp": "Codgrp",
+      "delserv": "Delserv",
+      "ordserv": "Ordserv"
+    }
+  }
+}

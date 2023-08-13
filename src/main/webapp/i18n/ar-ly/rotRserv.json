@@ -1,0 +1,37 @@
+{
+  "departdbApp": {
+    "rotRserv": {
+      "home": {
+        "title": "Rot Rservs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Rot Rserv",
+        "createOrEditLabel": "Create or edit a Rot Rserv",
+        "notFound": "No Rot Rservs found"
+      },
+      "created": "A new Rot Rserv is created with identifier {{ param }}",
+      "updated": "A Rot Rserv is updated with identifier {{ param }}",
+      "deleted": "A Rot Rserv is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Rot Rserv {{ id }}?"
+      },
+      "detail": {
+        "title": "Rot Rserv"
+      },
+      "deccent": "Deccent",
+      "decagenc": "Decagenc",
+      "dedated": "Dedated",
+      "matric": "Matric",
+      "heurdeb": "Heurdeb",
+      "heurfin": "Heurfin",
+      "statut": "Statut",
+      "lieedeb": "Lieedeb",
+      "lieefin": "Lieefin",
+      "program": "Program",
+      "cd1": "Cd 1",
+      "cd2": "Cd 2",
+      "cd3": "Cd 3",
+      "id": "Id",
+      "annul": "Annul"
+    }
+  }
+}

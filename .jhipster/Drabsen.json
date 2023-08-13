@@ -1,0 +1,56 @@
+{
+  "applications": "*",
+  "changelogDate": "20230811081306",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "drabsen",
+  "fields": [
+    {
+      "fieldName": "cdtypab",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "matric",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "databs",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "numabs",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "nbrabs",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "validabs",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "observaabs",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "cd1",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "cd2",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "cd3",
+      "fieldType": "Integer"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Drabsen",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

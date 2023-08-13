@@ -1,0 +1,68 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="drabsen">
+      <h2 data-cy="drabsenDetailsHeading"><span jhiTranslate="departdbApp.drabsen.detail.title">Drabsen</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ drabsen.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.drabsen.cdtypab">Cdtypab</span></dt>
+        <dd>
+          <span>{{ drabsen.cdtypab }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.drabsen.matric">Matric</span></dt>
+        <dd>
+          <span>{{ drabsen.matric }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.drabsen.databs">Databs</span></dt>
+        <dd>
+          <span>{{ drabsen.databs | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.drabsen.numabs">Numabs</span></dt>
+        <dd>
+          <span>{{ drabsen.numabs }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.drabsen.nbrabs">Nbrabs</span></dt>
+        <dd>
+          <span>{{ drabsen.nbrabs }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.drabsen.validabs">Validabs</span></dt>
+        <dd>
+          <span>{{ drabsen.validabs }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.drabsen.observaabs">Observaabs</span></dt>
+        <dd>
+          <span>{{ drabsen.observaabs }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.drabsen.cd1">Cd 1</span></dt>
+        <dd>
+          <span>{{ drabsen.cd1 }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.drabsen.cd2">Cd 2</span></dt>
+        <dd>
+          <span>{{ drabsen.cd2 }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.drabsen.cd3">Cd 3</span></dt>
+        <dd>
+          <span>{{ drabsen.cd3 }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/drabsen', drabsen.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>
