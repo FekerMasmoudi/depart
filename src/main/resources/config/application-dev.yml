@@ -32,7 +32,7 @@ spring:
       indent-output: true
   data:
     mongodb:
-      uri: mongodb+srv://benfarhatmohamed9:YXOitGp5pAWihEfe@cluster0.sk5q9eh.mongodb.net/
+      uri: mongodb://localhost:27017/
       database: departdb
   mail:
     host: localhost

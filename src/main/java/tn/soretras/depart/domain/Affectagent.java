@@ -68,6 +68,34 @@ public class Affectagent implements Serializable {
         return this.id;
     }
 
+    public Affectagent(
+        String id,
+        @NotNull Integer deccent,
+        @NotNull Integer decagenc,
+        @NotNull Integer decserv,
+        @NotNull String decoper,
+        @NotNull String decsean,
+        @NotNull Integer cdmois,
+        @NotNull String cdsocie,
+        @NotNull Integer decexer,
+        @NotNull Integer matric,
+        @NotNull Integer matric2,
+        @NotNull String cdmac
+    ) {
+        this.id = id;
+        this.deccent = deccent;
+        this.decagenc = decagenc;
+        this.decserv = decserv;
+        this.decoper = decoper;
+        this.decsean = decsean;
+        this.cdmois = cdmois;
+        this.cdsocie = cdsocie;
+        this.decexer = decexer;
+        this.matric = matric;
+        this.matric2 = matric2;
+        this.cdmac = cdmac;
+    }
+
     public Affectagent id(String id) {
         this.setId(id);
         return this;
