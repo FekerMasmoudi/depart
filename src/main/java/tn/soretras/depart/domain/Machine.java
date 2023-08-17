@@ -165,6 +165,106 @@ public class Machine implements Serializable {
         return this.id;
     }
 
+    public Machine(
+        String id,
+        String cdmac,
+        String cdmod,
+        String cdmarque,
+        String lbmac,
+        String refmac,
+        String serie,
+        LocalDate datfab,
+        LocalDate datacq,
+        LocalDate datmes,
+        Integer valacq,
+        String obs,
+        String numplan,
+        String cdlipro,
+        String immat,
+        String marque,
+        String typev,
+        String numser,
+        String puiss,
+        String nrj,
+        String genre,
+        Integer cylind,
+        Integer pdsvid,
+        Integer charge,
+        Integer plcass,
+        Integer plcdeb,
+        Integer cpt,
+        Integer cptmnt,
+        Integer actif,
+        LocalDate datact,
+        String cdcatvh,
+        Integer taux,
+        Integer kmmoy,
+        Integer codstat,
+        String edition,
+        Integer valassur,
+        Integer valamort,
+        Integer consommodel,
+        String decetat,
+        String codtypvoit,
+        String cdtyp,
+        Integer cdnat,
+        String typbv,
+        String cdtypbv,
+        String pneu,
+        String gps,
+        String marquebv,
+        String typboite
+    ) {
+        this.id = id;
+        this.cdmac = cdmac;
+        this.cdmod = cdmod;
+        this.cdmarque = cdmarque;
+        this.lbmac = lbmac;
+        this.refmac = refmac;
+        this.serie = serie;
+        this.datfab = datfab;
+        this.datacq = datacq;
+        this.datmes = datmes;
+        this.valacq = valacq;
+        this.obs = obs;
+        this.numplan = numplan;
+        this.cdlipro = cdlipro;
+        this.immat = immat;
+        this.marque = marque;
+        this.typev = typev;
+        this.numser = numser;
+        this.puiss = puiss;
+        this.nrj = nrj;
+        this.genre = genre;
+        this.cylind = cylind;
+        this.pdsvid = pdsvid;
+        this.charge = charge;
+        this.plcass = plcass;
+        this.plcdeb = plcdeb;
+        this.cpt = cpt;
+        this.cptmnt = cptmnt;
+        this.actif = actif;
+        this.datact = datact;
+        this.cdcatvh = cdcatvh;
+        this.taux = taux;
+        this.kmmoy = kmmoy;
+        this.codstat = codstat;
+        this.edition = edition;
+        this.valassur = valassur;
+        this.valamort = valamort;
+        this.consommodel = consommodel;
+        this.decetat = decetat;
+        this.codtypvoit = codtypvoit;
+        this.cdtyp = cdtyp;
+        this.cdnat = cdnat;
+        this.typbv = typbv;
+        this.cdtypbv = cdtypbv;
+        this.pneu = pneu;
+        this.gps = gps;
+        this.marquebv = marquebv;
+        this.typboite = typboite;
+    }
+
     public Machine id(String id) {
         this.setId(id);
         return this;

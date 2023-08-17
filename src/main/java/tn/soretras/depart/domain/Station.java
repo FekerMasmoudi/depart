@@ -49,6 +49,28 @@ public class Station implements Serializable {
         return this.id;
     }
 
+    public Station(
+        String id,
+        @NotNull String decstat,
+        String dectyst,
+        String decrout,
+        String delstat,
+        String delstatfr,
+        String lattitude,
+        String longitude,
+        String valide
+    ) {
+        this.id = id;
+        this.decstat = decstat;
+        this.dectyst = dectyst;
+        this.decrout = decrout;
+        this.delstat = delstat;
+        this.delstatfr = delstatfr;
+        this.lattitude = lattitude;
+        this.longitude = longitude;
+        this.valide = valide;
+    }
+
     public Station id(String id) {
         this.setId(id);
         return this;

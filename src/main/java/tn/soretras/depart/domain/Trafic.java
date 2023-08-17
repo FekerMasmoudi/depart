@@ -46,6 +46,24 @@ public class Trafic implements Serializable {
         return this.id;
     }
 
+    public Trafic(
+        String id,
+        @NotNull Integer deccent,
+        @NotNull Integer decagenc,
+        @NotNull LocalDate dedated,
+        Integer ancien,
+        String vldtrafic,
+        String clotrafic
+    ) {
+        this.id = id;
+        this.deccent = deccent;
+        this.decagenc = decagenc;
+        this.dedated = dedated;
+        this.ancien = ancien;
+        this.vldtrafic = vldtrafic;
+        this.clotrafic = clotrafic;
+    }
+
     public Trafic id(String id) {
         this.setId(id);
         return this;

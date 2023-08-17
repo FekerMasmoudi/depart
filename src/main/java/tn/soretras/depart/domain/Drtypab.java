@@ -35,6 +35,14 @@ public class Drtypab implements Serializable {
         return this.id;
     }
 
+    public Drtypab(String id, String cdtypab, String lbtypab, String dabsjt, String dabsjp) {
+        this.id = id;
+        this.cdtypab = cdtypab;
+        this.lbtypab = lbtypab;
+        this.dabsjt = dabsjt;
+        this.dabsjp = dabsjp;
+    }
+
     public Drtypab id(String id) {
         this.setId(id);
         return this;

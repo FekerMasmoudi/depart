@@ -42,6 +42,16 @@ public class RhAgent implements Serializable {
         return this.id;
     }
 
+    public RhAgent(String id, Integer matric, String decjour, LocalDate dateffrh, String decoper, Integer deccent, Integer decagenc) {
+        this.id = id;
+        this.matric = matric;
+        this.decjour = decjour;
+        this.dateffrh = dateffrh;
+        this.decoper = decoper;
+        this.deccent = deccent;
+        this.decagenc = decagenc;
+    }
+
     public RhAgent id(String id) {
         this.setId(id);
         return this;

@@ -1,0 +1,116 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="externalApi">
+      <h2 data-cy="externalApiDetailsHeading"><span jhiTranslate="departdbApp.externalApi.detail.title">External Api</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ externalApi.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.externalApi.idm">Idm</span></dt>
+        <dd>
+          <span>{{ externalApi.idm }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.externalApi.name">Name</span></dt>
+        <dd>
+          <span>{{ externalApi.name }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.externalApi.status">Status</span></dt>
+        <dd>
+          <span>{{ externalApi.status }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.externalApi.comments">Comments</span></dt>
+        <dd>
+          <span>{{ externalApi.comments }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.externalApi.idschema">Idschema</span></dt>
+        <dd>
+          <span>{{ externalApi.idschema }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.externalApi.datecreatedt">Datecreatedt</span></dt>
+        <dd>
+          <span>{{ externalApi.datecreatedt | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.externalApi.lastupdatedm">Lastupdatedm</span></dt>
+        <dd>
+          <span>{{ externalApi.lastupdatedm | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.externalApi.origin">Origin</span></dt>
+        <dd>
+          <span>{{ externalApi.origin }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.externalApi.templateid">Templateid</span></dt>
+        <dd>
+          <span>{{ externalApi.templateid }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.externalApi.idmodule">Idmodule</span></dt>
+        <dd>
+          <span>{{ externalApi.idmodule }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.externalApi.uritemplate">Uritemplate</span></dt>
+        <dd>
+          <span>{{ externalApi.uritemplate }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.externalApi.priority">Priority</span></dt>
+        <dd>
+          <span>{{ externalApi.priority }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.externalApi.schemaidt">Schemaidt</span></dt>
+        <dd>
+          <span>{{ externalApi.schemaidt }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.externalApi.createdatet">Createdatet</span></dt>
+        <dd>
+          <span>{{ externalApi.createdatet | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.externalApi.lastupdatete">Lastupdatete</span></dt>
+        <dd>
+          <span>{{ externalApi.lastupdatete | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.externalApi.entity">Entity</span></dt>
+        <dd>
+          <span>{{ externalApi.entity }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.externalApi.parametre">Parametre</span></dt>
+        <dd>
+          <span>{{ externalApi.parametre }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.externalApi.countrowsreq">Countrowsreq</span></dt>
+        <dd>
+          <span>{{ externalApi.countrowsreq }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.externalApi.countrowsres">Countrowsres</span></dt>
+        <dd>
+          <span>{{ externalApi.countrowsres }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.externalApi.frequency">Frequency</span></dt>
+        <dd>
+          <span>{{ externalApi.frequency }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.externalApi.emergencycode">Emergencycode</span></dt>
+        <dd>
+          <span>{{ externalApi.emergencycode }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.externalApi.satausgetapi">Satausgetapi</span></dt>
+        <dd>
+          <span>{{ externalApi.satausgetapi }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/external-api', externalApi.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

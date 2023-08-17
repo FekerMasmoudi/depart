@@ -139,6 +139,11 @@ import { RouterModule } from '@angular/router';
         data: { pageTitle: 'departdbApp.drabsen.home.title' },
         loadChildren: () => import('./drabsen/drabsen.module').then(m => m.DrabsenModule),
       },
+      {
+        path: 'external-api',
+        data: { pageTitle: 'departdbApp.externalApi.home.title' },
+        loadChildren: () => import('./external-api/external-api.module').then(m => m.ExternalApiModule),
+      },
       /* jhipster-needle-add-entity-route - JHipster will add entity modules routes here */
     ]),
   ],

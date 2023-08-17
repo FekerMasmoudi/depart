@@ -31,6 +31,12 @@ public class Motifa implements Serializable {
         return this.id;
     }
 
+    public Motifa(String id, @NotNull Integer decmotif, String libmotif) {
+        this.id = id;
+        this.decmotif = decmotif;
+        this.libmotif = libmotif;
+    }
+
     public Motifa id(String id) {
         this.setId(id);
         return this;
@@ -93,5 +99,9 @@ public class Motifa implements Serializable {
             ", decmotif=" + getDecmotif() +
             ", libmotif='" + getLibmotif() + "'" +
             "}";
+    }
+
+    public static long getSerialversionuid() {
+        return serialVersionUID;
     }
 }

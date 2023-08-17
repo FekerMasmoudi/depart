@@ -41,19 +41,19 @@ public class DepartDTO implements Serializable {
 
     private Integer cdmac;
 
-    private ZonedDateTime deheups;
+    private LocalDate deheups;
 
-    private ZonedDateTime deheufs;
+    private LocalDate deheufs;
 
     private Integer denbrro;
 
-    private ZonedDateTime deheuaa;
+    private LocalDate deheuaa;
 
-    private ZonedDateTime deheudr;
+    private LocalDate deheudr;
 
-    private ZonedDateTime deheupd;
+    private LocalDate deheupd;
 
-    private ZonedDateTime deampli;
+    private LocalDate deampli;
 
     private String obsind;
 
@@ -177,19 +177,19 @@ public class DepartDTO implements Serializable {
         this.cdmac = cdmac;
     }
 
-    public ZonedDateTime getDeheups() {
+    public LocalDate getDeheups() {
         return deheups;
     }
 
-    public void setDeheups(ZonedDateTime deheups) {
+    public void setDeheups(LocalDate deheups) {
         this.deheups = deheups;
     }
 
-    public ZonedDateTime getDeheufs() {
+    public LocalDate getDeheufs() {
         return deheufs;
     }
 
-    public void setDeheufs(ZonedDateTime deheufs) {
+    public void setDeheufs(LocalDate deheufs) {
         this.deheufs = deheufs;
     }
 
@@ -201,35 +201,35 @@ public class DepartDTO implements Serializable {
         this.denbrro = denbrro;
     }
 
-    public ZonedDateTime getDeheuaa() {
+    public LocalDate getDeheuaa() {
         return deheuaa;
     }
 
-    public void setDeheuaa(ZonedDateTime deheuaa) {
+    public void setDeheuaa(LocalDate deheuaa) {
         this.deheuaa = deheuaa;
     }
 
-    public ZonedDateTime getDeheudr() {
+    public LocalDate getDeheudr() {
         return deheudr;
     }
 
-    public void setDeheudr(ZonedDateTime deheudr) {
+    public void setDeheudr(LocalDate deheudr) {
         this.deheudr = deheudr;
     }
 
-    public ZonedDateTime getDeheupd() {
+    public LocalDate getDeheupd() {
         return deheupd;
     }
 
-    public void setDeheupd(ZonedDateTime deheupd) {
+    public void setDeheupd(LocalDate deheupd) {
         this.deheupd = deheupd;
     }
 
-    public ZonedDateTime getDeampli() {
+    public LocalDate getDeampli() {
         return deampli;
     }
 
-    public void setDeampli(ZonedDateTime deampli) {
+    public void setDeampli(LocalDate deampli) {
         this.deampli = deampli;
     }
 

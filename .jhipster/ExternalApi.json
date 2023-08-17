@@ -1,0 +1,104 @@
+{
+  "applications": "*",
+  "changelogDate": "20230817110421",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "external_api",
+  "fields": [
+    {
+      "fieldName": "idm",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "comments",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "idschema",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "datecreatedt",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "lastupdatedm",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "origin",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "templateid",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "idmodule",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "uritemplate",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "priority",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "schemaidt",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "createdatet",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "lastupdatete",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "entity",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "parametre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "countrowsreq",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "countrowsres",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "frequency",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "emergencycode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "satausgetapi",
+      "fieldType": "Boolean"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "ExternalApi",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

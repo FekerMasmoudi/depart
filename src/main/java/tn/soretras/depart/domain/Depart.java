@@ -2,7 +2,6 @@ package tn.soretras.depart.domain;
 
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.time.ZonedDateTime;
 import javax.validation.constraints.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -58,25 +57,25 @@ public class Depart implements Serializable {
     private Integer cdmac;
 
     @Field("deheups")
-    private ZonedDateTime deheups;
+    private LocalDate deheups;
 
     @Field("deheufs")
-    private ZonedDateTime deheufs;
+    private LocalDate deheufs;
 
     @Field("denbrro")
     private Integer denbrro;
 
     @Field("deheuaa")
-    private ZonedDateTime deheuaa;
+    private LocalDate deheuaa;
 
     @Field("deheudr")
-    private ZonedDateTime deheudr;
+    private LocalDate deheudr;
 
     @Field("deheupd")
-    private ZonedDateTime deheupd;
+    private LocalDate deheupd;
 
     @Field("deampli")
-    private ZonedDateTime deampli;
+    private LocalDate deampli;
 
     @Field("obsind")
     private String obsind;
@@ -130,6 +129,80 @@ public class Depart implements Serializable {
     private Integer decmotifrea;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
+
+    public Depart(
+        String id,
+        @NotNull Integer deccent,
+        @NotNull Integer decagenc,
+        @NotNull Integer decserv,
+        @NotNull String decoper,
+        @NotNull String decsean,
+        @NotNull LocalDate dedated,
+        @NotNull Integer denumdp,
+        Integer matric,
+        Integer matric1,
+        Integer cdmac,
+        LocalDate deheups,
+        LocalDate deheufs,
+        Integer denbrro,
+        LocalDate deheuaa,
+        LocalDate deheudr,
+        LocalDate deheupd,
+        LocalDate deampli,
+        String obsind,
+        String vldroul,
+        String deetat,
+        String deannul,
+        String decclot,
+        String execute,
+        String motifa,
+        String observ,
+        Float recettes,
+        Integer nbrevoy,
+        Integer decmotifch,
+        Integer decmotifre,
+        Integer cd1,
+        Integer cd2,
+        Integer cd3,
+        Integer decmotifcha,
+        Integer decmotifrea
+    ) {
+        this.id = id;
+        this.deccent = deccent;
+        this.decagenc = decagenc;
+        this.decserv = decserv;
+        this.decoper = decoper;
+        this.decsean = decsean;
+        this.dedated = dedated;
+        this.denumdp = denumdp;
+        this.matric = matric;
+        this.matric1 = matric1;
+        this.cdmac = cdmac;
+        this.deheups = deheups;
+        this.deheufs = deheufs;
+        this.denbrro = denbrro;
+        this.deheuaa = deheuaa;
+        this.deheudr = deheudr;
+        this.deheupd = deheupd;
+        this.deampli = deampli;
+        this.obsind = obsind;
+        this.vldroul = vldroul;
+        this.deetat = deetat;
+        this.deannul = deannul;
+        this.decclot = decclot;
+        this.execute = execute;
+        this.motifa = motifa;
+        this.observ = observ;
+        this.recettes = recettes;
+        this.nbrevoy = nbrevoy;
+        this.decmotifch = decmotifch;
+        this.decmotifre = decmotifre;
+        this.cd1 = cd1;
+        this.cd2 = cd2;
+        this.cd3 = cd3;
+        this.decmotifcha = decmotifcha;
+        this.decmotifrea = decmotifrea;
+    }
 
     public String getId() {
         return this.id;
@@ -274,29 +347,29 @@ public class Depart implements Serializable {
         this.cdmac = cdmac;
     }
 
-    public ZonedDateTime getDeheups() {
+    public LocalDate getDeheups() {
         return this.deheups;
     }
 
-    public Depart deheups(ZonedDateTime deheups) {
+    public Depart deheups(LocalDate deheups) {
         this.setDeheups(deheups);
         return this;
     }
 
-    public void setDeheups(ZonedDateTime deheups) {
+    public void setDeheups(LocalDate deheups) {
         this.deheups = deheups;
     }
 
-    public ZonedDateTime getDeheufs() {
+    public LocalDate getDeheufs() {
         return this.deheufs;
     }
 
-    public Depart deheufs(ZonedDateTime deheufs) {
+    public Depart deheufs(LocalDate deheufs) {
         this.setDeheufs(deheufs);
         return this;
     }
 
-    public void setDeheufs(ZonedDateTime deheufs) {
+    public void setDeheufs(LocalDate deheufs) {
         this.deheufs = deheufs;
     }
 
@@ -313,55 +386,55 @@ public class Depart implements Serializable {
         this.denbrro = denbrro;
     }
 
-    public ZonedDateTime getDeheuaa() {
+    public LocalDate getDeheuaa() {
         return this.deheuaa;
     }
 
-    public Depart deheuaa(ZonedDateTime deheuaa) {
+    public Depart deheuaa(LocalDate deheuaa) {
         this.setDeheuaa(deheuaa);
         return this;
     }
 
-    public void setDeheuaa(ZonedDateTime deheuaa) {
+    public void setDeheuaa(LocalDate deheuaa) {
         this.deheuaa = deheuaa;
     }
 
-    public ZonedDateTime getDeheudr() {
+    public LocalDate getDeheudr() {
         return this.deheudr;
     }
 
-    public Depart deheudr(ZonedDateTime deheudr) {
+    public Depart deheudr(LocalDate deheudr) {
         this.setDeheudr(deheudr);
         return this;
     }
 
-    public void setDeheudr(ZonedDateTime deheudr) {
+    public void setDeheudr(LocalDate deheudr) {
         this.deheudr = deheudr;
     }
 
-    public ZonedDateTime getDeheupd() {
+    public LocalDate getDeheupd() {
         return this.deheupd;
     }
 
-    public Depart deheupd(ZonedDateTime deheupd) {
+    public Depart deheupd(LocalDate deheupd) {
         this.setDeheupd(deheupd);
         return this;
     }
 
-    public void setDeheupd(ZonedDateTime deheupd) {
+    public void setDeheupd(LocalDate deheupd) {
         this.deheupd = deheupd;
     }
 
-    public ZonedDateTime getDeampli() {
+    public LocalDate getDeampli() {
         return this.deampli;
     }
 
-    public Depart deampli(ZonedDateTime deampli) {
+    public Depart deampli(LocalDate deampli) {
         this.setDeampli(deampli);
         return this;
     }
 
-    public void setDeampli(ZonedDateTime deampli) {
+    public void setDeampli(LocalDate deampli) {
         this.deampli = deampli;
     }
 

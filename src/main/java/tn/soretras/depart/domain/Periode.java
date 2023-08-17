@@ -38,6 +38,15 @@ public class Periode implements Serializable {
         return this.id;
     }
 
+    public Periode(String id, String decoper, String denoper, String primaire, String startdate, String enddate) {
+        this.id = id;
+        this.decoper = decoper;
+        this.denoper = denoper;
+        this.primaire = primaire;
+        this.startdate = startdate;
+        this.enddate = enddate;
+    }
+
     public Periode id(String id) {
         this.setId(id);
         return this;

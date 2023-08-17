@@ -46,14 +46,15 @@
       "RotRserv",
       "Modif",
       "Drtypab",
-      "Drabsen"
+      "Drabsen",
+      "ExternalApi"
     ],
     "entitySuffix": "",
     "jhiPrefix": "jhi",
     "jhipsterVersion": "7.9.3",
     "jwtSecretKey": "M2I2ZjU3YjM2NThmMjMyZTdlYTNmYjIxYzkwZTE2Zjc4NGM1NGU0YzlkOTZjMDM5MzViOGFmZjBlYmNjYTgzMWNhZmFlZWJjNGM2NzdiNzMwNDhlMzNhZjJlMzI1YjAwMzhkNTIwYmZmZDYwMTgxMTI4NGJkYTllNTc3YWFiZTI=",
     "languages": ["en", "ar-ly"],
-    "lastLiquibaseTimestamp": 1691741586000,
+    "lastLiquibaseTimestamp": 1692270261000,
     "messageBroker": false,
     "microfrontend": false,
     "microfrontends": [],

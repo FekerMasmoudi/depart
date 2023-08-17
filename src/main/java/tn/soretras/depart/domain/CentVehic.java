@@ -36,6 +36,14 @@ public class CentVehic implements Serializable {
         return this.id;
     }
 
+    public CentVehic(String id, String cdmac, LocalDate dateff, Integer deccent, Integer decagenc) {
+        this.id = id;
+        this.cdmac = cdmac;
+        this.dateff = dateff;
+        this.deccent = deccent;
+        this.decagenc = decagenc;
+    }
+
     public CentVehic id(String id) {
         this.setId(id);
         return this;

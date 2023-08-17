@@ -2,7 +2,6 @@ package tn.soretras.depart.domain;
 
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.time.ZonedDateTime;
 import javax.validation.constraints.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -76,22 +75,22 @@ public class Deprotat implements Serializable {
     private String cdmac;
 
     @Field("hdeparte")
-    private ZonedDateTime hdeparte;
+    private LocalDate hdeparte;
 
     @Field("hretoure")
-    private ZonedDateTime hretoure;
+    private LocalDate hretoure;
 
     @Field("harralle")
-    private ZonedDateTime harralle;
+    private LocalDate harralle;
 
     @Field("harrrete")
-    private ZonedDateTime harrrete;
+    private LocalDate harrrete;
 
     @Field("rannul")
     private String rannul;
 
     @Field("km")
-    private Integer km;
+    private Double km;
 
     @Field("motifa")
     private Integer motifa;
@@ -136,6 +135,84 @@ public class Deprotat implements Serializable {
     private String r;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
+
+    public Deprotat(
+        String id,
+        @NotNull Integer deccent,
+        @NotNull Integer decagenc,
+        @NotNull LocalDate dedated,
+        @NotNull Integer denumdp,
+        @NotNull Integer decserv,
+        @NotNull String decoper,
+        @NotNull String decsean,
+        Integer numrotat,
+        Integer ligdeccent,
+        Integer ligdecagenc,
+        String denumli,
+        String decstat,
+        String decsta1,
+        Integer matric,
+        Integer matric1,
+        String cdmac,
+        LocalDate hdeparte,
+        LocalDate hretoure,
+        LocalDate harralle,
+        LocalDate harrrete,
+        String rannul,
+        Double km,
+        Integer motifa,
+        String observ,
+        Integer recettesvoy,
+        Integer nbrevoy,
+        Integer paye,
+        Integer cd1,
+        Integer cd2,
+        Integer cd3,
+        Integer decmotifcha,
+        Integer decmotifrea,
+        Integer idapex,
+        String plusmoins,
+        String a,
+        String r
+    ) {
+        this.id = id;
+        this.deccent = deccent;
+        this.decagenc = decagenc;
+        this.dedated = dedated;
+        this.denumdp = denumdp;
+        this.decserv = decserv;
+        this.decoper = decoper;
+        this.decsean = decsean;
+        this.numrotat = numrotat;
+        this.ligdeccent = ligdeccent;
+        this.ligdecagenc = ligdecagenc;
+        this.denumli = denumli;
+        this.decstat = decstat;
+        this.decsta1 = decsta1;
+        this.matric = matric;
+        this.matric1 = matric1;
+        this.cdmac = cdmac;
+        this.hdeparte = hdeparte;
+        this.hretoure = hretoure;
+        this.harralle = harralle;
+        this.harrrete = harrrete;
+        this.rannul = rannul;
+        this.km = km;
+        this.motifa = motifa;
+        this.observ = observ;
+        this.recettesvoy = recettesvoy;
+        this.nbrevoy = nbrevoy;
+        this.paye = paye;
+        this.cd1 = cd1;
+        this.cd2 = cd2;
+        this.cd3 = cd3;
+        this.decmotifcha = decmotifcha;
+        this.decmotifrea = decmotifrea;
+        this.idapex = idapex;
+        this.plusmoins = plusmoins;
+        this.a = a;
+        this.r = r;
+    }
 
     public String getId() {
         return this.id;
@@ -358,55 +435,55 @@ public class Deprotat implements Serializable {
         this.cdmac = cdmac;
     }
 
-    public ZonedDateTime getHdeparte() {
+    public LocalDate getHdeparte() {
         return this.hdeparte;
     }
 
-    public Deprotat hdeparte(ZonedDateTime hdeparte) {
+    public Deprotat hdeparte(LocalDate hdeparte) {
         this.setHdeparte(hdeparte);
         return this;
     }
 
-    public void setHdeparte(ZonedDateTime hdeparte) {
+    public void setHdeparte(LocalDate hdeparte) {
         this.hdeparte = hdeparte;
     }
 
-    public ZonedDateTime getHretoure() {
+    public LocalDate getHretoure() {
         return this.hretoure;
     }
 
-    public Deprotat hretoure(ZonedDateTime hretoure) {
+    public Deprotat hretoure(LocalDate hretoure) {
         this.setHretoure(hretoure);
         return this;
     }
 
-    public void setHretoure(ZonedDateTime hretoure) {
+    public void setHretoure(LocalDate hretoure) {
         this.hretoure = hretoure;
     }
 
-    public ZonedDateTime getHarralle() {
+    public LocalDate getHarralle() {
         return this.harralle;
     }
 
-    public Deprotat harralle(ZonedDateTime harralle) {
+    public Deprotat harralle(LocalDate harralle) {
         this.setHarralle(harralle);
         return this;
     }
 
-    public void setHarralle(ZonedDateTime harralle) {
+    public void setHarralle(LocalDate harralle) {
         this.harralle = harralle;
     }
 
-    public ZonedDateTime getHarrrete() {
+    public LocalDate getHarrrete() {
         return this.harrrete;
     }
 
-    public Deprotat harrrete(ZonedDateTime harrrete) {
+    public Deprotat harrrete(LocalDate harrrete) {
         this.setHarrrete(harrrete);
         return this;
     }
 
-    public void setHarrrete(ZonedDateTime harrrete) {
+    public void setHarrrete(LocalDate harrrete) {
         this.harrrete = harrrete;
     }
 
@@ -423,16 +500,16 @@ public class Deprotat implements Serializable {
         this.rannul = rannul;
     }
 
-    public Integer getKm() {
+    public Double getKm() {
         return this.km;
     }
 
-    public Deprotat km(Integer km) {
+    public Deprotat km(Double km) {
         this.setKm(km);
         return this;
     }
 
-    public void setKm(Integer km) {
+    public void setKm(Double km) {
         this.km = km;
     }
 

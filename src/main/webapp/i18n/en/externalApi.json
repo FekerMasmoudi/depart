@@ -1,0 +1,45 @@
+{
+  "departdbApp": {
+    "externalApi": {
+      "home": {
+        "title": "External Apis",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new External Api",
+        "createOrEditLabel": "Create or edit a External Api",
+        "notFound": "No External Apis found"
+      },
+      "created": "A new External Api is created with identifier {{ param }}",
+      "updated": "A External Api is updated with identifier {{ param }}",
+      "deleted": "A External Api is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete External Api {{ id }}?"
+      },
+      "detail": {
+        "title": "External Api"
+      },
+      "id": "ID",
+      "idm": "Idm",
+      "name": "Name",
+      "status": "Status",
+      "comments": "Comments",
+      "idschema": "Idschema",
+      "datecreatedt": "Datecreatedt",
+      "lastupdatedm": "Lastupdatedm",
+      "origin": "Origin",
+      "templateid": "Templateid",
+      "idmodule": "Idmodule",
+      "uritemplate": "Uritemplate",
+      "priority": "Priority",
+      "schemaidt": "Schemaidt",
+      "createdatet": "Createdatet",
+      "lastupdatete": "Lastupdatete",
+      "entity": "Entity",
+      "parametre": "Parametre",
+      "countrowsreq": "Countrowsreq",
+      "countrowsres": "Countrowsres",
+      "frequency": "Frequency",
+      "emergencycode": "Emergencycode",
+      "satausgetapi": "Satausgetapi"
+    }
+  }
+}

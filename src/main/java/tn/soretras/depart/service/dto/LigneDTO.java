@@ -1,7 +1,7 @@
 package tn.soretras.depart.service.dto;
 
 import java.io.Serializable;
-import java.time.ZonedDateTime;
+import java.time.LocalDate;
 import java.util.Objects;
 
 /**
@@ -26,9 +26,9 @@ public class LigneDTO implements Serializable {
 
     private String dectyeq;
 
-    private Integer denbrkm;
+    private Double denbrkm;
 
-    private Integer detparc;
+    private String detparc;
 
     private Integer dedural;
 
@@ -38,7 +38,7 @@ public class LigneDTO implements Serializable {
 
     private Integer detrjvr;
 
-    private Integer depiste;
+    private Double depiste;
 
     private String statlig;
 
@@ -61,7 +61,7 @@ public class LigneDTO implements Serializable {
 
     private String charset;
 
-    private ZonedDateTime lastupdate;
+    private LocalDate lastupdate;
 
     public String getId() {
         return id;
@@ -127,19 +127,19 @@ public class LigneDTO implements Serializable {
         this.dectyeq = dectyeq;
     }
 
-    public Integer getDenbrkm() {
+    public Double getDenbrkm() {
         return denbrkm;
     }
 
-    public void setDenbrkm(Integer denbrkm) {
+    public void setDenbrkm(Double denbrkm) {
         this.denbrkm = denbrkm;
     }
 
-    public Integer getDetparc() {
+    public String getDetparc() {
         return detparc;
     }
 
-    public void setDetparc(Integer detparc) {
+    public void setDetparc(String detparc) {
         this.detparc = detparc;
     }
 
@@ -175,11 +175,11 @@ public class LigneDTO implements Serializable {
         this.detrjvr = detrjvr;
     }
 
-    public Integer getDepiste() {
+    public Double getDepiste() {
         return depiste;
     }
 
-    public void setDepiste(Integer depiste) {
+    public void setDepiste(Double depiste) {
         this.depiste = depiste;
     }
 
@@ -271,11 +271,11 @@ public class LigneDTO implements Serializable {
         this.charset = charset;
     }
 
-    public ZonedDateTime getLastupdate() {
+    public LocalDate getLastupdate() {
         return lastupdate;
     }
 
-    public void setLastupdate(ZonedDateTime lastupdate) {
+    public void setLastupdate(LocalDate lastupdate) {
         this.lastupdate = lastupdate;
     }
 

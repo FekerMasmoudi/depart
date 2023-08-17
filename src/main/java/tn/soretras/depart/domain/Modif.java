@@ -270,6 +270,40 @@ public class Modif implements Serializable {
         return id != null && id.equals(((Modif) o).id);
     }
 
+    public Modif(
+        String id,
+        Integer deccent,
+        Integer decagenc,
+        LocalDate dedated,
+        Integer denumdp,
+        Integer decserv,
+        String decoper,
+        String decsean,
+        Integer numrotat,
+        Integer matric,
+        Integer cd1,
+        Integer decmotif,
+        LocalDate heur,
+        String chre,
+        String typ
+    ) {
+        this.id = id;
+        this.deccent = deccent;
+        this.decagenc = decagenc;
+        this.dedated = dedated;
+        this.denumdp = denumdp;
+        this.decserv = decserv;
+        this.decoper = decoper;
+        this.decsean = decsean;
+        this.numrotat = numrotat;
+        this.matric = matric;
+        this.cd1 = cd1;
+        this.decmotif = decmotif;
+        this.heur = heur;
+        this.chre = chre;
+        this.typ = typ;
+    }
+
     @Override
     public int hashCode() {
         // see https://vladmihalcea.com/how-to-implement-equals-and-hashcode-using-the-jpa-entity-identifier/
