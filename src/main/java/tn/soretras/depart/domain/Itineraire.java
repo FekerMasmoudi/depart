@@ -60,10 +60,6 @@ public class Itineraire implements Serializable {
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
 
-    public String getId() {
-        return this.id;
-    }
-
     public Itineraire(
         String id,
         Integer deccent,
@@ -92,6 +88,10 @@ public class Itineraire implements Serializable {
         this.section = section;
         this.sens = sens;
         this.dectyst = dectyst;
+    }
+
+    public String getId() {
+        return this.id;
     }
 
     public Itineraire id(String id) {

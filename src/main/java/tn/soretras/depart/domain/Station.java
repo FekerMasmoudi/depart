@@ -43,7 +43,7 @@ public class Station implements Serializable {
     @Field("valide")
     private String valide;
 
-    // jhipster-needle-entity-add-field - JHipster will add fields
+    // jhipster-needle-entity-add-field - JHipster will add fields here
 
     public String getId() {
         return this.id;

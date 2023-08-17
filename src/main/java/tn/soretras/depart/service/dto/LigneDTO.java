@@ -2,7 +2,6 @@ package tn.soretras.depart.service.dto;
 
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.time.ZonedDateTime;
 import java.util.Objects;
 
 /**
@@ -31,7 +30,7 @@ public class LigneDTO implements Serializable {
 
     private String detparc;
 
-    private String dedural;
+    private Integer dedural;
 
     private Integer dedurrt;
 
@@ -144,11 +143,11 @@ public class LigneDTO implements Serializable {
         this.detparc = detparc;
     }
 
-    public String getDedural() {
+    public Integer getDedural() {
         return dedural;
     }
 
-    public void setDedural(String dedural) {
+    public void setDedural(Integer dedural) {
         this.dedural = dedural;
     }
 

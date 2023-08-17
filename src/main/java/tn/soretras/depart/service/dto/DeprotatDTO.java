@@ -2,7 +2,6 @@ package tn.soretras.depart.service.dto;
 
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.time.ZonedDateTime;
 import java.util.Objects;
 import javax.validation.constraints.*;
 

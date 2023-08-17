@@ -2,7 +2,6 @@ package tn.soretras.depart.domain;
 
 import java.io.Serializable;
 import java.time.LocalDate;
-import java.time.ZonedDateTime;
 import javax.validation.constraints.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -131,10 +130,6 @@ public class Depart implements Serializable {
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
 
-    public String getId() {
-        return this.id;
-    }
-
     public Depart(
         String id,
         @NotNull Integer deccent,
@@ -207,6 +202,10 @@ public class Depart implements Serializable {
         this.cd3 = cd3;
         this.decmotifcha = decmotifcha;
         this.decmotifrea = decmotifrea;
+    }
+
+    public String getId() {
+        return this.id;
     }
 
     public Depart id(String id) {

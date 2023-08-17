@@ -100,4 +100,8 @@ public class Motifa implements Serializable {
             ", libmotif='" + getLibmotif() + "'" +
             "}";
     }
+
+    public static long getSerialversionuid() {
+        return serialVersionUID;
+    }
 }

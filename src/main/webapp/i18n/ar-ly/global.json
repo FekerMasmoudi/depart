@@ -34,6 +34,7 @@
         "modif": "Modif",
         "drtypab": "Drtypab",
         "drabsen": "Drabsen",
+        "externalApi": "External Api",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

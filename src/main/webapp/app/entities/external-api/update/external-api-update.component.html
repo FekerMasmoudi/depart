@@ -1,0 +1,246 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-external-api-heading"
+        data-cy="ExternalApiCreateUpdateHeading"
+        jhiTranslate="departdbApp.externalApi.home.createOrEditLabel"
+      >
+        Create or edit a External Api
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row mb-3" *ngIf="editForm.controls.id.value !== null">
+          <label class="form-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="text" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.externalApi.idm" for="field_idm">Idm</label>
+          <input type="text" class="form-control" name="idm" id="field_idm" data-cy="idm" formControlName="idm" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.externalApi.name" for="field_name">Name</label>
+          <input type="text" class="form-control" name="name" id="field_name" data-cy="name" formControlName="name" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.externalApi.status" for="field_status">Status</label>
+          <input type="text" class="form-control" name="status" id="field_status" data-cy="status" formControlName="status" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.externalApi.comments" for="field_comments">Comments</label>
+          <input type="text" class="form-control" name="comments" id="field_comments" data-cy="comments" formControlName="comments" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.externalApi.idschema" for="field_idschema">Idschema</label>
+          <input type="number" class="form-control" name="idschema" id="field_idschema" data-cy="idschema" formControlName="idschema" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.externalApi.datecreatedt" for="field_datecreatedt">Datecreatedt</label>
+          <div class="input-group">
+            <input
+              id="field_datecreatedt"
+              data-cy="datecreatedt"
+              type="text"
+              class="form-control"
+              name="datecreatedt"
+              ngbDatepicker
+              #datecreatedtDp="ngbDatepicker"
+              formControlName="datecreatedt"
+            />
+            <button type="button" class="btn btn-secondary" (click)="datecreatedtDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.externalApi.lastupdatedm" for="field_lastupdatedm">Lastupdatedm</label>
+          <div class="input-group">
+            <input
+              id="field_lastupdatedm"
+              data-cy="lastupdatedm"
+              type="text"
+              class="form-control"
+              name="lastupdatedm"
+              ngbDatepicker
+              #lastupdatedmDp="ngbDatepicker"
+              formControlName="lastupdatedm"
+            />
+            <button type="button" class="btn btn-secondary" (click)="lastupdatedmDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.externalApi.origin" for="field_origin">Origin</label>
+          <input type="text" class="form-control" name="origin" id="field_origin" data-cy="origin" formControlName="origin" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.externalApi.templateid" for="field_templateid">Templateid</label>
+          <input
+            type="number"
+            class="form-control"
+            name="templateid"
+            id="field_templateid"
+            data-cy="templateid"
+            formControlName="templateid"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.externalApi.idmodule" for="field_idmodule">Idmodule</label>
+          <input type="number" class="form-control" name="idmodule" id="field_idmodule" data-cy="idmodule" formControlName="idmodule" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.externalApi.uritemplate" for="field_uritemplate">Uritemplate</label>
+          <input
+            type="text"
+            class="form-control"
+            name="uritemplate"
+            id="field_uritemplate"
+            data-cy="uritemplate"
+            formControlName="uritemplate"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.externalApi.priority" for="field_priority">Priority</label>
+          <input type="number" class="form-control" name="priority" id="field_priority" data-cy="priority" formControlName="priority" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.externalApi.schemaidt" for="field_schemaidt">Schemaidt</label>
+          <input type="number" class="form-control" name="schemaidt" id="field_schemaidt" data-cy="schemaidt" formControlName="schemaidt" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.externalApi.createdatet" for="field_createdatet">Createdatet</label>
+          <div class="input-group">
+            <input
+              id="field_createdatet"
+              data-cy="createdatet"
+              type="text"
+              class="form-control"
+              name="createdatet"
+              ngbDatepicker
+              #createdatetDp="ngbDatepicker"
+              formControlName="createdatet"
+            />
+            <button type="button" class="btn btn-secondary" (click)="createdatetDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.externalApi.lastupdatete" for="field_lastupdatete">Lastupdatete</label>
+          <div class="input-group">
+            <input
+              id="field_lastupdatete"
+              data-cy="lastupdatete"
+              type="text"
+              class="form-control"
+              name="lastupdatete"
+              ngbDatepicker
+              #lastupdateteDp="ngbDatepicker"
+              formControlName="lastupdatete"
+            />
+            <button type="button" class="btn btn-secondary" (click)="lastupdateteDp.toggle()">
+              <fa-icon icon="calendar-alt"></fa-icon>
+            </button>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.externalApi.entity" for="field_entity">Entity</label>
+          <input type="text" class="form-control" name="entity" id="field_entity" data-cy="entity" formControlName="entity" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.externalApi.parametre" for="field_parametre">Parametre</label>
+          <input type="text" class="form-control" name="parametre" id="field_parametre" data-cy="parametre" formControlName="parametre" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.externalApi.countrowsreq" for="field_countrowsreq">Countrowsreq</label>
+          <input
+            type="number"
+            class="form-control"
+            name="countrowsreq"
+            id="field_countrowsreq"
+            data-cy="countrowsreq"
+            formControlName="countrowsreq"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.externalApi.countrowsres" for="field_countrowsres">Countrowsres</label>
+          <input
+            type="number"
+            class="form-control"
+            name="countrowsres"
+            id="field_countrowsres"
+            data-cy="countrowsres"
+            formControlName="countrowsres"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.externalApi.frequency" for="field_frequency">Frequency</label>
+          <input type="text" class="form-control" name="frequency" id="field_frequency" data-cy="frequency" formControlName="frequency" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.externalApi.emergencycode" for="field_emergencycode">Emergencycode</label>
+          <input
+            type="text"
+            class="form-control"
+            name="emergencycode"
+            id="field_emergencycode"
+            data-cy="emergencycode"
+            formControlName="emergencycode"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.externalApi.satausgetapi" for="field_satausgetapi">Satausgetapi</label>
+          <input
+            type="checkbox"
+            class="form-check"
+            name="satausgetapi"
+            id="field_satausgetapi"
+            data-cy="satausgetapi"
+            formControlName="satausgetapi"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

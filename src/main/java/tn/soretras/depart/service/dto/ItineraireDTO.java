@@ -26,7 +26,7 @@ public class ItineraireDTO implements Serializable {
     @NotNull
     private Integer denumlg;
 
-    private Double dekmsta;
+    private Integer dekmsta;
 
     private Integer dedurtr;
 
@@ -88,11 +88,11 @@ public class ItineraireDTO implements Serializable {
         this.denumlg = denumlg;
     }
 
-    public Double getDekmsta() {
+    public Integer getDekmsta() {
         return dekmsta;
     }
 
-    public void setDekmsta(Double dekmsta) {
+    public void setDekmsta(Integer dekmsta) {
         this.dekmsta = dekmsta;
     }
 

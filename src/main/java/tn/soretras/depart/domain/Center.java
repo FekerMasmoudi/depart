@@ -25,14 +25,6 @@ public class Center implements Serializable {
     @Field("delcent")
     private String delcent;
 
-    public Center(String id, @NotNull Integer deccent, String delcent, String deadrce, String deobser) {
-        this.id = id;
-        this.deccent = deccent;
-        this.delcent = delcent;
-        this.deadrce = deadrce;
-        this.deobser = deobser;
-    }
-
     @Field("deadrce")
     private String deadrce;
 
@@ -43,6 +35,14 @@ public class Center implements Serializable {
 
     public String getId() {
         return this.id;
+    }
+
+    public Center(String id, @NotNull Integer deccent, String delcent, String deadrce, String deobser) {
+        this.id = id;
+        this.deccent = deccent;
+        this.delcent = delcent;
+        this.deadrce = deadrce;
+        this.deobser = deobser;
     }
 
     public Center id(String id) {

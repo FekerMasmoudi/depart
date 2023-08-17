@@ -97,12 +97,6 @@ public class Ligne implements Serializable {
     private LocalDate lastupdate;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
-    //DateTimeFormatter df = DateTimeFormatter.ofPattern("dd-MMM-yyyy HH:mm:ss z", Locale.ENGLISH);
-    // String s = lastupdate.format(df);
-
-    public String getId() {
-        return this.id;
-    }
 
     public Ligne(
         String id,
@@ -160,6 +154,10 @@ public class Ligne implements Serializable {
         this.filename = filename;
         this.charset = charset;
         this.lastupdate = lastupdate;
+    }
+
+    public String getId() {
+        return this.id;
     }
 
     public Ligne id(String id) {

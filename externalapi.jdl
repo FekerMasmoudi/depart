@@ -1,0 +1,29 @@
+entity ExternalApi {
+
+idm	String 
+name	String
+status	String
+comments String	
+idschema Integer	
+datecreatedt LocalDate	
+lastupdatedm LocalDate
+origin	String
+templateid Integer	
+idmodule Integer	
+uritemplate String	
+priority Integer
+schemaidt Integer	
+createdatet LocalDate	
+lastupdatete LocalDate
+entity	String
+parametre String	
+countrowsreq Integer
+countrowsres Integer
+frequency String	
+emergencycode	String
+satausgetapi Boolean
+
+	
+}
+
+use mapstruct, serviceClass, pagination for *
