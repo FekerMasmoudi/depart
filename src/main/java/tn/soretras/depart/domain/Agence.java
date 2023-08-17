@@ -38,6 +38,14 @@ public class Agence implements Serializable {
         return this.id;
     }
 
+    public Agence(String id, @NotNull Integer deccent, @NotNull Integer decagenc, String delagenc, String defaultagenc) {
+        this.id = id;
+        this.deccent = deccent;
+        this.decagenc = decagenc;
+        this.delagenc = delagenc;
+        this.defaultagenc = defaultagenc;
+    }
+
     public Agence id(String id) {
         this.setId(id);
         return this;

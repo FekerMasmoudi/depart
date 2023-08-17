@@ -53,17 +53,17 @@ public class DeprotatDTO implements Serializable {
 
     private String cdmac;
 
-    private ZonedDateTime hdeparte;
+    private LocalDate hdeparte;
 
-    private ZonedDateTime hretoure;
+    private LocalDate hretoure;
 
-    private ZonedDateTime harralle;
+    private LocalDate harralle;
 
-    private ZonedDateTime harrrete;
+    private LocalDate harrrete;
 
     private String rannul;
 
-    private Integer km;
+    private Double km;
 
     private Integer motifa;
 
@@ -229,35 +229,35 @@ public class DeprotatDTO implements Serializable {
         this.cdmac = cdmac;
     }
 
-    public ZonedDateTime getHdeparte() {
+    public LocalDate getHdeparte() {
         return hdeparte;
     }
 
-    public void setHdeparte(ZonedDateTime hdeparte) {
+    public void setHdeparte(LocalDate hdeparte) {
         this.hdeparte = hdeparte;
     }
 
-    public ZonedDateTime getHretoure() {
+    public LocalDate getHretoure() {
         return hretoure;
     }
 
-    public void setHretoure(ZonedDateTime hretoure) {
+    public void setHretoure(LocalDate hretoure) {
         this.hretoure = hretoure;
     }
 
-    public ZonedDateTime getHarralle() {
+    public LocalDate getHarralle() {
         return harralle;
     }
 
-    public void setHarralle(ZonedDateTime harralle) {
+    public void setHarralle(LocalDate harralle) {
         this.harralle = harralle;
     }
 
-    public ZonedDateTime getHarrrete() {
+    public LocalDate getHarrrete() {
         return harrrete;
     }
 
-    public void setHarrrete(ZonedDateTime harrrete) {
+    public void setHarrrete(LocalDate harrrete) {
         this.harrrete = harrrete;
     }
 
@@ -269,11 +269,11 @@ public class DeprotatDTO implements Serializable {
         this.rannul = rannul;
     }
 
-    public Integer getKm() {
+    public Double getKm() {
         return km;
     }
 
-    public void setKm(Integer km) {
+    public void setKm(Double km) {
         this.km = km;
     }
 

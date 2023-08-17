@@ -156,6 +156,100 @@ public class BonTvx implements Serializable {
         return this.id;
     }
 
+    public BonTvx(
+        String id,
+        Integer cdexerc,
+        Integer numbt,
+        String cdtier,
+        String cdmac,
+        String maccdmac,
+        String cdserv,
+        Integer decagen,
+        Integer dradecagen,
+        String cdorga,
+        String refbt,
+        LocalDate datbt,
+        LocalDate datdt,
+        LocalDate datft,
+        String vld,
+        String typtvx,
+        LocalDate heurdb,
+        LocalDate heurfi,
+        String observ,
+        LocalDate datsrt,
+        LocalDate heursr,
+        String obstest,
+        Integer indexdep,
+        Integer indexarr,
+        String immatex,
+        String nomchauff,
+        String numpermis,
+        String etab,
+        Integer compteur,
+        Integer cptorg,
+        String cdtyptr,
+        String decstat,
+        Integer testeur,
+        String motifdep,
+        String cdtypmnt,
+        LocalDate datsorprev,
+        LocalDate datmnqdu,
+        LocalDate datmnqau,
+        LocalDate datentant,
+        String codstat,
+        LocalDate datvld,
+        String observ1,
+        Integer testeur1,
+        Integer validag,
+        LocalDate datsais
+    ) {
+        this.id = id;
+        this.cdexerc = cdexerc;
+        this.numbt = numbt;
+        this.cdtier = cdtier;
+        this.cdmac = cdmac;
+        this.maccdmac = maccdmac;
+        this.cdserv = cdserv;
+        this.decagen = decagen;
+        this.dradecagen = dradecagen;
+        this.cdorga = cdorga;
+        this.refbt = refbt;
+        this.datbt = datbt;
+        this.datdt = datdt;
+        this.datft = datft;
+        this.vld = vld;
+        this.typtvx = typtvx;
+        this.heurdb = heurdb;
+        this.heurfi = heurfi;
+        this.observ = observ;
+        this.datsrt = datsrt;
+        this.heursr = heursr;
+        this.obstest = obstest;
+        this.indexdep = indexdep;
+        this.indexarr = indexarr;
+        this.immatex = immatex;
+        this.nomchauff = nomchauff;
+        this.numpermis = numpermis;
+        this.etab = etab;
+        this.compteur = compteur;
+        this.cptorg = cptorg;
+        this.cdtyptr = cdtyptr;
+        this.decstat = decstat;
+        this.testeur = testeur;
+        this.motifdep = motifdep;
+        this.cdtypmnt = cdtypmnt;
+        this.datsorprev = datsorprev;
+        this.datmnqdu = datmnqdu;
+        this.datmnqau = datmnqau;
+        this.datentant = datentant;
+        this.codstat = codstat;
+        this.datvld = datvld;
+        this.observ1 = observ1;
+        this.testeur1 = testeur1;
+        this.validag = validag;
+        this.datsais = datsais;
+    }
+
     public BonTvx id(String id) {
         this.setId(id);
         return this;

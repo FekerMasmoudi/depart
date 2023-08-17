@@ -54,6 +54,32 @@ public class Drabsen implements Serializable {
         return this.id;
     }
 
+    public Drabsen(
+        String id,
+        String cdtypab,
+        Integer matric,
+        LocalDate databs,
+        Integer numabs,
+        Integer nbrabs,
+        Integer validabs,
+        String observaabs,
+        Integer cd1,
+        Integer cd2,
+        Integer cd3
+    ) {
+        this.id = id;
+        this.cdtypab = cdtypab;
+        this.matric = matric;
+        this.databs = databs;
+        this.numabs = numabs;
+        this.nbrabs = nbrabs;
+        this.validabs = validabs;
+        this.observaabs = observaabs;
+        this.cd1 = cd1;
+        this.cd2 = cd2;
+        this.cd3 = cd3;
+    }
+
     public Drabsen id(String id) {
         this.setId(id);
         return this;

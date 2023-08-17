@@ -45,6 +45,24 @@ public class Groupe implements Serializable {
         return this.id;
     }
 
+    public Groupe(
+        String id,
+        @NotNull Integer deccent,
+        @NotNull Integer decagenc,
+        @NotNull Integer codgrp,
+        String libgrp,
+        String dectyli,
+        String libgrpfr
+    ) {
+        this.id = id;
+        this.deccent = deccent;
+        this.decagenc = decagenc;
+        this.codgrp = codgrp;
+        this.libgrp = libgrp;
+        this.dectyli = dectyli;
+        this.libgrpfr = libgrpfr;
+    }
+
     public Groupe id(String id) {
         this.setId(id);
         return this;

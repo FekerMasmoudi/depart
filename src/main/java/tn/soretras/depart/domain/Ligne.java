@@ -1,7 +1,7 @@
 package tn.soretras.depart.domain;
 
 import java.io.Serializable;
-import java.time.ZonedDateTime;
+import java.time.LocalDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
@@ -40,10 +40,10 @@ public class Ligne implements Serializable {
     private String dectyeq;
 
     @Field("denbrkm")
-    private Integer denbrkm;
+    private Double denbrkm;
 
     @Field("detparc")
-    private Integer detparc;
+    private String detparc;
 
     @Field("dedural")
     private Integer dedural;
@@ -58,7 +58,7 @@ public class Ligne implements Serializable {
     private Integer detrjvr;
 
     @Field("depiste")
-    private Integer depiste;
+    private Double depiste;
 
     @Field("statlig")
     private String statlig;
@@ -94,12 +94,72 @@ public class Ligne implements Serializable {
     private String charset;
 
     @Field("lastupdate")
-    private ZonedDateTime lastupdate;
+    private LocalDate lastupdate;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
+    //DateTimeFormatter df = DateTimeFormatter.ofPattern("dd-MMM-yyyy HH:mm:ss z", Locale.ENGLISH);
+    // String s = lastupdate.format(df);
 
     public String getId() {
         return this.id;
+    }
+
+    public Ligne(
+        String id,
+        Integer deccent,
+        Integer decagenc,
+        String denumli,
+        String dectyli,
+        String dectyta,
+        String denomli,
+        String dectyeq,
+        Double denbrkm,
+        String detparc,
+        Integer dedural,
+        Integer dedurrt,
+        Integer detrjva,
+        Integer detrjvr,
+        Double depiste,
+        String statlig,
+        String lig,
+        Integer lig1,
+        String valide,
+        String denumli2,
+        byte[] kml,
+        String kmlContentType,
+        String description,
+        String mimtype,
+        String filename,
+        String charset,
+        LocalDate lastupdate
+    ) {
+        this.id = id;
+        this.deccent = deccent;
+        this.decagenc = decagenc;
+        this.denumli = denumli;
+        this.dectyli = dectyli;
+        this.dectyta = dectyta;
+        this.denomli = denomli;
+        this.dectyeq = dectyeq;
+        this.denbrkm = denbrkm;
+        this.detparc = detparc;
+        this.dedural = dedural;
+        this.dedurrt = dedurrt;
+        this.detrjva = detrjva;
+        this.detrjvr = detrjvr;
+        this.depiste = depiste;
+        this.statlig = statlig;
+        this.lig = lig;
+        this.lig1 = lig1;
+        this.valide = valide;
+        this.denumli2 = denumli2;
+        this.kml = kml;
+        this.kmlContentType = kmlContentType;
+        this.description = description;
+        this.mimtype = mimtype;
+        this.filename = filename;
+        this.charset = charset;
+        this.lastupdate = lastupdate;
     }
 
     public Ligne id(String id) {
@@ -202,29 +262,29 @@ public class Ligne implements Serializable {
         this.dectyeq = dectyeq;
     }
 
-    public Integer getDenbrkm() {
+    public Double getDenbrkm() {
         return this.denbrkm;
     }
 
-    public Ligne denbrkm(Integer denbrkm) {
+    public Ligne denbrkm(Double denbrkm) {
         this.setDenbrkm(denbrkm);
         return this;
     }
 
-    public void setDenbrkm(Integer denbrkm) {
+    public void setDenbrkm(Double denbrkm) {
         this.denbrkm = denbrkm;
     }
 
-    public Integer getDetparc() {
+    public String getDetparc() {
         return this.detparc;
     }
 
-    public Ligne detparc(Integer detparc) {
+    public Ligne detparc(String detparc) {
         this.setDetparc(detparc);
         return this;
     }
 
-    public void setDetparc(Integer detparc) {
+    public void setDetparc(String detparc) {
         this.detparc = detparc;
     }
 
@@ -280,16 +340,16 @@ public class Ligne implements Serializable {
         this.detrjvr = detrjvr;
     }
 
-    public Integer getDepiste() {
+    public Double getDepiste() {
         return this.depiste;
     }
 
-    public Ligne depiste(Integer depiste) {
+    public Ligne depiste(Double depiste) {
         this.setDepiste(depiste);
         return this;
     }
 
-    public void setDepiste(Integer depiste) {
+    public void setDepiste(Double depiste) {
         this.depiste = depiste;
     }
 
@@ -436,16 +496,16 @@ public class Ligne implements Serializable {
         this.charset = charset;
     }
 
-    public ZonedDateTime getLastupdate() {
+    public LocalDate getLastupdate() {
         return this.lastupdate;
     }
 
-    public Ligne lastupdate(ZonedDateTime lastupdate) {
+    public Ligne lastupdate(LocalDate lastupdate) {
         this.setLastupdate(lastupdate);
         return this;
     }
 
-    public void setLastupdate(ZonedDateTime lastupdate) {
+    public void setLastupdate(LocalDate lastupdate) {
         this.lastupdate = lastupdate;
     }
 

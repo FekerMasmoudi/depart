@@ -38,7 +38,7 @@ public class Itineraire implements Serializable {
     private Integer denumlg;
 
     @Field("dekmsta")
-    private Integer dekmsta;
+    private Double dekmsta;
 
     @Field("dedurtr")
     private Integer dedurtr;
@@ -62,6 +62,36 @@ public class Itineraire implements Serializable {
 
     public String getId() {
         return this.id;
+    }
+
+    public Itineraire(
+        String id,
+        Integer deccent,
+        @NotNull Integer decagenc,
+        @NotNull String denumli,
+        @NotNull String decstat,
+        @NotNull Integer denumlg,
+        Double dekmsta,
+        Integer dedurtr,
+        Integer deescale,
+        String embra,
+        Integer section,
+        String sens,
+        String dectyst
+    ) {
+        this.id = id;
+        this.deccent = deccent;
+        this.decagenc = decagenc;
+        this.denumli = denumli;
+        this.decstat = decstat;
+        this.denumlg = denumlg;
+        this.dekmsta = dekmsta;
+        this.dedurtr = dedurtr;
+        this.deescale = deescale;
+        this.embra = embra;
+        this.section = section;
+        this.sens = sens;
+        this.dectyst = dectyst;
     }
 
     public Itineraire id(String id) {
@@ -138,16 +168,16 @@ public class Itineraire implements Serializable {
         this.denumlg = denumlg;
     }
 
-    public Integer getDekmsta() {
+    public Double getDekmsta() {
         return this.dekmsta;
     }
 
-    public Itineraire dekmsta(Integer dekmsta) {
+    public Itineraire dekmsta(Double dekmsta) {
         this.setDekmsta(dekmsta);
         return this;
     }
 
-    public void setDekmsta(Integer dekmsta) {
+    public void setDekmsta(Double dekmsta) {
         this.dekmsta = dekmsta;
     }
 
