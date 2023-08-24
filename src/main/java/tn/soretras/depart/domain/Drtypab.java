@@ -43,6 +43,8 @@ public class Drtypab implements Serializable {
         this.dabsjp = dabsjp;
     }
 
+    public Drtypab() {}
+
     public Drtypab id(String id) {
         this.setId(id);
         return this;

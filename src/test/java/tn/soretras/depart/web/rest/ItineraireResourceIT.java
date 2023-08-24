@@ -43,8 +43,8 @@ class ItineraireResourceIT {
     private static final Integer DEFAULT_DENUMLG = 1;
     private static final Integer UPDATED_DENUMLG = 2;
 
-    private static final Integer DEFAULT_DEKMSTA = 1;
-    private static final Integer UPDATED_DEKMSTA = 2;
+    private static final Double DEFAULT_DEKMSTA = (double) 1;
+    private static final Double UPDATED_DEKMSTA = (double) 2;
 
     private static final Integer DEFAULT_DEDURTR = 1;
     private static final Integer UPDATED_DEDURTR = 2;

@@ -304,6 +304,8 @@ public class Modif implements Serializable {
         this.typ = typ;
     }
 
+    public Modif() {}
+
     @Override
     public int hashCode() {
         // see https://vladmihalcea.com/how-to-implement-equals-and-hashcode-using-the-jpa-entity-identifier/

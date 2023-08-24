@@ -12,7 +12,7 @@ public class ExternalApiDTO implements Serializable {
 
     private String id;
 
-    private String idm;
+    private Integer idm;
 
     private String name;
 
@@ -64,11 +64,11 @@ public class ExternalApiDTO implements Serializable {
         this.id = id;
     }
 
-    public String getIdm() {
+    public Integer getIdm() {
         return idm;
     }
 
-    public void setIdm(String idm) {
+    public void setIdm(Integer idm) {
         this.idm = idm;
     }
 

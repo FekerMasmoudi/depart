@@ -64,26 +64,26 @@ class DepartResourceIT {
     private static final Integer DEFAULT_CDMAC = 1;
     private static final Integer UPDATED_CDMAC = 2;
 
-    private static final ZonedDateTime DEFAULT_DEHEUPS = ZonedDateTime.ofInstant(Instant.ofEpochMilli(0L), ZoneOffset.UTC);
-    private static final ZonedDateTime UPDATED_DEHEUPS = ZonedDateTime.now(ZoneId.systemDefault()).withNano(0);
+    private static final LocalDate DEFAULT_DEHEUPS = null;
+    private static final LocalDate UPDATED_DEHEUPS = null;
 
-    private static final ZonedDateTime DEFAULT_DEHEUFS = ZonedDateTime.ofInstant(Instant.ofEpochMilli(0L), ZoneOffset.UTC);
-    private static final ZonedDateTime UPDATED_DEHEUFS = ZonedDateTime.now(ZoneId.systemDefault()).withNano(0);
+    private static final LocalDate DEFAULT_DEHEUFS = null;
+    private static final LocalDate UPDATED_DEHEUFS = null;
 
     private static final Integer DEFAULT_DENBRRO = 1;
     private static final Integer UPDATED_DENBRRO = 2;
 
-    private static final ZonedDateTime DEFAULT_DEHEUAA = ZonedDateTime.ofInstant(Instant.ofEpochMilli(0L), ZoneOffset.UTC);
-    private static final ZonedDateTime UPDATED_DEHEUAA = ZonedDateTime.now(ZoneId.systemDefault()).withNano(0);
+    private static final LocalDate DEFAULT_DEHEUAA = null;
+    private static final LocalDate UPDATED_DEHEUAA = null;
 
-    private static final ZonedDateTime DEFAULT_DEHEUDR = ZonedDateTime.ofInstant(Instant.ofEpochMilli(0L), ZoneOffset.UTC);
-    private static final ZonedDateTime UPDATED_DEHEUDR = ZonedDateTime.now(ZoneId.systemDefault()).withNano(0);
+    private static final LocalDate DEFAULT_DEHEUDR = null;
+    private static final LocalDate UPDATED_DEHEUDR = null;
 
-    private static final ZonedDateTime DEFAULT_DEHEUPD = ZonedDateTime.ofInstant(Instant.ofEpochMilli(0L), ZoneOffset.UTC);
-    private static final ZonedDateTime UPDATED_DEHEUPD = ZonedDateTime.now(ZoneId.systemDefault()).withNano(0);
+    private static final LocalDate DEFAULT_DEHEUPD = null;
+    private static final LocalDate UPDATED_DEHEUPD = null;
 
-    private static final ZonedDateTime DEFAULT_DEAMPLI = ZonedDateTime.ofInstant(Instant.ofEpochMilli(0L), ZoneOffset.UTC);
-    private static final ZonedDateTime UPDATED_DEAMPLI = ZonedDateTime.now(ZoneId.systemDefault()).withNano(0);
+    private static final LocalDate DEFAULT_DEAMPLI = null;
+    private static final LocalDate UPDATED_DEAMPLI = null;
 
     private static final String DEFAULT_OBSIND = "AAAAAAAAAA";
     private static final String UPDATED_OBSIND = "BBBBBBBBBB";
@@ -453,13 +453,13 @@ class DepartResourceIT {
             .andExpect(jsonPath("$.[*].matric").value(hasItem(DEFAULT_MATRIC)))
             .andExpect(jsonPath("$.[*].matric1").value(hasItem(DEFAULT_MATRIC_1)))
             .andExpect(jsonPath("$.[*].cdmac").value(hasItem(DEFAULT_CDMAC)))
-            .andExpect(jsonPath("$.[*].deheups").value(hasItem(sameInstant(DEFAULT_DEHEUPS))))
-            .andExpect(jsonPath("$.[*].deheufs").value(hasItem(sameInstant(DEFAULT_DEHEUFS))))
+            .andExpect(jsonPath("$.[*].deheups").value(hasItem(null)))
+            .andExpect(jsonPath("$.[*].deheufs").value(hasItem(null)))
             .andExpect(jsonPath("$.[*].denbrro").value(hasItem(DEFAULT_DENBRRO)))
-            .andExpect(jsonPath("$.[*].deheuaa").value(hasItem(sameInstant(DEFAULT_DEHEUAA))))
-            .andExpect(jsonPath("$.[*].deheudr").value(hasItem(sameInstant(DEFAULT_DEHEUDR))))
-            .andExpect(jsonPath("$.[*].deheupd").value(hasItem(sameInstant(DEFAULT_DEHEUPD))))
-            .andExpect(jsonPath("$.[*].deampli").value(hasItem(sameInstant(DEFAULT_DEAMPLI))))
+            .andExpect(jsonPath("$.[*].deheuaa").value(null))
+            .andExpect(jsonPath("$.[*].deheudr").value(hasItem(null)))
+            .andExpect(jsonPath("$.[*].deheupd").value(hasItem(null)))
+            .andExpect(jsonPath("$.[*].deampli").value(hasItem(null)))
             .andExpect(jsonPath("$.[*].obsind").value(hasItem(DEFAULT_OBSIND)))
             .andExpect(jsonPath("$.[*].vldroul").value(hasItem(DEFAULT_VLDROUL)))
             .andExpect(jsonPath("$.[*].deetat").value(hasItem(DEFAULT_DEETAT)))
@@ -500,13 +500,13 @@ class DepartResourceIT {
             .andExpect(jsonPath("$.matric").value(DEFAULT_MATRIC))
             .andExpect(jsonPath("$.matric1").value(DEFAULT_MATRIC_1))
             .andExpect(jsonPath("$.cdmac").value(DEFAULT_CDMAC))
-            .andExpect(jsonPath("$.deheups").value(sameInstant(DEFAULT_DEHEUPS)))
-            .andExpect(jsonPath("$.deheufs").value(sameInstant(DEFAULT_DEHEUFS)))
+            .andExpect(jsonPath("$.deheups").value(null))
+            .andExpect(jsonPath("$.deheufs").value(null))
             .andExpect(jsonPath("$.denbrro").value(DEFAULT_DENBRRO))
-            .andExpect(jsonPath("$.deheuaa").value(sameInstant(DEFAULT_DEHEUAA)))
-            .andExpect(jsonPath("$.deheudr").value(sameInstant(DEFAULT_DEHEUDR)))
-            .andExpect(jsonPath("$.deheupd").value(sameInstant(DEFAULT_DEHEUPD)))
-            .andExpect(jsonPath("$.deampli").value(sameInstant(DEFAULT_DEAMPLI)))
+            .andExpect(jsonPath("$.deheuaa").value(null))
+            .andExpect(jsonPath("$.deheudr").value(null))
+            .andExpect(jsonPath("$.deheupd").value(null))
+            .andExpect(jsonPath("$.deampli").value(null))
             .andExpect(jsonPath("$.obsind").value(DEFAULT_OBSIND))
             .andExpect(jsonPath("$.vldroul").value(DEFAULT_VLDROUL))
             .andExpect(jsonPath("$.deetat").value(DEFAULT_DEETAT))

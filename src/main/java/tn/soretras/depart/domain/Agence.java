@@ -46,6 +46,8 @@ public class Agence implements Serializable {
         this.defaultagenc = defaultagenc;
     }
 
+    public Agence() {}
+
     public Agence id(String id) {
         this.setId(id);
         return this;

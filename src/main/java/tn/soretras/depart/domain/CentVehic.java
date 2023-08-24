@@ -44,6 +44,8 @@ public class CentVehic implements Serializable {
         this.decagenc = decagenc;
     }
 
+    public CentVehic() {}
+
     public CentVehic id(String id) {
         this.setId(id);
         return this;

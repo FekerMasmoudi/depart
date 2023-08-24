@@ -45,6 +45,8 @@ public class Center implements Serializable {
         this.deobser = deobser;
     }
 
+    public Center() {}
+
     public Center id(String id) {
         this.setId(id);
         return this;

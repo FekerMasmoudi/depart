@@ -90,6 +90,8 @@ public class Itineraire implements Serializable {
         this.dectyst = dectyst;
     }
 
+    public Itineraire() {}
+
     public String getId() {
         return this.id;
     }

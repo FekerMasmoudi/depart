@@ -47,6 +47,8 @@ public class Periode implements Serializable {
         this.enddate = enddate;
     }
 
+    public Periode() {}
+
     public Periode id(String id) {
         this.setId(id);
         return this;

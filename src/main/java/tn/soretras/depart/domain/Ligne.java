@@ -156,6 +156,8 @@ public class Ligne implements Serializable {
         this.lastupdate = lastupdate;
     }
 
+    public Ligne() {}
+
     public String getId() {
         return this.id;
     }

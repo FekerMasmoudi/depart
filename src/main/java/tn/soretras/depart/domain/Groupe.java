@@ -63,6 +63,8 @@ public class Groupe implements Serializable {
         this.libgrpfr = libgrpfr;
     }
 
+    public Groupe() {}
+
     public Groupe id(String id) {
         this.setId(id);
         return this;

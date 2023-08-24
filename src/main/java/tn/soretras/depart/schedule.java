@@ -23,6 +23,7 @@ import tn.soretras.depart.domain.Depart;
 import tn.soretras.depart.domain.Deprotat;
 import tn.soretras.depart.domain.Drabsen;
 import tn.soretras.depart.domain.Drtypab;
+import tn.soretras.depart.domain.ExternalApi;
 import tn.soretras.depart.domain.Groupe;
 import tn.soretras.depart.domain.Itineraire;
 import tn.soretras.depart.domain.Ligne;
@@ -42,6 +43,7 @@ import tn.soretras.depart.repository.DepartRepository;
 import tn.soretras.depart.repository.DeprotatRepository;
 import tn.soretras.depart.repository.DrabsenRepository;
 import tn.soretras.depart.repository.DrtypabRepository;
+import tn.soretras.depart.repository.ExternalApiRepository;
 import tn.soretras.depart.repository.GroupeRepository;
 import tn.soretras.depart.repository.ItineraireRepository;
 import tn.soretras.depart.repository.LigneRepository;
@@ -114,6 +116,9 @@ public class schedule {
     @Autowired
     private DrabsenRepository repositoryDrabsen;
 
+    @Autowired
+    private ExternalApiRepository repositoryExternalApi;
+
     DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss'Z'");
     DateTimeFormatter dtf1 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
     DateTimeFormatter dtf2 = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
@@ -155,6 +160,7 @@ public class schedule {
             .getForEntity(url + "modif/" + dtimef.format(now), String.class, Map.of("id", "1"));
         ResponseEntity<String> resultEntity19 = restTemplate()
             .getForEntity(url + "drabsen/" + dtimef1.format(now), String.class, Map.of("id", "1"));
+        ResponseEntity<String> resultEntityExApi = restTemplate().getForEntity(url + "ExternalApi", String.class, Map.of("id1", "1"));
 
         ObjectMapper objmap = new ObjectMapper(null, null, null);
 
@@ -664,5 +670,19 @@ public class schedule {
                 )
             );
         }
+        /*  JsonNode js19 = objmap.readTree(resultEntityExApi.getBody());
+        List<JsonNode> listjs19 = js19.findParents("keycomp");
+        System.out.println("Hello to cons api ExternalApi : \n" + js19);
+
+        for (int i = 0; i < listjs19.size(); i++) {
+        repositoryExternalApi.save(new ExternalApi(
+            
+            listjs19.get(i).get("keycomp").asText(null),
+            listjs19.get(i).get("id").asInt(0),
+            listjs19.get(i).get("name").asText(null),
+            listjs19.get(i).get("status").asText(null),
+        ));
+
+        } */
     }
 }
