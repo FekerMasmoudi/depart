@@ -250,6 +250,8 @@ public class BonTvx implements Serializable {
         this.datsais = datsais;
     }
 
+    public BonTvx() {}
+
     public BonTvx id(String id) {
         this.setId(id);
         return this;

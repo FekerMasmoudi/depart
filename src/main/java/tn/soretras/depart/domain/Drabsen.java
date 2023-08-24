@@ -80,6 +80,8 @@ public class Drabsen implements Serializable {
         this.cd3 = cd3;
     }
 
+    public Drabsen() {}
+
     public Drabsen id(String id) {
         this.setId(id);
         return this;

@@ -7,6 +7,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static tn.soretras.depart.web.rest.TestUtil.sameInstant;
 
 import java.time.Instant;
+import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
@@ -55,11 +56,11 @@ class LigneResourceIT {
     private static final String DEFAULT_DECTYEQ = "AAAAAAAAAA";
     private static final String UPDATED_DECTYEQ = "BBBBBBBBBB";
 
-    private static final Integer DEFAULT_DENBRKM = 1;
-    private static final Integer UPDATED_DENBRKM = 2;
+    private static final Double DEFAULT_DENBRKM = (double) 1;
+    private static final Double UPDATED_DENBRKM = (double) 2;
 
-    private static final Integer DEFAULT_DETPARC = 1;
-    private static final Integer UPDATED_DETPARC = 2;
+    private static final String DEFAULT_DETPARC = "1";
+    private static final String UPDATED_DETPARC = "2";
 
     private static final Integer DEFAULT_DEDURAL = 1;
     private static final Integer UPDATED_DEDURAL = 2;
@@ -73,8 +74,8 @@ class LigneResourceIT {
     private static final Integer DEFAULT_DETRJVR = 1;
     private static final Integer UPDATED_DETRJVR = 2;
 
-    private static final Integer DEFAULT_DEPISTE = 1;
-    private static final Integer UPDATED_DEPISTE = 2;
+    private static final Double DEFAULT_DEPISTE = (double) 1;
+    private static final Double UPDATED_DEPISTE = (double) 2;
 
     private static final String DEFAULT_STATLIG = "AAAAAAAAAA";
     private static final String UPDATED_STATLIG = "BBBBBBBBBB";
@@ -108,8 +109,8 @@ class LigneResourceIT {
     private static final String DEFAULT_CHARSET = "AAAAAAAAAA";
     private static final String UPDATED_CHARSET = "BBBBBBBBBB";
 
-    private static final ZonedDateTime DEFAULT_LASTUPDATE = ZonedDateTime.ofInstant(Instant.ofEpochMilli(0L), ZoneOffset.UTC);
-    private static final ZonedDateTime UPDATED_LASTUPDATE = ZonedDateTime.now(ZoneId.systemDefault()).withNano(0);
+    private static final LocalDate DEFAULT_LASTUPDATE = null;
+    private static final LocalDate UPDATED_LASTUPDATE = null;
 
     private static final String ENTITY_API_URL = "/api/lignes";
     private static final String ENTITY_API_URL_ID = ENTITY_API_URL + "/{id}";
@@ -300,7 +301,7 @@ class LigneResourceIT {
             .andExpect(jsonPath("$.[*].mimtype").value(hasItem(DEFAULT_MIMTYPE)))
             .andExpect(jsonPath("$.[*].filename").value(hasItem(DEFAULT_FILENAME)))
             .andExpect(jsonPath("$.[*].charset").value(hasItem(DEFAULT_CHARSET)))
-            .andExpect(jsonPath("$.[*].lastupdate").value(hasItem(sameInstant(DEFAULT_LASTUPDATE))));
+            .andExpect(jsonPath("$.[*].lastupdate").value(hasItem(null)));
     }
 
     @Test
@@ -339,7 +340,7 @@ class LigneResourceIT {
             .andExpect(jsonPath("$.mimtype").value(DEFAULT_MIMTYPE))
             .andExpect(jsonPath("$.filename").value(DEFAULT_FILENAME))
             .andExpect(jsonPath("$.charset").value(DEFAULT_CHARSET))
-            .andExpect(jsonPath("$.lastupdate").value(sameInstant(DEFAULT_LASTUPDATE)));
+            .andExpect(jsonPath("$.lastupdate").value(null));
     }
 
     @Test

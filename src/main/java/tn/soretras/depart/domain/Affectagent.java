@@ -96,6 +96,8 @@ public class Affectagent implements Serializable {
         this.cdmac = cdmac;
     }
 
+    public Affectagent() {}
+
     public Affectagent id(String id) {
         this.setId(id);
         return this;

@@ -52,6 +52,8 @@ public class RhAgent implements Serializable {
         this.decagenc = decagenc;
     }
 
+    public RhAgent() {}
+
     public RhAgent id(String id) {
         this.setId(id);
         return this;

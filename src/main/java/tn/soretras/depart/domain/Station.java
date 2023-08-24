@@ -71,6 +71,8 @@ public class Station implements Serializable {
         this.valide = valide;
     }
 
+    public Station() {}
+
     public Station id(String id) {
         this.setId(id);
         return this;

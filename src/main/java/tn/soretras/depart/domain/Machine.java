@@ -265,6 +265,8 @@ public class Machine implements Serializable {
         this.typboite = typboite;
     }
 
+    public Machine() {}
+
     public Machine id(String id) {
         this.setId(id);
         return this;

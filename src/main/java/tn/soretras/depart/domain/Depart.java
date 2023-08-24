@@ -204,6 +204,8 @@ public class Depart implements Serializable {
         this.decmotifrea = decmotifrea;
     }
 
+    public Depart() {}
+
     public String getId() {
         return this.id;
     }

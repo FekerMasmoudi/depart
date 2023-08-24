@@ -64,6 +64,8 @@ public class Trafic implements Serializable {
         this.clotrafic = clotrafic;
     }
 
+    public Trafic() {}
+
     public Trafic id(String id) {
         this.setId(id);
         return this;

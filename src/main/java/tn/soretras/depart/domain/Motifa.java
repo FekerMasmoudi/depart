@@ -37,6 +37,8 @@ public class Motifa implements Serializable {
         this.libmotif = libmotif;
     }
 
+    public Motifa() {}
+
     public Motifa id(String id) {
         this.setId(id);
         return this;

@@ -82,23 +82,23 @@ class DeprotatResourceIT {
     private static final String DEFAULT_CDMAC = "AAAAAAAAAA";
     private static final String UPDATED_CDMAC = "BBBBBBBBBB";
 
-    private static final ZonedDateTime DEFAULT_HDEPARTE = ZonedDateTime.ofInstant(Instant.ofEpochMilli(0L), ZoneOffset.UTC);
-    private static final ZonedDateTime UPDATED_HDEPARTE = ZonedDateTime.now(ZoneId.systemDefault()).withNano(0);
+    private static final LocalDate DEFAULT_HDEPARTE = null;
+    private static final LocalDate UPDATED_HDEPARTE = null;
 
-    private static final ZonedDateTime DEFAULT_HRETOURE = ZonedDateTime.ofInstant(Instant.ofEpochMilli(0L), ZoneOffset.UTC);
-    private static final ZonedDateTime UPDATED_HRETOURE = ZonedDateTime.now(ZoneId.systemDefault()).withNano(0);
+    private static final LocalDate DEFAULT_HRETOURE = null;
+    private static final LocalDate UPDATED_HRETOURE = null;
 
-    private static final ZonedDateTime DEFAULT_HARRALLE = ZonedDateTime.ofInstant(Instant.ofEpochMilli(0L), ZoneOffset.UTC);
-    private static final ZonedDateTime UPDATED_HARRALLE = ZonedDateTime.now(ZoneId.systemDefault()).withNano(0);
+    private static final LocalDate DEFAULT_HARRALLE = null;
+    private static final LocalDate UPDATED_HARRALLE = null;
 
-    private static final ZonedDateTime DEFAULT_HARRRETE = ZonedDateTime.ofInstant(Instant.ofEpochMilli(0L), ZoneOffset.UTC);
-    private static final ZonedDateTime UPDATED_HARRRETE = ZonedDateTime.now(ZoneId.systemDefault()).withNano(0);
+    private static final LocalDate DEFAULT_HARRRETE = null;
+    private static final LocalDate UPDATED_HARRRETE = null;
 
     private static final String DEFAULT_RANNUL = "AAAAAAAAAA";
     private static final String UPDATED_RANNUL = "BBBBBBBBBB";
 
-    private static final Integer DEFAULT_KM = 1;
-    private static final Integer UPDATED_KM = 2;
+    private static final Double DEFAULT_KM = (double) 1;
+    private static final Double UPDATED_KM = (double) 2;
 
     private static final Integer DEFAULT_MOTIFA = 1;
     private static final Integer UPDATED_MOTIFA = 2;
@@ -471,10 +471,10 @@ class DeprotatResourceIT {
             .andExpect(jsonPath("$.[*].matric").value(hasItem(DEFAULT_MATRIC)))
             .andExpect(jsonPath("$.[*].matric1").value(hasItem(DEFAULT_MATRIC_1)))
             .andExpect(jsonPath("$.[*].cdmac").value(hasItem(DEFAULT_CDMAC)))
-            .andExpect(jsonPath("$.[*].hdeparte").value(hasItem(sameInstant(DEFAULT_HDEPARTE))))
-            .andExpect(jsonPath("$.[*].hretoure").value(hasItem(sameInstant(DEFAULT_HRETOURE))))
-            .andExpect(jsonPath("$.[*].harralle").value(hasItem(sameInstant(DEFAULT_HARRALLE))))
-            .andExpect(jsonPath("$.[*].harrrete").value(hasItem(sameInstant(DEFAULT_HARRRETE))))
+            .andExpect(jsonPath("$.[*].hdeparte").value(hasItem(null)))
+            .andExpect(jsonPath("$.[*].hretoure").value(hasItem(null)))
+            .andExpect(jsonPath("$.[*].harralle").value(hasItem(null)))
+            .andExpect(jsonPath("$.[*].harrrete").value(hasItem(null)))
             .andExpect(jsonPath("$.[*].rannul").value(hasItem(DEFAULT_RANNUL)))
             .andExpect(jsonPath("$.[*].km").value(hasItem(DEFAULT_KM)))
             .andExpect(jsonPath("$.[*].motifa").value(hasItem(DEFAULT_MOTIFA)))
@@ -520,10 +520,10 @@ class DeprotatResourceIT {
             .andExpect(jsonPath("$.matric").value(DEFAULT_MATRIC))
             .andExpect(jsonPath("$.matric1").value(DEFAULT_MATRIC_1))
             .andExpect(jsonPath("$.cdmac").value(DEFAULT_CDMAC))
-            .andExpect(jsonPath("$.hdeparte").value(sameInstant(DEFAULT_HDEPARTE)))
-            .andExpect(jsonPath("$.hretoure").value(sameInstant(DEFAULT_HRETOURE)))
-            .andExpect(jsonPath("$.harralle").value(sameInstant(DEFAULT_HARRALLE)))
-            .andExpect(jsonPath("$.harrrete").value(sameInstant(DEFAULT_HARRRETE)))
+            .andExpect(jsonPath("$.hdeparte").value(null))
+            .andExpect(jsonPath("$.hretoure").value(null))
+            .andExpect(jsonPath("$.harralle").value(null))
+            .andExpect(jsonPath("$.harrrete").value(null))
             .andExpect(jsonPath("$.rannul").value(DEFAULT_RANNUL))
             .andExpect(jsonPath("$.km").value(DEFAULT_KM))
             .andExpect(jsonPath("$.motifa").value(DEFAULT_MOTIFA))

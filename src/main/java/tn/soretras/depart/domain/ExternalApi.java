@@ -19,7 +19,7 @@ public class ExternalApi implements Serializable {
     private String id;
 
     @Field("idm")
-    private String idm;
+    private Integer idm;
 
     @Field("name")
     private String name;
@@ -99,16 +99,16 @@ public class ExternalApi implements Serializable {
         this.id = id;
     }
 
-    public String getIdm() {
+    public Integer getIdm() {
         return this.idm;
     }
 
-    public ExternalApi idm(String idm) {
+    public ExternalApi idm(Integer idm) {
         this.setIdm(idm);
         return this;
     }
 
-    public void setIdm(String idm) {
+    public void setIdm(Integer idm) {
         this.idm = idm;
     }
 

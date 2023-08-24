@@ -214,6 +214,8 @@ public class Deprotat implements Serializable {
         this.r = r;
     }
 
+    public Deprotat() {}
+
     public String getId() {
         return this.id;
     }
