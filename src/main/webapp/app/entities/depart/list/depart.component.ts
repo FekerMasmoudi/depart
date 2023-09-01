@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpHeaders } from '@angular/common/http';
+import { HttpHeaders, HttpResponse } from '@angular/common/http';
 import { ActivatedRoute, Data, ParamMap, Router } from '@angular/router';
-import { combineLatest, filter, Observable, switchMap, tap } from 'rxjs';
+import { combineLatest, filter, finalize, Observable, switchMap, tap } from 'rxjs';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 import { IDepart } from '../depart.model';
@@ -10,6 +10,16 @@ import { ITEMS_PER_PAGE, PAGE_HEADER, TOTAL_COUNT_RESPONSE_HEADER } from 'app/co
 import { ASC, DESC, SORT, ITEM_DELETED_EVENT, DEFAULT_SORT_DATA } from 'app/config/navigation.constants';
 import { EntityArrayResponseType, DepartService } from '../service/depart.service';
 import { DepartDeleteDialogComponent } from '../delete/depart-delete-dialog.component';
+import { AffectagentService } from 'app/entities/affectagent/service/affectagent.service';
+import { MachineService } from 'app/entities/machine/service/machine.service';
+import { MotifaService } from 'app/entities/motifa/service/motifa.service';
+import { DrabsenService } from 'app/entities/drabsen/service/drabsen.service';
+import { ModifService } from 'app/entities/modif/service/modif.service';
+import { DepartFormGroup, DepartFormService } from '../update/depart-form.service';
+import { ListMotifaComponent } from '../list-motifa/list-motifa.component';
+import { MatDialog } from '@angular/material/dialog';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'jhi-depart',
@@ -26,8 +36,22 @@ export class DepartComponent implements OnInit {
   totalItems = 0;
   page = 1;
 
+  isSaving = false;
+  depart: IDepart | null = null;
+
+  arrayInput: IDepart[] = [];
+
+  editForm: DepartFormGroup = this.departFormService.createDepartFormGroup();
+
   constructor(
     protected departService: DepartService,
+    public dialog: MatDialog,
+    protected departFormService: DepartFormService,
+    protected affectagentService: AffectagentService,
+    protected machineService: MachineService,
+    protected motifaService: MotifaService,
+    protected drabsenService: DrabsenService,
+    protected modifService: ModifService,
     protected activatedRoute: ActivatedRoute,
     public router: Router,
     protected modalService: NgbModal
@@ -53,6 +77,79 @@ export class DepartComponent implements OnInit {
           this.onResponseSuccess(res);
         },
       });
+  }
+
+  changeMatric(event: any): void {
+    //alert(event.matric);
+
+    this.isSaving = true;
+    const lineDepart: IDepart = {
+      id: event.id,
+      cd1: event.cd1,
+      cd2: event.cd2,
+      cd3: event.cd3,
+      deccent: event.deccent,
+      decagenc: event.decagenc,
+      decserv: event.decserv,
+      decsean: event.decsean,
+      decoper: event.decoper,
+      dedated: event.dedated,
+      matric: event.matric,
+      matric1: event.matric1,
+      cdmac: event.cdmac,
+      deampli: event.deampli,
+      deannul: event.deannul,
+      denumdp: event.denumdp,
+      decclot: event.decclot,
+      deheuaa: event.deheuaa,
+      deheudr: event.deheudr,
+      deheufs: event.deheufs,
+      deheupd: event.deheupd,
+      deheups: event.deheups,
+      decmotifch: event.decmotifch,
+      decmotifcha: event.decmotifcha,
+      decmotifre: event.decmotifre,
+      decmotifrea: event.decmotifrea,
+      deetat: event.deetat,
+      denbrro: event.denbrro,
+      execute: event.execute,
+      motifa: event.motifa,
+      nbrevoy: event.nbrevoy,
+      observ: event.observ,
+      obsind: event.obsind,
+      recettes: event.recettes,
+      vldroul: event.vldroul,
+    };
+
+    if (lineDepart.id != null) {
+      this.subscribeToSaveResponse(this.departService.update(lineDepart));
+    } /*else {
+      this.subscribeToSaveResponse(this.departService.create(depart));
+    }*/
+    console.log(this.arrayInput);
+  }
+
+  protected subscribeToSaveResponse(result: Observable<HttpResponse<IDepart>>): void {
+    result.pipe(finalize(() => this.onSaveFinalize())).subscribe({
+      next: () => this.onSaveSuccess(),
+      error: () => this.onSaveError(),
+    });
+  }
+
+  protected onSaveSuccess(): void {
+    this.previousState();
+  }
+
+  protected onSaveError(): void {
+    // Api for inheritance.
+  }
+
+  protected onSaveFinalize(): void {
+    this.isSaving = false;
+  }
+
+  previousState(): void {
+    window.history.back();
   }
 
   load(): void {
@@ -131,5 +228,20 @@ export class DepartComponent implements OnInit {
     } else {
       return [predicate + ',' + ascendingQueryParam];
     }
+  }
+  openDialog(): void {
+    const dialogRef = this.dialog.open(ListMotifaComponent, {
+      data: {
+        id: '',
+        libmotifa: '',
+      },
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      //this.type = result;
+
+      console.log(result);
+    });
   }
 }

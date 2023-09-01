@@ -3,6 +3,21 @@
     <span jhiTranslate="departdbApp.depart.home.title">Departs</span>
 
     <div class="d-flex justify-content-end">
+      <button type="submit" [routerLink]="['/depart', 'view']" class="btn btn-info me-2" data-cy="entityDetailsButton">
+        <fa-icon icon="eye"></fa-icon>
+        <span class="d-none d-md-inline" jhiTranslate="entity.action.resagent">Reserve agents</span>
+      </button>
+
+      <button type="submit" class="btn btn-danger me-2" data-cy="entityDeleteButton">
+        <fa-icon icon="times"></fa-icon>
+        <span class="d-none d-md-inline" jhiTranslate="entity.action.absagents">Absentee agents</span>
+      </button>
+
+      <button type="submit" [routerLink]="['/depart', 'edit']" class="btn btn-primary me-2" data-cy="entityEditButton">
+        <fa-icon icon="pencil-alt"></fa-icon>
+        <span class="d-none d-md-inline" jhiTranslate="entity.action.offwrest">Officers on weekly rest</span>
+      </button>
+
       <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
         <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
         <span jhiTranslate="departdbApp.depart.home.refreshListLabel">Refresh list</span>
@@ -38,13 +53,13 @@
               <fa-icon class="p-1" icon="sort"></fa-icon>
             </div>
           </th>
-          <th scope="col" jhiSortBy="deccent">
+          <th scope="col" jhiSortBy="deccent" [hidden]="true">
             <div class="d-flex">
               <span jhiTranslate="departdbApp.depart.deccent">Deccent</span>
               <fa-icon class="p-1" icon="sort"></fa-icon>
             </div>
           </th>
-          <th scope="col" jhiSortBy="decagenc">
+          <th scope="col" jhiSortBy="decagenc" [hidden]="true">
             <div class="d-flex">
               <span jhiTranslate="departdbApp.depart.decagenc">Decagenc</span>
               <fa-icon class="p-1" icon="sort"></fa-icon>
@@ -56,13 +71,13 @@
               <fa-icon class="p-1" icon="sort"></fa-icon>
             </div>
           </th>
-          <th scope="col" jhiSortBy="decoper">
+          <th scope="col" jhiSortBy="decoper" [hidden]="true">
             <div class="d-flex">
               <span jhiTranslate="departdbApp.depart.decoper">Decoper</span>
               <fa-icon class="p-1" icon="sort"></fa-icon>
             </div>
           </th>
-          <th scope="col" jhiSortBy="decsean">
+          <th scope="col" jhiSortBy="decsean" [hidden]="true">
             <div class="d-flex">
               <span jhiTranslate="departdbApp.depart.decsean">Decsean</span>
               <fa-icon class="p-1" icon="sort"></fa-icon>
@@ -74,7 +89,7 @@
               <fa-icon class="p-1" icon="sort"></fa-icon>
             </div>
           </th>
-          <th scope="col" jhiSortBy="denumdp">
+          <th scope="col" jhiSortBy="denumdp" [hidden]="true">
             <div class="d-flex">
               <span jhiTranslate="departdbApp.depart.denumdp">Denumdp</span>
               <fa-icon class="p-1" icon="sort"></fa-icon>
@@ -110,7 +125,7 @@
               <fa-icon class="p-1" icon="sort"></fa-icon>
             </div>
           </th>
-          <th scope="col" jhiSortBy="denbrro">
+          <!--<th scope="col" jhiSortBy="denbrro">
             <div class="d-flex">
               <span jhiTranslate="departdbApp.depart.denbrro">Denbrro</span>
               <fa-icon class="p-1" icon="sort"></fa-icon>
@@ -151,7 +166,7 @@
               <span jhiTranslate="departdbApp.depart.vldroul">Vldroul</span>
               <fa-icon class="p-1" icon="sort"></fa-icon>
             </div>
-          </th>
+          </th>-->
           <th scope="col" jhiSortBy="deetat">
             <div class="d-flex">
               <span jhiTranslate="departdbApp.depart.deetat">Deetat</span>
@@ -182,7 +197,25 @@
               <fa-icon class="p-1" icon="sort"></fa-icon>
             </div>
           </th>
-          <th scope="col" jhiSortBy="observ">
+          <th scope="col" jhiSortBy="annul">
+            <div class="d-flex">
+              <span>X</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="valid">
+            <div class="d-flex">
+              <span>V</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <th scope="col" jhiSortBy="exec">
+            <div class="d-flex">
+              <span>Ex</span>
+              <fa-icon class="p-1" icon="sort"></fa-icon>
+            </div>
+          </th>
+          <!--<th scope="col" jhiSortBy="observ">
             <div class="d-flex">
               <span jhiTranslate="departdbApp.depart.observ">Observ</span>
               <fa-icon class="p-1" icon="sort"></fa-icon>
@@ -241,7 +274,7 @@
               <span jhiTranslate="departdbApp.depart.decmotifrea">Decmotifrea</span>
               <fa-icon class="p-1" icon="sort"></fa-icon>
             </div>
-          </th>
+          </th>-->
           <th scope="col"></th>
         </tr>
       </thead>
@@ -250,31 +283,58 @@
           <td>
             <a [routerLink]="['/depart', depart.id, 'view']">{{ depart.id }}</a>
           </td>
-          <td>{{ depart.deccent }}</td>
-          <td>{{ depart.decagenc }}</td>
+          <td [hidden]="true">
+            <input type="number" class="form-control" name="deccent" id="field_deccent" data-cy="deccent" [(ngModel)]="depart.deccent" />
+          </td>
+          <td [hidden]="true">
+            <input
+              type="number"
+              class="form-control"
+              name="decagenc"
+              id="field_decagenc"
+              data-cy="decagenc"
+              [(ngModel)]="depart.decagenc"
+            />
+          </td>
           <td>{{ depart.decserv }}</td>
-          <td>{{ depart.decoper }}</td>
-          <td>{{ depart.decsean }}</td>
+          <td [hidden]="true">
+            <input type="text" class="form-control" name="decoper" id="field_decoper" data-cy="decoper" [(ngModel)]="depart.decoper" />
+          </td>
+          <td [hidden]="true">
+            <input type="text" class="form-control" name="decsean" id="field_decsean" data-cy="decsean" [(ngModel)]="depart.decsean" />
+          </td>
           <td>{{ depart.dedated | formatMediumDate }}</td>
-          <td>{{ depart.denumdp }}</td>
-          <td>{{ depart.matric }}</td>
+          <td [hidden]="true">
+            <input type="number" class="form-control" name="denumdp" id="field_denumdp" data-cy="denumdp" [(ngModel)]="depart.denumdp" />
+          </td>
+          <td>
+            <input
+              type="number"
+              class="form-control"
+              name="matric"
+              id="field_matric"
+              data-cy="matric"
+              [(ngModel)]="depart.matric"
+              (change)="changeMatric(depart)"
+            />
+          </td>
           <td>{{ depart.matric1 }}</td>
           <td>{{ depart.cdmac }}</td>
           <td>{{ depart.deheups | formatMediumDatetime }}</td>
           <td>{{ depart.deheufs | formatMediumDatetime }}</td>
-          <td>{{ depart.denbrro }}</td>
+          <!--<td>{{ depart.denbrro }}</td>
           <td>{{ depart.deheuaa | formatMediumDatetime }}</td>
           <td>{{ depart.deheudr | formatMediumDatetime }}</td>
           <td>{{ depart.deheupd | formatMediumDatetime }}</td>
           <td>{{ depart.deampli | formatMediumDatetime }}</td>
           <td>{{ depart.obsind }}</td>
-          <td>{{ depart.vldroul }}</td>
+          <td>{{ depart.vldroul }}</td>-->
           <td>{{ depart.deetat }}</td>
           <td>{{ depart.deannul }}</td>
           <td>{{ depart.decclot }}</td>
           <td>{{ depart.execute }}</td>
           <td>{{ depart.motifa }}</td>
-          <td>{{ depart.observ }}</td>
+          <!--<td>{{ depart.observ }}</td>
           <td>{{ depart.recettes }}</td>
           <td>{{ depart.nbrevoy }}</td>
           <td>{{ depart.decmotifch }}</td>
@@ -283,25 +343,28 @@
           <td>{{ depart.cd2 }}</td>
           <td>{{ depart.cd3 }}</td>
           <td>{{ depart.decmotifcha }}</td>
-          <td>{{ depart.decmotifrea }}</td>
+          <td>{{ depart.decmotifrea }}</td>-->
           <td class="text-end">
-            <div class="btn-group">
-              <button type="submit" [routerLink]="['/depart', depart.id, 'view']" class="btn btn-info btn-sm" data-cy="entityDetailsButton">
+            <!--<button type="submit" [routerLink]="['/depart', depart.id, 'view']" class="btn btn-info btn-sm" data-cy="entityDetailsButton">
                 <fa-icon icon="eye"></fa-icon>
                 <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
-              </button>
+              </button>-->
 
-              <button type="submit" [routerLink]="['/depart', depart.id, 'edit']" class="btn btn-primary btn-sm" data-cy="entityEditButton">
+            <mat-checkbox style="margin: 0 12px" (click)="openDialog()"></mat-checkbox>
+            <mat-icon (click)="openDialog()" aria-hidden="false" aria-label="Example settings icon" fontIcon="settings"></mat-icon>
+          </td>
+
+          <!--<button type="submit" [routerLink]="['/depart', depart.id, 'edit']" class="btn btn-primary btn-sm" data-cy="entityEditButton">
                 <fa-icon icon="pencil-alt"></fa-icon>
                 <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
-              </button>
+              </button>-->
+          <td><input type="checkbox" name="valid" /></td>
 
-              <button type="submit" (click)="delete(depart)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+          <!--<button type="submit" (click)="delete(depart)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
                 <fa-icon icon="times"></fa-icon>
                 <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
-              </button>
-            </div>
-          </td>
+              </button>-->
+          <td><input type="checkbox" name="exec" /></td>
         </tr>
       </tbody>
     </table>

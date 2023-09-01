@@ -30,6 +30,7 @@ import tn.soretras.depart.domain.Ligne;
 import tn.soretras.depart.domain.Machine;
 import tn.soretras.depart.domain.Modif;
 import tn.soretras.depart.domain.Motifa;
+import tn.soretras.depart.domain.Motifchserv;
 import tn.soretras.depart.domain.Periode;
 import tn.soretras.depart.domain.RhAgent;
 import tn.soretras.depart.domain.Station;
@@ -50,6 +51,7 @@ import tn.soretras.depart.repository.LigneRepository;
 import tn.soretras.depart.repository.MachineRepository;
 import tn.soretras.depart.repository.ModifRepository;
 import tn.soretras.depart.repository.MotifaRepository;
+import tn.soretras.depart.repository.MotifchservRepository;
 import tn.soretras.depart.repository.PeriodeRepository;
 import tn.soretras.depart.repository.RhAgentRepository;
 import tn.soretras.depart.repository.StationRepository;
@@ -119,6 +121,9 @@ public class schedule {
     @Autowired
     private ExternalApiRepository repositoryExternalApi;
 
+    @Autowired
+    private MotifchservRepository repositoryMotifchserv;
+
     DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss'Z'");
     DateTimeFormatter dtf1 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
     DateTimeFormatter dtf2 = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
@@ -132,7 +137,7 @@ public class schedule {
         return new RestTemplate();
     }
 
-    @Scheduled(cron = "5 * * * * *", zone = "Africa/Tunis")
+    @Scheduled(cron = "* * 0 * * *", zone = "Africa/Tunis")
     public void testCons() throws Exception {
         String url = "http://197.3.5.106:9280/ords/ti/exploitation/";
         ResponseEntity<String> resulEntity = restTemplate().getForEntity(url + "center", String.class, Map.of("id", "1"));
@@ -161,6 +166,7 @@ public class schedule {
         ResponseEntity<String> resultEntity19 = restTemplate()
             .getForEntity(url + "drabsen/" + dtimef1.format(now), String.class, Map.of("id", "1"));
         ResponseEntity<String> resultEntityExApi = restTemplate().getForEntity(url + "ExternalApi", String.class, Map.of("id1", "1"));
+        ResponseEntity<String> resultEntity20 = restTemplate().getForEntity(url + "motifchserv", String.class, Map.of("id", "1"));
 
         ObjectMapper objmap = new ObjectMapper(null, null, null);
 
@@ -684,5 +690,45 @@ public class schedule {
         ));
 
         } */
+
+        JsonNode js20 = objmap.readTree(resultEntity20.getBody());
+        List<JsonNode> listjs20 = js20.findParents("decmotif");
+        System.out.println("Hello to cons api Motifchserv : \n" + js20);
+
+        for (int i = 0; i < listjs20.size(); i++) {
+            repositoryMotifchserv.save(
+                new Motifchserv(
+                    Integer.toString(i, i + 1),
+                    listjs20.get(i).get("decmotif").asInt(i),
+                    listjs20.get(i).get("delmotif").asText(null),
+                    listjs20.get(i).get("x").asText(null),
+                    listjs20.get(i).get("vs").asText(null)
+                )
+            );
+        }
+    }
+
+    public void restTables() {
+        /*repositoryCenter.deleteAll();
+        repositoryAffectagent.deleteAll();
+        repositoryGroupe.deleteAll();
+        repositoryStation.deleteAll();
+        repositoryPeriode.deleteAll();
+        repositoryItineraire.deleteAll();
+        repositoryMotifa.deleteAll();
+        repositoryLigne.deleteAll();
+        repositoryDrtypab.deleteAll();
+        repositoryAgence.deleteAll();
+        repositoryRhAgent.deleteAll();
+        repositoryCentVehic.deleteAll();
+        repositoryMachine.deleteAll();
+        repositoryBonTvx.deleteAll();
+        repositoryTrafic.deleteAll();*/
+        repositoryDepart.deleteAll();
+        repositoryDeprotat.deleteAll();
+        repositoryModif.deleteAll();
+        repositoryDrabsen.deleteAll();
+        //repositoryMotifchserv.deleteAll();
+
     }
 }

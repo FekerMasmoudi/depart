@@ -37,6 +37,16 @@ public class Motifchserv implements Serializable {
         return this.id;
     }
 
+    public Motifchserv(String id, @NotNull Integer decmotif, String delmotif, String x, String vs) {
+        this.id = id;
+        this.decmotif = decmotif;
+        this.delmotif = delmotif;
+        this.x = x;
+        this.vs = vs;
+    }
+
+    public Motifchserv() {}
+
     public Motifchserv id(String id) {
         this.setId(id);
         return this;

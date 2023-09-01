@@ -1,0 +1,23 @@
+<!-- ***** Modified by Mohamed **** 
+<h1 mat-dialog-title>{{ data.name }}</h1> -->
+<div class="mat-dialog">
+  <mat-dialog-content>
+    <p>سبب الإلغاء</p>
+
+    <mat-form-field>
+      <mat-label class="form-label" jhiTranslate="departdbApp.depart.motifa" for="field_motifa">سبب الإلغاء</mat-label>
+      <mat-select [(ngModel)]="data" (ngModelChange)="onChange($event)">
+        <mat-option [value]="null" selected>-- الرّجـاء إختيـار سبب الإلغاء --</mat-option>
+        <mat-option *ngFor="let m of listmotifa" [value]="m.id">
+          {{ m.libmotif }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <!--{{test[0].cname}}-->
+  </mat-dialog-content>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button color="warn" (click)="onNoClick()">إلغـاء</button>
+  <button mat-raised-button color="primary" [mat-dialog-close]="data" cdkFocusInitial>حفـظ</button>
+</div>
