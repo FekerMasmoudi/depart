@@ -126,6 +126,9 @@
       "open": "فتح",
       "save": "حفظ",
       "view": "عرض",
+      "resagent": "أعوان إحتياطيون",
+      "absagents": "أعوان متغيبون",
+      "offwrest": "أعوان في راحة اسبوعية",
       "show": "Show {{otherEntity}}"
     },
     "detail": {
