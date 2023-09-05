@@ -1,0 +1,60 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="displaybus">
+      <h2 data-cy="displaybusDetailsHeading"><span jhiTranslate="departdbApp.displaybus.detail.title">Displaybus</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ displaybus.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.displaybus.lang">Lang</span></dt>
+        <dd>
+          <span>{{ displaybus.lang }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.displaybus.vehicule">Vehicule</span></dt>
+        <dd>
+          <span>{{ displaybus.vehicule }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.displaybus.num_appel">Num Appel</span></dt>
+        <dd>
+          <span>{{ displaybus.num_appel }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.displaybus.detail_ligne">Detail Ligne</span></dt>
+        <dd>
+          <span>{{ displaybus.detail_ligne }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.displaybus.ligne">Ligne</span></dt>
+        <dd>
+          <span>{{ displaybus.ligne }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.displaybus.direction">Direction</span></dt>
+        <dd>
+          <span>{{ displaybus.direction }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.displaybus.denumli">Denumli</span></dt>
+        <dd>
+          <span>{{ displaybus.denumli }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.displaybus.deltyli">Deltyli</span></dt>
+        <dd>
+          <span>{{ displaybus.deltyli }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/displaybus', displaybus.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

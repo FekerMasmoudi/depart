@@ -29,7 +29,9 @@ export class MotifaService {
   partialUpdate(motifa: PartialUpdateMotifa): Observable<EntityResponseType> {
     return this.http.patch<IMotifa>(`${this.resourceUrl}/${this.getMotifaIdentifier(motifa)}`, motifa, { observe: 'response' });
   }
-
+  queryTakaza(): Observable<EntityArrayResponseType> {
+    return this.http.get<IMotifa[]>(this.resourceUrl, { observe: 'response' });
+  }
   find(id: string): Observable<EntityResponseType> {
     return this.http.get<IMotifa>(`${this.resourceUrl}/${id}`, { observe: 'response' });
   }

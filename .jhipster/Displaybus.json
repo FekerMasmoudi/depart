@@ -1,0 +1,43 @@
+{
+  "changelogDate": "20230905094101",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "lang",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "vehicule",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "num_appel",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "detail_ligne",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ligne",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "direction",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "denumli",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "deltyli",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Displaybus",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

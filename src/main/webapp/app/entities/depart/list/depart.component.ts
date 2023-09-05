@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { HttpHeaders, HttpResponse } from '@angular/common/http';
 import { ActivatedRoute, Data, ParamMap, Router } from '@angular/router';
 import { combineLatest, filter, finalize, Observable, switchMap, tap } from 'rxjs';
@@ -20,12 +20,18 @@ import { ListMotifaComponent } from '../list-motifa/list-motifa.component';
 import { MatDialog } from '@angular/material/dialog';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormsModule } from '@angular/forms';
+import { IMotifa } from 'app/entities/motifa/motifa.model';
+import { IDeprotat } from 'app/entities/deprotat/deprotat.model';
+import { DeprotatService } from 'app/entities/deprotat/service/deprotat.service';
+
+import { DeprotatUpdateComponent } from 'app/entities/deprotat/update/deprotat-update.component';
 
 @Component({
   selector: 'jhi-depart',
   templateUrl: './depart.component.html',
 })
 export class DepartComponent implements OnInit {
+  @ViewChild(DeprotatUpdateComponent) y!: DeprotatUpdateComponent;
   departs?: IDepart[];
   isLoading = false;
 
@@ -38,8 +44,12 @@ export class DepartComponent implements OnInit {
 
   isSaving = false;
   depart: IDepart | null = null;
-
+  takaza!: IDepart;
+  takaza1!: IDeprotat;
   arrayInput: IDepart[] = [];
+
+  id!: String;
+  libmotif!: String;
 
   editForm: DepartFormGroup = this.departFormService.createDepartFormGroup();
 
@@ -53,6 +63,7 @@ export class DepartComponent implements OnInit {
     protected drabsenService: DrabsenService,
     protected modifService: ModifService,
     protected activatedRoute: ActivatedRoute,
+    protected deprotatService: DeprotatService,
     public router: Router,
     protected modalService: NgbModal
   ) {}
@@ -229,11 +240,12 @@ export class DepartComponent implements OnInit {
       return [predicate + ',' + ascendingQueryParam];
     }
   }
-  openDialog(): void {
+  openDialog(event: IDepart): void {
+    this.takaza = event;
     const dialogRef = this.dialog.open(ListMotifaComponent, {
       data: {
-        id: '',
-        libmotifa: '',
+        id: this.id,
+        libmotif: this.libmotif,
       },
     });
 
@@ -241,7 +253,31 @@ export class DepartComponent implements OnInit {
       console.log('The dialog was closed');
       //this.type = result;
 
+      if (result.id != null) {
+        this.takaza.deannul = '1';
+        this.takaza.execute = '0';
+        this.takaza1.rannul = '1';
+        this.takaza1.motifa = 1;
+        this.takaza.motifa = result.id;
+        if (this.takaza.id != null && this.takaza1.id != null) {
+          this.subscribeToSaveResponse(this.departService.update(this.takaza));
+          this.y.subscribeToSaveResponse(this.deprotatService.update(this.takaza1));
+        }
+        this.ngOnInit();
+      }
       console.log(result);
     });
+  }
+
+  checkValid(event: IDepart): void {
+    this.takaza = event;
+
+    if (this.takaza.id != null) {
+      this.takaza.deannul = '0';
+      this.takaza.execute = '1';
+      this.takaza.motifa = null;
+      this.subscribeToSaveResponse(this.departService.update(this.takaza));
+      this.ngOnInit();
+    }
   }
 }

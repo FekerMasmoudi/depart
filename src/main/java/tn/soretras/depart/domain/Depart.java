@@ -2,8 +2,11 @@ package tn.soretras.depart.domain;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 import javax.validation.constraints.*;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
@@ -127,6 +130,10 @@ public class Depart implements Serializable {
 
     @Field("decmotifrea")
     private Integer decmotifrea;
+
+    @DBRef
+    @Field
+    private Set<Deprotat> deprotat = new HashSet<>();
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
 
@@ -663,6 +670,14 @@ public class Depart implements Serializable {
 
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here
 
+    public Set<Deprotat> getDeprotat() {
+        return deprotat;
+    }
+
+    public void setDeprotat(Set<Deprotat> deprotat) {
+        this.deprotat = deprotat;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -681,44 +696,17 @@ public class Depart implements Serializable {
     }
 
     // prettier-ignore
-    @Override
-    public String toString() {
-        return "Depart{" +
-            "id=" + getId() +
-            ", deccent=" + getDeccent() +
-            ", decagenc=" + getDecagenc() +
-            ", decserv=" + getDecserv() +
-            ", decoper='" + getDecoper() + "'" +
-            ", decsean='" + getDecsean() + "'" +
-            ", dedated='" + getDedated() + "'" +
-            ", denumdp=" + getDenumdp() +
-            ", matric=" + getMatric() +
-            ", matric1=" + getMatric1() +
-            ", cdmac=" + getCdmac() +
-            ", deheups='" + getDeheups() + "'" +
-            ", deheufs='" + getDeheufs() + "'" +
-            ", denbrro=" + getDenbrro() +
-            ", deheuaa='" + getDeheuaa() + "'" +
-            ", deheudr='" + getDeheudr() + "'" +
-            ", deheupd='" + getDeheupd() + "'" +
-            ", deampli='" + getDeampli() + "'" +
-            ", obsind='" + getObsind() + "'" +
-            ", vldroul='" + getVldroul() + "'" +
-            ", deetat='" + getDeetat() + "'" +
-            ", deannul='" + getDeannul() + "'" +
-            ", decclot='" + getDecclot() + "'" +
-            ", execute='" + getExecute() + "'" +
-            ", motifa='" + getMotifa() + "'" +
-            ", observ='" + getObserv() + "'" +
-            ", recettes=" + getRecettes() +
-            ", nbrevoy=" + getNbrevoy() +
-            ", decmotifch=" + getDecmotifch() +
-            ", decmotifre=" + getDecmotifre() +
-            ", cd1=" + getCd1() +
-            ", cd2=" + getCd2() +
-            ", cd3=" + getCd3() +
-            ", decmotifcha=" + getDecmotifcha() +
-            ", decmotifrea=" + getDecmotifrea() +
-            "}";
-    }
+	@Override
+	public String toString() {
+		return "Depart [id=" + id + ", deccent=" + deccent + ", decagenc=" + decagenc + ", decserv=" + decserv
+				+ ", decoper=" + decoper + ", decsean=" + decsean + ", dedated=" + dedated + ", denumdp=" + denumdp
+				+ ", matric=" + matric + ", matric1=" + matric1 + ", cdmac=" + cdmac + ", deheups=" + deheups
+				+ ", deheufs=" + deheufs + ", denbrro=" + denbrro + ", deheuaa=" + deheuaa + ", deheudr=" + deheudr
+				+ ", deheupd=" + deheupd + ", deampli=" + deampli + ", obsind=" + obsind + ", vldroul=" + vldroul
+				+ ", deetat=" + deetat + ", deannul=" + deannul + ", decclot=" + decclot + ", execute=" + execute
+				+ ", motifa=" + motifa + ", observ=" + observ + ", recettes=" + recettes + ", nbrevoy=" + nbrevoy
+				+ ", decmotifch=" + decmotifch + ", decmotifre=" + decmotifre + ", cd1=" + cd1 + ", cd2=" + cd2
+				+ ", cd3=" + cd3 + ", decmotifcha=" + decmotifcha + ", decmotifrea=" + decmotifrea + ", deprotat="
+				+ deprotat + "]";
+	}
 }

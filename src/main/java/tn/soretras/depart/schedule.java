@@ -21,6 +21,7 @@ import tn.soretras.depart.domain.CentVehic;
 import tn.soretras.depart.domain.Center;
 import tn.soretras.depart.domain.Depart;
 import tn.soretras.depart.domain.Deprotat;
+import tn.soretras.depart.domain.Displaybus;
 import tn.soretras.depart.domain.Drabsen;
 import tn.soretras.depart.domain.Drtypab;
 import tn.soretras.depart.domain.ExternalApi;
@@ -42,6 +43,7 @@ import tn.soretras.depart.repository.CentVehicRepository;
 import tn.soretras.depart.repository.CenterRepository;
 import tn.soretras.depart.repository.DepartRepository;
 import tn.soretras.depart.repository.DeprotatRepository;
+import tn.soretras.depart.repository.DisplaybusRepository;
 import tn.soretras.depart.repository.DrabsenRepository;
 import tn.soretras.depart.repository.DrtypabRepository;
 import tn.soretras.depart.repository.ExternalApiRepository;
@@ -124,9 +126,13 @@ public class schedule {
     @Autowired
     private MotifchservRepository repositoryMotifchserv;
 
+    @Autowired
+    private DisplaybusRepository repositoryDisplaybus;
+
     DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss'Z'");
-    DateTimeFormatter dtf1 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
-    DateTimeFormatter dtf2 = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+    DateTimeFormatter dtf1 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+    DateTimeFormatter dtf2 = DateTimeFormatter.ofPattern("MM/dd/yyyy HH:mm");
+    DateTimeFormatter dtf3 = DateTimeFormatter.ofPattern("MM/dd/yyyy HH:mm:ss");
 
     DateTimeFormatter dtimef = DateTimeFormatter.ofPattern("ddMMyyyy");
     DateTimeFormatter dtimef1 = DateTimeFormatter.ofPattern("MMddyyyy");
@@ -137,7 +143,7 @@ public class schedule {
         return new RestTemplate();
     }
 
-    @Scheduled(cron = "* * 0 * * *", zone = "Africa/Tunis")
+    @Scheduled(cron = "5 * * * * *", zone = "Africa/Tunis")
     public void testCons() throws Exception {
         String url = "http://197.3.5.106:9280/ords/ti/exploitation/";
         ResponseEntity<String> resulEntity = restTemplate().getForEntity(url + "center", String.class, Map.of("id", "1"));
@@ -165,8 +171,9 @@ public class schedule {
             .getForEntity(url + "modif/" + dtimef.format(now), String.class, Map.of("id", "1"));
         ResponseEntity<String> resultEntity19 = restTemplate()
             .getForEntity(url + "drabsen/" + dtimef1.format(now), String.class, Map.of("id", "1"));
-        ResponseEntity<String> resultEntityExApi = restTemplate().getForEntity(url + "ExternalApi", String.class, Map.of("id1", "1"));
+        ResponseEntity<String> resultEntityExApi = restTemplate().getForEntity(url + "ExternalApi", String.class, Map.of("id", "1"));
         ResponseEntity<String> resultEntity20 = restTemplate().getForEntity(url + "motifchserv", String.class, Map.of("id", "1"));
+        ResponseEntity<String> resultEntity21 = restTemplate().getForEntity(url + "AFFICHEURS_BUS_AR_FR", String.class, Map.of("id", "1"));
 
         ObjectMapper objmap = new ObjectMapper(null, null, null);
 
@@ -553,13 +560,13 @@ public class schedule {
                     listjs15.get(i).get("matric").asInt(0),
                     listjs15.get(i).get("matric1").asInt(0),
                     listjs15.get(i).get("cdmac").asInt(0),
-                    LocalDate.parse(listjs15.get(i).get("deheups").asText("2033-12-16 23:00:00"), dtf2),
-                    LocalDate.parse(listjs15.get(i).get("deheufs").asText("2033-12-16 23:00:00"), dtf2),
+                    LocalDate.parse(listjs15.get(i).get("deheups").asText("16/12/2033 23:00"), dtf1),
+                    LocalDate.parse(listjs15.get(i).get("deheufs").asText("16/12/2033 23:00"), dtf1),
                     listjs15.get(i).get("denbrro").asInt(0),
-                    LocalDate.parse(listjs15.get(i).get("deheuaa").asText("16/12/2033 23:00:00"), dtf1),
-                    LocalDate.parse(listjs15.get(i).get("deheudr").asText("16/12/2033 23:00:00"), dtf1),
-                    LocalDate.parse(listjs15.get(i).get("deheupd").asText("16/12/2033 23:00:00"), dtf1),
-                    LocalDate.parse(listjs15.get(i).get("deampli").asText("16/12/2033 23:00:00"), dtf1),
+                    LocalDate.parse(listjs15.get(i).get("deheuaa").asText("16/12/2033 23:00"), dtf1),
+                    LocalDate.parse(listjs15.get(i).get("deheudr").asText("16/12/2033 23:00"), dtf1),
+                    LocalDate.parse(listjs15.get(i).get("deheupd").asText("16/12/2033 23:00"), dtf1),
+                    LocalDate.parse(listjs15.get(i).get("deampli").asText("16/12/2033 23:00"), dtf1),
                     listjs15.get(i).get("obs_ind").asText(null),
                     listjs15.get(i).get("vld_roul").asText(null),
                     listjs15.get(i).get("deetat").asText(null),
@@ -621,7 +628,7 @@ public class schedule {
                     listjs16.get(i).get("cd3").asInt(0),
                     listjs16.get(i).get("decmotifcha").asInt(0),
                     listjs16.get(i).get("decmotifrea").asInt(0),
-                    listjs16.get(i).get("id_apex").asInt(0),
+                    listjs16.get(i).get("id_apex").asInt(),
                     listjs16.get(i).get("plus_moins").asText(null),
                     listjs16.get(i).get("a").asText(null),
                     listjs16.get(i).get("r").asText(null)
@@ -703,6 +710,26 @@ public class schedule {
                     listjs20.get(i).get("delmotif").asText(null),
                     listjs20.get(i).get("x").asText(null),
                     listjs20.get(i).get("vs").asText(null)
+                )
+            );
+        }
+
+        JsonNode js21 = objmap.readTree(resultEntity21.getBody());
+        List<JsonNode> listjs21 = js21.findParents("num_appel");
+        System.out.println("Hello to cons api Afficheur_Bus_Ar_Fr : \n" + js21);
+        repositoryDisplaybus.deleteAll();
+        for (int i = 0; i < listjs21.size(); i++) {
+            repositoryDisplaybus.save(
+                new Displaybus(
+                    listjs21.get(i).get("num_appel").asText(),
+                    listjs21.get(i).get("lang").asText(),
+                    listjs21.get(i).get("vehicule").asText(),
+                    listjs21.get(i).get("num_appel").asInt(),
+                    listjs21.get(i).get("detail_ligne").asText(),
+                    listjs21.get(i).get("ligne").asText(),
+                    listjs21.get(i).get("direction").asText(),
+                    listjs21.get(i).get("denumli").asText(),
+                    listjs21.get(i).get("deltyli").asText()
                 )
             );
         }
