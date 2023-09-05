@@ -70,6 +70,8 @@ public class Displaybus implements Serializable {
         this.deltyli = deltyli;
     }
 
+    public Displaybus() {}
+
     public Displaybus id(String id) {
         this.setId(id);
         return this;
