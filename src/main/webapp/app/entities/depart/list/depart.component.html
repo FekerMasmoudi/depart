@@ -166,13 +166,13 @@
               <span jhiTranslate="departdbApp.depart.vldroul">Vldroul</span>
               <fa-icon class="p-1" icon="sort"></fa-icon>
             </div>
-          </th>-->
+          </th>
           <th scope="col" jhiSortBy="deetat">
             <div class="d-flex">
               <span jhiTranslate="departdbApp.depart.deetat">Deetat</span>
               <fa-icon class="p-1" icon="sort"></fa-icon>
             </div>
-          </th>
+          </th>-->
           <th scope="col" jhiSortBy="deannul">
             <div class="d-flex">
               <span jhiTranslate="departdbApp.depart.deannul">Deannul</span>
@@ -209,12 +209,7 @@
               <fa-icon class="p-1" icon="sort"></fa-icon>
             </div>
           </th>
-          <th scope="col" jhiSortBy="exec">
-            <div class="d-flex">
-              <span>Ex</span>
-              <fa-icon class="p-1" icon="sort"></fa-icon>
-            </div>
-          </th>
+
           <!--<th scope="col" jhiSortBy="observ">
             <div class="d-flex">
               <span jhiTranslate="departdbApp.depart.observ">Observ</span>
@@ -328,8 +323,9 @@
           <td>{{ depart.deheupd | formatMediumDatetime }}</td>
           <td>{{ depart.deampli | formatMediumDatetime }}</td>
           <td>{{ depart.obsind }}</td>
-          <td>{{ depart.vldroul }}</td>-->
-          <td>{{ depart.deetat }}</td>
+          <td>{{ depart.vldroul }}</td>
+          <td>{{ depart.deetat }}</td>-->
+
           <td>{{ depart.deannul }}</td>
           <td>{{ depart.decclot }}</td>
           <td>{{ depart.execute }}</td>
@@ -350,21 +346,44 @@
                 <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
               </button>-->
 
-            <mat-checkbox style="margin: 0 12px" (click)="openDialog()"></mat-checkbox>
-            <mat-icon (click)="openDialog()" aria-hidden="false" aria-label="Example settings icon" fontIcon="settings"></mat-icon>
+            <mat-checkbox
+              style="margin: 0 12px"
+              (click)="openDialog(depart)"
+              *ngIf="depart.deannul == '1'"
+              style="background-color: red"
+              checked="true"
+            ></mat-checkbox>
+            <mat-checkbox
+              style="margin: 0 12px"
+              (click)="openDialog(depart)"
+              *ngIf="depart.deannul == '0' || depart.deannul == null"
+              style="background-color: orange"
+            ></mat-checkbox>
           </td>
 
           <!--<button type="submit" [routerLink]="['/depart', depart.id, 'edit']" class="btn btn-primary btn-sm" data-cy="entityEditButton">
                 <fa-icon icon="pencil-alt"></fa-icon>
                 <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
               </button>-->
-          <td><input type="checkbox" name="valid" /></td>
+          <td>
+            <mat-checkbox
+              style="margin: 0 12px"
+              (click)="checkValid(depart)"
+              *ngIf="depart.execute == '1'"
+              style="background-color: green"
+            ></mat-checkbox>
+            <mat-checkbox
+              style="margin: 0 12px"
+              (click)="checkValid(depart)"
+              *ngIf="depart.execute == '0' || depart.execute == null"
+              style="background-color: orange"
+            ></mat-checkbox>
+          </td>
 
           <!--<button type="submit" (click)="delete(depart)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
                 <fa-icon icon="times"></fa-icon>
                 <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
               </button>-->
-          <td><input type="checkbox" name="exec" /></td>
         </tr>
       </tbody>
     </table>

@@ -1,0 +1,31 @@
+{
+  "departdbApp": {
+    "displaybus": {
+      "home": {
+        "title": "Displaybuses",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Displaybus",
+        "createOrEditLabel": "Create or edit a Displaybus",
+        "notFound": "No Displaybuses found"
+      },
+      "created": "A new Displaybus is created with identifier {{ param }}",
+      "updated": "A Displaybus is updated with identifier {{ param }}",
+      "deleted": "A Displaybus is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Displaybus {{ id }}?"
+      },
+      "detail": {
+        "title": "Displaybus"
+      },
+      "id": "ID",
+      "lang": "Lang",
+      "vehicule": "Vehicule",
+      "num_appel": "Num Appel",
+      "detail_ligne": "Detail Ligne",
+      "ligne": "Ligne",
+      "direction": "Direction",
+      "denumli": "Denumli",
+      "deltyli": "Deltyli"
+    }
+  }
+}

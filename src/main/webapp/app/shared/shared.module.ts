@@ -14,6 +14,8 @@ import { SortDirective } from './sort/sort.directive';
 import { ItemCountComponent } from './pagination/item-count.component';
 import { FilterComponent } from './filter/filter.component';
 import { MaterialModule } from './material/material.module';
+import { MatIconModule } from '@angular/material/icon';
+
 @NgModule({
   imports: [SharedLibsModule],
   declarations: [
@@ -45,6 +47,7 @@ import { MaterialModule } from './material/material.module';
     ItemCountComponent,
     FilterComponent,
     MaterialModule,
+    MatIconModule,
   ],
 })
 export class SharedModule {}

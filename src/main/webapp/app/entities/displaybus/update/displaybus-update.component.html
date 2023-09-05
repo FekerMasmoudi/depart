@@ -1,0 +1,81 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-displaybus-heading" data-cy="DisplaybusCreateUpdateHeading" jhiTranslate="departdbApp.displaybus.home.createOrEditLabel">
+        Create or edit a Displaybus
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row mb-3" *ngIf="editForm.controls.id.value !== null">
+          <label class="form-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="text" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.displaybus.lang" for="field_lang">Lang</label>
+          <input type="text" class="form-control" name="lang" id="field_lang" data-cy="lang" formControlName="lang" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.displaybus.vehicule" for="field_vehicule">Vehicule</label>
+          <input type="text" class="form-control" name="vehicule" id="field_vehicule" data-cy="vehicule" formControlName="vehicule" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.displaybus.num_appel" for="field_num_appel">Num Appel</label>
+          <input type="number" class="form-control" name="num_appel" id="field_num_appel" data-cy="num_appel" formControlName="num_appel" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.displaybus.detail_ligne" for="field_detail_ligne">Detail Ligne</label>
+          <input
+            type="text"
+            class="form-control"
+            name="detail_ligne"
+            id="field_detail_ligne"
+            data-cy="detail_ligne"
+            formControlName="detail_ligne"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.displaybus.ligne" for="field_ligne">Ligne</label>
+          <input type="text" class="form-control" name="ligne" id="field_ligne" data-cy="ligne" formControlName="ligne" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.displaybus.direction" for="field_direction">Direction</label>
+          <input type="text" class="form-control" name="direction" id="field_direction" data-cy="direction" formControlName="direction" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.displaybus.denumli" for="field_denumli">Denumli</label>
+          <input type="text" class="form-control" name="denumli" id="field_denumli" data-cy="denumli" formControlName="denumli" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.displaybus.deltyli" for="field_deltyli">Deltyli</label>
+          <input type="text" class="form-control" name="deltyli" id="field_deltyli" data-cy="deltyli" formControlName="deltyli" />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

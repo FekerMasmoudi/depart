@@ -15,6 +15,7 @@ import { CommonModule } from '@angular/common';
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { ListMotifaModule } from './list-motifa/list-motifa.module';
 
 const MaterialComponents = [
   MatButtonModule,
@@ -29,7 +30,7 @@ const MaterialComponents = [
 ];
 
 @NgModule({
-  imports: [SharedModule, DepartRoutingModule, ListMotifaComponent],
+  imports: [SharedModule, DepartRoutingModule, ListMotifaComponent, ListMotifaModule, MaterialComponents, FormsModule, CommonModule],
   declarations: [DepartComponent, DepartDetailComponent, DepartUpdateComponent, DepartDeleteDialogComponent],
 
   exports: [MaterialComponents],

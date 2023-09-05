@@ -10,6 +10,13 @@ import { IDepart } from '../depart.model';
 import { IMotifa } from 'app/entities/motifa/motifa.model';
 import { BrowserModule } from '@angular/platform-browser';
 import { DepartComponent } from '../list/depart.component';
+import { ActivatedRoute, Data, ParamMap } from '@angular/router';
+
+import { EntityArrayResponseType } from '../service/depart.service';
+import { HttpHeaders } from '@angular/common/http';
+import { ITEMS_PER_PAGE, PAGE_HEADER, TOTAL_COUNT_RESPONSE_HEADER } from 'app/config/pagination.constants';
+import { ASC, DEFAULT_SORT_DATA, DESC, SORT } from 'app/config/navigation.constants';
+import { MotifaService } from 'app/entities/motifa/service/motifa.service';
 
 @Component({
   selector: 'jhi-list-motifa',
@@ -19,21 +26,26 @@ import { DepartComponent } from '../list/depart.component';
   imports: [MatDialogModule, MatFormFieldModule, MatInputModule, FormsModule, MatButtonModule, CommonModule, MatSelectModule],
 })
 export class ListMotifaComponent implements OnInit {
-  @ViewChild(DepartComponent) x!: DepartComponent;
-
-  constructor(public dialogRef: MatDialogRef<ListMotifaComponent>, @Inject(MAT_DIALOG_DATA) public data: IMotifa) {}
+  constructor(
+    public dialogRef: MatDialogRef<ListMotifaComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    protected activatedRoute: ActivatedRoute,
+    protected motifaService: MotifaService
+  ) {}
 
   listmotifa: IMotifa[] = [];
+  motifas!: IMotifa[] | null;
+  //motifas1: IMotifa[]=[{"id":"0","decmotif":4,"libmotif":"ee"}];
+
   ngOnInit(): void {
-    console.log(this.data.libmotif);
+    //console.log(this.listmotifa[0].libmotif);
+    this.motifaService.queryTakaza().subscribe(data => {
+      this.motifas = data.body;
+    });
+    console.log(this.motifas);
   }
 
   onNoClick(): void {
     this.dialogRef.close();
-  }
-
-  onChange(event: IMotifa): void {
-    alert(event.libmotif);
-    //console.log(event.libmotif);
   }
 }
