@@ -750,12 +750,12 @@ public class schedule {
         repositoryCentVehic.deleteAll();
         repositoryMachine.deleteAll();
         repositoryBonTvx.deleteAll();
-        repositoryTrafic.deleteAll();*/
+        repositoryTrafic.deleteAll();
         repositoryDepart.deleteAll();
         repositoryDeprotat.deleteAll();
         repositoryModif.deleteAll();
         repositoryDrabsen.deleteAll();
-        //repositoryMotifchserv.deleteAll();
+        repositoryMotifchserv.deleteAll();*/
 
     }
 }

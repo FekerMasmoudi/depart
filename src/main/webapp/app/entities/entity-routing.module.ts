@@ -144,6 +144,11 @@ import { RouterModule } from '@angular/router';
         data: { pageTitle: 'departdbApp.externalApi.home.title' },
         loadChildren: () => import('./external-api/external-api.module').then(m => m.ExternalApiModule),
       },
+      {
+        path: 'displaybus',
+        data: { pageTitle: 'departdbApp.displaybus.home.title' },
+        loadChildren: () => import('./displaybus/displaybus.module').then(m => m.DisplaybusModule),
+      },
       /* jhipster-needle-add-entity-route - JHipster will add entity modules routes here */
     ]),
   ],

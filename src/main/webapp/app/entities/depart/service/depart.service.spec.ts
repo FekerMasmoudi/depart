@@ -10,12 +10,12 @@ import { DepartService, RestDepart } from './depart.service';
 const requireRestSample: RestDepart = {
   ...sampleWithRequiredData,
   dedated: sampleWithRequiredData.dedated?.format(DATE_FORMAT),
-  deheups: sampleWithRequiredData.deheups?.toJSON(),
-  deheufs: sampleWithRequiredData.deheufs?.toJSON(),
-  deheuaa: sampleWithRequiredData.deheuaa?.toJSON(),
-  deheudr: sampleWithRequiredData.deheudr?.toJSON(),
-  deheupd: sampleWithRequiredData.deheupd?.toJSON(),
-  deampli: sampleWithRequiredData.deampli?.toJSON(),
+  deheups: sampleWithRequiredData.deheups?.format(DATE_FORMAT),
+  deheufs: sampleWithRequiredData.deheufs?.format(DATE_FORMAT),
+  deheuaa: sampleWithRequiredData.deheuaa?.format(DATE_FORMAT),
+  deheudr: sampleWithRequiredData.deheudr?.format(DATE_FORMAT),
+  deheupd: sampleWithRequiredData.deheupd?.format(DATE_FORMAT),
+  deampli: sampleWithRequiredData.deampli?.format(DATE_FORMAT),
 };
 
 describe('Depart Service', () => {

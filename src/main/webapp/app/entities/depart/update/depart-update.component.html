@@ -168,31 +168,35 @@
 
         <div class="row mb-3">
           <label class="form-label" jhiTranslate="departdbApp.depart.deheups" for="field_deheups">Deheups</label>
-          <div class="d-flex">
+          <div class="input-group">
             <input
               id="field_deheups"
               data-cy="deheups"
-              type="datetime-local"
+              type="text"
               class="form-control"
               name="deheups"
+              ngbDatepicker
+              #deheupsDp="ngbDatepicker"
               formControlName="deheups"
-              placeholder="YYYY-MM-DD HH:mm"
             />
+            <button type="button" class="btn btn-secondary" (click)="deheupsDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
           </div>
         </div>
 
         <div class="row mb-3">
           <label class="form-label" jhiTranslate="departdbApp.depart.deheufs" for="field_deheufs">Deheufs</label>
-          <div class="d-flex">
+          <div class="input-group">
             <input
               id="field_deheufs"
               data-cy="deheufs"
-              type="datetime-local"
+              type="text"
               class="form-control"
               name="deheufs"
+              ngbDatepicker
+              #deheufsDp="ngbDatepicker"
               formControlName="deheufs"
-              placeholder="YYYY-MM-DD HH:mm"
             />
+            <button type="button" class="btn btn-secondary" (click)="deheufsDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
           </div>
         </div>
 
@@ -203,61 +207,69 @@
 
         <div class="row mb-3">
           <label class="form-label" jhiTranslate="departdbApp.depart.deheuaa" for="field_deheuaa">Deheuaa</label>
-          <div class="d-flex">
+          <div class="input-group">
             <input
               id="field_deheuaa"
               data-cy="deheuaa"
-              type="datetime-local"
+              type="text"
               class="form-control"
               name="deheuaa"
+              ngbDatepicker
+              #deheuaaDp="ngbDatepicker"
               formControlName="deheuaa"
-              placeholder="YYYY-MM-DD HH:mm"
             />
+            <button type="button" class="btn btn-secondary" (click)="deheuaaDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
           </div>
         </div>
 
         <div class="row mb-3">
           <label class="form-label" jhiTranslate="departdbApp.depart.deheudr" for="field_deheudr">Deheudr</label>
-          <div class="d-flex">
+          <div class="input-group">
             <input
               id="field_deheudr"
               data-cy="deheudr"
-              type="datetime-local"
+              type="text"
               class="form-control"
               name="deheudr"
+              ngbDatepicker
+              #deheudrDp="ngbDatepicker"
               formControlName="deheudr"
-              placeholder="YYYY-MM-DD HH:mm"
             />
+            <button type="button" class="btn btn-secondary" (click)="deheudrDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
           </div>
         </div>
 
         <div class="row mb-3">
           <label class="form-label" jhiTranslate="departdbApp.depart.deheupd" for="field_deheupd">Deheupd</label>
-          <div class="d-flex">
+          <div class="input-group">
             <input
               id="field_deheupd"
               data-cy="deheupd"
-              type="datetime-local"
+              type="text"
               class="form-control"
               name="deheupd"
+              ngbDatepicker
+              #deheupdDp="ngbDatepicker"
               formControlName="deheupd"
-              placeholder="YYYY-MM-DD HH:mm"
             />
+            <button type="button" class="btn btn-secondary" (click)="deheupdDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
           </div>
         </div>
 
         <div class="row mb-3">
           <label class="form-label" jhiTranslate="departdbApp.depart.deampli" for="field_deampli">Deampli</label>
-          <div class="d-flex">
+          <div class="input-group">
             <input
               id="field_deampli"
               data-cy="deampli"
-              type="datetime-local"
+              type="text"
               class="form-control"
               name="deampli"
+              ngbDatepicker
+              #deampliDp="ngbDatepicker"
               formControlName="deampli"
-              placeholder="YYYY-MM-DD HH:mm"
             />
+            <button type="button" class="btn btn-secondary" (click)="deampliDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
           </div>
         </div>
 

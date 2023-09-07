@@ -3,8 +3,11 @@ package tn.soretras.depart.service.dto;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.ZonedDateTime;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 import javax.validation.constraints.*;
+import tn.soretras.depart.domain.Deprotat;
 
 /**
  * A DTO for the {@link tn.soretras.depart.domain.Depart} entity.
@@ -88,6 +91,8 @@ public class DepartDTO implements Serializable {
     private Integer decmotifcha;
 
     private Integer decmotifrea;
+
+    private Set<DeprotatDTO> deprotats = new HashSet<>();
 
     public String getId() {
         return id;
@@ -429,6 +434,15 @@ public class DepartDTO implements Serializable {
             ", cd3=" + getCd3() +
             ", decmotifcha=" + getDecmotifcha() +
             ", decmotifrea=" + getDecmotifrea() +
+            ", deprotats=" + getDeprotats() +
             "}";
+    }
+
+    public Set<DeprotatDTO> getDeprotats() {
+        return deprotats;
+    }
+
+    public void setDeprotats(Set<DeprotatDTO> deprotats) {
+        this.deprotats = deprotats;
     }
 }

@@ -212,61 +212,69 @@
 
         <div class="row mb-3">
           <label class="form-label" jhiTranslate="departdbApp.deprotat.hdeparte" for="field_hdeparte">Hdeparte</label>
-          <div class="d-flex">
+          <div class="input-group">
             <input
               id="field_hdeparte"
               data-cy="hdeparte"
-              type="datetime-local"
+              type="text"
               class="form-control"
               name="hdeparte"
+              ngbDatepicker
+              #hdeparteDp="ngbDatepicker"
               formControlName="hdeparte"
-              placeholder="YYYY-MM-DD HH:mm"
             />
+            <button type="button" class="btn btn-secondary" (click)="hdeparteDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
           </div>
         </div>
 
         <div class="row mb-3">
           <label class="form-label" jhiTranslate="departdbApp.deprotat.hretoure" for="field_hretoure">Hretoure</label>
-          <div class="d-flex">
+          <div class="input-group">
             <input
               id="field_hretoure"
               data-cy="hretoure"
-              type="datetime-local"
+              type="text"
               class="form-control"
               name="hretoure"
+              ngbDatepicker
+              #hretoureDp="ngbDatepicker"
               formControlName="hretoure"
-              placeholder="YYYY-MM-DD HH:mm"
             />
+            <button type="button" class="btn btn-secondary" (click)="hretoureDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
           </div>
         </div>
 
         <div class="row mb-3">
           <label class="form-label" jhiTranslate="departdbApp.deprotat.harralle" for="field_harralle">Harralle</label>
-          <div class="d-flex">
+          <div class="input-group">
             <input
               id="field_harralle"
               data-cy="harralle"
-              type="datetime-local"
+              type="text"
               class="form-control"
               name="harralle"
+              ngbDatepicker
+              #harralleDp="ngbDatepicker"
               formControlName="harralle"
-              placeholder="YYYY-MM-DD HH:mm"
             />
+            <button type="button" class="btn btn-secondary" (click)="harralleDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
           </div>
         </div>
 
         <div class="row mb-3">
           <label class="form-label" jhiTranslate="departdbApp.deprotat.harrrete" for="field_harrrete">Harrrete</label>
-          <div class="d-flex">
+          <div class="input-group">
             <input
               id="field_harrrete"
               data-cy="harrrete"
-              type="datetime-local"
+              type="text"
               class="form-control"
               name="harrrete"
+              ngbDatepicker
+              #harrreteDp="ngbDatepicker"
               formControlName="harrrete"
-              placeholder="YYYY-MM-DD HH:mm"
             />
+            <button type="button" class="btn btn-secondary" (click)="harrreteDp.toggle()"><fa-icon icon="calendar-alt"></fa-icon></button>
           </div>
         </div>
 
@@ -369,6 +377,21 @@
         <div class="row mb-3">
           <label class="form-label" jhiTranslate="departdbApp.deprotat.r" for="field_r">R</label>
           <input type="text" class="form-control" name="r" id="field_r" data-cy="r" formControlName="r" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="departdbApp.deprotat.depart" for="field_depart">Depart</label>
+          <select
+            class="form-control"
+            id="field_depart"
+            data-cy="depart"
+            name="depart"
+            formControlName="depart"
+            [compareWith]="compareDepart"
+          >
+            <option [ngValue]="null"></option>
+            <option [ngValue]="departOption" *ngFor="let departOption of departsSharedCollection">{{ departOption.id }}</option>
+          </select>
         </div>
       </div>
 

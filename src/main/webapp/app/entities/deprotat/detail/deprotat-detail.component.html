@@ -80,19 +80,19 @@
         </dd>
         <dt><span jhiTranslate="departdbApp.deprotat.hdeparte">Hdeparte</span></dt>
         <dd>
-          <span>{{ deprotat.hdeparte | formatMediumDatetime }}</span>
+          <span>{{ deprotat.hdeparte | formatMediumDate }}</span>
         </dd>
         <dt><span jhiTranslate="departdbApp.deprotat.hretoure">Hretoure</span></dt>
         <dd>
-          <span>{{ deprotat.hretoure | formatMediumDatetime }}</span>
+          <span>{{ deprotat.hretoure | formatMediumDate }}</span>
         </dd>
         <dt><span jhiTranslate="departdbApp.deprotat.harralle">Harralle</span></dt>
         <dd>
-          <span>{{ deprotat.harralle | formatMediumDatetime }}</span>
+          <span>{{ deprotat.harralle | formatMediumDate }}</span>
         </dd>
         <dt><span jhiTranslate="departdbApp.deprotat.harrrete">Harrrete</span></dt>
         <dd>
-          <span>{{ deprotat.harrrete | formatMediumDatetime }}</span>
+          <span>{{ deprotat.harrrete | formatMediumDate }}</span>
         </dd>
         <dt><span jhiTranslate="departdbApp.deprotat.rannul">Rannul</span></dt>
         <dd>
@@ -157,6 +157,12 @@
         <dt><span jhiTranslate="departdbApp.deprotat.r">R</span></dt>
         <dd>
           <span>{{ deprotat.r }}</span>
+        </dd>
+        <dt><span jhiTranslate="departdbApp.deprotat.depart">Depart</span></dt>
+        <dd>
+          <div *ngIf="deprotat.depart">
+            <a [routerLink]="['/depart', deprotat.depart.id, 'view']">{{ deprotat.depart.id }}</a>
+          </div>
         </dd>
       </dl>
 

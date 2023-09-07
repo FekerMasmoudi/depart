@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
-import dayjs from 'dayjs/esm';
-import { DATE_TIME_FORMAT } from 'app/config/input.constants';
 import { IDeprotat, NewDeprotat } from '../deprotat.model';
 
 /**
@@ -16,60 +14,47 @@ type PartialWithRequiredKeyOf<T extends { id: unknown }> = Partial<Omit<T, 'id'>
  */
 type DeprotatFormGroupInput = IDeprotat | PartialWithRequiredKeyOf<NewDeprotat>;
 
-/**
- * Type that converts some properties for forms.
- */
-type FormValueOf<T extends IDeprotat | NewDeprotat> = Omit<T, 'hdeparte' | 'hretoure' | 'harralle' | 'harrrete'> & {
-  hdeparte?: string | null;
-  hretoure?: string | null;
-  harralle?: string | null;
-  harrrete?: string | null;
-};
-
-type DeprotatFormRawValue = FormValueOf<IDeprotat>;
-
-type NewDeprotatFormRawValue = FormValueOf<NewDeprotat>;
-
-type DeprotatFormDefaults = Pick<NewDeprotat, 'id' | 'hdeparte' | 'hretoure' | 'harralle' | 'harrrete'>;
+type DeprotatFormDefaults = Pick<NewDeprotat, 'id'>;
 
 type DeprotatFormGroupContent = {
-  id: FormControl<DeprotatFormRawValue['id'] | NewDeprotat['id']>;
-  deccent: FormControl<DeprotatFormRawValue['deccent']>;
-  decagenc: FormControl<DeprotatFormRawValue['decagenc']>;
-  dedated: FormControl<DeprotatFormRawValue['dedated']>;
-  denumdp: FormControl<DeprotatFormRawValue['denumdp']>;
-  decserv: FormControl<DeprotatFormRawValue['decserv']>;
-  decoper: FormControl<DeprotatFormRawValue['decoper']>;
-  decsean: FormControl<DeprotatFormRawValue['decsean']>;
-  numrotat: FormControl<DeprotatFormRawValue['numrotat']>;
-  ligdeccent: FormControl<DeprotatFormRawValue['ligdeccent']>;
-  ligdecagenc: FormControl<DeprotatFormRawValue['ligdecagenc']>;
-  denumli: FormControl<DeprotatFormRawValue['denumli']>;
-  decstat: FormControl<DeprotatFormRawValue['decstat']>;
-  decsta1: FormControl<DeprotatFormRawValue['decsta1']>;
-  matric: FormControl<DeprotatFormRawValue['matric']>;
-  matric1: FormControl<DeprotatFormRawValue['matric1']>;
-  cdmac: FormControl<DeprotatFormRawValue['cdmac']>;
-  hdeparte: FormControl<DeprotatFormRawValue['hdeparte']>;
-  hretoure: FormControl<DeprotatFormRawValue['hretoure']>;
-  harralle: FormControl<DeprotatFormRawValue['harralle']>;
-  harrrete: FormControl<DeprotatFormRawValue['harrrete']>;
-  rannul: FormControl<DeprotatFormRawValue['rannul']>;
-  km: FormControl<DeprotatFormRawValue['km']>;
-  motifa: FormControl<DeprotatFormRawValue['motifa']>;
-  observ: FormControl<DeprotatFormRawValue['observ']>;
-  recettesvoy: FormControl<DeprotatFormRawValue['recettesvoy']>;
-  nbrevoy: FormControl<DeprotatFormRawValue['nbrevoy']>;
-  paye: FormControl<DeprotatFormRawValue['paye']>;
-  cd1: FormControl<DeprotatFormRawValue['cd1']>;
-  cd2: FormControl<DeprotatFormRawValue['cd2']>;
-  cd3: FormControl<DeprotatFormRawValue['cd3']>;
-  decmotifcha: FormControl<DeprotatFormRawValue['decmotifcha']>;
-  decmotifrea: FormControl<DeprotatFormRawValue['decmotifrea']>;
-  idapex: FormControl<DeprotatFormRawValue['idapex']>;
-  plusmoins: FormControl<DeprotatFormRawValue['plusmoins']>;
-  a: FormControl<DeprotatFormRawValue['a']>;
-  r: FormControl<DeprotatFormRawValue['r']>;
+  id: FormControl<IDeprotat['id'] | NewDeprotat['id']>;
+  deccent: FormControl<IDeprotat['deccent']>;
+  decagenc: FormControl<IDeprotat['decagenc']>;
+  dedated: FormControl<IDeprotat['dedated']>;
+  denumdp: FormControl<IDeprotat['denumdp']>;
+  decserv: FormControl<IDeprotat['decserv']>;
+  decoper: FormControl<IDeprotat['decoper']>;
+  decsean: FormControl<IDeprotat['decsean']>;
+  numrotat: FormControl<IDeprotat['numrotat']>;
+  ligdeccent: FormControl<IDeprotat['ligdeccent']>;
+  ligdecagenc: FormControl<IDeprotat['ligdecagenc']>;
+  denumli: FormControl<IDeprotat['denumli']>;
+  decstat: FormControl<IDeprotat['decstat']>;
+  decsta1: FormControl<IDeprotat['decsta1']>;
+  matric: FormControl<IDeprotat['matric']>;
+  matric1: FormControl<IDeprotat['matric1']>;
+  cdmac: FormControl<IDeprotat['cdmac']>;
+  hdeparte: FormControl<IDeprotat['hdeparte']>;
+  hretoure: FormControl<IDeprotat['hretoure']>;
+  harralle: FormControl<IDeprotat['harralle']>;
+  harrrete: FormControl<IDeprotat['harrrete']>;
+  rannul: FormControl<IDeprotat['rannul']>;
+  km: FormControl<IDeprotat['km']>;
+  motifa: FormControl<IDeprotat['motifa']>;
+  observ: FormControl<IDeprotat['observ']>;
+  recettesvoy: FormControl<IDeprotat['recettesvoy']>;
+  nbrevoy: FormControl<IDeprotat['nbrevoy']>;
+  paye: FormControl<IDeprotat['paye']>;
+  cd1: FormControl<IDeprotat['cd1']>;
+  cd2: FormControl<IDeprotat['cd2']>;
+  cd3: FormControl<IDeprotat['cd3']>;
+  decmotifcha: FormControl<IDeprotat['decmotifcha']>;
+  decmotifrea: FormControl<IDeprotat['decmotifrea']>;
+  idapex: FormControl<IDeprotat['idapex']>;
+  plusmoins: FormControl<IDeprotat['plusmoins']>;
+  a: FormControl<IDeprotat['a']>;
+  r: FormControl<IDeprotat['r']>;
+  depart: FormControl<IDeprotat['depart']>;
 };
 
 export type DeprotatFormGroup = FormGroup<DeprotatFormGroupContent>;
@@ -77,10 +62,10 @@ export type DeprotatFormGroup = FormGroup<DeprotatFormGroupContent>;
 @Injectable({ providedIn: 'root' })
 export class DeprotatFormService {
   createDeprotatFormGroup(deprotat: DeprotatFormGroupInput = { id: null }): DeprotatFormGroup {
-    const deprotatRawValue = this.convertDeprotatToDeprotatRawValue({
+    const deprotatRawValue = {
       ...this.getFormDefaults(),
       ...deprotat,
-    });
+    };
     return new FormGroup<DeprotatFormGroupContent>({
       id: new FormControl(
         { value: deprotatRawValue.id, disabled: true },
@@ -139,15 +124,16 @@ export class DeprotatFormService {
       plusmoins: new FormControl(deprotatRawValue.plusmoins),
       a: new FormControl(deprotatRawValue.a),
       r: new FormControl(deprotatRawValue.r),
+      depart: new FormControl(deprotatRawValue.depart),
     });
   }
 
   getDeprotat(form: DeprotatFormGroup): IDeprotat | NewDeprotat {
-    return this.convertDeprotatRawValueToDeprotat(form.getRawValue() as DeprotatFormRawValue | NewDeprotatFormRawValue);
+    return form.getRawValue() as IDeprotat | NewDeprotat;
   }
 
   resetForm(form: DeprotatFormGroup, deprotat: DeprotatFormGroupInput): void {
-    const deprotatRawValue = this.convertDeprotatToDeprotatRawValue({ ...this.getFormDefaults(), ...deprotat });
+    const deprotatRawValue = { ...this.getFormDefaults(), ...deprotat };
     form.reset(
       {
         ...deprotatRawValue,
@@ -157,36 +143,8 @@ export class DeprotatFormService {
   }
 
   private getFormDefaults(): DeprotatFormDefaults {
-    const currentTime = dayjs();
-
     return {
       id: null,
-      hdeparte: currentTime,
-      hretoure: currentTime,
-      harralle: currentTime,
-      harrrete: currentTime,
-    };
-  }
-
-  private convertDeprotatRawValueToDeprotat(rawDeprotat: DeprotatFormRawValue | NewDeprotatFormRawValue): IDeprotat | NewDeprotat {
-    return {
-      ...rawDeprotat,
-      hdeparte: dayjs(rawDeprotat.hdeparte, DATE_TIME_FORMAT),
-      hretoure: dayjs(rawDeprotat.hretoure, DATE_TIME_FORMAT),
-      harralle: dayjs(rawDeprotat.harralle, DATE_TIME_FORMAT),
-      harrrete: dayjs(rawDeprotat.harrrete, DATE_TIME_FORMAT),
-    };
-  }
-
-  private convertDeprotatToDeprotatRawValue(
-    deprotat: IDeprotat | (Partial<NewDeprotat> & DeprotatFormDefaults)
-  ): DeprotatFormRawValue | PartialWithRequiredKeyOf<NewDeprotatFormRawValue> {
-    return {
-      ...deprotat,
-      hdeparte: deprotat.hdeparte ? deprotat.hdeparte.format(DATE_TIME_FORMAT) : undefined,
-      hretoure: deprotat.hretoure ? deprotat.hretoure.format(DATE_TIME_FORMAT) : undefined,
-      harralle: deprotat.harralle ? deprotat.harralle.format(DATE_TIME_FORMAT) : undefined,
-      harrrete: deprotat.harrrete ? deprotat.harrrete.format(DATE_TIME_FORMAT) : undefined,
     };
   }
 }

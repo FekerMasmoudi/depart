@@ -1,4 +1,5 @@
 import dayjs from 'dayjs/esm';
+import { IDepart } from 'app/entities/depart/depart.model';
 
 export interface IDeprotat {
   id: string;
@@ -38,6 +39,7 @@ export interface IDeprotat {
   plusmoins?: string | null;
   a?: string | null;
   r?: string | null;
+  depart?: Pick<IDepart, 'id'> | null;
 }
 
 export type NewDeprotat = Omit<IDeprotat, 'id'> & { id: null };

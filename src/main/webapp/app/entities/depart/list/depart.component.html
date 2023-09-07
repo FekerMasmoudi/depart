@@ -172,25 +172,25 @@
               <span jhiTranslate="departdbApp.depart.deetat">Deetat</span>
               <fa-icon class="p-1" icon="sort"></fa-icon>
             </div>
-          </th>-->
+          </th>
           <th scope="col" jhiSortBy="deannul">
             <div class="d-flex">
               <span jhiTranslate="departdbApp.depart.deannul">Deannul</span>
               <fa-icon class="p-1" icon="sort"></fa-icon>
             </div>
-          </th>
+          </th>-->
           <th scope="col" jhiSortBy="decclot">
             <div class="d-flex">
               <span jhiTranslate="departdbApp.depart.decclot">Decclot</span>
               <fa-icon class="p-1" icon="sort"></fa-icon>
             </div>
           </th>
-          <th scope="col" jhiSortBy="execute">
+          <!--<th scope="col" jhiSortBy="execute">
             <div class="d-flex">
               <span jhiTranslate="departdbApp.depart.execute">Execute</span>
               <fa-icon class="p-1" icon="sort"></fa-icon>
             </div>
-          </th>
+          </th>-->
           <th scope="col" jhiSortBy="motifa">
             <div class="d-flex">
               <span jhiTranslate="departdbApp.depart.motifa">Motifa</span>
@@ -309,6 +309,7 @@
               name="matric"
               id="field_matric"
               data-cy="matric"
+              style="direction: rtl"
               [(ngModel)]="depart.matric"
               (change)="changeMatric(depart)"
             />
@@ -324,11 +325,11 @@
           <td>{{ depart.deampli | formatMediumDatetime }}</td>
           <td>{{ depart.obsind }}</td>
           <td>{{ depart.vldroul }}</td>
-          <td>{{ depart.deetat }}</td>-->
+          <td>{{ depart.deetat }}</td>
 
-          <td>{{ depart.deannul }}</td>
+          <td>{{ depart.deannul }}</td>-->
           <td>{{ depart.decclot }}</td>
-          <td>{{ depart.execute }}</td>
+          <!--<td>{{ depart.execute }}</td>-->
           <td>{{ depart.motifa }}</td>
           <!--<td>{{ depart.observ }}</td>
           <td>{{ depart.recettes }}</td>

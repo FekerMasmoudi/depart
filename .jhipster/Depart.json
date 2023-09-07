@@ -1,7 +1,7 @@
 {
   "applications": "*",
   "changelogDate": "20230804093443",
-  "dto": "mapstruct",
+  "dto": "no",
   "embedded": false,
   "entityTableName": "depart",
   "fields": [
@@ -54,11 +54,11 @@
     },
     {
       "fieldName": "deheups",
-      "fieldType": "ZonedDateTime"
+      "fieldType": "LocalDate"
     },
     {
       "fieldName": "deheufs",
-      "fieldType": "ZonedDateTime"
+      "fieldType": "LocalDate"
     },
     {
       "fieldName": "denbrro",
@@ -66,19 +66,19 @@
     },
     {
       "fieldName": "deheuaa",
-      "fieldType": "ZonedDateTime"
+      "fieldType": "LocalDate"
     },
     {
       "fieldName": "deheudr",
-      "fieldType": "ZonedDateTime"
+      "fieldType": "LocalDate"
     },
     {
       "fieldName": "deheupd",
-      "fieldType": "ZonedDateTime"
+      "fieldType": "LocalDate"
     },
     {
       "fieldName": "deampli",
-      "fieldType": "ZonedDateTime"
+      "fieldType": "LocalDate"
     },
     {
       "fieldName": "obsind",
@@ -152,8 +152,15 @@
   "fluentMethods": true,
   "jpaMetamodelFiltering": false,
   "name": "Depart",
-  "pagination": "pagination",
+  "pagination": "no",
   "readOnly": false,
-  "relationships": [],
-  "service": "serviceClass"
+  "relationships": [
+    {
+      "otherEntityName": "deprotat",
+      "otherEntityRelationshipName": "depart",
+      "relationshipName": "deprotat",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "no"
 }

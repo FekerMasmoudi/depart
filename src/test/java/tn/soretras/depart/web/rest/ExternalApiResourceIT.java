@@ -30,8 +30,8 @@ import tn.soretras.depart.service.mapper.ExternalApiMapper;
 @WithMockUser
 class ExternalApiResourceIT {
 
-    private static final Integer DEFAULT_IDM = 222;
-    private static final Integer UPDATED_IDM = 233;
+    private static final String DEFAULT_IDM = "AAAAAAAAAA";
+    private static final String UPDATED_IDM = "BBBBBBBBBB";
 
     private static final String DEFAULT_NAME = "AAAAAAAAAA";
     private static final String UPDATED_NAME = "BBBBBBBBBB";

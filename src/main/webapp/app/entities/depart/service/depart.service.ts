@@ -107,12 +107,12 @@ export class DepartService {
     return {
       ...depart,
       dedated: depart.dedated?.format(DATE_FORMAT) ?? null,
-      deheups: depart.deheups?.toJSON() ?? null,
-      deheufs: depart.deheufs?.toJSON() ?? null,
-      deheuaa: depart.deheuaa?.toJSON() ?? null,
-      deheudr: depart.deheudr?.toJSON() ?? null,
-      deheupd: depart.deheupd?.toJSON() ?? null,
-      deampli: depart.deampli?.toJSON() ?? null,
+      deheups: depart.deheups?.format(DATE_FORMAT) ?? null,
+      deheufs: depart.deheufs?.format(DATE_FORMAT) ?? null,
+      deheuaa: depart.deheuaa?.format(DATE_FORMAT) ?? null,
+      deheudr: depart.deheudr?.format(DATE_FORMAT) ?? null,
+      deheupd: depart.deheupd?.format(DATE_FORMAT) ?? null,
+      deampli: depart.deampli?.format(DATE_FORMAT) ?? null,
     };
   }
 

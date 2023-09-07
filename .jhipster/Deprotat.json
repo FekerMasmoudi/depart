@@ -1,7 +1,7 @@
 {
   "applications": "*",
   "changelogDate": "20230804103421",
-  "dto": "mapstruct",
+  "dto": "no",
   "embedded": false,
   "entityTableName": "deprotat",
   "fields": [
@@ -78,19 +78,19 @@
     },
     {
       "fieldName": "hdeparte",
-      "fieldType": "ZonedDateTime"
+      "fieldType": "LocalDate"
     },
     {
       "fieldName": "hretoure",
-      "fieldType": "ZonedDateTime"
+      "fieldType": "LocalDate"
     },
     {
       "fieldName": "harralle",
-      "fieldType": "ZonedDateTime"
+      "fieldType": "LocalDate"
     },
     {
       "fieldName": "harrrete",
-      "fieldType": "ZonedDateTime"
+      "fieldType": "LocalDate"
     },
     {
       "fieldName": "rannul",
@@ -98,7 +98,7 @@
     },
     {
       "fieldName": "km",
-      "fieldType": "Integer"
+      "fieldType": "Double"
     },
     {
       "fieldName": "motifa",
@@ -160,8 +160,15 @@
   "fluentMethods": true,
   "jpaMetamodelFiltering": false,
   "name": "Deprotat",
-  "pagination": "pagination",
+  "pagination": "no",
   "readOnly": false,
-  "relationships": [],
-  "service": "serviceClass"
+  "relationships": [
+    {
+      "otherEntityName": "depart",
+      "otherEntityRelationshipName": "deprotat",
+      "relationshipName": "depart",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
 }

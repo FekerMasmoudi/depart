@@ -26,7 +26,7 @@
       "dedated": "Dedated",
       "denumdp": "Denumdp",
       "matric": "Matric",
-      "matric1": "Matric1",
+      "matric1": "Matric 1",
       "cdmac": "Cdmac",
       "deheups": "Deheups",
       "deheufs": "Deheufs",
@@ -51,7 +51,8 @@
       "cd2": "Cd 2",
       "cd3": "Cd 3",
       "decmotifcha": "Decmotifcha",
-      "decmotifrea": "Decmotifrea"
+      "decmotifrea": "Decmotifrea",
+      "deprotat": "Deprotat"
     }
   }
 }

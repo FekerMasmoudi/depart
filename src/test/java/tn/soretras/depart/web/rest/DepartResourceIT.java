@@ -4,13 +4,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-import static tn.soretras.depart.web.rest.TestUtil.sameInstant;
 
-import java.time.Instant;
 import java.time.LocalDate;
 import java.time.ZoneId;
-import java.time.ZoneOffset;
-import java.time.ZonedDateTime;
 import java.util.List;
 import java.util.UUID;
 import org.junit.jupiter.api.BeforeEach;
@@ -23,8 +19,6 @@ import org.springframework.test.web.servlet.MockMvc;
 import tn.soretras.depart.IntegrationTest;
 import tn.soretras.depart.domain.Depart;
 import tn.soretras.depart.repository.DepartRepository;
-import tn.soretras.depart.service.dto.DepartDTO;
-import tn.soretras.depart.service.mapper.DepartMapper;
 
 /**
  * Integration tests for the {@link DepartResource} REST controller.
@@ -64,26 +58,26 @@ class DepartResourceIT {
     private static final Integer DEFAULT_CDMAC = 1;
     private static final Integer UPDATED_CDMAC = 2;
 
-    private static final LocalDate DEFAULT_DEHEUPS = null;
-    private static final LocalDate UPDATED_DEHEUPS = null;
+    private static final LocalDate DEFAULT_DEHEUPS = LocalDate.ofEpochDay(0L);
+    private static final LocalDate UPDATED_DEHEUPS = LocalDate.now(ZoneId.systemDefault());
 
-    private static final LocalDate DEFAULT_DEHEUFS = null;
-    private static final LocalDate UPDATED_DEHEUFS = null;
+    private static final LocalDate DEFAULT_DEHEUFS = LocalDate.ofEpochDay(0L);
+    private static final LocalDate UPDATED_DEHEUFS = LocalDate.now(ZoneId.systemDefault());
 
     private static final Integer DEFAULT_DENBRRO = 1;
     private static final Integer UPDATED_DENBRRO = 2;
 
-    private static final LocalDate DEFAULT_DEHEUAA = null;
-    private static final LocalDate UPDATED_DEHEUAA = null;
+    private static final LocalDate DEFAULT_DEHEUAA = LocalDate.ofEpochDay(0L);
+    private static final LocalDate UPDATED_DEHEUAA = LocalDate.now(ZoneId.systemDefault());
 
-    private static final LocalDate DEFAULT_DEHEUDR = null;
-    private static final LocalDate UPDATED_DEHEUDR = null;
+    private static final LocalDate DEFAULT_DEHEUDR = LocalDate.ofEpochDay(0L);
+    private static final LocalDate UPDATED_DEHEUDR = LocalDate.now(ZoneId.systemDefault());
 
-    private static final LocalDate DEFAULT_DEHEUPD = null;
-    private static final LocalDate UPDATED_DEHEUPD = null;
+    private static final LocalDate DEFAULT_DEHEUPD = LocalDate.ofEpochDay(0L);
+    private static final LocalDate UPDATED_DEHEUPD = LocalDate.now(ZoneId.systemDefault());
 
-    private static final LocalDate DEFAULT_DEAMPLI = null;
-    private static final LocalDate UPDATED_DEAMPLI = null;
+    private static final LocalDate DEFAULT_DEAMPLI = LocalDate.ofEpochDay(0L);
+    private static final LocalDate UPDATED_DEAMPLI = LocalDate.now(ZoneId.systemDefault());
 
     private static final String DEFAULT_OBSIND = "AAAAAAAAAA";
     private static final String UPDATED_OBSIND = "BBBBBBBBBB";
@@ -141,9 +135,6 @@ class DepartResourceIT {
 
     @Autowired
     private DepartRepository departRepository;
-
-    @Autowired
-    private DepartMapper departMapper;
 
     @Autowired
     private MockMvc restDepartMockMvc;
@@ -250,9 +241,8 @@ class DepartResourceIT {
     void createDepart() throws Exception {
         int databaseSizeBeforeCreate = departRepository.findAll().size();
         // Create the Depart
-        DepartDTO departDTO = departMapper.toDto(depart);
         restDepartMockMvc
-            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(departDTO)))
+            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(depart)))
             .andExpect(status().isCreated());
 
         // Validate the Depart in the database
@@ -299,13 +289,12 @@ class DepartResourceIT {
     void createDepartWithExistingId() throws Exception {
         // Create the Depart with an existing ID
         depart.setId("existing_id");
-        DepartDTO departDTO = departMapper.toDto(depart);
 
         int databaseSizeBeforeCreate = departRepository.findAll().size();
 
         // An entity with an existing ID cannot be created, so this API call must fail
         restDepartMockMvc
-            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(departDTO)))
+            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(depart)))
             .andExpect(status().isBadRequest());
 
         // Validate the Depart in the database
@@ -320,10 +309,9 @@ class DepartResourceIT {
         depart.setDeccent(null);
 
         // Create the Depart, which fails.
-        DepartDTO departDTO = departMapper.toDto(depart);
 
         restDepartMockMvc
-            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(departDTO)))
+            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(depart)))
             .andExpect(status().isBadRequest());
 
         List<Depart> departList = departRepository.findAll();
@@ -337,10 +325,9 @@ class DepartResourceIT {
         depart.setDecagenc(null);
 
         // Create the Depart, which fails.
-        DepartDTO departDTO = departMapper.toDto(depart);
 
         restDepartMockMvc
-            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(departDTO)))
+            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(depart)))
             .andExpect(status().isBadRequest());
 
         List<Depart> departList = departRepository.findAll();
@@ -354,10 +341,9 @@ class DepartResourceIT {
         depart.setDecserv(null);
 
         // Create the Depart, which fails.
-        DepartDTO departDTO = departMapper.toDto(depart);
 
         restDepartMockMvc
-            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(departDTO)))
+            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(depart)))
             .andExpect(status().isBadRequest());
 
         List<Depart> departList = departRepository.findAll();
@@ -371,10 +357,9 @@ class DepartResourceIT {
         depart.setDecoper(null);
 
         // Create the Depart, which fails.
-        DepartDTO departDTO = departMapper.toDto(depart);
 
         restDepartMockMvc
-            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(departDTO)))
+            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(depart)))
             .andExpect(status().isBadRequest());
 
         List<Depart> departList = departRepository.findAll();
@@ -388,10 +373,9 @@ class DepartResourceIT {
         depart.setDecsean(null);
 
         // Create the Depart, which fails.
-        DepartDTO departDTO = departMapper.toDto(depart);
 
         restDepartMockMvc
-            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(departDTO)))
+            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(depart)))
             .andExpect(status().isBadRequest());
 
         List<Depart> departList = departRepository.findAll();
@@ -405,10 +389,9 @@ class DepartResourceIT {
         depart.setDedated(null);
 
         // Create the Depart, which fails.
-        DepartDTO departDTO = departMapper.toDto(depart);
 
         restDepartMockMvc
-            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(departDTO)))
+            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(depart)))
             .andExpect(status().isBadRequest());
 
         List<Depart> departList = departRepository.findAll();
@@ -422,10 +405,9 @@ class DepartResourceIT {
         depart.setDenumdp(null);
 
         // Create the Depart, which fails.
-        DepartDTO departDTO = departMapper.toDto(depart);
 
         restDepartMockMvc
-            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(departDTO)))
+            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(depart)))
             .andExpect(status().isBadRequest());
 
         List<Depart> departList = departRepository.findAll();
@@ -453,13 +435,13 @@ class DepartResourceIT {
             .andExpect(jsonPath("$.[*].matric").value(hasItem(DEFAULT_MATRIC)))
             .andExpect(jsonPath("$.[*].matric1").value(hasItem(DEFAULT_MATRIC_1)))
             .andExpect(jsonPath("$.[*].cdmac").value(hasItem(DEFAULT_CDMAC)))
-            .andExpect(jsonPath("$.[*].deheups").value(hasItem(null)))
-            .andExpect(jsonPath("$.[*].deheufs").value(hasItem(null)))
+            .andExpect(jsonPath("$.[*].deheups").value(hasItem(DEFAULT_DEHEUPS.toString())))
+            .andExpect(jsonPath("$.[*].deheufs").value(hasItem(DEFAULT_DEHEUFS.toString())))
             .andExpect(jsonPath("$.[*].denbrro").value(hasItem(DEFAULT_DENBRRO)))
-            .andExpect(jsonPath("$.[*].deheuaa").value(null))
-            .andExpect(jsonPath("$.[*].deheudr").value(hasItem(null)))
-            .andExpect(jsonPath("$.[*].deheupd").value(hasItem(null)))
-            .andExpect(jsonPath("$.[*].deampli").value(hasItem(null)))
+            .andExpect(jsonPath("$.[*].deheuaa").value(hasItem(DEFAULT_DEHEUAA.toString())))
+            .andExpect(jsonPath("$.[*].deheudr").value(hasItem(DEFAULT_DEHEUDR.toString())))
+            .andExpect(jsonPath("$.[*].deheupd").value(hasItem(DEFAULT_DEHEUPD.toString())))
+            .andExpect(jsonPath("$.[*].deampli").value(hasItem(DEFAULT_DEAMPLI.toString())))
             .andExpect(jsonPath("$.[*].obsind").value(hasItem(DEFAULT_OBSIND)))
             .andExpect(jsonPath("$.[*].vldroul").value(hasItem(DEFAULT_VLDROUL)))
             .andExpect(jsonPath("$.[*].deetat").value(hasItem(DEFAULT_DEETAT)))
@@ -500,13 +482,13 @@ class DepartResourceIT {
             .andExpect(jsonPath("$.matric").value(DEFAULT_MATRIC))
             .andExpect(jsonPath("$.matric1").value(DEFAULT_MATRIC_1))
             .andExpect(jsonPath("$.cdmac").value(DEFAULT_CDMAC))
-            .andExpect(jsonPath("$.deheups").value(null))
-            .andExpect(jsonPath("$.deheufs").value(null))
+            .andExpect(jsonPath("$.deheups").value(DEFAULT_DEHEUPS.toString()))
+            .andExpect(jsonPath("$.deheufs").value(DEFAULT_DEHEUFS.toString()))
             .andExpect(jsonPath("$.denbrro").value(DEFAULT_DENBRRO))
-            .andExpect(jsonPath("$.deheuaa").value(null))
-            .andExpect(jsonPath("$.deheudr").value(null))
-            .andExpect(jsonPath("$.deheupd").value(null))
-            .andExpect(jsonPath("$.deampli").value(null))
+            .andExpect(jsonPath("$.deheuaa").value(DEFAULT_DEHEUAA.toString()))
+            .andExpect(jsonPath("$.deheudr").value(DEFAULT_DEHEUDR.toString()))
+            .andExpect(jsonPath("$.deheupd").value(DEFAULT_DEHEUPD.toString()))
+            .andExpect(jsonPath("$.deampli").value(DEFAULT_DEAMPLI.toString()))
             .andExpect(jsonPath("$.obsind").value(DEFAULT_OBSIND))
             .andExpect(jsonPath("$.vldroul").value(DEFAULT_VLDROUL))
             .andExpect(jsonPath("$.deetat").value(DEFAULT_DEETAT))
@@ -576,13 +558,12 @@ class DepartResourceIT {
             .cd3(UPDATED_CD_3)
             .decmotifcha(UPDATED_DECMOTIFCHA)
             .decmotifrea(UPDATED_DECMOTIFREA);
-        DepartDTO departDTO = departMapper.toDto(updatedDepart);
 
         restDepartMockMvc
             .perform(
-                put(ENTITY_API_URL_ID, departDTO.getId())
+                put(ENTITY_API_URL_ID, updatedDepart.getId())
                     .contentType(MediaType.APPLICATION_JSON)
-                    .content(TestUtil.convertObjectToJsonBytes(departDTO))
+                    .content(TestUtil.convertObjectToJsonBytes(updatedDepart))
             )
             .andExpect(status().isOk());
 
@@ -631,15 +612,12 @@ class DepartResourceIT {
         int databaseSizeBeforeUpdate = departRepository.findAll().size();
         depart.setId(UUID.randomUUID().toString());
 
-        // Create the Depart
-        DepartDTO departDTO = departMapper.toDto(depart);
-
         // If the entity doesn't have an ID, it will throw BadRequestAlertException
         restDepartMockMvc
             .perform(
-                put(ENTITY_API_URL_ID, departDTO.getId())
+                put(ENTITY_API_URL_ID, depart.getId())
                     .contentType(MediaType.APPLICATION_JSON)
-                    .content(TestUtil.convertObjectToJsonBytes(departDTO))
+                    .content(TestUtil.convertObjectToJsonBytes(depart))
             )
             .andExpect(status().isBadRequest());
 
@@ -653,15 +631,12 @@ class DepartResourceIT {
         int databaseSizeBeforeUpdate = departRepository.findAll().size();
         depart.setId(UUID.randomUUID().toString());
 
-        // Create the Depart
-        DepartDTO departDTO = departMapper.toDto(depart);
-
         // If url ID doesn't match entity ID, it will throw BadRequestAlertException
         restDepartMockMvc
             .perform(
                 put(ENTITY_API_URL_ID, UUID.randomUUID().toString())
                     .contentType(MediaType.APPLICATION_JSON)
-                    .content(TestUtil.convertObjectToJsonBytes(departDTO))
+                    .content(TestUtil.convertObjectToJsonBytes(depart))
             )
             .andExpect(status().isBadRequest());
 
@@ -675,12 +650,9 @@ class DepartResourceIT {
         int databaseSizeBeforeUpdate = departRepository.findAll().size();
         depart.setId(UUID.randomUUID().toString());
 
-        // Create the Depart
-        DepartDTO departDTO = departMapper.toDto(depart);
-
         // If url ID doesn't match entity ID, it will throw BadRequestAlertException
         restDepartMockMvc
-            .perform(put(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(departDTO)))
+            .perform(put(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(depart)))
             .andExpect(status().isMethodNotAllowed());
 
         // Validate the Depart in the database
@@ -866,15 +838,12 @@ class DepartResourceIT {
         int databaseSizeBeforeUpdate = departRepository.findAll().size();
         depart.setId(UUID.randomUUID().toString());
 
-        // Create the Depart
-        DepartDTO departDTO = departMapper.toDto(depart);
-
         // If the entity doesn't have an ID, it will throw BadRequestAlertException
         restDepartMockMvc
             .perform(
-                patch(ENTITY_API_URL_ID, departDTO.getId())
+                patch(ENTITY_API_URL_ID, depart.getId())
                     .contentType("application/merge-patch+json")
-                    .content(TestUtil.convertObjectToJsonBytes(departDTO))
+                    .content(TestUtil.convertObjectToJsonBytes(depart))
             )
             .andExpect(status().isBadRequest());
 
@@ -888,15 +857,12 @@ class DepartResourceIT {
         int databaseSizeBeforeUpdate = departRepository.findAll().size();
         depart.setId(UUID.randomUUID().toString());
 
-        // Create the Depart
-        DepartDTO departDTO = departMapper.toDto(depart);
-
         // If url ID doesn't match entity ID, it will throw BadRequestAlertException
         restDepartMockMvc
             .perform(
                 patch(ENTITY_API_URL_ID, UUID.randomUUID().toString())
                     .contentType("application/merge-patch+json")
-                    .content(TestUtil.convertObjectToJsonBytes(departDTO))
+                    .content(TestUtil.convertObjectToJsonBytes(depart))
             )
             .andExpect(status().isBadRequest());
 
@@ -910,14 +876,9 @@ class DepartResourceIT {
         int databaseSizeBeforeUpdate = departRepository.findAll().size();
         depart.setId(UUID.randomUUID().toString());
 
-        // Create the Depart
-        DepartDTO departDTO = departMapper.toDto(depart);
-
         // If url ID doesn't match entity ID, it will throw BadRequestAlertException
         restDepartMockMvc
-            .perform(
-                patch(ENTITY_API_URL).contentType("application/merge-patch+json").content(TestUtil.convertObjectToJsonBytes(departDTO))
-            )
+            .perform(patch(ENTITY_API_URL).contentType("application/merge-patch+json").content(TestUtil.convertObjectToJsonBytes(depart)))
             .andExpect(status().isMethodNotAllowed());
 
         // Validate the Depart in the database

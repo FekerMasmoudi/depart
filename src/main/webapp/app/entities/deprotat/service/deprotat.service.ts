@@ -105,10 +105,10 @@ export class DeprotatService {
     return {
       ...deprotat,
       dedated: deprotat.dedated?.format(DATE_FORMAT) ?? null,
-      hdeparte: deprotat.hdeparte?.toJSON() ?? null,
-      hretoure: deprotat.hretoure?.toJSON() ?? null,
-      harralle: deprotat.harralle?.toJSON() ?? null,
-      harrrete: deprotat.harrrete?.toJSON() ?? null,
+      hdeparte: deprotat.hdeparte?.format(DATE_FORMAT) ?? null,
+      hretoure: deprotat.hretoure?.format(DATE_FORMAT) ?? null,
+      harralle: deprotat.harralle?.format(DATE_FORMAT) ?? null,
+      harrrete: deprotat.harrrete?.format(DATE_FORMAT) ?? null,
     };
   }
 

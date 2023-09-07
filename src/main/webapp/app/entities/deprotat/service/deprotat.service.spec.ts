@@ -10,10 +10,10 @@ import { DeprotatService, RestDeprotat } from './deprotat.service';
 const requireRestSample: RestDeprotat = {
   ...sampleWithRequiredData,
   dedated: sampleWithRequiredData.dedated?.format(DATE_FORMAT),
-  hdeparte: sampleWithRequiredData.hdeparte?.toJSON(),
-  hretoure: sampleWithRequiredData.hretoure?.toJSON(),
-  harralle: sampleWithRequiredData.harralle?.toJSON(),
-  harrrete: sampleWithRequiredData.harrrete?.toJSON(),
+  hdeparte: sampleWithRequiredData.hdeparte?.format(DATE_FORMAT),
+  hretoure: sampleWithRequiredData.hretoure?.format(DATE_FORMAT),
+  harralle: sampleWithRequiredData.harralle?.format(DATE_FORMAT),
+  harrrete: sampleWithRequiredData.harrrete?.format(DATE_FORMAT),
 };
 
 describe('Deprotat Service', () => {

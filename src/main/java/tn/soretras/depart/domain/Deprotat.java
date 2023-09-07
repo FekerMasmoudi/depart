@@ -1,9 +1,11 @@
 package tn.soretras.depart.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.io.Serializable;
 import java.time.LocalDate;
 import javax.validation.constraints.*;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
@@ -133,6 +135,11 @@ public class Deprotat implements Serializable {
 
     @Field("r")
     private String r;
+
+    @DBRef
+    @Field("depart")
+    @JsonIgnoreProperties(value = { "deprotats" }, allowSetters = true)
+    private Depart depart;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
 
@@ -695,6 +702,19 @@ public class Deprotat implements Serializable {
 
     public void setR(String r) {
         this.r = r;
+    }
+
+    public Depart getDepart() {
+        return this.depart;
+    }
+
+    public void setDepart(Depart depart) {
+        this.depart = depart;
+    }
+
+    public Deprotat depart(Depart depart) {
+        this.setDepart(depart);
+        return this;
     }
 
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here

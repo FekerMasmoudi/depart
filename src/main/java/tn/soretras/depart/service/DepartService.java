@@ -1,15 +1,24 @@
 package tn.soretras.depart.service;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import tn.soretras.depart.domain.Depart;
 import tn.soretras.depart.repository.DepartRepository;
+import tn.soretras.depart.repository.DeprotatRepository;
 import tn.soretras.depart.service.dto.DepartDTO;
+import tn.soretras.depart.service.dto.DeprotatDTO;
 import tn.soretras.depart.service.mapper.DepartMapper;
+import tn.soretras.depart.service.mapper.DeprotatMapper;
 
 /**
  * Service Implementation for managing {@link Depart}.
@@ -23,9 +32,19 @@ public class DepartService {
 
     private final DepartMapper departMapper;
 
-    public DepartService(DepartRepository departRepository, DepartMapper departMapper) {
+    private final DeprotatRepository deprotatRepository;
+    private final DeprotatMapper deprotatMapper;
+
+    public DepartService(
+        DepartRepository departRepository,
+        DepartMapper departMapper,
+        DeprotatRepository deprotatRepository,
+        DeprotatMapper deprotatMapper
+    ) {
         this.departRepository = departRepository;
         this.departMapper = departMapper;
+        this.deprotatRepository = deprotatRepository;
+        this.deprotatMapper = deprotatMapper;
     }
 
     /**
@@ -82,7 +101,31 @@ public class DepartService {
      */
     public Page<DepartDTO> findAll(Pageable pageable) {
         log.debug("Request to get all Departs");
-        return departRepository.findAll(pageable).map(departMapper::toDto);
+        //return departRepository.findAll(pageable).map(departMapper::toDto);
+
+        Page<DepartDTO> dpdto = departRepository.findAll(pageable).map(departMapper::toDto);
+        List<DepartDTO> listDep = new ArrayList<>();
+        if (dpdto != null && dpdto.hasContent()) {
+            listDep = dpdto.getContent();
+            for (int i = 0; i < listDep.size(); i++) {
+                Set<DeprotatDTO> setdep = listDep.get(i).getDeprotats();
+                Set<DeprotatDTO> setdepf = new HashSet<DeprotatDTO>();
+                Iterator<DeprotatDTO> itdep = setdep.iterator();
+                while (itdep.hasNext()) {
+                    DeprotatDTO deprdto = (DeprotatDTO) itdep.next();
+                    String iddeprot = deprdto.getId();
+                    Optional<Object> opobj = deprotatRepository.findById(iddeprot).map(deprotatMapper::toDto);
+                    setdepf.add((DeprotatDTO) opobj.get());
+                }
+                listDep.get(i).setDeprotats(setdepf);
+                log.debug("Request to get array deprotat" + setdepf);
+            }
+            Long totalpages = (long) listDep.size();
+            @SuppressWarnings("unused")
+            Page<DepartDTO> pageddto = new PageImpl<DepartDTO>(listDep, pageable, totalpages);
+        }
+
+        return dpdto;
     }
 
     /**

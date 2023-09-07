@@ -4,13 +4,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-import static tn.soretras.depart.web.rest.TestUtil.sameInstant;
 
-import java.time.Instant;
 import java.time.LocalDate;
 import java.time.ZoneId;
-import java.time.ZoneOffset;
-import java.time.ZonedDateTime;
 import java.util.List;
 import java.util.UUID;
 import org.junit.jupiter.api.BeforeEach;
@@ -23,8 +19,6 @@ import org.springframework.test.web.servlet.MockMvc;
 import tn.soretras.depart.IntegrationTest;
 import tn.soretras.depart.domain.Deprotat;
 import tn.soretras.depart.repository.DeprotatRepository;
-import tn.soretras.depart.service.dto.DeprotatDTO;
-import tn.soretras.depart.service.mapper.DeprotatMapper;
 
 /**
  * Integration tests for the {@link DeprotatResource} REST controller.
@@ -82,23 +76,23 @@ class DeprotatResourceIT {
     private static final String DEFAULT_CDMAC = "AAAAAAAAAA";
     private static final String UPDATED_CDMAC = "BBBBBBBBBB";
 
-    private static final LocalDate DEFAULT_HDEPARTE = null;
-    private static final LocalDate UPDATED_HDEPARTE = null;
+    private static final LocalDate DEFAULT_HDEPARTE = LocalDate.ofEpochDay(0L);
+    private static final LocalDate UPDATED_HDEPARTE = LocalDate.now(ZoneId.systemDefault());
 
-    private static final LocalDate DEFAULT_HRETOURE = null;
-    private static final LocalDate UPDATED_HRETOURE = null;
+    private static final LocalDate DEFAULT_HRETOURE = LocalDate.ofEpochDay(0L);
+    private static final LocalDate UPDATED_HRETOURE = LocalDate.now(ZoneId.systemDefault());
 
-    private static final LocalDate DEFAULT_HARRALLE = null;
-    private static final LocalDate UPDATED_HARRALLE = null;
+    private static final LocalDate DEFAULT_HARRALLE = LocalDate.ofEpochDay(0L);
+    private static final LocalDate UPDATED_HARRALLE = LocalDate.now(ZoneId.systemDefault());
 
-    private static final LocalDate DEFAULT_HARRRETE = null;
-    private static final LocalDate UPDATED_HARRRETE = null;
+    private static final LocalDate DEFAULT_HARRRETE = LocalDate.ofEpochDay(0L);
+    private static final LocalDate UPDATED_HARRRETE = LocalDate.now(ZoneId.systemDefault());
 
     private static final String DEFAULT_RANNUL = "AAAAAAAAAA";
     private static final String UPDATED_RANNUL = "BBBBBBBBBB";
 
-    private static final Double DEFAULT_KM = (double) 1;
-    private static final Double UPDATED_KM = (double) 2;
+    private static final Double DEFAULT_KM = 1D;
+    private static final Double UPDATED_KM = 2D;
 
     private static final Integer DEFAULT_MOTIFA = 1;
     private static final Integer UPDATED_MOTIFA = 2;
@@ -147,9 +141,6 @@ class DeprotatResourceIT {
 
     @Autowired
     private DeprotatRepository deprotatRepository;
-
-    @Autowired
-    private DeprotatMapper deprotatMapper;
 
     @Autowired
     private MockMvc restDeprotatMockMvc;
@@ -260,9 +251,8 @@ class DeprotatResourceIT {
     void createDeprotat() throws Exception {
         int databaseSizeBeforeCreate = deprotatRepository.findAll().size();
         // Create the Deprotat
-        DeprotatDTO deprotatDTO = deprotatMapper.toDto(deprotat);
         restDeprotatMockMvc
-            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(deprotatDTO)))
+            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(deprotat)))
             .andExpect(status().isCreated());
 
         // Validate the Deprotat in the database
@@ -311,13 +301,12 @@ class DeprotatResourceIT {
     void createDeprotatWithExistingId() throws Exception {
         // Create the Deprotat with an existing ID
         deprotat.setId("existing_id");
-        DeprotatDTO deprotatDTO = deprotatMapper.toDto(deprotat);
 
         int databaseSizeBeforeCreate = deprotatRepository.findAll().size();
 
         // An entity with an existing ID cannot be created, so this API call must fail
         restDeprotatMockMvc
-            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(deprotatDTO)))
+            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(deprotat)))
             .andExpect(status().isBadRequest());
 
         // Validate the Deprotat in the database
@@ -332,10 +321,9 @@ class DeprotatResourceIT {
         deprotat.setDeccent(null);
 
         // Create the Deprotat, which fails.
-        DeprotatDTO deprotatDTO = deprotatMapper.toDto(deprotat);
 
         restDeprotatMockMvc
-            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(deprotatDTO)))
+            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(deprotat)))
             .andExpect(status().isBadRequest());
 
         List<Deprotat> deprotatList = deprotatRepository.findAll();
@@ -349,10 +337,9 @@ class DeprotatResourceIT {
         deprotat.setDecagenc(null);
 
         // Create the Deprotat, which fails.
-        DeprotatDTO deprotatDTO = deprotatMapper.toDto(deprotat);
 
         restDeprotatMockMvc
-            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(deprotatDTO)))
+            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(deprotat)))
             .andExpect(status().isBadRequest());
 
         List<Deprotat> deprotatList = deprotatRepository.findAll();
@@ -366,10 +353,9 @@ class DeprotatResourceIT {
         deprotat.setDedated(null);
 
         // Create the Deprotat, which fails.
-        DeprotatDTO deprotatDTO = deprotatMapper.toDto(deprotat);
 
         restDeprotatMockMvc
-            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(deprotatDTO)))
+            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(deprotat)))
             .andExpect(status().isBadRequest());
 
         List<Deprotat> deprotatList = deprotatRepository.findAll();
@@ -383,10 +369,9 @@ class DeprotatResourceIT {
         deprotat.setDenumdp(null);
 
         // Create the Deprotat, which fails.
-        DeprotatDTO deprotatDTO = deprotatMapper.toDto(deprotat);
 
         restDeprotatMockMvc
-            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(deprotatDTO)))
+            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(deprotat)))
             .andExpect(status().isBadRequest());
 
         List<Deprotat> deprotatList = deprotatRepository.findAll();
@@ -400,10 +385,9 @@ class DeprotatResourceIT {
         deprotat.setDecserv(null);
 
         // Create the Deprotat, which fails.
-        DeprotatDTO deprotatDTO = deprotatMapper.toDto(deprotat);
 
         restDeprotatMockMvc
-            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(deprotatDTO)))
+            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(deprotat)))
             .andExpect(status().isBadRequest());
 
         List<Deprotat> deprotatList = deprotatRepository.findAll();
@@ -417,10 +401,9 @@ class DeprotatResourceIT {
         deprotat.setDecoper(null);
 
         // Create the Deprotat, which fails.
-        DeprotatDTO deprotatDTO = deprotatMapper.toDto(deprotat);
 
         restDeprotatMockMvc
-            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(deprotatDTO)))
+            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(deprotat)))
             .andExpect(status().isBadRequest());
 
         List<Deprotat> deprotatList = deprotatRepository.findAll();
@@ -434,10 +417,9 @@ class DeprotatResourceIT {
         deprotat.setDecsean(null);
 
         // Create the Deprotat, which fails.
-        DeprotatDTO deprotatDTO = deprotatMapper.toDto(deprotat);
 
         restDeprotatMockMvc
-            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(deprotatDTO)))
+            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(deprotat)))
             .andExpect(status().isBadRequest());
 
         List<Deprotat> deprotatList = deprotatRepository.findAll();
@@ -471,12 +453,12 @@ class DeprotatResourceIT {
             .andExpect(jsonPath("$.[*].matric").value(hasItem(DEFAULT_MATRIC)))
             .andExpect(jsonPath("$.[*].matric1").value(hasItem(DEFAULT_MATRIC_1)))
             .andExpect(jsonPath("$.[*].cdmac").value(hasItem(DEFAULT_CDMAC)))
-            .andExpect(jsonPath("$.[*].hdeparte").value(hasItem(null)))
-            .andExpect(jsonPath("$.[*].hretoure").value(hasItem(null)))
-            .andExpect(jsonPath("$.[*].harralle").value(hasItem(null)))
-            .andExpect(jsonPath("$.[*].harrrete").value(hasItem(null)))
+            .andExpect(jsonPath("$.[*].hdeparte").value(hasItem(DEFAULT_HDEPARTE.toString())))
+            .andExpect(jsonPath("$.[*].hretoure").value(hasItem(DEFAULT_HRETOURE.toString())))
+            .andExpect(jsonPath("$.[*].harralle").value(hasItem(DEFAULT_HARRALLE.toString())))
+            .andExpect(jsonPath("$.[*].harrrete").value(hasItem(DEFAULT_HARRRETE.toString())))
             .andExpect(jsonPath("$.[*].rannul").value(hasItem(DEFAULT_RANNUL)))
-            .andExpect(jsonPath("$.[*].km").value(hasItem(DEFAULT_KM)))
+            .andExpect(jsonPath("$.[*].km").value(hasItem(DEFAULT_KM.doubleValue())))
             .andExpect(jsonPath("$.[*].motifa").value(hasItem(DEFAULT_MOTIFA)))
             .andExpect(jsonPath("$.[*].observ").value(hasItem(DEFAULT_OBSERV)))
             .andExpect(jsonPath("$.[*].recettesvoy").value(hasItem(DEFAULT_RECETTESVOY)))
@@ -520,12 +502,12 @@ class DeprotatResourceIT {
             .andExpect(jsonPath("$.matric").value(DEFAULT_MATRIC))
             .andExpect(jsonPath("$.matric1").value(DEFAULT_MATRIC_1))
             .andExpect(jsonPath("$.cdmac").value(DEFAULT_CDMAC))
-            .andExpect(jsonPath("$.hdeparte").value(null))
-            .andExpect(jsonPath("$.hretoure").value(null))
-            .andExpect(jsonPath("$.harralle").value(null))
-            .andExpect(jsonPath("$.harrrete").value(null))
+            .andExpect(jsonPath("$.hdeparte").value(DEFAULT_HDEPARTE.toString()))
+            .andExpect(jsonPath("$.hretoure").value(DEFAULT_HRETOURE.toString()))
+            .andExpect(jsonPath("$.harralle").value(DEFAULT_HARRALLE.toString()))
+            .andExpect(jsonPath("$.harrrete").value(DEFAULT_HARRRETE.toString()))
             .andExpect(jsonPath("$.rannul").value(DEFAULT_RANNUL))
-            .andExpect(jsonPath("$.km").value(DEFAULT_KM))
+            .andExpect(jsonPath("$.km").value(DEFAULT_KM.doubleValue()))
             .andExpect(jsonPath("$.motifa").value(DEFAULT_MOTIFA))
             .andExpect(jsonPath("$.observ").value(DEFAULT_OBSERV))
             .andExpect(jsonPath("$.recettesvoy").value(DEFAULT_RECETTESVOY))
@@ -594,13 +576,12 @@ class DeprotatResourceIT {
             .plusmoins(UPDATED_PLUSMOINS)
             .a(UPDATED_A)
             .r(UPDATED_R);
-        DeprotatDTO deprotatDTO = deprotatMapper.toDto(updatedDeprotat);
 
         restDeprotatMockMvc
             .perform(
-                put(ENTITY_API_URL_ID, deprotatDTO.getId())
+                put(ENTITY_API_URL_ID, updatedDeprotat.getId())
                     .contentType(MediaType.APPLICATION_JSON)
-                    .content(TestUtil.convertObjectToJsonBytes(deprotatDTO))
+                    .content(TestUtil.convertObjectToJsonBytes(updatedDeprotat))
             )
             .andExpect(status().isOk());
 
@@ -651,15 +632,12 @@ class DeprotatResourceIT {
         int databaseSizeBeforeUpdate = deprotatRepository.findAll().size();
         deprotat.setId(UUID.randomUUID().toString());
 
-        // Create the Deprotat
-        DeprotatDTO deprotatDTO = deprotatMapper.toDto(deprotat);
-
         // If the entity doesn't have an ID, it will throw BadRequestAlertException
         restDeprotatMockMvc
             .perform(
-                put(ENTITY_API_URL_ID, deprotatDTO.getId())
+                put(ENTITY_API_URL_ID, deprotat.getId())
                     .contentType(MediaType.APPLICATION_JSON)
-                    .content(TestUtil.convertObjectToJsonBytes(deprotatDTO))
+                    .content(TestUtil.convertObjectToJsonBytes(deprotat))
             )
             .andExpect(status().isBadRequest());
 
@@ -673,15 +651,12 @@ class DeprotatResourceIT {
         int databaseSizeBeforeUpdate = deprotatRepository.findAll().size();
         deprotat.setId(UUID.randomUUID().toString());
 
-        // Create the Deprotat
-        DeprotatDTO deprotatDTO = deprotatMapper.toDto(deprotat);
-
         // If url ID doesn't match entity ID, it will throw BadRequestAlertException
         restDeprotatMockMvc
             .perform(
                 put(ENTITY_API_URL_ID, UUID.randomUUID().toString())
                     .contentType(MediaType.APPLICATION_JSON)
-                    .content(TestUtil.convertObjectToJsonBytes(deprotatDTO))
+                    .content(TestUtil.convertObjectToJsonBytes(deprotat))
             )
             .andExpect(status().isBadRequest());
 
@@ -695,12 +670,9 @@ class DeprotatResourceIT {
         int databaseSizeBeforeUpdate = deprotatRepository.findAll().size();
         deprotat.setId(UUID.randomUUID().toString());
 
-        // Create the Deprotat
-        DeprotatDTO deprotatDTO = deprotatMapper.toDto(deprotat);
-
         // If url ID doesn't match entity ID, it will throw BadRequestAlertException
         restDeprotatMockMvc
-            .perform(put(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(deprotatDTO)))
+            .perform(put(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(deprotat)))
             .andExpect(status().isMethodNotAllowed());
 
         // Validate the Deprotat in the database
@@ -895,15 +867,12 @@ class DeprotatResourceIT {
         int databaseSizeBeforeUpdate = deprotatRepository.findAll().size();
         deprotat.setId(UUID.randomUUID().toString());
 
-        // Create the Deprotat
-        DeprotatDTO deprotatDTO = deprotatMapper.toDto(deprotat);
-
         // If the entity doesn't have an ID, it will throw BadRequestAlertException
         restDeprotatMockMvc
             .perform(
-                patch(ENTITY_API_URL_ID, deprotatDTO.getId())
+                patch(ENTITY_API_URL_ID, deprotat.getId())
                     .contentType("application/merge-patch+json")
-                    .content(TestUtil.convertObjectToJsonBytes(deprotatDTO))
+                    .content(TestUtil.convertObjectToJsonBytes(deprotat))
             )
             .andExpect(status().isBadRequest());
 
@@ -917,15 +886,12 @@ class DeprotatResourceIT {
         int databaseSizeBeforeUpdate = deprotatRepository.findAll().size();
         deprotat.setId(UUID.randomUUID().toString());
 
-        // Create the Deprotat
-        DeprotatDTO deprotatDTO = deprotatMapper.toDto(deprotat);
-
         // If url ID doesn't match entity ID, it will throw BadRequestAlertException
         restDeprotatMockMvc
             .perform(
                 patch(ENTITY_API_URL_ID, UUID.randomUUID().toString())
                     .contentType("application/merge-patch+json")
-                    .content(TestUtil.convertObjectToJsonBytes(deprotatDTO))
+                    .content(TestUtil.convertObjectToJsonBytes(deprotat))
             )
             .andExpect(status().isBadRequest());
 
@@ -939,14 +905,9 @@ class DeprotatResourceIT {
         int databaseSizeBeforeUpdate = deprotatRepository.findAll().size();
         deprotat.setId(UUID.randomUUID().toString());
 
-        // Create the Deprotat
-        DeprotatDTO deprotatDTO = deprotatMapper.toDto(deprotat);
-
         // If url ID doesn't match entity ID, it will throw BadRequestAlertException
         restDeprotatMockMvc
-            .perform(
-                patch(ENTITY_API_URL).contentType("application/merge-patch+json").content(TestUtil.convertObjectToJsonBytes(deprotatDTO))
-            )
+            .perform(patch(ENTITY_API_URL).contentType("application/merge-patch+json").content(TestUtil.convertObjectToJsonBytes(deprotat)))
             .andExpect(status().isMethodNotAllowed());
 
         // Validate the Deprotat in the database

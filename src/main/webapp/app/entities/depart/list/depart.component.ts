@@ -256,12 +256,13 @@ export class DepartComponent implements OnInit {
       if (result.id != null) {
         this.takaza.deannul = '1';
         this.takaza.execute = '0';
-        this.takaza1.rannul = '1';
-        this.takaza1.motifa = 1;
+        //this.takaza1.rannul = '1';
+        //this.takaza1.motifa = 1;
         this.takaza.motifa = result.id;
-        if (this.takaza.id != null && this.takaza1.id != null) {
+        if (this.takaza.id != null) {
+          //&& this.takaza1.id != null
           this.subscribeToSaveResponse(this.departService.update(this.takaza));
-          this.y.subscribeToSaveResponse(this.deprotatService.update(this.takaza1));
+          //this.y.subscribeToSaveResponse(this.deprotatService.update(this.takaza1));
         }
         this.ngOnInit();
       }
