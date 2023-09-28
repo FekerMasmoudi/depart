@@ -21,7 +21,7 @@ public class StationDTO implements Serializable {
 
     private String delstat;
 
-    private String delstatfr;
+    private String delstat_fr;
 
     private String lattitude;
 
@@ -69,12 +69,12 @@ public class StationDTO implements Serializable {
         this.delstat = delstat;
     }
 
-    public String getDelstatfr() {
-        return delstatfr;
+    public String getDelstat_fr() {
+        return delstat_fr;
     }
 
-    public void setDelstatfr(String delstatfr) {
-        this.delstatfr = delstatfr;
+    public void setDelstat_fr(String delstat_fr) {
+        this.delstat_fr = delstat_fr;
     }
 
     public String getLattitude() {
@@ -131,7 +131,7 @@ public class StationDTO implements Serializable {
             ", dectyst='" + getDectyst() + "'" +
             ", decrout='" + getDecrout() + "'" +
             ", delstat='" + getDelstat() + "'" +
-            ", delstatfr='" + getDelstatfr() + "'" +
+            ", delstatfr='" + getDelstat_fr() + "'" +
             ", lattitude='" + getLattitude() + "'" +
             ", longitude='" + getLongitude() + "'" +
             ", valide='" + getValide() + "'" +

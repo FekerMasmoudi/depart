@@ -20,6 +20,12 @@ public class Displaybus implements Serializable {
     @Field("lang")
     private String lang;
 
+    @Field("depart")
+    private String depart;
+
+    @Field("arrivee")
+    private String arrivee;
+
     @Field("vehicule")
     private String vehicule;
 
@@ -47,29 +53,6 @@ public class Displaybus implements Serializable {
         return this.id;
     }
 
-    public Displaybus(
-        String id,
-        String lang,
-        String vehicule,
-        Integer num_appel,
-        String detail_ligne,
-        String ligne,
-        String direction,
-        String denumli,
-        String deltyli
-    ) {
-        super();
-        this.id = id;
-        this.lang = lang;
-        this.vehicule = vehicule;
-        this.num_appel = num_appel;
-        this.detail_ligne = detail_ligne;
-        this.ligne = ligne;
-        this.direction = direction;
-        this.denumli = denumli;
-        this.deltyli = deltyli;
-    }
-
     public Displaybus() {}
 
     public Displaybus id(String id) {
@@ -92,6 +75,32 @@ public class Displaybus implements Serializable {
 
     public void setLang(String lang) {
         this.lang = lang;
+    }
+
+    public String getDepart() {
+        return this.depart;
+    }
+
+    public Displaybus depart(String depart) {
+        this.setDepart(depart);
+        return this;
+    }
+
+    public void setDepart(String depart) {
+        this.depart = depart;
+    }
+
+    public String getArrivee() {
+        return this.arrivee;
+    }
+
+    public Displaybus arrivee(String arrivee) {
+        this.setArrivee(arrivee);
+        return this;
+    }
+
+    public void setArrivee(String arrivee) {
+        this.arrivee = arrivee;
     }
 
     public String getVehicule() {
@@ -210,6 +219,8 @@ public class Displaybus implements Serializable {
         return "Displaybus{" +
             "id=" + getId() +
             ", lang='" + getLang() + "'" +
+            ", lang='" + getDepart() + "'" +
+            ", lang='" + getArrivee() + "'" +
             ", vehicule='" + getVehicule() + "'" +
             ", num_appel=" + getNum_appel() +
             ", detail_ligne='" + getDetail_ligne() + "'" +

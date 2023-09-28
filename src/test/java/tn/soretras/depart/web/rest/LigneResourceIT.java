@@ -109,8 +109,8 @@ class LigneResourceIT {
     private static final String DEFAULT_CHARSET = "AAAAAAAAAA";
     private static final String UPDATED_CHARSET = "BBBBBBBBBB";
 
-    private static final LocalDate DEFAULT_LASTUPDATE = null;
-    private static final LocalDate UPDATED_LASTUPDATE = null;
+    private static final String DEFAULT_LASTUPDATE = null;
+    private static final String UPDATED_LASTUPDATE = null;
 
     private static final String ENTITY_API_URL = "/api/lignes";
     private static final String ENTITY_API_URL_ID = ENTITY_API_URL + "/{id}";
@@ -148,7 +148,7 @@ class LigneResourceIT {
             .detrjva(DEFAULT_DETRJVA)
             .detrjvr(DEFAULT_DETRJVR)
             .depiste(DEFAULT_DEPISTE)
-            .statlig(DEFAULT_STATLIG)
+            .stat_lig(DEFAULT_STATLIG)
             .lig(DEFAULT_LIG)
             .lig1(DEFAULT_LIG_1)
             .valide(DEFAULT_VALIDE)
@@ -156,10 +156,10 @@ class LigneResourceIT {
             .kml(DEFAULT_KML)
             .kmlContentType(DEFAULT_KML_CONTENT_TYPE)
             .description(DEFAULT_DESCRIPTION)
-            .mimtype(DEFAULT_MIMTYPE)
-            .filename(DEFAULT_FILENAME)
-            .charset(DEFAULT_CHARSET)
-            .lastupdate(DEFAULT_LASTUPDATE);
+            .mim_type(DEFAULT_MIMTYPE)
+            .file_name(DEFAULT_FILENAME)
+            .char_set(DEFAULT_CHARSET)
+            .last_update(DEFAULT_LASTUPDATE);
         return ligne;
     }
 
@@ -185,7 +185,7 @@ class LigneResourceIT {
             .detrjva(UPDATED_DETRJVA)
             .detrjvr(UPDATED_DETRJVR)
             .depiste(UPDATED_DEPISTE)
-            .statlig(UPDATED_STATLIG)
+            .stat_lig(UPDATED_STATLIG)
             .lig(UPDATED_LIG)
             .lig1(UPDATED_LIG_1)
             .valide(UPDATED_VALIDE)
@@ -193,10 +193,10 @@ class LigneResourceIT {
             .kml(UPDATED_KML)
             .kmlContentType(UPDATED_KML_CONTENT_TYPE)
             .description(UPDATED_DESCRIPTION)
-            .mimtype(UPDATED_MIMTYPE)
-            .filename(UPDATED_FILENAME)
-            .charset(UPDATED_CHARSET)
-            .lastupdate(UPDATED_LASTUPDATE);
+            .mim_type(UPDATED_MIMTYPE)
+            .file_name(UPDATED_FILENAME)
+            .char_set(UPDATED_CHARSET)
+            .last_update(UPDATED_LASTUPDATE);
         return ligne;
     }
 
@@ -233,7 +233,7 @@ class LigneResourceIT {
         assertThat(testLigne.getDetrjva()).isEqualTo(DEFAULT_DETRJVA);
         assertThat(testLigne.getDetrjvr()).isEqualTo(DEFAULT_DETRJVR);
         assertThat(testLigne.getDepiste()).isEqualTo(DEFAULT_DEPISTE);
-        assertThat(testLigne.getStatlig()).isEqualTo(DEFAULT_STATLIG);
+        assertThat(testLigne.getStat_lig()).isEqualTo(DEFAULT_STATLIG);
         assertThat(testLigne.getLig()).isEqualTo(DEFAULT_LIG);
         assertThat(testLigne.getLig1()).isEqualTo(DEFAULT_LIG_1);
         assertThat(testLigne.getValide()).isEqualTo(DEFAULT_VALIDE);
@@ -241,10 +241,10 @@ class LigneResourceIT {
         assertThat(testLigne.getKml()).isEqualTo(DEFAULT_KML);
         assertThat(testLigne.getKmlContentType()).isEqualTo(DEFAULT_KML_CONTENT_TYPE);
         assertThat(testLigne.getDescription()).isEqualTo(DEFAULT_DESCRIPTION);
-        assertThat(testLigne.getMimtype()).isEqualTo(DEFAULT_MIMTYPE);
-        assertThat(testLigne.getFilename()).isEqualTo(DEFAULT_FILENAME);
-        assertThat(testLigne.getCharset()).isEqualTo(DEFAULT_CHARSET);
-        assertThat(testLigne.getLastupdate()).isEqualTo(DEFAULT_LASTUPDATE);
+        assertThat(testLigne.getMim_type()).isEqualTo(DEFAULT_MIMTYPE);
+        assertThat(testLigne.getFile_name()).isEqualTo(DEFAULT_FILENAME);
+        assertThat(testLigne.getChar_set()).isEqualTo(DEFAULT_CHARSET);
+        assertThat(testLigne.getLast_update()).isEqualTo(DEFAULT_LASTUPDATE);
     }
 
     @Test
@@ -373,7 +373,7 @@ class LigneResourceIT {
             .detrjva(UPDATED_DETRJVA)
             .detrjvr(UPDATED_DETRJVR)
             .depiste(UPDATED_DEPISTE)
-            .statlig(UPDATED_STATLIG)
+            .stat_lig(UPDATED_STATLIG)
             .lig(UPDATED_LIG)
             .lig1(UPDATED_LIG_1)
             .valide(UPDATED_VALIDE)
@@ -381,10 +381,10 @@ class LigneResourceIT {
             .kml(UPDATED_KML)
             .kmlContentType(UPDATED_KML_CONTENT_TYPE)
             .description(UPDATED_DESCRIPTION)
-            .mimtype(UPDATED_MIMTYPE)
-            .filename(UPDATED_FILENAME)
-            .charset(UPDATED_CHARSET)
-            .lastupdate(UPDATED_LASTUPDATE);
+            .mim_type(UPDATED_MIMTYPE)
+            .file_name(UPDATED_FILENAME)
+            .char_set(UPDATED_CHARSET)
+            .last_update(UPDATED_LASTUPDATE);
         LigneDTO ligneDTO = ligneMapper.toDto(updatedLigne);
 
         restLigneMockMvc
@@ -413,7 +413,7 @@ class LigneResourceIT {
         assertThat(testLigne.getDetrjva()).isEqualTo(UPDATED_DETRJVA);
         assertThat(testLigne.getDetrjvr()).isEqualTo(UPDATED_DETRJVR);
         assertThat(testLigne.getDepiste()).isEqualTo(UPDATED_DEPISTE);
-        assertThat(testLigne.getStatlig()).isEqualTo(UPDATED_STATLIG);
+        assertThat(testLigne.getStat_lig()).isEqualTo(UPDATED_STATLIG);
         assertThat(testLigne.getLig()).isEqualTo(UPDATED_LIG);
         assertThat(testLigne.getLig1()).isEqualTo(UPDATED_LIG_1);
         assertThat(testLigne.getValide()).isEqualTo(UPDATED_VALIDE);
@@ -421,10 +421,10 @@ class LigneResourceIT {
         assertThat(testLigne.getKml()).isEqualTo(UPDATED_KML);
         assertThat(testLigne.getKmlContentType()).isEqualTo(UPDATED_KML_CONTENT_TYPE);
         assertThat(testLigne.getDescription()).isEqualTo(UPDATED_DESCRIPTION);
-        assertThat(testLigne.getMimtype()).isEqualTo(UPDATED_MIMTYPE);
-        assertThat(testLigne.getFilename()).isEqualTo(UPDATED_FILENAME);
-        assertThat(testLigne.getCharset()).isEqualTo(UPDATED_CHARSET);
-        assertThat(testLigne.getLastupdate()).isEqualTo(UPDATED_LASTUPDATE);
+        assertThat(testLigne.getMim_type()).isEqualTo(UPDATED_MIMTYPE);
+        assertThat(testLigne.getFile_name()).isEqualTo(UPDATED_FILENAME);
+        assertThat(testLigne.getChar_set()).isEqualTo(UPDATED_CHARSET);
+        assertThat(testLigne.getLast_update()).isEqualTo(UPDATED_LASTUPDATE);
     }
 
     @Test
@@ -510,8 +510,8 @@ class LigneResourceIT {
             .dedurrt(UPDATED_DEDURRT)
             .lig1(UPDATED_LIG_1)
             .denumli2(UPDATED_DENUMLI_2)
-            .mimtype(UPDATED_MIMTYPE)
-            .charset(UPDATED_CHARSET);
+            .mim_type(UPDATED_MIMTYPE)
+            .char_set(UPDATED_CHARSET);
 
         restLigneMockMvc
             .perform(
@@ -539,7 +539,7 @@ class LigneResourceIT {
         assertThat(testLigne.getDetrjva()).isEqualTo(DEFAULT_DETRJVA);
         assertThat(testLigne.getDetrjvr()).isEqualTo(DEFAULT_DETRJVR);
         assertThat(testLigne.getDepiste()).isEqualTo(DEFAULT_DEPISTE);
-        assertThat(testLigne.getStatlig()).isEqualTo(DEFAULT_STATLIG);
+        assertThat(testLigne.getStat_lig()).isEqualTo(DEFAULT_STATLIG);
         assertThat(testLigne.getLig()).isEqualTo(DEFAULT_LIG);
         assertThat(testLigne.getLig1()).isEqualTo(UPDATED_LIG_1);
         assertThat(testLigne.getValide()).isEqualTo(DEFAULT_VALIDE);
@@ -547,10 +547,10 @@ class LigneResourceIT {
         assertThat(testLigne.getKml()).isEqualTo(DEFAULT_KML);
         assertThat(testLigne.getKmlContentType()).isEqualTo(DEFAULT_KML_CONTENT_TYPE);
         assertThat(testLigne.getDescription()).isEqualTo(DEFAULT_DESCRIPTION);
-        assertThat(testLigne.getMimtype()).isEqualTo(UPDATED_MIMTYPE);
-        assertThat(testLigne.getFilename()).isEqualTo(DEFAULT_FILENAME);
-        assertThat(testLigne.getCharset()).isEqualTo(UPDATED_CHARSET);
-        assertThat(testLigne.getLastupdate()).isEqualTo(DEFAULT_LASTUPDATE);
+        assertThat(testLigne.getMim_type()).isEqualTo(UPDATED_MIMTYPE);
+        assertThat(testLigne.getFile_name()).isEqualTo(DEFAULT_FILENAME);
+        assertThat(testLigne.getChar_set()).isEqualTo(UPDATED_CHARSET);
+        assertThat(testLigne.getLast_update()).isEqualTo(DEFAULT_LASTUPDATE);
     }
 
     @Test
@@ -579,7 +579,7 @@ class LigneResourceIT {
             .detrjva(UPDATED_DETRJVA)
             .detrjvr(UPDATED_DETRJVR)
             .depiste(UPDATED_DEPISTE)
-            .statlig(UPDATED_STATLIG)
+            .stat_lig(UPDATED_STATLIG)
             .lig(UPDATED_LIG)
             .lig1(UPDATED_LIG_1)
             .valide(UPDATED_VALIDE)
@@ -587,10 +587,10 @@ class LigneResourceIT {
             .kml(UPDATED_KML)
             .kmlContentType(UPDATED_KML_CONTENT_TYPE)
             .description(UPDATED_DESCRIPTION)
-            .mimtype(UPDATED_MIMTYPE)
-            .filename(UPDATED_FILENAME)
-            .charset(UPDATED_CHARSET)
-            .lastupdate(UPDATED_LASTUPDATE);
+            .mim_type(UPDATED_MIMTYPE)
+            .file_name(UPDATED_FILENAME)
+            .char_set(UPDATED_CHARSET)
+            .last_update(UPDATED_LASTUPDATE);
 
         restLigneMockMvc
             .perform(
@@ -618,7 +618,7 @@ class LigneResourceIT {
         assertThat(testLigne.getDetrjva()).isEqualTo(UPDATED_DETRJVA);
         assertThat(testLigne.getDetrjvr()).isEqualTo(UPDATED_DETRJVR);
         assertThat(testLigne.getDepiste()).isEqualTo(UPDATED_DEPISTE);
-        assertThat(testLigne.getStatlig()).isEqualTo(UPDATED_STATLIG);
+        assertThat(testLigne.getStat_lig()).isEqualTo(UPDATED_STATLIG);
         assertThat(testLigne.getLig()).isEqualTo(UPDATED_LIG);
         assertThat(testLigne.getLig1()).isEqualTo(UPDATED_LIG_1);
         assertThat(testLigne.getValide()).isEqualTo(UPDATED_VALIDE);
@@ -626,10 +626,10 @@ class LigneResourceIT {
         assertThat(testLigne.getKml()).isEqualTo(UPDATED_KML);
         assertThat(testLigne.getKmlContentType()).isEqualTo(UPDATED_KML_CONTENT_TYPE);
         assertThat(testLigne.getDescription()).isEqualTo(UPDATED_DESCRIPTION);
-        assertThat(testLigne.getMimtype()).isEqualTo(UPDATED_MIMTYPE);
-        assertThat(testLigne.getFilename()).isEqualTo(UPDATED_FILENAME);
-        assertThat(testLigne.getCharset()).isEqualTo(UPDATED_CHARSET);
-        assertThat(testLigne.getLastupdate()).isEqualTo(UPDATED_LASTUPDATE);
+        assertThat(testLigne.getMim_type()).isEqualTo(UPDATED_MIMTYPE);
+        assertThat(testLigne.getFile_name()).isEqualTo(UPDATED_FILENAME);
+        assertThat(testLigne.getChar_set()).isEqualTo(UPDATED_CHARSET);
+        assertThat(testLigne.getLast_update()).isEqualTo(UPDATED_LASTUPDATE);
     }
 
     @Test

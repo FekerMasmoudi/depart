@@ -113,12 +113,14 @@ public class DepartService {
                 Iterator<DeprotatDTO> itdep = setdep.iterator();
                 while (itdep.hasNext()) {
                     DeprotatDTO deprdto = (DeprotatDTO) itdep.next();
-                    String iddeprot = deprdto.getId();
+                    String iddeprot = deprdto.getId_apex().toString();
+                    System.out.println("show data used------------------------>" + iddeprot);
                     Optional<Object> opobj = deprotatRepository.findById(iddeprot).map(deprotatMapper::toDto);
                     setdepf.add((DeprotatDTO) opobj.get());
+
+                    listDep.get(i).setDeprotats(setdepf);
+                    log.debug("Request to get array deprotat", setdepf);
                 }
-                listDep.get(i).setDeprotats(setdepf);
-                log.debug("Request to get array deprotat" + setdepf);
             }
             Long totalpages = (long) listDep.size();
             @SuppressWarnings("unused")

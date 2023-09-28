@@ -33,8 +33,8 @@ class CentVehicResourceIT {
     private static final String DEFAULT_CDMAC = "AAAAAAAAAA";
     private static final String UPDATED_CDMAC = "BBBBBBBBBB";
 
-    private static final LocalDate DEFAULT_DATEFF = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_DATEFF = LocalDate.now(ZoneId.systemDefault());
+    private static final String DEFAULT_DATEFF = "2022-08-08T23:00:00Z";
+    private static final String UPDATED_DATEFF = "2022-08-08T23:00:00Z";
 
     private static final Integer DEFAULT_DECCENT = 1;
     private static final Integer UPDATED_DECCENT = 2;
@@ -65,7 +65,7 @@ class CentVehicResourceIT {
     public static CentVehic createEntity() {
         CentVehic centVehic = new CentVehic()
             .cdmac(DEFAULT_CDMAC)
-            .dateff(DEFAULT_DATEFF)
+            .dat_eff(DEFAULT_DATEFF)
             .deccent(DEFAULT_DECCENT)
             .decagenc(DEFAULT_DECAGENC);
         return centVehic;
@@ -80,7 +80,7 @@ class CentVehicResourceIT {
     public static CentVehic createUpdatedEntity() {
         CentVehic centVehic = new CentVehic()
             .cdmac(UPDATED_CDMAC)
-            .dateff(UPDATED_DATEFF)
+            .dat_eff(UPDATED_DATEFF)
             .deccent(UPDATED_DECCENT)
             .decagenc(UPDATED_DECAGENC);
         return centVehic;
@@ -106,7 +106,7 @@ class CentVehicResourceIT {
         assertThat(centVehicList).hasSize(databaseSizeBeforeCreate + 1);
         CentVehic testCentVehic = centVehicList.get(centVehicList.size() - 1);
         assertThat(testCentVehic.getCdmac()).isEqualTo(DEFAULT_CDMAC);
-        assertThat(testCentVehic.getDateff()).isEqualTo(DEFAULT_DATEFF);
+        assertThat(testCentVehic.getDat_eff()).isEqualTo(DEFAULT_DATEFF);
         assertThat(testCentVehic.getDeccent()).isEqualTo(DEFAULT_DECCENT);
         assertThat(testCentVehic.getDecagenc()).isEqualTo(DEFAULT_DECAGENC);
     }
@@ -178,7 +178,7 @@ class CentVehicResourceIT {
 
         // Update the centVehic
         CentVehic updatedCentVehic = centVehicRepository.findById(centVehic.getId()).get();
-        updatedCentVehic.cdmac(UPDATED_CDMAC).dateff(UPDATED_DATEFF).deccent(UPDATED_DECCENT).decagenc(UPDATED_DECAGENC);
+        updatedCentVehic.cdmac(UPDATED_CDMAC).dat_eff(UPDATED_DATEFF).deccent(UPDATED_DECCENT).decagenc(UPDATED_DECAGENC);
         CentVehicDTO centVehicDTO = centVehicMapper.toDto(updatedCentVehic);
 
         restCentVehicMockMvc
@@ -194,7 +194,7 @@ class CentVehicResourceIT {
         assertThat(centVehicList).hasSize(databaseSizeBeforeUpdate);
         CentVehic testCentVehic = centVehicList.get(centVehicList.size() - 1);
         assertThat(testCentVehic.getCdmac()).isEqualTo(UPDATED_CDMAC);
-        assertThat(testCentVehic.getDateff()).isEqualTo(UPDATED_DATEFF);
+        assertThat(testCentVehic.getDat_eff()).isEqualTo(UPDATED_DATEFF);
         assertThat(testCentVehic.getDeccent()).isEqualTo(UPDATED_DECCENT);
         assertThat(testCentVehic.getDecagenc()).isEqualTo(UPDATED_DECAGENC);
     }
@@ -287,7 +287,7 @@ class CentVehicResourceIT {
         assertThat(centVehicList).hasSize(databaseSizeBeforeUpdate);
         CentVehic testCentVehic = centVehicList.get(centVehicList.size() - 1);
         assertThat(testCentVehic.getCdmac()).isEqualTo(UPDATED_CDMAC);
-        assertThat(testCentVehic.getDateff()).isEqualTo(DEFAULT_DATEFF);
+        assertThat(testCentVehic.getDat_eff()).isEqualTo(DEFAULT_DATEFF);
         assertThat(testCentVehic.getDeccent()).isEqualTo(UPDATED_DECCENT);
         assertThat(testCentVehic.getDecagenc()).isEqualTo(UPDATED_DECAGENC);
     }
@@ -303,7 +303,7 @@ class CentVehicResourceIT {
         CentVehic partialUpdatedCentVehic = new CentVehic();
         partialUpdatedCentVehic.setId(centVehic.getId());
 
-        partialUpdatedCentVehic.cdmac(UPDATED_CDMAC).dateff(UPDATED_DATEFF).deccent(UPDATED_DECCENT).decagenc(UPDATED_DECAGENC);
+        partialUpdatedCentVehic.cdmac(UPDATED_CDMAC).dat_eff(UPDATED_DATEFF).deccent(UPDATED_DECCENT).decagenc(UPDATED_DECAGENC);
 
         restCentVehicMockMvc
             .perform(
@@ -318,7 +318,7 @@ class CentVehicResourceIT {
         assertThat(centVehicList).hasSize(databaseSizeBeforeUpdate);
         CentVehic testCentVehic = centVehicList.get(centVehicList.size() - 1);
         assertThat(testCentVehic.getCdmac()).isEqualTo(UPDATED_CDMAC);
-        assertThat(testCentVehic.getDateff()).isEqualTo(UPDATED_DATEFF);
+        assertThat(testCentVehic.getDat_eff()).isEqualTo(UPDATED_DATEFF);
         assertThat(testCentVehic.getDeccent()).isEqualTo(UPDATED_DECCENT);
         assertThat(testCentVehic.getDecagenc()).isEqualTo(UPDATED_DECAGENC);
     }

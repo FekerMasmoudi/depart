@@ -29,39 +29,21 @@ public class Trafic implements Serializable {
 
     @NotNull
     @Field("dedated")
-    private LocalDate dedated;
+    private String dedated;
 
     @Field("ancien")
     private Integer ancien;
 
     @Field("vldtrafic")
-    private String vldtrafic;
+    private String vld_trafic;
 
     @Field("clotrafic")
-    private String clotrafic;
+    private String clo_trafic;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
 
     public String getId() {
         return this.id;
-    }
-
-    public Trafic(
-        String id,
-        @NotNull Integer deccent,
-        @NotNull Integer decagenc,
-        @NotNull LocalDate dedated,
-        Integer ancien,
-        String vldtrafic,
-        String clotrafic
-    ) {
-        this.id = id;
-        this.deccent = deccent;
-        this.decagenc = decagenc;
-        this.dedated = dedated;
-        this.ancien = ancien;
-        this.vldtrafic = vldtrafic;
-        this.clotrafic = clotrafic;
     }
 
     public Trafic() {}
@@ -101,16 +83,16 @@ public class Trafic implements Serializable {
         this.decagenc = decagenc;
     }
 
-    public LocalDate getDedated() {
+    public String getDedated() {
         return this.dedated;
     }
 
-    public Trafic dedated(LocalDate dedated) {
+    public Trafic dedated(String dedated) {
         this.setDedated(dedated);
         return this;
     }
 
-    public void setDedated(LocalDate dedated) {
+    public void setDedated(String dedated) {
         this.dedated = dedated;
     }
 
@@ -127,30 +109,30 @@ public class Trafic implements Serializable {
         this.ancien = ancien;
     }
 
-    public String getVldtrafic() {
-        return this.vldtrafic;
+    public String getVld_trafic() {
+        return this.vld_trafic;
     }
 
-    public Trafic vldtrafic(String vldtrafic) {
-        this.setVldtrafic(vldtrafic);
+    public Trafic vld_trafic(String vld_trafic) {
+        this.setVld_trafic(vld_trafic);
         return this;
     }
 
-    public void setVldtrafic(String vldtrafic) {
-        this.vldtrafic = vldtrafic;
+    public void setVld_trafic(String vld_trafic) {
+        this.vld_trafic = vld_trafic;
     }
 
-    public String getClotrafic() {
-        return this.clotrafic;
+    public String getClo_trafic() {
+        return this.clo_trafic;
     }
 
-    public Trafic clotrafic(String clotrafic) {
-        this.setClotrafic(clotrafic);
+    public Trafic clo_trafic(String clo_trafic) {
+        this.setClo_trafic(clo_trafic);
         return this;
     }
 
-    public void setClotrafic(String clotrafic) {
-        this.clotrafic = clotrafic;
+    public void setClo_trafic(String clo_trafic) {
+        this.clo_trafic = clo_trafic;
     }
 
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here
@@ -181,8 +163,8 @@ public class Trafic implements Serializable {
             ", decagenc=" + getDecagenc() +
             ", dedated='" + getDedated() + "'" +
             ", ancien=" + getAncien() +
-            ", vldtrafic='" + getVldtrafic() + "'" +
-            ", clotrafic='" + getClotrafic() + "'" +
+            ", vldtrafic='" + getVld_trafic() + "'" +
+            ", clotrafic='" + getClo_trafic() + "'" +
             "}";
     }
 }

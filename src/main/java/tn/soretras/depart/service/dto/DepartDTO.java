@@ -33,7 +33,7 @@ public class DepartDTO implements Serializable {
     private String decsean;
 
     @NotNull
-    private LocalDate dedated;
+    private String dedated;
 
     @NotNull
     private Integer denumdp;
@@ -44,23 +44,23 @@ public class DepartDTO implements Serializable {
 
     private Integer cdmac;
 
-    private LocalDate deheups;
+    private String deheups;
 
-    private LocalDate deheufs;
+    private String deheufs;
 
     private Integer denbrro;
 
-    private LocalDate deheuaa;
+    private String deheuaa;
 
-    private LocalDate deheudr;
+    private String deheudr;
 
-    private LocalDate deheupd;
+    private String deheupd;
 
-    private LocalDate deampli;
+    private String deampli;
 
-    private String obsind;
+    private String obs_ind;
 
-    private String vldroul;
+    private String vld_roul;
 
     private String deetat;
 
@@ -70,13 +70,13 @@ public class DepartDTO implements Serializable {
 
     private String execute;
 
-    private String motifa;
+    private String motif_a;
 
     private String observ;
 
     private Float recettes;
 
-    private Integer nbrevoy;
+    private Integer nbre_voy;
 
     private Integer decmotifch;
 
@@ -91,6 +91,8 @@ public class DepartDTO implements Serializable {
     private Integer decmotifcha;
 
     private Integer decmotifrea;
+
+    private Integer id_apex;
 
     private Set<DeprotatDTO> deprotats = new HashSet<>();
 
@@ -142,11 +144,11 @@ public class DepartDTO implements Serializable {
         this.decsean = decsean;
     }
 
-    public LocalDate getDedated() {
+    public String getDedated() {
         return dedated;
     }
 
-    public void setDedated(LocalDate dedated) {
+    public void setDedated(String dedated) {
         this.dedated = dedated;
     }
 
@@ -182,19 +184,19 @@ public class DepartDTO implements Serializable {
         this.cdmac = cdmac;
     }
 
-    public LocalDate getDeheups() {
+    public String getDeheups() {
         return deheups;
     }
 
-    public void setDeheups(LocalDate deheups) {
+    public void setDeheups(String deheups) {
         this.deheups = deheups;
     }
 
-    public LocalDate getDeheufs() {
+    public String getDeheufs() {
         return deheufs;
     }
 
-    public void setDeheufs(LocalDate deheufs) {
+    public void setDeheufs(String deheufs) {
         this.deheufs = deheufs;
     }
 
@@ -206,52 +208,52 @@ public class DepartDTO implements Serializable {
         this.denbrro = denbrro;
     }
 
-    public LocalDate getDeheuaa() {
+    public String getDeheuaa() {
         return deheuaa;
     }
 
-    public void setDeheuaa(LocalDate deheuaa) {
+    public void setDeheuaa(String deheuaa) {
         this.deheuaa = deheuaa;
     }
 
-    public LocalDate getDeheudr() {
+    public String getDeheudr() {
         return deheudr;
     }
 
-    public void setDeheudr(LocalDate deheudr) {
+    public void setDeheudr(String deheudr) {
         this.deheudr = deheudr;
     }
 
-    public LocalDate getDeheupd() {
+    public String getDeheupd() {
         return deheupd;
     }
 
-    public void setDeheupd(LocalDate deheupd) {
+    public void setDeheupd(String deheupd) {
         this.deheupd = deheupd;
     }
 
-    public LocalDate getDeampli() {
+    public String getDeampli() {
         return deampli;
     }
 
-    public void setDeampli(LocalDate deampli) {
+    public void setDeampli(String deampli) {
         this.deampli = deampli;
     }
 
-    public String getObsind() {
-        return obsind;
+    public String getObs_ind() {
+        return obs_ind;
     }
 
-    public void setObsind(String obsind) {
-        this.obsind = obsind;
+    public void setObs_ind(String obs_ind) {
+        this.obs_ind = obs_ind;
     }
 
-    public String getVldroul() {
-        return vldroul;
+    public String getVld_roul() {
+        return vld_roul;
     }
 
-    public void setVldroul(String vldroul) {
-        this.vldroul = vldroul;
+    public void setVld_roul(String vld_roul) {
+        this.vld_roul = vld_roul;
     }
 
     public String getDeetat() {
@@ -286,12 +288,12 @@ public class DepartDTO implements Serializable {
         this.execute = execute;
     }
 
-    public String getMotifa() {
-        return motifa;
+    public String getMotif_a() {
+        return motif_a;
     }
 
-    public void setMotifa(String motifa) {
-        this.motifa = motifa;
+    public void setMotif_a(String motif_a) {
+        this.motif_a = motif_a;
     }
 
     public String getObserv() {
@@ -310,12 +312,12 @@ public class DepartDTO implements Serializable {
         this.recettes = recettes;
     }
 
-    public Integer getNbrevoy() {
-        return nbrevoy;
+    public Integer getNbre_voy() {
+        return nbre_voy;
     }
 
-    public void setNbrevoy(Integer nbrevoy) {
-        this.nbrevoy = nbrevoy;
+    public void setNbre_voy(Integer nbre_voy) {
+        this.nbre_voy = nbre_voy;
     }
 
     public Integer getDecmotifch() {
@@ -374,6 +376,14 @@ public class DepartDTO implements Serializable {
         this.decmotifrea = decmotifrea;
     }
 
+    public Set<DeprotatDTO> getDeprotats() {
+        return deprotats;
+    }
+
+    public void setDeprotats(Set<DeprotatDTO> deprotats) {
+        this.deprotats = deprotats;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -417,16 +427,16 @@ public class DepartDTO implements Serializable {
             ", deheudr='" + getDeheudr() + "'" +
             ", deheupd='" + getDeheupd() + "'" +
             ", deampli='" + getDeampli() + "'" +
-            ", obsind='" + getObsind() + "'" +
-            ", vldroul='" + getVldroul() + "'" +
+            ", obsind='" + getObs_ind() + "'" +
+            ", vldroul='" + getVld_roul() + "'" +
             ", deetat='" + getDeetat() + "'" +
             ", deannul='" + getDeannul() + "'" +
             ", decclot='" + getDecclot() + "'" +
             ", execute='" + getExecute() + "'" +
-            ", motifa='" + getMotifa() + "'" +
+            ", motifa='" + getMotif_a() + "'" +
             ", observ='" + getObserv() + "'" +
             ", recettes=" + getRecettes() +
-            ", nbrevoy=" + getNbrevoy() +
+            ", nbrevoy=" + getNbre_voy() +
             ", decmotifch=" + getDecmotifch() +
             ", decmotifre=" + getDecmotifre() +
             ", cd1=" + getCd1() +
@@ -434,15 +444,16 @@ public class DepartDTO implements Serializable {
             ", cd3=" + getCd3() +
             ", decmotifcha=" + getDecmotifcha() +
             ", decmotifrea=" + getDecmotifrea() +
+            ", id_apex=" + getId_apex() +
             ", deprotats=" + getDeprotats() +
             "}";
     }
 
-    public Set<DeprotatDTO> getDeprotats() {
-        return deprotats;
+    public Integer getId_apex() {
+        return id_apex;
     }
 
-    public void setDeprotats(Set<DeprotatDTO> deprotats) {
-        this.deprotats = deprotats;
+    public void setId_apex(Integer id_apex) {
+        this.id_apex = id_apex;
     }
 }

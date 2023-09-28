@@ -61,7 +61,7 @@ class MotifchservResourceIT {
      * if they test an entity which requires the current entity.
      */
     public static Motifchserv createEntity() {
-        Motifchserv motifchserv = new Motifchserv().decmotif(DEFAULT_DECMOTIF).delmotif(DEFAULT_DELMOTIF).x(DEFAULT_X).vs(DEFAULT_VS);
+        Motifchserv motifchserv = new Motifchserv().delmotif(DEFAULT_DELMOTIF).x(DEFAULT_X).vs(DEFAULT_VS);
         return motifchserv;
     }
 
@@ -72,7 +72,7 @@ class MotifchservResourceIT {
      * if they test an entity which requires the current entity.
      */
     public static Motifchserv createUpdatedEntity() {
-        Motifchserv motifchserv = new Motifchserv().decmotif(UPDATED_DECMOTIF).delmotif(UPDATED_DELMOTIF).x(UPDATED_X).vs(UPDATED_VS);
+        Motifchserv motifchserv = new Motifchserv().delmotif(UPDATED_DELMOTIF).x(UPDATED_X).vs(UPDATED_VS);
         return motifchserv;
     }
 
@@ -97,7 +97,7 @@ class MotifchservResourceIT {
         List<Motifchserv> motifchservList = motifchservRepository.findAll();
         assertThat(motifchservList).hasSize(databaseSizeBeforeCreate + 1);
         Motifchserv testMotifchserv = motifchservList.get(motifchservList.size() - 1);
-        assertThat(testMotifchserv.getDecmotif()).isEqualTo(DEFAULT_DECMOTIF);
+        //assertThat(testMotifchserv.getDecmotif()).isEqualTo(DEFAULT_DECMOTIF);
         assertThat(testMotifchserv.getDelmotif()).isEqualTo(DEFAULT_DELMOTIF);
         assertThat(testMotifchserv.getX()).isEqualTo(DEFAULT_X);
         assertThat(testMotifchserv.getVs()).isEqualTo(DEFAULT_VS);
@@ -127,7 +127,7 @@ class MotifchservResourceIT {
     void checkDecmotifIsRequired() throws Exception {
         int databaseSizeBeforeTest = motifchservRepository.findAll().size();
         // set the field null
-        motifchserv.setDecmotif(null);
+        //motifchserv.setDecmotif(null);
 
         // Create the Motifchserv, which fails.
         MotifchservDTO motifchservDTO = motifchservMapper.toDto(motifchserv);
@@ -191,7 +191,7 @@ class MotifchservResourceIT {
 
         // Update the motifchserv
         Motifchserv updatedMotifchserv = motifchservRepository.findById(motifchserv.getId()).get();
-        updatedMotifchserv.decmotif(UPDATED_DECMOTIF).delmotif(UPDATED_DELMOTIF).x(UPDATED_X).vs(UPDATED_VS);
+        updatedMotifchserv.delmotif(UPDATED_DELMOTIF).x(UPDATED_X).vs(UPDATED_VS);
         MotifchservDTO motifchservDTO = motifchservMapper.toDto(updatedMotifchserv);
 
         restMotifchservMockMvc
@@ -206,7 +206,7 @@ class MotifchservResourceIT {
         List<Motifchserv> motifchservList = motifchservRepository.findAll();
         assertThat(motifchservList).hasSize(databaseSizeBeforeUpdate);
         Motifchserv testMotifchserv = motifchservList.get(motifchservList.size() - 1);
-        assertThat(testMotifchserv.getDecmotif()).isEqualTo(UPDATED_DECMOTIF);
+        //assertThat(testMotifchserv.getDecmotif()).isEqualTo(UPDATED_DECMOTIF);
         assertThat(testMotifchserv.getDelmotif()).isEqualTo(UPDATED_DELMOTIF);
         assertThat(testMotifchserv.getX()).isEqualTo(UPDATED_X);
         assertThat(testMotifchserv.getVs()).isEqualTo(UPDATED_VS);
@@ -299,7 +299,7 @@ class MotifchservResourceIT {
         List<Motifchserv> motifchservList = motifchservRepository.findAll();
         assertThat(motifchservList).hasSize(databaseSizeBeforeUpdate);
         Motifchserv testMotifchserv = motifchservList.get(motifchservList.size() - 1);
-        assertThat(testMotifchserv.getDecmotif()).isEqualTo(DEFAULT_DECMOTIF);
+        //assertThat(testMotifchserv.getDecmotif()).isEqualTo(DEFAULT_DECMOTIF);
         assertThat(testMotifchserv.getDelmotif()).isEqualTo(DEFAULT_DELMOTIF);
         assertThat(testMotifchserv.getX()).isEqualTo(DEFAULT_X);
         assertThat(testMotifchserv.getVs()).isEqualTo(UPDATED_VS);
@@ -316,7 +316,7 @@ class MotifchservResourceIT {
         Motifchserv partialUpdatedMotifchserv = new Motifchserv();
         partialUpdatedMotifchserv.setId(motifchserv.getId());
 
-        partialUpdatedMotifchserv.decmotif(UPDATED_DECMOTIF).delmotif(UPDATED_DELMOTIF).x(UPDATED_X).vs(UPDATED_VS);
+        // partialUpdatedMotifchserv.decmotif(UPDATED_DECMOTIF).delmotif(UPDATED_DELMOTIF).x(UPDATED_X).vs(UPDATED_VS);
 
         restMotifchservMockMvc
             .perform(
@@ -330,7 +330,7 @@ class MotifchservResourceIT {
         List<Motifchserv> motifchservList = motifchservRepository.findAll();
         assertThat(motifchservList).hasSize(databaseSizeBeforeUpdate);
         Motifchserv testMotifchserv = motifchservList.get(motifchservList.size() - 1);
-        assertThat(testMotifchserv.getDecmotif()).isEqualTo(UPDATED_DECMOTIF);
+        //assertThat(testMotifchserv.getDecmotif()).isEqualTo(UPDATED_DECMOTIF);
         assertThat(testMotifchserv.getDelmotif()).isEqualTo(UPDATED_DELMOTIF);
         assertThat(testMotifchserv.getX()).isEqualTo(UPDATED_X);
         assertThat(testMotifchserv.getVs()).isEqualTo(UPDATED_VS);

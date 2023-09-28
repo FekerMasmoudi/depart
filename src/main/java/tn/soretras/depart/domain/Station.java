@@ -32,7 +32,7 @@ public class Station implements Serializable {
     private String delstat;
 
     @Field("delstatfr")
-    private String delstatfr;
+    private String delstat_fr;
 
     @Field("lattitude")
     private String lattitude;
@@ -47,28 +47,6 @@ public class Station implements Serializable {
 
     public String getId() {
         return this.id;
-    }
-
-    public Station(
-        String id,
-        @NotNull String decstat,
-        String dectyst,
-        String decrout,
-        String delstat,
-        String delstatfr,
-        String lattitude,
-        String longitude,
-        String valide
-    ) {
-        this.id = id;
-        this.decstat = decstat;
-        this.dectyst = dectyst;
-        this.decrout = decrout;
-        this.delstat = delstat;
-        this.delstatfr = delstatfr;
-        this.lattitude = lattitude;
-        this.longitude = longitude;
-        this.valide = valide;
     }
 
     public Station() {}
@@ -134,17 +112,17 @@ public class Station implements Serializable {
         this.delstat = delstat;
     }
 
-    public String getDelstatfr() {
-        return this.delstatfr;
+    public String getDelstat_fr() {
+        return this.delstat_fr;
     }
 
-    public Station delstatfr(String delstatfr) {
-        this.setDelstatfr(delstatfr);
+    public Station delstat_fr(String delstat_fr) {
+        this.setDelstat_fr(delstat_fr);
         return this;
     }
 
-    public void setDelstatfr(String delstatfr) {
-        this.delstatfr = delstatfr;
+    public void setDelstat_fr(String delstat_fr) {
+        this.delstat_fr = delstat_fr;
     }
 
     public String getLattitude() {
@@ -214,7 +192,7 @@ public class Station implements Serializable {
             ", dectyst='" + getDectyst() + "'" +
             ", decrout='" + getDecrout() + "'" +
             ", delstat='" + getDelstat() + "'" +
-            ", delstatfr='" + getDelstatfr() + "'" +
+            ", delstatfr='" + getDelstat_fr() + "'" +
             ", lattitude='" + getLattitude() + "'" +
             ", longitude='" + getLongitude() + "'" +
             ", valide='" + getValide() + "'" +

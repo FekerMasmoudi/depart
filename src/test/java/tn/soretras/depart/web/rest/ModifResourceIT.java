@@ -36,8 +36,8 @@ class ModifResourceIT {
     private static final Integer DEFAULT_DECAGENC = 1;
     private static final Integer UPDATED_DECAGENC = 2;
 
-    private static final LocalDate DEFAULT_DEDATED = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_DEDATED = LocalDate.now(ZoneId.systemDefault());
+    private static final String DEFAULT_DEDATED = "2023-08-08T23:00:00Z";
+    private static final String UPDATED_DEDATED = "2023-08-08T23:00:00Z";
 
     private static final Integer DEFAULT_DENUMDP = 1;
     private static final Integer UPDATED_DENUMDP = 2;
@@ -63,8 +63,8 @@ class ModifResourceIT {
     private static final Integer DEFAULT_DECMOTIF = 1;
     private static final Integer UPDATED_DECMOTIF = 2;
 
-    private static final LocalDate DEFAULT_HEUR = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_HEUR = LocalDate.now(ZoneId.systemDefault());
+    private static final String DEFAULT_HEUR = "2023-08-08T23:00:00Z";
+    private static final String UPDATED_HEUR = "2023-08-08T23:00:00Z";
 
     private static final String DEFAULT_CHRE = "AAAAAAAAAA";
     private static final String UPDATED_CHRE = "BBBBBBBBBB";

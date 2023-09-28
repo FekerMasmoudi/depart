@@ -48,14 +48,14 @@ class MachineResourceIT {
     private static final String DEFAULT_SERIE = "AAAAAAAAAA";
     private static final String UPDATED_SERIE = "BBBBBBBBBB";
 
-    private static final LocalDate DEFAULT_DATFAB = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_DATFAB = LocalDate.now(ZoneId.systemDefault());
+    private static final String DEFAULT_DATFAB = "2023-08-08T23:00:00Z";
+    private static final String UPDATED_DATFAB = "2023-08-08T23:00:00Z";
 
-    private static final LocalDate DEFAULT_DATACQ = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_DATACQ = LocalDate.now(ZoneId.systemDefault());
+    private static final String DEFAULT_DATACQ = "2023-08-08T23:00:00Z";
+    private static final String UPDATED_DATACQ = "2023-08-08T23:00:00Z";
 
-    private static final LocalDate DEFAULT_DATMES = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_DATMES = LocalDate.now(ZoneId.systemDefault());
+    private static final String DEFAULT_DATMES = "2023-08-08T23:00:00Z";
+    private static final String UPDATED_DATMES = "2023-08-08T23:00:00Z";
 
     private static final Integer DEFAULT_VALACQ = 1;
     private static final Integer UPDATED_VALACQ = 2;
@@ -114,8 +114,8 @@ class MachineResourceIT {
     private static final Integer DEFAULT_ACTIF = 1;
     private static final Integer UPDATED_ACTIF = 2;
 
-    private static final LocalDate DEFAULT_DATACT = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_DATACT = LocalDate.now(ZoneId.systemDefault());
+    private static final String DEFAULT_DATACT = "2023-08-08T23:00:00Z";
+    private static final String UPDATED_DATACT = "2023-08-08T23:00:00Z";
 
     private static final String DEFAULT_CDCATVH = "AAAAAAAAAA";
     private static final String UPDATED_CDCATVH = "BBBBBBBBBB";
@@ -123,8 +123,8 @@ class MachineResourceIT {
     private static final Integer DEFAULT_TAUX = 1;
     private static final Integer UPDATED_TAUX = 2;
 
-    private static final Integer DEFAULT_KMMOY = 1;
-    private static final Integer UPDATED_KMMOY = 2;
+    private static final Double DEFAULT_KMMOY = (double) 1;
+    private static final Double UPDATED_KMMOY = (double) 2;
 
     private static final Integer DEFAULT_CODSTAT = 1;
     private static final Integer UPDATED_CODSTAT = 2;
@@ -197,39 +197,39 @@ class MachineResourceIT {
             .cdmod(DEFAULT_CDMOD)
             .cdmarque(DEFAULT_CDMARQUE)
             .lbmac(DEFAULT_LBMAC)
-            .refmac(DEFAULT_REFMAC)
+            .ref_mac(DEFAULT_REFMAC)
             .serie(DEFAULT_SERIE)
-            .datfab(DEFAULT_DATFAB)
-            .datacq(DEFAULT_DATACQ)
-            .datmes(DEFAULT_DATMES)
-            .valacq(DEFAULT_VALACQ)
+            .dat_fab(DEFAULT_DATFAB)
+            .dat_acq(DEFAULT_DATACQ)
+            .dat_mes(DEFAULT_DATMES)
+            .val_acq(DEFAULT_VALACQ)
             .obs(DEFAULT_OBS)
             .numplan(DEFAULT_NUMPLAN)
             .cdlipro(DEFAULT_CDLIPRO)
             .immat(DEFAULT_IMMAT)
             .marque(DEFAULT_MARQUE)
-            .typev(DEFAULT_TYPEV)
-            .numser(DEFAULT_NUMSER)
+            .type_v(DEFAULT_TYPEV)
+            .num_ser(DEFAULT_NUMSER)
             .puiss(DEFAULT_PUISS)
             .nrj(DEFAULT_NRJ)
             .genre(DEFAULT_GENRE)
             .cylind(DEFAULT_CYLIND)
-            .pdsvid(DEFAULT_PDSVID)
+            .pds_vid(DEFAULT_PDSVID)
             .charge(DEFAULT_CHARGE)
-            .plcass(DEFAULT_PLCASS)
-            .plcdeb(DEFAULT_PLCDEB)
+            .plc_ass(DEFAULT_PLCASS)
+            .plc_deb(DEFAULT_PLCDEB)
             .cpt(DEFAULT_CPT)
-            .cptmnt(DEFAULT_CPTMNT)
+            .cpt_mnt(DEFAULT_CPTMNT)
             .actif(DEFAULT_ACTIF)
-            .datact(DEFAULT_DATACT)
+            .dat_act(DEFAULT_DATACT)
             .cdcatvh(DEFAULT_CDCATVH)
             .taux(DEFAULT_TAUX)
-            .kmmoy(DEFAULT_KMMOY)
+            .km_moy(DEFAULT_KMMOY)
             .codstat(DEFAULT_CODSTAT)
             .edition(DEFAULT_EDITION)
-            .valassur(DEFAULT_VALASSUR)
-            .valamort(DEFAULT_VALAMORT)
-            .consommodel(DEFAULT_CONSOMMODEL)
+            .val_assur(DEFAULT_VALASSUR)
+            .val_amort(DEFAULT_VALAMORT)
+            .consom_model(DEFAULT_CONSOMMODEL)
             .decetat(DEFAULT_DECETAT)
             .codtypvoit(DEFAULT_CODTYPVOIT)
             .cdtyp(DEFAULT_CDTYP)
@@ -238,8 +238,8 @@ class MachineResourceIT {
             .cdtypbv(DEFAULT_CDTYPBV)
             .pneu(DEFAULT_PNEU)
             .gps(DEFAULT_GPS)
-            .marquebv(DEFAULT_MARQUEBV)
-            .typboite(DEFAULT_TYPBOITE);
+            .marque_bv(DEFAULT_MARQUEBV)
+            .typ_boite(DEFAULT_TYPBOITE);
         return machine;
     }
 
@@ -255,39 +255,39 @@ class MachineResourceIT {
             .cdmod(UPDATED_CDMOD)
             .cdmarque(UPDATED_CDMARQUE)
             .lbmac(UPDATED_LBMAC)
-            .refmac(UPDATED_REFMAC)
+            .ref_mac(UPDATED_REFMAC)
             .serie(UPDATED_SERIE)
-            .datfab(UPDATED_DATFAB)
-            .datacq(UPDATED_DATACQ)
-            .datmes(UPDATED_DATMES)
-            .valacq(UPDATED_VALACQ)
+            .dat_fab(UPDATED_DATFAB)
+            .dat_acq(UPDATED_DATACQ)
+            .dat_mes(UPDATED_DATMES)
+            .val_acq(UPDATED_VALACQ)
             .obs(UPDATED_OBS)
             .numplan(UPDATED_NUMPLAN)
             .cdlipro(UPDATED_CDLIPRO)
             .immat(UPDATED_IMMAT)
             .marque(UPDATED_MARQUE)
-            .typev(UPDATED_TYPEV)
-            .numser(UPDATED_NUMSER)
+            .type_v(UPDATED_TYPEV)
+            .num_ser(UPDATED_NUMSER)
             .puiss(UPDATED_PUISS)
             .nrj(UPDATED_NRJ)
             .genre(UPDATED_GENRE)
             .cylind(UPDATED_CYLIND)
-            .pdsvid(UPDATED_PDSVID)
+            .pds_vid(UPDATED_PDSVID)
             .charge(UPDATED_CHARGE)
-            .plcass(UPDATED_PLCASS)
-            .plcdeb(UPDATED_PLCDEB)
+            .plc_ass(UPDATED_PLCASS)
+            .plc_deb(UPDATED_PLCDEB)
             .cpt(UPDATED_CPT)
-            .cptmnt(UPDATED_CPTMNT)
+            .cpt_mnt(UPDATED_CPTMNT)
             .actif(UPDATED_ACTIF)
-            .datact(UPDATED_DATACT)
+            .dat_act(UPDATED_DATACT)
             .cdcatvh(UPDATED_CDCATVH)
             .taux(UPDATED_TAUX)
-            .kmmoy(UPDATED_KMMOY)
+            .km_moy(UPDATED_KMMOY)
             .codstat(UPDATED_CODSTAT)
             .edition(UPDATED_EDITION)
-            .valassur(UPDATED_VALASSUR)
-            .valamort(UPDATED_VALAMORT)
-            .consommodel(UPDATED_CONSOMMODEL)
+            .val_assur(UPDATED_VALASSUR)
+            .val_amort(UPDATED_VALAMORT)
+            .consom_model(UPDATED_CONSOMMODEL)
             .decetat(UPDATED_DECETAT)
             .codtypvoit(UPDATED_CODTYPVOIT)
             .cdtyp(UPDATED_CDTYP)
@@ -296,8 +296,8 @@ class MachineResourceIT {
             .cdtypbv(UPDATED_CDTYPBV)
             .pneu(UPDATED_PNEU)
             .gps(UPDATED_GPS)
-            .marquebv(UPDATED_MARQUEBV)
-            .typboite(UPDATED_TYPBOITE);
+            .marque_bv(UPDATED_MARQUEBV)
+            .typ_boite(UPDATED_TYPBOITE);
         return machine;
     }
 
@@ -324,39 +324,39 @@ class MachineResourceIT {
         assertThat(testMachine.getCdmod()).isEqualTo(DEFAULT_CDMOD);
         assertThat(testMachine.getCdmarque()).isEqualTo(DEFAULT_CDMARQUE);
         assertThat(testMachine.getLbmac()).isEqualTo(DEFAULT_LBMAC);
-        assertThat(testMachine.getRefmac()).isEqualTo(DEFAULT_REFMAC);
+        assertThat(testMachine.getRef_mac()).isEqualTo(DEFAULT_REFMAC);
         assertThat(testMachine.getSerie()).isEqualTo(DEFAULT_SERIE);
-        assertThat(testMachine.getDatfab()).isEqualTo(DEFAULT_DATFAB);
-        assertThat(testMachine.getDatacq()).isEqualTo(DEFAULT_DATACQ);
-        assertThat(testMachine.getDatmes()).isEqualTo(DEFAULT_DATMES);
-        assertThat(testMachine.getValacq()).isEqualTo(DEFAULT_VALACQ);
+        assertThat(testMachine.getDat_fab()).isEqualTo(DEFAULT_DATFAB);
+        assertThat(testMachine.getDat_acq()).isEqualTo(DEFAULT_DATACQ);
+        assertThat(testMachine.getDat_mes()).isEqualTo(DEFAULT_DATMES);
+        assertThat(testMachine.getVal_acq()).isEqualTo(DEFAULT_VALACQ);
         assertThat(testMachine.getObs()).isEqualTo(DEFAULT_OBS);
         assertThat(testMachine.getNumplan()).isEqualTo(DEFAULT_NUMPLAN);
         assertThat(testMachine.getCdlipro()).isEqualTo(DEFAULT_CDLIPRO);
         assertThat(testMachine.getImmat()).isEqualTo(DEFAULT_IMMAT);
         assertThat(testMachine.getMarque()).isEqualTo(DEFAULT_MARQUE);
-        assertThat(testMachine.getTypev()).isEqualTo(DEFAULT_TYPEV);
-        assertThat(testMachine.getNumser()).isEqualTo(DEFAULT_NUMSER);
+        assertThat(testMachine.getType_v()).isEqualTo(DEFAULT_TYPEV);
+        assertThat(testMachine.getNum_ser()).isEqualTo(DEFAULT_NUMSER);
         assertThat(testMachine.getPuiss()).isEqualTo(DEFAULT_PUISS);
         assertThat(testMachine.getNrj()).isEqualTo(DEFAULT_NRJ);
         assertThat(testMachine.getGenre()).isEqualTo(DEFAULT_GENRE);
         assertThat(testMachine.getCylind()).isEqualTo(DEFAULT_CYLIND);
-        assertThat(testMachine.getPdsvid()).isEqualTo(DEFAULT_PDSVID);
+        assertThat(testMachine.getPds_vid()).isEqualTo(DEFAULT_PDSVID);
         assertThat(testMachine.getCharge()).isEqualTo(DEFAULT_CHARGE);
-        assertThat(testMachine.getPlcass()).isEqualTo(DEFAULT_PLCASS);
-        assertThat(testMachine.getPlcdeb()).isEqualTo(DEFAULT_PLCDEB);
+        assertThat(testMachine.getPlc_ass()).isEqualTo(DEFAULT_PLCASS);
+        assertThat(testMachine.getPlc_deb()).isEqualTo(DEFAULT_PLCDEB);
         assertThat(testMachine.getCpt()).isEqualTo(DEFAULT_CPT);
-        assertThat(testMachine.getCptmnt()).isEqualTo(DEFAULT_CPTMNT);
+        assertThat(testMachine.getCpt_mnt()).isEqualTo(DEFAULT_CPTMNT);
         assertThat(testMachine.getActif()).isEqualTo(DEFAULT_ACTIF);
-        assertThat(testMachine.getDatact()).isEqualTo(DEFAULT_DATACT);
+        assertThat(testMachine.getDat_act()).isEqualTo(DEFAULT_DATACT);
         assertThat(testMachine.getCdcatvh()).isEqualTo(DEFAULT_CDCATVH);
         assertThat(testMachine.getTaux()).isEqualTo(DEFAULT_TAUX);
-        assertThat(testMachine.getKmmoy()).isEqualTo(DEFAULT_KMMOY);
+        assertThat(testMachine.getKm_moy()).isEqualTo(DEFAULT_KMMOY);
         assertThat(testMachine.getCodstat()).isEqualTo(DEFAULT_CODSTAT);
         assertThat(testMachine.getEdition()).isEqualTo(DEFAULT_EDITION);
-        assertThat(testMachine.getValassur()).isEqualTo(DEFAULT_VALASSUR);
-        assertThat(testMachine.getValamort()).isEqualTo(DEFAULT_VALAMORT);
-        assertThat(testMachine.getConsommodel()).isEqualTo(DEFAULT_CONSOMMODEL);
+        assertThat(testMachine.getVal_assur()).isEqualTo(DEFAULT_VALASSUR);
+        assertThat(testMachine.getVal_amort()).isEqualTo(DEFAULT_VALAMORT);
+        assertThat(testMachine.getConsom_model()).isEqualTo(DEFAULT_CONSOMMODEL);
         assertThat(testMachine.getDecetat()).isEqualTo(DEFAULT_DECETAT);
         assertThat(testMachine.getCodtypvoit()).isEqualTo(DEFAULT_CODTYPVOIT);
         assertThat(testMachine.getCdtyp()).isEqualTo(DEFAULT_CDTYP);
@@ -365,8 +365,8 @@ class MachineResourceIT {
         assertThat(testMachine.getCdtypbv()).isEqualTo(DEFAULT_CDTYPBV);
         assertThat(testMachine.getPneu()).isEqualTo(DEFAULT_PNEU);
         assertThat(testMachine.getGps()).isEqualTo(DEFAULT_GPS);
-        assertThat(testMachine.getMarquebv()).isEqualTo(DEFAULT_MARQUEBV);
-        assertThat(testMachine.getTypboite()).isEqualTo(DEFAULT_TYPBOITE);
+        assertThat(testMachine.getMarque_bv()).isEqualTo(DEFAULT_MARQUEBV);
+        assertThat(testMachine.getTyp_boite()).isEqualTo(DEFAULT_TYPBOITE);
     }
 
     @Test
@@ -527,39 +527,39 @@ class MachineResourceIT {
             .cdmod(UPDATED_CDMOD)
             .cdmarque(UPDATED_CDMARQUE)
             .lbmac(UPDATED_LBMAC)
-            .refmac(UPDATED_REFMAC)
+            .ref_mac(UPDATED_REFMAC)
             .serie(UPDATED_SERIE)
-            .datfab(UPDATED_DATFAB)
-            .datacq(UPDATED_DATACQ)
-            .datmes(UPDATED_DATMES)
-            .valacq(UPDATED_VALACQ)
+            .dat_fab(UPDATED_DATFAB)
+            .dat_acq(UPDATED_DATACQ)
+            .dat_mes(UPDATED_DATMES)
+            .val_acq(UPDATED_VALACQ)
             .obs(UPDATED_OBS)
             .numplan(UPDATED_NUMPLAN)
             .cdlipro(UPDATED_CDLIPRO)
             .immat(UPDATED_IMMAT)
             .marque(UPDATED_MARQUE)
-            .typev(UPDATED_TYPEV)
-            .numser(UPDATED_NUMSER)
+            .type_v(UPDATED_TYPEV)
+            .num_ser(UPDATED_NUMSER)
             .puiss(UPDATED_PUISS)
             .nrj(UPDATED_NRJ)
             .genre(UPDATED_GENRE)
             .cylind(UPDATED_CYLIND)
-            .pdsvid(UPDATED_PDSVID)
+            .pds_vid(UPDATED_PDSVID)
             .charge(UPDATED_CHARGE)
-            .plcass(UPDATED_PLCASS)
-            .plcdeb(UPDATED_PLCDEB)
+            .plc_ass(UPDATED_PLCASS)
+            .plc_deb(UPDATED_PLCDEB)
             .cpt(UPDATED_CPT)
-            .cptmnt(UPDATED_CPTMNT)
+            .cpt_mnt(UPDATED_CPTMNT)
             .actif(UPDATED_ACTIF)
-            .datact(UPDATED_DATACT)
+            .dat_act(UPDATED_DATACT)
             .cdcatvh(UPDATED_CDCATVH)
             .taux(UPDATED_TAUX)
-            .kmmoy(UPDATED_KMMOY)
+            .km_moy(UPDATED_KMMOY)
             .codstat(UPDATED_CODSTAT)
             .edition(UPDATED_EDITION)
-            .valassur(UPDATED_VALASSUR)
-            .valamort(UPDATED_VALAMORT)
-            .consommodel(UPDATED_CONSOMMODEL)
+            .val_assur(UPDATED_VALASSUR)
+            .val_amort(UPDATED_VALAMORT)
+            .consom_model(UPDATED_CONSOMMODEL)
             .decetat(UPDATED_DECETAT)
             .codtypvoit(UPDATED_CODTYPVOIT)
             .cdtyp(UPDATED_CDTYP)
@@ -568,8 +568,8 @@ class MachineResourceIT {
             .cdtypbv(UPDATED_CDTYPBV)
             .pneu(UPDATED_PNEU)
             .gps(UPDATED_GPS)
-            .marquebv(UPDATED_MARQUEBV)
-            .typboite(UPDATED_TYPBOITE);
+            .marque_bv(UPDATED_MARQUEBV)
+            .typ_boite(UPDATED_TYPBOITE);
         MachineDTO machineDTO = machineMapper.toDto(updatedMachine);
 
         restMachineMockMvc
@@ -588,39 +588,39 @@ class MachineResourceIT {
         assertThat(testMachine.getCdmod()).isEqualTo(UPDATED_CDMOD);
         assertThat(testMachine.getCdmarque()).isEqualTo(UPDATED_CDMARQUE);
         assertThat(testMachine.getLbmac()).isEqualTo(UPDATED_LBMAC);
-        assertThat(testMachine.getRefmac()).isEqualTo(UPDATED_REFMAC);
+        assertThat(testMachine.getRef_mac()).isEqualTo(UPDATED_REFMAC);
         assertThat(testMachine.getSerie()).isEqualTo(UPDATED_SERIE);
-        assertThat(testMachine.getDatfab()).isEqualTo(UPDATED_DATFAB);
-        assertThat(testMachine.getDatacq()).isEqualTo(UPDATED_DATACQ);
-        assertThat(testMachine.getDatmes()).isEqualTo(UPDATED_DATMES);
-        assertThat(testMachine.getValacq()).isEqualTo(UPDATED_VALACQ);
+        assertThat(testMachine.getDat_fab()).isEqualTo(UPDATED_DATFAB);
+        assertThat(testMachine.getDat_acq()).isEqualTo(UPDATED_DATACQ);
+        assertThat(testMachine.getDat_mes()).isEqualTo(UPDATED_DATMES);
+        assertThat(testMachine.getVal_acq()).isEqualTo(UPDATED_VALACQ);
         assertThat(testMachine.getObs()).isEqualTo(UPDATED_OBS);
         assertThat(testMachine.getNumplan()).isEqualTo(UPDATED_NUMPLAN);
         assertThat(testMachine.getCdlipro()).isEqualTo(UPDATED_CDLIPRO);
         assertThat(testMachine.getImmat()).isEqualTo(UPDATED_IMMAT);
         assertThat(testMachine.getMarque()).isEqualTo(UPDATED_MARQUE);
-        assertThat(testMachine.getTypev()).isEqualTo(UPDATED_TYPEV);
-        assertThat(testMachine.getNumser()).isEqualTo(UPDATED_NUMSER);
+        assertThat(testMachine.getType_v()).isEqualTo(UPDATED_TYPEV);
+        assertThat(testMachine.getNum_ser()).isEqualTo(UPDATED_NUMSER);
         assertThat(testMachine.getPuiss()).isEqualTo(UPDATED_PUISS);
         assertThat(testMachine.getNrj()).isEqualTo(UPDATED_NRJ);
         assertThat(testMachine.getGenre()).isEqualTo(UPDATED_GENRE);
         assertThat(testMachine.getCylind()).isEqualTo(UPDATED_CYLIND);
-        assertThat(testMachine.getPdsvid()).isEqualTo(UPDATED_PDSVID);
+        assertThat(testMachine.getPds_vid()).isEqualTo(UPDATED_PDSVID);
         assertThat(testMachine.getCharge()).isEqualTo(UPDATED_CHARGE);
-        assertThat(testMachine.getPlcass()).isEqualTo(UPDATED_PLCASS);
-        assertThat(testMachine.getPlcdeb()).isEqualTo(UPDATED_PLCDEB);
+        assertThat(testMachine.getPlc_ass()).isEqualTo(UPDATED_PLCASS);
+        assertThat(testMachine.getPlc_deb()).isEqualTo(UPDATED_PLCDEB);
         assertThat(testMachine.getCpt()).isEqualTo(UPDATED_CPT);
-        assertThat(testMachine.getCptmnt()).isEqualTo(UPDATED_CPTMNT);
+        assertThat(testMachine.getCpt_mnt()).isEqualTo(UPDATED_CPTMNT);
         assertThat(testMachine.getActif()).isEqualTo(UPDATED_ACTIF);
-        assertThat(testMachine.getDatact()).isEqualTo(UPDATED_DATACT);
+        assertThat(testMachine.getDat_act()).isEqualTo(UPDATED_DATACT);
         assertThat(testMachine.getCdcatvh()).isEqualTo(UPDATED_CDCATVH);
         assertThat(testMachine.getTaux()).isEqualTo(UPDATED_TAUX);
-        assertThat(testMachine.getKmmoy()).isEqualTo(UPDATED_KMMOY);
+        assertThat(testMachine.getKm_moy()).isEqualTo(UPDATED_KMMOY);
         assertThat(testMachine.getCodstat()).isEqualTo(UPDATED_CODSTAT);
         assertThat(testMachine.getEdition()).isEqualTo(UPDATED_EDITION);
-        assertThat(testMachine.getValassur()).isEqualTo(UPDATED_VALASSUR);
-        assertThat(testMachine.getValamort()).isEqualTo(UPDATED_VALAMORT);
-        assertThat(testMachine.getConsommodel()).isEqualTo(UPDATED_CONSOMMODEL);
+        assertThat(testMachine.getVal_assur()).isEqualTo(UPDATED_VALASSUR);
+        assertThat(testMachine.getVal_amort()).isEqualTo(UPDATED_VALAMORT);
+        assertThat(testMachine.getConsom_model()).isEqualTo(UPDATED_CONSOMMODEL);
         assertThat(testMachine.getDecetat()).isEqualTo(UPDATED_DECETAT);
         assertThat(testMachine.getCodtypvoit()).isEqualTo(UPDATED_CODTYPVOIT);
         assertThat(testMachine.getCdtyp()).isEqualTo(UPDATED_CDTYP);
@@ -629,8 +629,8 @@ class MachineResourceIT {
         assertThat(testMachine.getCdtypbv()).isEqualTo(UPDATED_CDTYPBV);
         assertThat(testMachine.getPneu()).isEqualTo(UPDATED_PNEU);
         assertThat(testMachine.getGps()).isEqualTo(UPDATED_GPS);
-        assertThat(testMachine.getMarquebv()).isEqualTo(UPDATED_MARQUEBV);
-        assertThat(testMachine.getTypboite()).isEqualTo(UPDATED_TYPBOITE);
+        assertThat(testMachine.getMarque_bv()).isEqualTo(UPDATED_MARQUEBV);
+        assertThat(testMachine.getTyp_boite()).isEqualTo(UPDATED_TYPBOITE);
     }
 
     @Test
@@ -708,19 +708,19 @@ class MachineResourceIT {
 
         partialUpdatedMachine
             .cdmod(UPDATED_CDMOD)
-            .refmac(UPDATED_REFMAC)
+            .ref_mac(UPDATED_REFMAC)
             .serie(UPDATED_SERIE)
             .cdlipro(UPDATED_CDLIPRO)
             .immat(UPDATED_IMMAT)
             .marque(UPDATED_MARQUE)
-            .numser(UPDATED_NUMSER)
+            .num_ser(UPDATED_NUMSER)
             .nrj(UPDATED_NRJ)
-            .cptmnt(UPDATED_CPTMNT)
-            .datact(UPDATED_DATACT)
+            .cpt_mnt(UPDATED_CPTMNT)
+            .dat_act(UPDATED_DATACT)
             .cdcatvh(UPDATED_CDCATVH)
-            .kmmoy(UPDATED_KMMOY)
+            .km_moy(UPDATED_KMMOY)
             .codstat(UPDATED_CODSTAT)
-            .consommodel(UPDATED_CONSOMMODEL)
+            .consom_model(UPDATED_CONSOMMODEL)
             .decetat(UPDATED_DECETAT)
             .codtypvoit(UPDATED_CODTYPVOIT)
             .cdtyp(UPDATED_CDTYP)
@@ -728,8 +728,8 @@ class MachineResourceIT {
             .cdtypbv(UPDATED_CDTYPBV)
             .pneu(UPDATED_PNEU)
             .gps(UPDATED_GPS)
-            .marquebv(UPDATED_MARQUEBV)
-            .typboite(UPDATED_TYPBOITE);
+            .marque_bv(UPDATED_MARQUEBV)
+            .typ_boite(UPDATED_TYPBOITE);
 
         restMachineMockMvc
             .perform(
@@ -747,39 +747,39 @@ class MachineResourceIT {
         assertThat(testMachine.getCdmod()).isEqualTo(UPDATED_CDMOD);
         assertThat(testMachine.getCdmarque()).isEqualTo(DEFAULT_CDMARQUE);
         assertThat(testMachine.getLbmac()).isEqualTo(DEFAULT_LBMAC);
-        assertThat(testMachine.getRefmac()).isEqualTo(UPDATED_REFMAC);
+        assertThat(testMachine.getRef_mac()).isEqualTo(UPDATED_REFMAC);
         assertThat(testMachine.getSerie()).isEqualTo(UPDATED_SERIE);
-        assertThat(testMachine.getDatfab()).isEqualTo(DEFAULT_DATFAB);
-        assertThat(testMachine.getDatacq()).isEqualTo(DEFAULT_DATACQ);
-        assertThat(testMachine.getDatmes()).isEqualTo(DEFAULT_DATMES);
-        assertThat(testMachine.getValacq()).isEqualTo(DEFAULT_VALACQ);
+        assertThat(testMachine.getDat_fab()).isEqualTo(DEFAULT_DATFAB);
+        assertThat(testMachine.getDat_acq()).isEqualTo(DEFAULT_DATACQ);
+        assertThat(testMachine.getDat_mes()).isEqualTo(DEFAULT_DATMES);
+        assertThat(testMachine.getVal_acq()).isEqualTo(DEFAULT_VALACQ);
         assertThat(testMachine.getObs()).isEqualTo(DEFAULT_OBS);
         assertThat(testMachine.getNumplan()).isEqualTo(DEFAULT_NUMPLAN);
         assertThat(testMachine.getCdlipro()).isEqualTo(UPDATED_CDLIPRO);
         assertThat(testMachine.getImmat()).isEqualTo(UPDATED_IMMAT);
         assertThat(testMachine.getMarque()).isEqualTo(UPDATED_MARQUE);
-        assertThat(testMachine.getTypev()).isEqualTo(DEFAULT_TYPEV);
-        assertThat(testMachine.getNumser()).isEqualTo(UPDATED_NUMSER);
+        assertThat(testMachine.getType_v()).isEqualTo(DEFAULT_TYPEV);
+        assertThat(testMachine.getNum_ser()).isEqualTo(UPDATED_NUMSER);
         assertThat(testMachine.getPuiss()).isEqualTo(DEFAULT_PUISS);
         assertThat(testMachine.getNrj()).isEqualTo(UPDATED_NRJ);
         assertThat(testMachine.getGenre()).isEqualTo(DEFAULT_GENRE);
         assertThat(testMachine.getCylind()).isEqualTo(DEFAULT_CYLIND);
-        assertThat(testMachine.getPdsvid()).isEqualTo(DEFAULT_PDSVID);
+        assertThat(testMachine.getPds_vid()).isEqualTo(DEFAULT_PDSVID);
         assertThat(testMachine.getCharge()).isEqualTo(DEFAULT_CHARGE);
-        assertThat(testMachine.getPlcass()).isEqualTo(DEFAULT_PLCASS);
-        assertThat(testMachine.getPlcdeb()).isEqualTo(DEFAULT_PLCDEB);
+        assertThat(testMachine.getPlc_ass()).isEqualTo(DEFAULT_PLCASS);
+        assertThat(testMachine.getPlc_deb()).isEqualTo(DEFAULT_PLCDEB);
         assertThat(testMachine.getCpt()).isEqualTo(DEFAULT_CPT);
-        assertThat(testMachine.getCptmnt()).isEqualTo(UPDATED_CPTMNT);
+        assertThat(testMachine.getCpt_mnt()).isEqualTo(UPDATED_CPTMNT);
         assertThat(testMachine.getActif()).isEqualTo(DEFAULT_ACTIF);
-        assertThat(testMachine.getDatact()).isEqualTo(UPDATED_DATACT);
+        assertThat(testMachine.getDat_act()).isEqualTo(UPDATED_DATACT);
         assertThat(testMachine.getCdcatvh()).isEqualTo(UPDATED_CDCATVH);
         assertThat(testMachine.getTaux()).isEqualTo(DEFAULT_TAUX);
-        assertThat(testMachine.getKmmoy()).isEqualTo(UPDATED_KMMOY);
+        assertThat(testMachine.getKm_moy()).isEqualTo(UPDATED_KMMOY);
         assertThat(testMachine.getCodstat()).isEqualTo(UPDATED_CODSTAT);
         assertThat(testMachine.getEdition()).isEqualTo(DEFAULT_EDITION);
-        assertThat(testMachine.getValassur()).isEqualTo(DEFAULT_VALASSUR);
-        assertThat(testMachine.getValamort()).isEqualTo(DEFAULT_VALAMORT);
-        assertThat(testMachine.getConsommodel()).isEqualTo(UPDATED_CONSOMMODEL);
+        assertThat(testMachine.getVal_assur()).isEqualTo(DEFAULT_VALASSUR);
+        assertThat(testMachine.getVal_amort()).isEqualTo(DEFAULT_VALAMORT);
+        assertThat(testMachine.getConsom_model()).isEqualTo(UPDATED_CONSOMMODEL);
         assertThat(testMachine.getDecetat()).isEqualTo(UPDATED_DECETAT);
         assertThat(testMachine.getCodtypvoit()).isEqualTo(UPDATED_CODTYPVOIT);
         assertThat(testMachine.getCdtyp()).isEqualTo(UPDATED_CDTYP);
@@ -788,8 +788,8 @@ class MachineResourceIT {
         assertThat(testMachine.getCdtypbv()).isEqualTo(UPDATED_CDTYPBV);
         assertThat(testMachine.getPneu()).isEqualTo(UPDATED_PNEU);
         assertThat(testMachine.getGps()).isEqualTo(UPDATED_GPS);
-        assertThat(testMachine.getMarquebv()).isEqualTo(UPDATED_MARQUEBV);
-        assertThat(testMachine.getTypboite()).isEqualTo(UPDATED_TYPBOITE);
+        assertThat(testMachine.getMarque_bv()).isEqualTo(UPDATED_MARQUEBV);
+        assertThat(testMachine.getTyp_boite()).isEqualTo(UPDATED_TYPBOITE);
     }
 
     @Test
@@ -808,39 +808,39 @@ class MachineResourceIT {
             .cdmod(UPDATED_CDMOD)
             .cdmarque(UPDATED_CDMARQUE)
             .lbmac(UPDATED_LBMAC)
-            .refmac(UPDATED_REFMAC)
+            .ref_mac(UPDATED_REFMAC)
             .serie(UPDATED_SERIE)
-            .datfab(UPDATED_DATFAB)
-            .datacq(UPDATED_DATACQ)
-            .datmes(UPDATED_DATMES)
-            .valacq(UPDATED_VALACQ)
+            .dat_fab(UPDATED_DATFAB)
+            .dat_acq(UPDATED_DATACQ)
+            .dat_mes(UPDATED_DATMES)
+            .val_acq(UPDATED_VALACQ)
             .obs(UPDATED_OBS)
             .numplan(UPDATED_NUMPLAN)
             .cdlipro(UPDATED_CDLIPRO)
             .immat(UPDATED_IMMAT)
             .marque(UPDATED_MARQUE)
-            .typev(UPDATED_TYPEV)
-            .numser(UPDATED_NUMSER)
+            .type_v(UPDATED_TYPEV)
+            .num_ser(UPDATED_NUMSER)
             .puiss(UPDATED_PUISS)
             .nrj(UPDATED_NRJ)
             .genre(UPDATED_GENRE)
             .cylind(UPDATED_CYLIND)
-            .pdsvid(UPDATED_PDSVID)
+            .pds_vid(UPDATED_PDSVID)
             .charge(UPDATED_CHARGE)
-            .plcass(UPDATED_PLCASS)
-            .plcdeb(UPDATED_PLCDEB)
+            .plc_ass(UPDATED_PLCASS)
+            .plc_deb(UPDATED_PLCDEB)
             .cpt(UPDATED_CPT)
-            .cptmnt(UPDATED_CPTMNT)
+            .cpt_mnt(UPDATED_CPTMNT)
             .actif(UPDATED_ACTIF)
-            .datact(UPDATED_DATACT)
+            .dat_act(UPDATED_DATACT)
             .cdcatvh(UPDATED_CDCATVH)
             .taux(UPDATED_TAUX)
-            .kmmoy(UPDATED_KMMOY)
+            .km_moy(UPDATED_KMMOY)
             .codstat(UPDATED_CODSTAT)
             .edition(UPDATED_EDITION)
-            .valassur(UPDATED_VALASSUR)
-            .valamort(UPDATED_VALAMORT)
-            .consommodel(UPDATED_CONSOMMODEL)
+            .val_assur(UPDATED_VALASSUR)
+            .val_amort(UPDATED_VALAMORT)
+            .consom_model(UPDATED_CONSOMMODEL)
             .decetat(UPDATED_DECETAT)
             .codtypvoit(UPDATED_CODTYPVOIT)
             .cdtyp(UPDATED_CDTYP)
@@ -849,8 +849,8 @@ class MachineResourceIT {
             .cdtypbv(UPDATED_CDTYPBV)
             .pneu(UPDATED_PNEU)
             .gps(UPDATED_GPS)
-            .marquebv(UPDATED_MARQUEBV)
-            .typboite(UPDATED_TYPBOITE);
+            .marque_bv(UPDATED_MARQUEBV)
+            .typ_boite(UPDATED_TYPBOITE);
 
         restMachineMockMvc
             .perform(
@@ -868,39 +868,39 @@ class MachineResourceIT {
         assertThat(testMachine.getCdmod()).isEqualTo(UPDATED_CDMOD);
         assertThat(testMachine.getCdmarque()).isEqualTo(UPDATED_CDMARQUE);
         assertThat(testMachine.getLbmac()).isEqualTo(UPDATED_LBMAC);
-        assertThat(testMachine.getRefmac()).isEqualTo(UPDATED_REFMAC);
+        assertThat(testMachine.getRef_mac()).isEqualTo(UPDATED_REFMAC);
         assertThat(testMachine.getSerie()).isEqualTo(UPDATED_SERIE);
-        assertThat(testMachine.getDatfab()).isEqualTo(UPDATED_DATFAB);
-        assertThat(testMachine.getDatacq()).isEqualTo(UPDATED_DATACQ);
-        assertThat(testMachine.getDatmes()).isEqualTo(UPDATED_DATMES);
-        assertThat(testMachine.getValacq()).isEqualTo(UPDATED_VALACQ);
+        assertThat(testMachine.getDat_fab()).isEqualTo(UPDATED_DATFAB);
+        assertThat(testMachine.getDat_acq()).isEqualTo(UPDATED_DATACQ);
+        assertThat(testMachine.getDat_mes()).isEqualTo(UPDATED_DATMES);
+        assertThat(testMachine.getVal_acq()).isEqualTo(UPDATED_VALACQ);
         assertThat(testMachine.getObs()).isEqualTo(UPDATED_OBS);
         assertThat(testMachine.getNumplan()).isEqualTo(UPDATED_NUMPLAN);
         assertThat(testMachine.getCdlipro()).isEqualTo(UPDATED_CDLIPRO);
         assertThat(testMachine.getImmat()).isEqualTo(UPDATED_IMMAT);
         assertThat(testMachine.getMarque()).isEqualTo(UPDATED_MARQUE);
-        assertThat(testMachine.getTypev()).isEqualTo(UPDATED_TYPEV);
-        assertThat(testMachine.getNumser()).isEqualTo(UPDATED_NUMSER);
+        assertThat(testMachine.getType_v()).isEqualTo(UPDATED_TYPEV);
+        assertThat(testMachine.getNum_ser()).isEqualTo(UPDATED_NUMSER);
         assertThat(testMachine.getPuiss()).isEqualTo(UPDATED_PUISS);
         assertThat(testMachine.getNrj()).isEqualTo(UPDATED_NRJ);
         assertThat(testMachine.getGenre()).isEqualTo(UPDATED_GENRE);
         assertThat(testMachine.getCylind()).isEqualTo(UPDATED_CYLIND);
-        assertThat(testMachine.getPdsvid()).isEqualTo(UPDATED_PDSVID);
+        assertThat(testMachine.getPds_vid()).isEqualTo(UPDATED_PDSVID);
         assertThat(testMachine.getCharge()).isEqualTo(UPDATED_CHARGE);
-        assertThat(testMachine.getPlcass()).isEqualTo(UPDATED_PLCASS);
-        assertThat(testMachine.getPlcdeb()).isEqualTo(UPDATED_PLCDEB);
+        assertThat(testMachine.getPlc_ass()).isEqualTo(UPDATED_PLCASS);
+        assertThat(testMachine.getPlc_deb()).isEqualTo(UPDATED_PLCDEB);
         assertThat(testMachine.getCpt()).isEqualTo(UPDATED_CPT);
-        assertThat(testMachine.getCptmnt()).isEqualTo(UPDATED_CPTMNT);
+        assertThat(testMachine.getCpt_mnt()).isEqualTo(UPDATED_CPTMNT);
         assertThat(testMachine.getActif()).isEqualTo(UPDATED_ACTIF);
-        assertThat(testMachine.getDatact()).isEqualTo(UPDATED_DATACT);
+        assertThat(testMachine.getDat_act()).isEqualTo(UPDATED_DATACT);
         assertThat(testMachine.getCdcatvh()).isEqualTo(UPDATED_CDCATVH);
         assertThat(testMachine.getTaux()).isEqualTo(UPDATED_TAUX);
-        assertThat(testMachine.getKmmoy()).isEqualTo(UPDATED_KMMOY);
+        assertThat(testMachine.getKm_moy()).isEqualTo(UPDATED_KMMOY);
         assertThat(testMachine.getCodstat()).isEqualTo(UPDATED_CODSTAT);
         assertThat(testMachine.getEdition()).isEqualTo(UPDATED_EDITION);
-        assertThat(testMachine.getValassur()).isEqualTo(UPDATED_VALASSUR);
-        assertThat(testMachine.getValamort()).isEqualTo(UPDATED_VALAMORT);
-        assertThat(testMachine.getConsommodel()).isEqualTo(UPDATED_CONSOMMODEL);
+        assertThat(testMachine.getVal_assur()).isEqualTo(UPDATED_VALASSUR);
+        assertThat(testMachine.getVal_amort()).isEqualTo(UPDATED_VALAMORT);
+        assertThat(testMachine.getConsom_model()).isEqualTo(UPDATED_CONSOMMODEL);
         assertThat(testMachine.getDecetat()).isEqualTo(UPDATED_DECETAT);
         assertThat(testMachine.getCodtypvoit()).isEqualTo(UPDATED_CODTYPVOIT);
         assertThat(testMachine.getCdtyp()).isEqualTo(UPDATED_CDTYP);
@@ -909,8 +909,8 @@ class MachineResourceIT {
         assertThat(testMachine.getCdtypbv()).isEqualTo(UPDATED_CDTYPBV);
         assertThat(testMachine.getPneu()).isEqualTo(UPDATED_PNEU);
         assertThat(testMachine.getGps()).isEqualTo(UPDATED_GPS);
-        assertThat(testMachine.getMarquebv()).isEqualTo(UPDATED_MARQUEBV);
-        assertThat(testMachine.getTypboite()).isEqualTo(UPDATED_TYPBOITE);
+        assertThat(testMachine.getMarque_bv()).isEqualTo(UPDATED_MARQUEBV);
+        assertThat(testMachine.getTyp_boite()).isEqualTo(UPDATED_TYPBOITE);
     }
 
     @Test

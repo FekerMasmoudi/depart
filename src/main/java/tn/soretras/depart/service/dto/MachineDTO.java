@@ -20,17 +20,17 @@ public class MachineDTO implements Serializable {
 
     private String lbmac;
 
-    private String refmac;
+    private String ref_mac;
 
     private String serie;
 
-    private LocalDate datfab;
+    private String dat_fab;
 
-    private LocalDate datacq;
+    private String dat_acq;
 
-    private LocalDate datmes;
+    private String dat_mes;
 
-    private Integer valacq;
+    private Integer val_acq;
 
     private String obs;
 
@@ -42,9 +42,9 @@ public class MachineDTO implements Serializable {
 
     private String marque;
 
-    private String typev;
+    private String type_v;
 
-    private String numser;
+    private String num_ser;
 
     private String puiss;
 
@@ -54,37 +54,37 @@ public class MachineDTO implements Serializable {
 
     private Integer cylind;
 
-    private Integer pdsvid;
+    private Integer pds_vid;
 
     private Integer charge;
 
-    private Integer plcass;
+    private Integer plc_ass;
 
-    private Integer plcdeb;
+    private Integer plc_deb;
 
     private Integer cpt;
 
-    private Integer cptmnt;
+    private Integer cpt_mnt;
 
     private Integer actif;
 
-    private LocalDate datact;
+    private String dat_act;
 
     private String cdcatvh;
 
     private Integer taux;
 
-    private Integer kmmoy;
+    private Double km_moy;
 
     private Integer codstat;
 
     private String edition;
 
-    private Integer valassur;
+    private Integer val_assur;
 
-    private Integer valamort;
+    private Integer val_amort;
 
-    private Integer consommodel;
+    private Integer consom_model;
 
     private String decetat;
 
@@ -102,9 +102,9 @@ public class MachineDTO implements Serializable {
 
     private String gps;
 
-    private String marquebv;
+    private String marque_bv;
 
-    private String typboite;
+    private String typ_boite;
 
     public String getId() {
         return id;
@@ -146,12 +146,12 @@ public class MachineDTO implements Serializable {
         this.lbmac = lbmac;
     }
 
-    public String getRefmac() {
-        return refmac;
+    public String getRef_mac() {
+        return ref_mac;
     }
 
-    public void setRefmac(String refmac) {
-        this.refmac = refmac;
+    public void setRef_mac(String ref_mac) {
+        this.ref_mac = ref_mac;
     }
 
     public String getSerie() {
@@ -162,36 +162,36 @@ public class MachineDTO implements Serializable {
         this.serie = serie;
     }
 
-    public LocalDate getDatfab() {
-        return datfab;
+    public String getDat_fab() {
+        return dat_fab;
     }
 
-    public void setDatfab(LocalDate datfab) {
-        this.datfab = datfab;
+    public void setDat_fab(String dat_fab) {
+        this.dat_fab = dat_fab;
     }
 
-    public LocalDate getDatacq() {
-        return datacq;
+    public String getDat_acq() {
+        return dat_acq;
     }
 
-    public void setDatacq(LocalDate datacq) {
-        this.datacq = datacq;
+    public void setDat_acq(String dat_acq) {
+        this.dat_acq = dat_acq;
     }
 
-    public LocalDate getDatmes() {
-        return datmes;
+    public String getDat_mes() {
+        return dat_mes;
     }
 
-    public void setDatmes(LocalDate datmes) {
-        this.datmes = datmes;
+    public void setDat_mes(String dat_mes) {
+        this.dat_mes = dat_mes;
     }
 
-    public Integer getValacq() {
-        return valacq;
+    public Integer getVal_acq() {
+        return val_acq;
     }
 
-    public void setValacq(Integer valacq) {
-        this.valacq = valacq;
+    public void setVal_acq(Integer val_acq) {
+        this.val_acq = val_acq;
     }
 
     public String getObs() {
@@ -234,20 +234,20 @@ public class MachineDTO implements Serializable {
         this.marque = marque;
     }
 
-    public String getTypev() {
-        return typev;
+    public String getType_v() {
+        return type_v;
     }
 
-    public void setTypev(String typev) {
-        this.typev = typev;
+    public void setType_v(String type_v) {
+        this.type_v = type_v;
     }
 
-    public String getNumser() {
-        return numser;
+    public String getNum_ser() {
+        return num_ser;
     }
 
-    public void setNumser(String numser) {
-        this.numser = numser;
+    public void setNum_ser(String num_ser) {
+        this.num_ser = num_ser;
     }
 
     public String getPuiss() {
@@ -282,12 +282,12 @@ public class MachineDTO implements Serializable {
         this.cylind = cylind;
     }
 
-    public Integer getPdsvid() {
-        return pdsvid;
+    public Integer getPds_vid() {
+        return pds_vid;
     }
 
-    public void setPdsvid(Integer pdsvid) {
-        this.pdsvid = pdsvid;
+    public void setPds_vid(Integer pds_vid) {
+        this.pds_vid = pds_vid;
     }
 
     public Integer getCharge() {
@@ -298,20 +298,20 @@ public class MachineDTO implements Serializable {
         this.charge = charge;
     }
 
-    public Integer getPlcass() {
-        return plcass;
+    public Integer getPlc_ass() {
+        return plc_ass;
     }
 
-    public void setPlcass(Integer plcass) {
-        this.plcass = plcass;
+    public void setPlc_ass(Integer plc_ass) {
+        this.plc_ass = plc_ass;
     }
 
-    public Integer getPlcdeb() {
-        return plcdeb;
+    public Integer getPlc_deb() {
+        return plc_deb;
     }
 
-    public void setPlcdeb(Integer plcdeb) {
-        this.plcdeb = plcdeb;
+    public void setPlc_deb(Integer plc_deb) {
+        this.plc_deb = plc_deb;
     }
 
     public Integer getCpt() {
@@ -322,12 +322,12 @@ public class MachineDTO implements Serializable {
         this.cpt = cpt;
     }
 
-    public Integer getCptmnt() {
-        return cptmnt;
+    public Integer getCpt_mnt() {
+        return cpt_mnt;
     }
 
-    public void setCptmnt(Integer cptmnt) {
-        this.cptmnt = cptmnt;
+    public void setCpt_mnt(Integer cpt_mnt) {
+        this.cpt_mnt = cpt_mnt;
     }
 
     public Integer getActif() {
@@ -338,12 +338,12 @@ public class MachineDTO implements Serializable {
         this.actif = actif;
     }
 
-    public LocalDate getDatact() {
-        return datact;
+    public String getDat_act() {
+        return dat_act;
     }
 
-    public void setDatact(LocalDate datact) {
-        this.datact = datact;
+    public void setDat_act(String dat_act) {
+        this.dat_act = dat_act;
     }
 
     public String getCdcatvh() {
@@ -362,12 +362,12 @@ public class MachineDTO implements Serializable {
         this.taux = taux;
     }
 
-    public Integer getKmmoy() {
-        return kmmoy;
+    public Double getKm_moy() {
+        return km_moy;
     }
 
-    public void setKmmoy(Integer kmmoy) {
-        this.kmmoy = kmmoy;
+    public void setKm_moy(Double km_moy) {
+        this.km_moy = km_moy;
     }
 
     public Integer getCodstat() {
@@ -386,28 +386,28 @@ public class MachineDTO implements Serializable {
         this.edition = edition;
     }
 
-    public Integer getValassur() {
-        return valassur;
+    public Integer getVal_assur() {
+        return val_assur;
     }
 
-    public void setValassur(Integer valassur) {
-        this.valassur = valassur;
+    public void setVal_assur(Integer val_assur) {
+        this.val_assur = val_assur;
     }
 
-    public Integer getValamort() {
-        return valamort;
+    public Integer getVal_amort() {
+        return val_amort;
     }
 
-    public void setValamort(Integer valamort) {
-        this.valamort = valamort;
+    public void setVal_amort(Integer val_amort) {
+        this.val_amort = val_amort;
     }
 
-    public Integer getConsommodel() {
-        return consommodel;
+    public Integer getConsom_model() {
+        return consom_model;
     }
 
-    public void setConsommodel(Integer consommodel) {
-        this.consommodel = consommodel;
+    public void setConsom_model(Integer consom_model) {
+        this.consom_model = consom_model;
     }
 
     public String getDecetat() {
@@ -474,20 +474,20 @@ public class MachineDTO implements Serializable {
         this.gps = gps;
     }
 
-    public String getMarquebv() {
-        return marquebv;
+    public String getMarque_bv() {
+        return marque_bv;
     }
 
-    public void setMarquebv(String marquebv) {
-        this.marquebv = marquebv;
+    public void setMarque_bv(String marque_bv) {
+        this.marque_bv = marque_bv;
     }
 
-    public String getTypboite() {
-        return typboite;
+    public String getTyp_boite() {
+        return typ_boite;
     }
 
-    public void setTypboite(String typboite) {
-        this.typboite = typboite;
+    public void setTyp_boite(String typ_boite) {
+        this.typ_boite = typ_boite;
     }
 
     @Override
@@ -520,39 +520,39 @@ public class MachineDTO implements Serializable {
             ", cdmod='" + getCdmod() + "'" +
             ", cdmarque='" + getCdmarque() + "'" +
             ", lbmac='" + getLbmac() + "'" +
-            ", refmac='" + getRefmac() + "'" +
+            ", refmac='" + getRef_mac() + "'" +
             ", serie='" + getSerie() + "'" +
-            ", datfab='" + getDatfab() + "'" +
-            ", datacq='" + getDatacq() + "'" +
-            ", datmes='" + getDatmes() + "'" +
-            ", valacq=" + getValacq() +
+            ", datfab='" + getDat_fab() + "'" +
+            ", datacq='" + getDat_acq() + "'" +
+            ", datmes='" + getDat_mes() + "'" +
+            ", valacq=" + getVal_acq() +
             ", obs='" + getObs() + "'" +
             ", numplan='" + getNumplan() + "'" +
             ", cdlipro='" + getCdlipro() + "'" +
             ", immat='" + getImmat() + "'" +
             ", marque='" + getMarque() + "'" +
-            ", typev='" + getTypev() + "'" +
-            ", numser='" + getNumser() + "'" +
+            ", typev='" + getType_v() + "'" +
+            ", numser='" + getNum_ser() + "'" +
             ", puiss='" + getPuiss() + "'" +
             ", nrj='" + getNrj() + "'" +
             ", genre='" + getGenre() + "'" +
             ", cylind=" + getCylind() +
-            ", pdsvid=" + getPdsvid() +
+            ", pdsvid=" + getPds_vid() +
             ", charge=" + getCharge() +
-            ", plcass=" + getPlcass() +
-            ", plcdeb=" + getPlcdeb() +
+            ", plcass=" + getPlc_ass() +
+            ", plcdeb=" + getPlc_deb() +
             ", cpt=" + getCpt() +
-            ", cptmnt=" + getCptmnt() +
+            ", cptmnt=" + getCpt_mnt() +
             ", actif=" + getActif() +
-            ", datact='" + getDatact() + "'" +
+            ", datact='" + getDat_act() + "'" +
             ", cdcatvh='" + getCdcatvh() + "'" +
             ", taux=" + getTaux() +
-            ", kmmoy=" + getKmmoy() +
+            ", kmmoy=" + getKm_moy() +
             ", codstat=" + getCodstat() +
             ", edition='" + getEdition() + "'" +
-            ", valassur=" + getValassur() +
-            ", valamort=" + getValamort() +
-            ", consommodel=" + getConsommodel() +
+            ", valassur=" + getVal_assur() +
+            ", valamort=" + getVal_amort() +
+            ", consommodel=" + getConsom_model() +
             ", decetat='" + getDecetat() + "'" +
             ", codtypvoit='" + getCodtypvoit() + "'" +
             ", cdtyp='" + getCdtyp() + "'" +
@@ -561,8 +561,8 @@ public class MachineDTO implements Serializable {
             ", cdtypbv='" + getCdtypbv() + "'" +
             ", pneu='" + getPneu() + "'" +
             ", gps='" + getGps() + "'" +
-            ", marquebv='" + getMarquebv() + "'" +
-            ", typboite='" + getTypboite() + "'" +
+            ", marquebv='" + getMarque_bv() + "'" +
+            ", typboite='" + getTyp_boite() + "'" +
             "}";
     }
 }

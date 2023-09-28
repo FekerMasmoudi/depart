@@ -65,7 +65,7 @@ class AgenceResourceIT {
             .deccent(DEFAULT_DECCENT)
             .decagenc(DEFAULT_DECAGENC)
             .delagenc(DEFAULT_DELAGENC)
-            .defaultagenc(DEFAULT_DEFAULTAGENC);
+            .default_agenc(DEFAULT_DEFAULTAGENC);
         return agence;
     }
 
@@ -80,7 +80,7 @@ class AgenceResourceIT {
             .deccent(UPDATED_DECCENT)
             .decagenc(UPDATED_DECAGENC)
             .delagenc(UPDATED_DELAGENC)
-            .defaultagenc(UPDATED_DEFAULTAGENC);
+            .default_agenc(UPDATED_DEFAULTAGENC);
         return agence;
     }
 
@@ -106,7 +106,7 @@ class AgenceResourceIT {
         assertThat(testAgence.getDeccent()).isEqualTo(DEFAULT_DECCENT);
         assertThat(testAgence.getDecagenc()).isEqualTo(DEFAULT_DECAGENC);
         assertThat(testAgence.getDelagenc()).isEqualTo(DEFAULT_DELAGENC);
-        assertThat(testAgence.getDefaultagenc()).isEqualTo(DEFAULT_DEFAULTAGENC);
+        assertThat(testAgence.getDefault_agenc()).isEqualTo(DEFAULT_DEFAULTAGENC);
     }
 
     @Test
@@ -210,7 +210,7 @@ class AgenceResourceIT {
 
         // Update the agence
         Agence updatedAgence = agenceRepository.findById(agence.getId()).get();
-        updatedAgence.deccent(UPDATED_DECCENT).decagenc(UPDATED_DECAGENC).delagenc(UPDATED_DELAGENC).defaultagenc(UPDATED_DEFAULTAGENC);
+        updatedAgence.deccent(UPDATED_DECCENT).decagenc(UPDATED_DECAGENC).delagenc(UPDATED_DELAGENC).default_agenc(UPDATED_DEFAULTAGENC);
         AgenceDTO agenceDTO = agenceMapper.toDto(updatedAgence);
 
         restAgenceMockMvc
@@ -228,7 +228,7 @@ class AgenceResourceIT {
         assertThat(testAgence.getDeccent()).isEqualTo(UPDATED_DECCENT);
         assertThat(testAgence.getDecagenc()).isEqualTo(UPDATED_DECAGENC);
         assertThat(testAgence.getDelagenc()).isEqualTo(UPDATED_DELAGENC);
-        assertThat(testAgence.getDefaultagenc()).isEqualTo(UPDATED_DEFAULTAGENC);
+        assertThat(testAgence.getDefault_agenc()).isEqualTo(UPDATED_DEFAULTAGENC);
     }
 
     @Test
@@ -304,7 +304,7 @@ class AgenceResourceIT {
         Agence partialUpdatedAgence = new Agence();
         partialUpdatedAgence.setId(agence.getId());
 
-        partialUpdatedAgence.delagenc(UPDATED_DELAGENC).defaultagenc(UPDATED_DEFAULTAGENC);
+        partialUpdatedAgence.delagenc(UPDATED_DELAGENC).default_agenc(UPDATED_DEFAULTAGENC);
 
         restAgenceMockMvc
             .perform(
@@ -321,7 +321,7 @@ class AgenceResourceIT {
         assertThat(testAgence.getDeccent()).isEqualTo(DEFAULT_DECCENT);
         assertThat(testAgence.getDecagenc()).isEqualTo(DEFAULT_DECAGENC);
         assertThat(testAgence.getDelagenc()).isEqualTo(UPDATED_DELAGENC);
-        assertThat(testAgence.getDefaultagenc()).isEqualTo(UPDATED_DEFAULTAGENC);
+        assertThat(testAgence.getDefault_agenc()).isEqualTo(UPDATED_DEFAULTAGENC);
     }
 
     @Test
@@ -339,7 +339,7 @@ class AgenceResourceIT {
             .deccent(UPDATED_DECCENT)
             .decagenc(UPDATED_DECAGENC)
             .delagenc(UPDATED_DELAGENC)
-            .defaultagenc(UPDATED_DEFAULTAGENC);
+            .default_agenc(UPDATED_DEFAULTAGENC);
 
         restAgenceMockMvc
             .perform(
@@ -356,7 +356,7 @@ class AgenceResourceIT {
         assertThat(testAgence.getDeccent()).isEqualTo(UPDATED_DECCENT);
         assertThat(testAgence.getDecagenc()).isEqualTo(UPDATED_DECAGENC);
         assertThat(testAgence.getDelagenc()).isEqualTo(UPDATED_DELAGENC);
-        assertThat(testAgence.getDefaultagenc()).isEqualTo(UPDATED_DEFAULTAGENC);
+        assertThat(testAgence.getDefault_agenc()).isEqualTo(UPDATED_DEFAULTAGENC);
     }
 
     @Test

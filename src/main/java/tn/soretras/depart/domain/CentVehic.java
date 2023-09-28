@@ -22,7 +22,7 @@ public class CentVehic implements Serializable {
     private String cdmac;
 
     @Field("dateff")
-    private LocalDate dateff;
+    private String dat_eff;
 
     @Field("deccent")
     private Integer deccent;
@@ -34,14 +34,6 @@ public class CentVehic implements Serializable {
 
     public String getId() {
         return this.id;
-    }
-
-    public CentVehic(String id, String cdmac, LocalDate dateff, Integer deccent, Integer decagenc) {
-        this.id = id;
-        this.cdmac = cdmac;
-        this.dateff = dateff;
-        this.deccent = deccent;
-        this.decagenc = decagenc;
     }
 
     public CentVehic() {}
@@ -68,17 +60,17 @@ public class CentVehic implements Serializable {
         this.cdmac = cdmac;
     }
 
-    public LocalDate getDateff() {
-        return this.dateff;
+    public String getDat_eff() {
+        return this.dat_eff;
     }
 
-    public CentVehic dateff(LocalDate dateff) {
-        this.setDateff(dateff);
+    public CentVehic dat_eff(String dat_eff) {
+        this.setDat_eff(dat_eff);
         return this;
     }
 
-    public void setDateff(LocalDate dateff) {
-        this.dateff = dateff;
+    public void setDat_eff(String dat_eff) {
+        this.dat_eff = dat_eff;
     }
 
     public Integer getDeccent() {
@@ -132,7 +124,7 @@ public class CentVehic implements Serializable {
         return "CentVehic{" +
             "id=" + getId() +
             ", cdmac='" + getCdmac() + "'" +
-            ", dateff='" + getDateff() + "'" +
+            ", dateff='" + getDat_eff() + "'" +
             ", deccent=" + getDeccent() +
             ", decagenc=" + getDecagenc() +
             "}";

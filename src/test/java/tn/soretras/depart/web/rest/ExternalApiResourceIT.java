@@ -45,11 +45,11 @@ class ExternalApiResourceIT {
     private static final Integer DEFAULT_IDSCHEMA = 1;
     private static final Integer UPDATED_IDSCHEMA = 2;
 
-    private static final LocalDate DEFAULT_DATECREATEDT = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_DATECREATEDT = LocalDate.now(ZoneId.systemDefault());
+    private static final String DEFAULT_DATECREATEDT = "";
+    private static final String UPDATED_DATECREATEDT = "";
 
-    private static final LocalDate DEFAULT_LASTUPDATEDM = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_LASTUPDATEDM = LocalDate.now(ZoneId.systemDefault());
+    private static final String DEFAULT_LASTUPDATEDM = "";
+    private static final String UPDATED_LASTUPDATEDM = "";
 
     private static final String DEFAULT_ORIGIN = "AAAAAAAAAA";
     private static final String UPDATED_ORIGIN = "BBBBBBBBBB";
@@ -69,11 +69,11 @@ class ExternalApiResourceIT {
     private static final Integer DEFAULT_SCHEMAIDT = 1;
     private static final Integer UPDATED_SCHEMAIDT = 2;
 
-    private static final LocalDate DEFAULT_CREATEDATET = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_CREATEDATET = LocalDate.now(ZoneId.systemDefault());
+    private static final String DEFAULT_CREATEDATET = "";
+    private static final String UPDATED_CREATEDATET = "";
 
-    private static final LocalDate DEFAULT_LASTUPDATETE = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_LASTUPDATETE = LocalDate.now(ZoneId.systemDefault());
+    private static final String DEFAULT_LASTUPDATETE = "";
+    private static final String UPDATED_LASTUPDATETE = "";
 
     private static final String DEFAULT_ENTITY = "AAAAAAAAAA";
     private static final String UPDATED_ENTITY = "BBBBBBBBBB";
@@ -122,17 +122,17 @@ class ExternalApiResourceIT {
             .name(DEFAULT_NAME)
             .status(DEFAULT_STATUS)
             .comments(DEFAULT_COMMENTS)
-            .idschema(DEFAULT_IDSCHEMA)
-            .datecreatedt(DEFAULT_DATECREATEDT)
-            .lastupdatedm(DEFAULT_LASTUPDATEDM)
+            .id_schema(DEFAULT_IDSCHEMA)
+            .date_created_t(DEFAULT_DATECREATEDT)
+            .last_updated_m(DEFAULT_LASTUPDATEDM)
             .origin(DEFAULT_ORIGIN)
-            .templateid(DEFAULT_TEMPLATEID)
-            .idmodule(DEFAULT_IDMODULE)
-            .uritemplate(DEFAULT_URITEMPLATE)
+            .template_id(DEFAULT_TEMPLATEID)
+            .id_module(DEFAULT_IDMODULE)
+            .uri_template(DEFAULT_URITEMPLATE)
             .priority(DEFAULT_PRIORITY)
-            .schemaidt(DEFAULT_SCHEMAIDT)
-            .createdatet(DEFAULT_CREATEDATET)
-            .lastupdatete(DEFAULT_LASTUPDATETE)
+            .schema_id_t(DEFAULT_SCHEMAIDT)
+            .create_date_t(DEFAULT_CREATEDATET)
+            .lat_update_te(DEFAULT_LASTUPDATETE)
             .entity(DEFAULT_ENTITY)
             .parametre(DEFAULT_PARAMETRE)
             .countrowsreq(DEFAULT_COUNTROWSREQ)
@@ -155,17 +155,17 @@ class ExternalApiResourceIT {
             .name(UPDATED_NAME)
             .status(UPDATED_STATUS)
             .comments(UPDATED_COMMENTS)
-            .idschema(UPDATED_IDSCHEMA)
-            .datecreatedt(UPDATED_DATECREATEDT)
-            .lastupdatedm(UPDATED_LASTUPDATEDM)
+            .id_schema(UPDATED_IDSCHEMA)
+            .date_created_t(UPDATED_DATECREATEDT)
+            .last_updated_m(UPDATED_LASTUPDATEDM)
             .origin(UPDATED_ORIGIN)
-            .templateid(UPDATED_TEMPLATEID)
-            .idmodule(UPDATED_IDMODULE)
-            .uritemplate(UPDATED_URITEMPLATE)
+            .template_id(UPDATED_TEMPLATEID)
+            .id_module(UPDATED_IDMODULE)
+            .uri_template(UPDATED_URITEMPLATE)
             .priority(UPDATED_PRIORITY)
-            .schemaidt(UPDATED_SCHEMAIDT)
-            .createdatet(UPDATED_CREATEDATET)
-            .lastupdatete(UPDATED_LASTUPDATETE)
+            .schema_id_t(UPDATED_SCHEMAIDT)
+            .create_date_t(UPDATED_CREATEDATET)
+            .lat_update_te(UPDATED_LASTUPDATETE)
             .entity(UPDATED_ENTITY)
             .parametre(UPDATED_PARAMETRE)
             .countrowsreq(UPDATED_COUNTROWSREQ)
@@ -201,17 +201,17 @@ class ExternalApiResourceIT {
         assertThat(testExternalApi.getName()).isEqualTo(DEFAULT_NAME);
         assertThat(testExternalApi.getStatus()).isEqualTo(DEFAULT_STATUS);
         assertThat(testExternalApi.getComments()).isEqualTo(DEFAULT_COMMENTS);
-        assertThat(testExternalApi.getIdschema()).isEqualTo(DEFAULT_IDSCHEMA);
-        assertThat(testExternalApi.getDatecreatedt()).isEqualTo(DEFAULT_DATECREATEDT);
-        assertThat(testExternalApi.getLastupdatedm()).isEqualTo(DEFAULT_LASTUPDATEDM);
+        assertThat(testExternalApi.getId_schema()).isEqualTo(DEFAULT_IDSCHEMA);
+        assertThat(testExternalApi.getDate_created_t()).isEqualTo(DEFAULT_DATECREATEDT);
+        assertThat(testExternalApi.getLast_updated_m()).isEqualTo(DEFAULT_LASTUPDATEDM);
         assertThat(testExternalApi.getOrigin()).isEqualTo(DEFAULT_ORIGIN);
-        assertThat(testExternalApi.getTemplateid()).isEqualTo(DEFAULT_TEMPLATEID);
-        assertThat(testExternalApi.getIdmodule()).isEqualTo(DEFAULT_IDMODULE);
-        assertThat(testExternalApi.getUritemplate()).isEqualTo(DEFAULT_URITEMPLATE);
+        assertThat(testExternalApi.getTemplate_id()).isEqualTo(DEFAULT_TEMPLATEID);
+        assertThat(testExternalApi.getId_module()).isEqualTo(DEFAULT_IDMODULE);
+        assertThat(testExternalApi.getUri_template()).isEqualTo(DEFAULT_URITEMPLATE);
         assertThat(testExternalApi.getPriority()).isEqualTo(DEFAULT_PRIORITY);
-        assertThat(testExternalApi.getSchemaidt()).isEqualTo(DEFAULT_SCHEMAIDT);
-        assertThat(testExternalApi.getCreatedatet()).isEqualTo(DEFAULT_CREATEDATET);
-        assertThat(testExternalApi.getLastupdatete()).isEqualTo(DEFAULT_LASTUPDATETE);
+        assertThat(testExternalApi.getSchema_id_t()).isEqualTo(DEFAULT_SCHEMAIDT);
+        assertThat(testExternalApi.getCreate_date_t()).isEqualTo(DEFAULT_CREATEDATET);
+        assertThat(testExternalApi.getLat_update_te()).isEqualTo(DEFAULT_LASTUPDATETE);
         assertThat(testExternalApi.getEntity()).isEqualTo(DEFAULT_ENTITY);
         assertThat(testExternalApi.getParametre()).isEqualTo(DEFAULT_PARAMETRE);
         assertThat(testExternalApi.getCountrowsreq()).isEqualTo(DEFAULT_COUNTROWSREQ);
@@ -331,17 +331,17 @@ class ExternalApiResourceIT {
             .name(UPDATED_NAME)
             .status(UPDATED_STATUS)
             .comments(UPDATED_COMMENTS)
-            .idschema(UPDATED_IDSCHEMA)
-            .datecreatedt(UPDATED_DATECREATEDT)
-            .lastupdatedm(UPDATED_LASTUPDATEDM)
+            .id_schema(UPDATED_IDSCHEMA)
+            .date_created_t(UPDATED_DATECREATEDT)
+            .last_updated_m(UPDATED_LASTUPDATEDM)
             .origin(UPDATED_ORIGIN)
-            .templateid(UPDATED_TEMPLATEID)
-            .idmodule(UPDATED_IDMODULE)
-            .uritemplate(UPDATED_URITEMPLATE)
+            .template_id(UPDATED_TEMPLATEID)
+            .id_module(UPDATED_IDMODULE)
+            .uri_template(UPDATED_URITEMPLATE)
             .priority(UPDATED_PRIORITY)
-            .schemaidt(UPDATED_SCHEMAIDT)
-            .createdatet(UPDATED_CREATEDATET)
-            .lastupdatete(UPDATED_LASTUPDATETE)
+            .schema_id_t(UPDATED_SCHEMAIDT)
+            .create_date_t(UPDATED_CREATEDATET)
+            .lat_update_te(UPDATED_LASTUPDATETE)
             .entity(UPDATED_ENTITY)
             .parametre(UPDATED_PARAMETRE)
             .countrowsreq(UPDATED_COUNTROWSREQ)
@@ -367,17 +367,17 @@ class ExternalApiResourceIT {
         assertThat(testExternalApi.getName()).isEqualTo(UPDATED_NAME);
         assertThat(testExternalApi.getStatus()).isEqualTo(UPDATED_STATUS);
         assertThat(testExternalApi.getComments()).isEqualTo(UPDATED_COMMENTS);
-        assertThat(testExternalApi.getIdschema()).isEqualTo(UPDATED_IDSCHEMA);
-        assertThat(testExternalApi.getDatecreatedt()).isEqualTo(UPDATED_DATECREATEDT);
-        assertThat(testExternalApi.getLastupdatedm()).isEqualTo(UPDATED_LASTUPDATEDM);
+        assertThat(testExternalApi.getId_schema()).isEqualTo(UPDATED_IDSCHEMA);
+        assertThat(testExternalApi.getDate_created_t()).isEqualTo(UPDATED_DATECREATEDT);
+        assertThat(testExternalApi.getLast_updated_m()).isEqualTo(UPDATED_LASTUPDATEDM);
         assertThat(testExternalApi.getOrigin()).isEqualTo(UPDATED_ORIGIN);
-        assertThat(testExternalApi.getTemplateid()).isEqualTo(UPDATED_TEMPLATEID);
-        assertThat(testExternalApi.getIdmodule()).isEqualTo(UPDATED_IDMODULE);
-        assertThat(testExternalApi.getUritemplate()).isEqualTo(UPDATED_URITEMPLATE);
+        assertThat(testExternalApi.getTemplate_id()).isEqualTo(UPDATED_TEMPLATEID);
+        assertThat(testExternalApi.getId_module()).isEqualTo(UPDATED_IDMODULE);
+        assertThat(testExternalApi.getUri_template()).isEqualTo(UPDATED_URITEMPLATE);
         assertThat(testExternalApi.getPriority()).isEqualTo(UPDATED_PRIORITY);
-        assertThat(testExternalApi.getSchemaidt()).isEqualTo(UPDATED_SCHEMAIDT);
-        assertThat(testExternalApi.getCreatedatet()).isEqualTo(UPDATED_CREATEDATET);
-        assertThat(testExternalApi.getLastupdatete()).isEqualTo(UPDATED_LASTUPDATETE);
+        assertThat(testExternalApi.getSchema_id_t()).isEqualTo(UPDATED_SCHEMAIDT);
+        assertThat(testExternalApi.getCreate_date_t()).isEqualTo(UPDATED_CREATEDATET);
+        assertThat(testExternalApi.getLat_update_te()).isEqualTo(UPDATED_LASTUPDATETE);
         assertThat(testExternalApi.getEntity()).isEqualTo(UPDATED_ENTITY);
         assertThat(testExternalApi.getParametre()).isEqualTo(UPDATED_PARAMETRE);
         assertThat(testExternalApi.getCountrowsreq()).isEqualTo(UPDATED_COUNTROWSREQ);
@@ -461,13 +461,13 @@ class ExternalApiResourceIT {
         partialUpdatedExternalApi.setId(externalApi.getId());
 
         partialUpdatedExternalApi
-            .idschema(UPDATED_IDSCHEMA)
-            .lastupdatedm(UPDATED_LASTUPDATEDM)
+            .id_schema(UPDATED_IDSCHEMA)
+            .last_updated_m(UPDATED_LASTUPDATEDM)
             .origin(UPDATED_ORIGIN)
-            .idmodule(UPDATED_IDMODULE)
+            .id_module(UPDATED_IDMODULE)
             .priority(UPDATED_PRIORITY)
-            .createdatet(UPDATED_CREATEDATET)
-            .lastupdatete(UPDATED_LASTUPDATETE)
+            .create_date_t(UPDATED_CREATEDATET)
+            .lat_update_te(UPDATED_LASTUPDATETE)
             .countrowsreq(UPDATED_COUNTROWSREQ)
             .satausgetapi(UPDATED_SATAUSGETAPI);
 
@@ -487,17 +487,17 @@ class ExternalApiResourceIT {
         assertThat(testExternalApi.getName()).isEqualTo(DEFAULT_NAME);
         assertThat(testExternalApi.getStatus()).isEqualTo(DEFAULT_STATUS);
         assertThat(testExternalApi.getComments()).isEqualTo(DEFAULT_COMMENTS);
-        assertThat(testExternalApi.getIdschema()).isEqualTo(UPDATED_IDSCHEMA);
-        assertThat(testExternalApi.getDatecreatedt()).isEqualTo(DEFAULT_DATECREATEDT);
-        assertThat(testExternalApi.getLastupdatedm()).isEqualTo(UPDATED_LASTUPDATEDM);
+        assertThat(testExternalApi.getId_schema()).isEqualTo(UPDATED_IDSCHEMA);
+        assertThat(testExternalApi.getDate_created_t()).isEqualTo(DEFAULT_DATECREATEDT);
+        assertThat(testExternalApi.getLast_updated_m()).isEqualTo(UPDATED_LASTUPDATEDM);
         assertThat(testExternalApi.getOrigin()).isEqualTo(UPDATED_ORIGIN);
-        assertThat(testExternalApi.getTemplateid()).isEqualTo(DEFAULT_TEMPLATEID);
-        assertThat(testExternalApi.getIdmodule()).isEqualTo(UPDATED_IDMODULE);
-        assertThat(testExternalApi.getUritemplate()).isEqualTo(DEFAULT_URITEMPLATE);
+        assertThat(testExternalApi.getTemplate_id()).isEqualTo(DEFAULT_TEMPLATEID);
+        assertThat(testExternalApi.getId_module()).isEqualTo(UPDATED_IDMODULE);
+        assertThat(testExternalApi.getUri_template()).isEqualTo(DEFAULT_URITEMPLATE);
         assertThat(testExternalApi.getPriority()).isEqualTo(UPDATED_PRIORITY);
-        assertThat(testExternalApi.getSchemaidt()).isEqualTo(DEFAULT_SCHEMAIDT);
-        assertThat(testExternalApi.getCreatedatet()).isEqualTo(UPDATED_CREATEDATET);
-        assertThat(testExternalApi.getLastupdatete()).isEqualTo(UPDATED_LASTUPDATETE);
+        assertThat(testExternalApi.getSchema_id_t()).isEqualTo(DEFAULT_SCHEMAIDT);
+        assertThat(testExternalApi.getCreate_date_t()).isEqualTo(UPDATED_CREATEDATET);
+        assertThat(testExternalApi.getLat_update_te()).isEqualTo(UPDATED_LASTUPDATETE);
         assertThat(testExternalApi.getEntity()).isEqualTo(DEFAULT_ENTITY);
         assertThat(testExternalApi.getParametre()).isEqualTo(DEFAULT_PARAMETRE);
         assertThat(testExternalApi.getCountrowsreq()).isEqualTo(UPDATED_COUNTROWSREQ);
@@ -523,17 +523,17 @@ class ExternalApiResourceIT {
             .name(UPDATED_NAME)
             .status(UPDATED_STATUS)
             .comments(UPDATED_COMMENTS)
-            .idschema(UPDATED_IDSCHEMA)
-            .datecreatedt(UPDATED_DATECREATEDT)
-            .lastupdatedm(UPDATED_LASTUPDATEDM)
+            .id_schema(UPDATED_IDSCHEMA)
+            .date_created_t(UPDATED_DATECREATEDT)
+            .last_updated_m(UPDATED_LASTUPDATEDM)
             .origin(UPDATED_ORIGIN)
-            .templateid(UPDATED_TEMPLATEID)
-            .idmodule(UPDATED_IDMODULE)
-            .uritemplate(UPDATED_URITEMPLATE)
+            .template_id(UPDATED_TEMPLATEID)
+            .id_module(UPDATED_IDMODULE)
+            .uri_template(UPDATED_URITEMPLATE)
             .priority(UPDATED_PRIORITY)
-            .schemaidt(UPDATED_SCHEMAIDT)
-            .createdatet(UPDATED_CREATEDATET)
-            .lastupdatete(UPDATED_LASTUPDATETE)
+            .schema_id_t(UPDATED_SCHEMAIDT)
+            .create_date_t(UPDATED_CREATEDATET)
+            .lat_update_te(UPDATED_LASTUPDATETE)
             .entity(UPDATED_ENTITY)
             .parametre(UPDATED_PARAMETRE)
             .countrowsreq(UPDATED_COUNTROWSREQ)
@@ -558,17 +558,17 @@ class ExternalApiResourceIT {
         assertThat(testExternalApi.getName()).isEqualTo(UPDATED_NAME);
         assertThat(testExternalApi.getStatus()).isEqualTo(UPDATED_STATUS);
         assertThat(testExternalApi.getComments()).isEqualTo(UPDATED_COMMENTS);
-        assertThat(testExternalApi.getIdschema()).isEqualTo(UPDATED_IDSCHEMA);
-        assertThat(testExternalApi.getDatecreatedt()).isEqualTo(UPDATED_DATECREATEDT);
-        assertThat(testExternalApi.getLastupdatedm()).isEqualTo(UPDATED_LASTUPDATEDM);
+        assertThat(testExternalApi.getId_schema()).isEqualTo(UPDATED_IDSCHEMA);
+        assertThat(testExternalApi.getDate_created_t()).isEqualTo(UPDATED_DATECREATEDT);
+        assertThat(testExternalApi.getLast_updated_m()).isEqualTo(UPDATED_LASTUPDATEDM);
         assertThat(testExternalApi.getOrigin()).isEqualTo(UPDATED_ORIGIN);
-        assertThat(testExternalApi.getTemplateid()).isEqualTo(UPDATED_TEMPLATEID);
-        assertThat(testExternalApi.getIdmodule()).isEqualTo(UPDATED_IDMODULE);
-        assertThat(testExternalApi.getUritemplate()).isEqualTo(UPDATED_URITEMPLATE);
+        assertThat(testExternalApi.getTemplate_id()).isEqualTo(UPDATED_TEMPLATEID);
+        assertThat(testExternalApi.getId_module()).isEqualTo(UPDATED_IDMODULE);
+        assertThat(testExternalApi.getUri_template()).isEqualTo(UPDATED_URITEMPLATE);
         assertThat(testExternalApi.getPriority()).isEqualTo(UPDATED_PRIORITY);
-        assertThat(testExternalApi.getSchemaidt()).isEqualTo(UPDATED_SCHEMAIDT);
-        assertThat(testExternalApi.getCreatedatet()).isEqualTo(UPDATED_CREATEDATET);
-        assertThat(testExternalApi.getLastupdatete()).isEqualTo(UPDATED_LASTUPDATETE);
+        assertThat(testExternalApi.getSchema_id_t()).isEqualTo(UPDATED_SCHEMAIDT);
+        assertThat(testExternalApi.getCreate_date_t()).isEqualTo(UPDATED_CREATEDATET);
+        assertThat(testExternalApi.getLat_update_te()).isEqualTo(UPDATED_LASTUPDATETE);
         assertThat(testExternalApi.getEntity()).isEqualTo(UPDATED_ENTITY);
         assertThat(testExternalApi.getParametre()).isEqualTo(UPDATED_PARAMETRE);
         assertThat(testExternalApi.getCountrowsreq()).isEqualTo(UPDATED_COUNTROWSREQ);

@@ -12,9 +12,6 @@ public class MotifaDTO implements Serializable {
 
     private String id;
 
-    @NotNull
-    private Integer decmotif;
-
     private String libmotif;
 
     public String getId() {
@@ -23,14 +20,6 @@ public class MotifaDTO implements Serializable {
 
     public void setId(String id) {
         this.id = id;
-    }
-
-    public Integer getDecmotif() {
-        return decmotif;
-    }
-
-    public void setDecmotif(Integer decmotif) {
-        this.decmotif = decmotif;
     }
 
     public String getLibmotif() {
@@ -67,7 +56,6 @@ public class MotifaDTO implements Serializable {
     public String toString() {
         return "MotifaDTO{" +
             "id='" + getId() + "'" +
-            ", decmotif=" + getDecmotif() +
             ", libmotif='" + getLibmotif() + "'" +
             "}";
     }

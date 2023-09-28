@@ -3,27 +3,7 @@
     <span jhiTranslate="departdbApp.depart.home.title">Departs</span>
 
     <div class="d-flex justify-content-end">
-      <button type="submit" [routerLink]="['/depart', 'view']" class="btn btn-info me-2" data-cy="entityDetailsButton">
-        <fa-icon icon="eye"></fa-icon>
-        <span class="d-none d-md-inline" jhiTranslate="entity.action.resagent">Reserve agents</span>
-      </button>
-
-      <button type="submit" class="btn btn-danger me-2" data-cy="entityDeleteButton">
-        <fa-icon icon="times"></fa-icon>
-        <span class="d-none d-md-inline" jhiTranslate="entity.action.absagents">Absentee agents</span>
-      </button>
-
-      <button type="submit" [routerLink]="['/depart', 'edit']" class="btn btn-primary me-2" data-cy="entityEditButton">
-        <fa-icon icon="pencil-alt"></fa-icon>
-        <span class="d-none d-md-inline" jhiTranslate="entity.action.offwrest">Officers on weekly rest</span>
-      </button>
-
-      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
-        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
-        <span jhiTranslate="departdbApp.depart.home.refreshListLabel">Refresh list</span>
-      </button>
-
-      <button
+      <!--<button
         id="jh-create-entity"
         data-cy="entityCreateButton"
         class="btn btn-primary jh-create-entity create-depart"
@@ -31,7 +11,33 @@
       >
         <fa-icon icon="plus"></fa-icon>
         <span jhiTranslate="departdbApp.depart.home.createLabel"> Create a new Depart </span>
+      </button>-->
+
+      <button class="btn btn-info me-2" (click)="load()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span jhiTranslate="departdbApp.depart.home.refreshListLabel">Refresh list</span>
       </button>
+
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <!--<mat-icon>more_vert</mat-icon>-->
+        <img src="../../../../content/images/icons8-menu-30.png" alt="menu" />
+      </button>
+      <mat-menu #menu="matMenu">
+        <button type="submit" [routerLink]="['/depart', 'view']" class="btn btn-info me-2" data-cy="entityDetailsButton">
+          <fa-icon icon="eye"></fa-icon>
+          <span class="d-none d-md-inline" jhiTranslate="entity.action.resagent">Reserve agents</span>
+        </button>
+
+        <button type="submit" class="btn btn-danger me-2" data-cy="entityDeleteButton">
+          <fa-icon icon="times"></fa-icon>
+          <span class="d-none d-md-inline" jhiTranslate="entity.action.absagents">Absentee agents</span>
+        </button>
+
+        <button type="submit" [routerLink]="['/depart', 'edit']" class="btn btn-primary me-2" data-cy="entityEditButton">
+          <fa-icon icon="pencil-alt"></fa-icon>
+          <span class="d-none d-md-inline" jhiTranslate="entity.action.offwrest">Officers on weekly rest</span>
+        </button>
+      </mat-menu>
     </div>
   </h2>
 
@@ -330,7 +336,7 @@
           <td>{{ depart.deannul }}</td>-->
           <td>{{ depart.decclot }}</td>
           <!--<td>{{ depart.execute }}</td>-->
-          <td>{{ depart.motifa }}</td>
+          <td>{{ depart.motif_a }}</td>
           <!--<td>{{ depart.observ }}</td>
           <td>{{ depart.recettes }}</td>
           <td>{{ depart.nbrevoy }}</td>
@@ -351,14 +357,14 @@
               style="margin: 0 12px"
               (click)="openDialog(depart)"
               *ngIf="depart.deannul == '1'"
-              style="background-color: red"
+              style="background-color: rgba(239, 13, 13, 0.846)"
               checked="true"
             ></mat-checkbox>
             <mat-checkbox
               style="margin: 0 12px"
               (click)="openDialog(depart)"
               *ngIf="depart.deannul == '0' || depart.deannul == null"
-              style="background-color: orange"
+              style="background-color: rgba(238, 162, 20, 0.904)"
             ></mat-checkbox>
           </td>
 
@@ -371,7 +377,7 @@
               style="margin: 0 12px"
               (click)="checkValid(depart)"
               *ngIf="depart.execute == '1'"
-              style="background-color: green"
+              style="background-color: rgba(17, 222, 17, 0.909)"
             ></mat-checkbox>
             <mat-checkbox
               style="margin: 0 12px"

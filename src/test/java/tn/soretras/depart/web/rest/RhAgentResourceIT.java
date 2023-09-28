@@ -36,8 +36,8 @@ class RhAgentResourceIT {
     private static final String DEFAULT_DECJOUR = "AAAAAAAAAA";
     private static final String UPDATED_DECJOUR = "BBBBBBBBBB";
 
-    private static final LocalDate DEFAULT_DATEFFRH = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_DATEFFRH = LocalDate.now(ZoneId.systemDefault());
+    private static final String DEFAULT_DATEFFRH = "2022-08-22T23:00:00Z";
+    private static final String UPDATED_DATEFFRH = "2022-08-22T23:00:00Z";
 
     private static final String DEFAULT_DECOPER = "AAAAAAAAAA";
     private static final String UPDATED_DECOPER = "BBBBBBBBBB";
@@ -72,7 +72,7 @@ class RhAgentResourceIT {
         RhAgent rhAgent = new RhAgent()
             .matric(DEFAULT_MATRIC)
             .decjour(DEFAULT_DECJOUR)
-            .dateffrh(DEFAULT_DATEFFRH)
+            .dat_eff_rh(DEFAULT_DATEFFRH)
             .decoper(DEFAULT_DECOPER)
             .deccent(DEFAULT_DECCENT)
             .decagenc(DEFAULT_DECAGENC);
@@ -89,7 +89,7 @@ class RhAgentResourceIT {
         RhAgent rhAgent = new RhAgent()
             .matric(UPDATED_MATRIC)
             .decjour(UPDATED_DECJOUR)
-            .dateffrh(UPDATED_DATEFFRH)
+            .dat_eff_rh(UPDATED_DATEFFRH)
             .decoper(UPDATED_DECOPER)
             .deccent(UPDATED_DECCENT)
             .decagenc(UPDATED_DECAGENC);
@@ -117,7 +117,7 @@ class RhAgentResourceIT {
         RhAgent testRhAgent = rhAgentList.get(rhAgentList.size() - 1);
         assertThat(testRhAgent.getMatric()).isEqualTo(DEFAULT_MATRIC);
         assertThat(testRhAgent.getDecjour()).isEqualTo(DEFAULT_DECJOUR);
-        assertThat(testRhAgent.getDateffrh()).isEqualTo(DEFAULT_DATEFFRH);
+        assertThat(testRhAgent.getDat_eff_rh()).isEqualTo(DEFAULT_DATEFFRH);
         assertThat(testRhAgent.getDecoper()).isEqualTo(DEFAULT_DECOPER);
         assertThat(testRhAgent.getDeccent()).isEqualTo(DEFAULT_DECCENT);
         assertThat(testRhAgent.getDecagenc()).isEqualTo(DEFAULT_DECAGENC);
@@ -197,7 +197,7 @@ class RhAgentResourceIT {
         updatedRhAgent
             .matric(UPDATED_MATRIC)
             .decjour(UPDATED_DECJOUR)
-            .dateffrh(UPDATED_DATEFFRH)
+            .dat_eff_rh(UPDATED_DATEFFRH)
             .decoper(UPDATED_DECOPER)
             .deccent(UPDATED_DECCENT)
             .decagenc(UPDATED_DECAGENC);
@@ -217,7 +217,7 @@ class RhAgentResourceIT {
         RhAgent testRhAgent = rhAgentList.get(rhAgentList.size() - 1);
         assertThat(testRhAgent.getMatric()).isEqualTo(UPDATED_MATRIC);
         assertThat(testRhAgent.getDecjour()).isEqualTo(UPDATED_DECJOUR);
-        assertThat(testRhAgent.getDateffrh()).isEqualTo(UPDATED_DATEFFRH);
+        assertThat(testRhAgent.getDat_eff_rh()).isEqualTo(UPDATED_DATEFFRH);
         assertThat(testRhAgent.getDecoper()).isEqualTo(UPDATED_DECOPER);
         assertThat(testRhAgent.getDeccent()).isEqualTo(UPDATED_DECCENT);
         assertThat(testRhAgent.getDecagenc()).isEqualTo(UPDATED_DECAGENC);
@@ -296,7 +296,7 @@ class RhAgentResourceIT {
         RhAgent partialUpdatedRhAgent = new RhAgent();
         partialUpdatedRhAgent.setId(rhAgent.getId());
 
-        partialUpdatedRhAgent.matric(UPDATED_MATRIC).decjour(UPDATED_DECJOUR).dateffrh(UPDATED_DATEFFRH).decoper(UPDATED_DECOPER);
+        partialUpdatedRhAgent.matric(UPDATED_MATRIC).decjour(UPDATED_DECJOUR).dat_eff_rh(UPDATED_DATEFFRH).decoper(UPDATED_DECOPER);
 
         restRhAgentMockMvc
             .perform(
@@ -312,7 +312,7 @@ class RhAgentResourceIT {
         RhAgent testRhAgent = rhAgentList.get(rhAgentList.size() - 1);
         assertThat(testRhAgent.getMatric()).isEqualTo(UPDATED_MATRIC);
         assertThat(testRhAgent.getDecjour()).isEqualTo(UPDATED_DECJOUR);
-        assertThat(testRhAgent.getDateffrh()).isEqualTo(UPDATED_DATEFFRH);
+        assertThat(testRhAgent.getDat_eff_rh()).isEqualTo(UPDATED_DATEFFRH);
         assertThat(testRhAgent.getDecoper()).isEqualTo(UPDATED_DECOPER);
         assertThat(testRhAgent.getDeccent()).isEqualTo(DEFAULT_DECCENT);
         assertThat(testRhAgent.getDecagenc()).isEqualTo(DEFAULT_DECAGENC);
@@ -332,7 +332,7 @@ class RhAgentResourceIT {
         partialUpdatedRhAgent
             .matric(UPDATED_MATRIC)
             .decjour(UPDATED_DECJOUR)
-            .dateffrh(UPDATED_DATEFFRH)
+            .dat_eff_rh(UPDATED_DATEFFRH)
             .decoper(UPDATED_DECOPER)
             .deccent(UPDATED_DECCENT)
             .decagenc(UPDATED_DECAGENC);
@@ -351,7 +351,7 @@ class RhAgentResourceIT {
         RhAgent testRhAgent = rhAgentList.get(rhAgentList.size() - 1);
         assertThat(testRhAgent.getMatric()).isEqualTo(UPDATED_MATRIC);
         assertThat(testRhAgent.getDecjour()).isEqualTo(UPDATED_DECJOUR);
-        assertThat(testRhAgent.getDateffrh()).isEqualTo(UPDATED_DATEFFRH);
+        assertThat(testRhAgent.getDat_eff_rh()).isEqualTo(UPDATED_DATEFFRH);
         assertThat(testRhAgent.getDecoper()).isEqualTo(UPDATED_DECOPER);
         assertThat(testRhAgent.getDeccent()).isEqualTo(UPDATED_DECCENT);
         assertThat(testRhAgent.getDecagenc()).isEqualTo(UPDATED_DECAGENC);

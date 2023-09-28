@@ -31,22 +31,22 @@ public class Machine implements Serializable {
     private String lbmac;
 
     @Field("refmac")
-    private String refmac;
+    private String ref_mac;
 
     @Field("serie")
     private String serie;
 
     @Field("datfab")
-    private LocalDate datfab;
+    private String dat_fab;
 
     @Field("datacq")
-    private LocalDate datacq;
+    private String dat_acq;
 
     @Field("datmes")
-    private LocalDate datmes;
+    private String dat_mes;
 
     @Field("valacq")
-    private Integer valacq;
+    private Integer val_acq;
 
     @Field("obs")
     private String obs;
@@ -64,10 +64,10 @@ public class Machine implements Serializable {
     private String marque;
 
     @Field("typev")
-    private String typev;
+    private String type_v;
 
     @Field("numser")
-    private String numser;
+    private String num_ser;
 
     @Field("puiss")
     private String puiss;
@@ -82,28 +82,28 @@ public class Machine implements Serializable {
     private Integer cylind;
 
     @Field("pdsvid")
-    private Integer pdsvid;
+    private Integer pds_vid;
 
     @Field("charge")
     private Integer charge;
 
     @Field("plcass")
-    private Integer plcass;
+    private Integer plc_ass;
 
     @Field("plcdeb")
-    private Integer plcdeb;
+    private Integer plc_deb;
 
     @Field("cpt")
     private Integer cpt;
 
     @Field("cptmnt")
-    private Integer cptmnt;
+    private Integer cpt_mnt;
 
     @Field("actif")
     private Integer actif;
 
     @Field("datact")
-    private LocalDate datact;
+    private String dat_act;
 
     @Field("cdcatvh")
     private String cdcatvh;
@@ -112,7 +112,7 @@ public class Machine implements Serializable {
     private Integer taux;
 
     @Field("kmmoy")
-    private Integer kmmoy;
+    private Double km_moy;
 
     @Field("codstat")
     private Integer codstat;
@@ -121,13 +121,13 @@ public class Machine implements Serializable {
     private String edition;
 
     @Field("valassur")
-    private Integer valassur;
+    private Integer val_assur;
 
     @Field("valamort")
-    private Integer valamort;
+    private Integer val_amort;
 
     @Field("consommodel")
-    private Integer consommodel;
+    private Integer consom_model;
 
     @Field("decetat")
     private String decetat;
@@ -154,115 +154,15 @@ public class Machine implements Serializable {
     private String gps;
 
     @Field("marquebv")
-    private String marquebv;
+    private String marque_bv;
 
     @Field("typboite")
-    private String typboite;
+    private String typ_boite;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
 
     public String getId() {
         return this.id;
-    }
-
-    public Machine(
-        String id,
-        String cdmac,
-        String cdmod,
-        String cdmarque,
-        String lbmac,
-        String refmac,
-        String serie,
-        LocalDate datfab,
-        LocalDate datacq,
-        LocalDate datmes,
-        Integer valacq,
-        String obs,
-        String numplan,
-        String cdlipro,
-        String immat,
-        String marque,
-        String typev,
-        String numser,
-        String puiss,
-        String nrj,
-        String genre,
-        Integer cylind,
-        Integer pdsvid,
-        Integer charge,
-        Integer plcass,
-        Integer plcdeb,
-        Integer cpt,
-        Integer cptmnt,
-        Integer actif,
-        LocalDate datact,
-        String cdcatvh,
-        Integer taux,
-        Integer kmmoy,
-        Integer codstat,
-        String edition,
-        Integer valassur,
-        Integer valamort,
-        Integer consommodel,
-        String decetat,
-        String codtypvoit,
-        String cdtyp,
-        Integer cdnat,
-        String typbv,
-        String cdtypbv,
-        String pneu,
-        String gps,
-        String marquebv,
-        String typboite
-    ) {
-        this.id = id;
-        this.cdmac = cdmac;
-        this.cdmod = cdmod;
-        this.cdmarque = cdmarque;
-        this.lbmac = lbmac;
-        this.refmac = refmac;
-        this.serie = serie;
-        this.datfab = datfab;
-        this.datacq = datacq;
-        this.datmes = datmes;
-        this.valacq = valacq;
-        this.obs = obs;
-        this.numplan = numplan;
-        this.cdlipro = cdlipro;
-        this.immat = immat;
-        this.marque = marque;
-        this.typev = typev;
-        this.numser = numser;
-        this.puiss = puiss;
-        this.nrj = nrj;
-        this.genre = genre;
-        this.cylind = cylind;
-        this.pdsvid = pdsvid;
-        this.charge = charge;
-        this.plcass = plcass;
-        this.plcdeb = plcdeb;
-        this.cpt = cpt;
-        this.cptmnt = cptmnt;
-        this.actif = actif;
-        this.datact = datact;
-        this.cdcatvh = cdcatvh;
-        this.taux = taux;
-        this.kmmoy = kmmoy;
-        this.codstat = codstat;
-        this.edition = edition;
-        this.valassur = valassur;
-        this.valamort = valamort;
-        this.consommodel = consommodel;
-        this.decetat = decetat;
-        this.codtypvoit = codtypvoit;
-        this.cdtyp = cdtyp;
-        this.cdnat = cdnat;
-        this.typbv = typbv;
-        this.cdtypbv = cdtypbv;
-        this.pneu = pneu;
-        this.gps = gps;
-        this.marquebv = marquebv;
-        this.typboite = typboite;
     }
 
     public Machine() {}
@@ -328,17 +228,17 @@ public class Machine implements Serializable {
         this.lbmac = lbmac;
     }
 
-    public String getRefmac() {
-        return this.refmac;
+    public String getRef_mac() {
+        return this.ref_mac;
     }
 
-    public Machine refmac(String refmac) {
-        this.setRefmac(refmac);
+    public Machine ref_mac(String ref_mac) {
+        this.setRef_mac(ref_mac);
         return this;
     }
 
-    public void setRefmac(String refmac) {
-        this.refmac = refmac;
+    public void setRef_mac(String ref_mac) {
+        this.ref_mac = ref_mac;
     }
 
     public String getSerie() {
@@ -354,56 +254,56 @@ public class Machine implements Serializable {
         this.serie = serie;
     }
 
-    public LocalDate getDatfab() {
-        return this.datfab;
+    public String getDat_fab() {
+        return this.dat_fab;
     }
 
-    public Machine datfab(LocalDate datfab) {
-        this.setDatfab(datfab);
+    public Machine dat_fab(String dat_fab) {
+        this.setDat_fab(dat_fab);
         return this;
     }
 
-    public void setDatfab(LocalDate datfab) {
-        this.datfab = datfab;
+    public void setDat_fab(String dat_fab) {
+        this.dat_fab = dat_fab;
     }
 
-    public LocalDate getDatacq() {
-        return this.datacq;
+    public String getDat_acq() {
+        return this.dat_acq;
     }
 
-    public Machine datacq(LocalDate datacq) {
-        this.setDatacq(datacq);
+    public Machine dat_acq(String dat_acq) {
+        this.setDat_acq(dat_acq);
         return this;
     }
 
-    public void setDatacq(LocalDate datacq) {
-        this.datacq = datacq;
+    public void setDat_acq(String dat_acq) {
+        this.dat_acq = dat_acq;
     }
 
-    public LocalDate getDatmes() {
-        return this.datmes;
+    public String getDat_mes() {
+        return this.dat_mes;
     }
 
-    public Machine datmes(LocalDate datmes) {
-        this.setDatmes(datmes);
+    public Machine dat_mes(String dat_mes) {
+        this.setDat_mes(dat_mes);
         return this;
     }
 
-    public void setDatmes(LocalDate datmes) {
-        this.datmes = datmes;
+    public void setDat_mes(String dat_mes) {
+        this.dat_mes = dat_mes;
     }
 
-    public Integer getValacq() {
-        return this.valacq;
+    public Integer getVal_acq() {
+        return this.val_acq;
     }
 
-    public Machine valacq(Integer valacq) {
-        this.setValacq(valacq);
+    public Machine val_acq(Integer val_acq) {
+        this.setVal_acq(val_acq);
         return this;
     }
 
-    public void setValacq(Integer valacq) {
-        this.valacq = valacq;
+    public void setVal_acq(Integer val_acq) {
+        this.val_acq = val_acq;
     }
 
     public String getObs() {
@@ -471,30 +371,30 @@ public class Machine implements Serializable {
         this.marque = marque;
     }
 
-    public String getTypev() {
-        return this.typev;
+    public String getType_v() {
+        return this.type_v;
     }
 
-    public Machine typev(String typev) {
-        this.setTypev(typev);
+    public Machine type_v(String type_v) {
+        this.setType_v(type_v);
         return this;
     }
 
-    public void setTypev(String typev) {
-        this.typev = typev;
+    public void setType_v(String type_v) {
+        this.type_v = type_v;
     }
 
-    public String getNumser() {
-        return this.numser;
+    public String getNum_ser() {
+        return this.num_ser;
     }
 
-    public Machine numser(String numser) {
-        this.setNumser(numser);
+    public Machine num_ser(String num_ser) {
+        this.setNum_ser(num_ser);
         return this;
     }
 
-    public void setNumser(String numser) {
-        this.numser = numser;
+    public void setNum_ser(String num_ser) {
+        this.num_ser = num_ser;
     }
 
     public String getPuiss() {
@@ -549,17 +449,17 @@ public class Machine implements Serializable {
         this.cylind = cylind;
     }
 
-    public Integer getPdsvid() {
-        return this.pdsvid;
+    public Integer getPds_vid() {
+        return this.pds_vid;
     }
 
-    public Machine pdsvid(Integer pdsvid) {
-        this.setPdsvid(pdsvid);
+    public Machine pds_vid(Integer pds_vid) {
+        this.setPds_vid(pds_vid);
         return this;
     }
 
-    public void setPdsvid(Integer pdsvid) {
-        this.pdsvid = pdsvid;
+    public void setPds_vid(Integer pds_vid) {
+        this.pds_vid = pds_vid;
     }
 
     public Integer getCharge() {
@@ -575,30 +475,30 @@ public class Machine implements Serializable {
         this.charge = charge;
     }
 
-    public Integer getPlcass() {
-        return this.plcass;
+    public Integer getPlc_ass() {
+        return this.plc_ass;
     }
 
-    public Machine plcass(Integer plcass) {
-        this.setPlcass(plcass);
+    public Machine plc_ass(Integer plc_ass) {
+        this.setPlc_ass(plc_ass);
         return this;
     }
 
-    public void setPlcass(Integer plcass) {
-        this.plcass = plcass;
+    public void setPlc_ass(Integer plc_ass) {
+        this.plc_ass = plc_ass;
     }
 
-    public Integer getPlcdeb() {
-        return this.plcdeb;
+    public Integer getPlc_deb() {
+        return this.plc_deb;
     }
 
-    public Machine plcdeb(Integer plcdeb) {
-        this.setPlcdeb(plcdeb);
+    public Machine plc_deb(Integer plc_deb) {
+        this.setPlc_deb(plc_deb);
         return this;
     }
 
-    public void setPlcdeb(Integer plcdeb) {
-        this.plcdeb = plcdeb;
+    public void setPlc_deb(Integer plc_deb) {
+        this.plc_deb = plc_deb;
     }
 
     public Integer getCpt() {
@@ -614,17 +514,17 @@ public class Machine implements Serializable {
         this.cpt = cpt;
     }
 
-    public Integer getCptmnt() {
-        return this.cptmnt;
+    public Integer getCpt_mnt() {
+        return this.cpt_mnt;
     }
 
-    public Machine cptmnt(Integer cptmnt) {
-        this.setCptmnt(cptmnt);
+    public Machine cpt_mnt(Integer cpt_mnt) {
+        this.setCpt_mnt(cpt_mnt);
         return this;
     }
 
-    public void setCptmnt(Integer cptmnt) {
-        this.cptmnt = cptmnt;
+    public void setCpt_mnt(Integer cpt_mnt) {
+        this.cpt_mnt = cpt_mnt;
     }
 
     public Integer getActif() {
@@ -640,17 +540,17 @@ public class Machine implements Serializable {
         this.actif = actif;
     }
 
-    public LocalDate getDatact() {
-        return this.datact;
+    public String getDat_act() {
+        return this.dat_act;
     }
 
-    public Machine datact(LocalDate datact) {
-        this.setDatact(datact);
+    public Machine dat_act(String dat_act) {
+        this.setDat_acq(dat_act);
         return this;
     }
 
-    public void setDatact(LocalDate datact) {
-        this.datact = datact;
+    public void setDat_act(String dat_act) {
+        this.dat_act = dat_act;
     }
 
     public String getCdcatvh() {
@@ -679,17 +579,17 @@ public class Machine implements Serializable {
         this.taux = taux;
     }
 
-    public Integer getKmmoy() {
-        return this.kmmoy;
+    public Double getKm_moy() {
+        return this.km_moy;
     }
 
-    public Machine kmmoy(Integer kmmoy) {
-        this.setKmmoy(kmmoy);
+    public Machine km_moy(Double km_moy) {
+        this.setKm_moy(km_moy);
         return this;
     }
 
-    public void setKmmoy(Integer kmmoy) {
-        this.kmmoy = kmmoy;
+    public void setKm_moy(Double km_moy) {
+        this.km_moy = km_moy;
     }
 
     public Integer getCodstat() {
@@ -718,43 +618,43 @@ public class Machine implements Serializable {
         this.edition = edition;
     }
 
-    public Integer getValassur() {
-        return this.valassur;
+    public Integer getVal_assur() {
+        return this.val_assur;
     }
 
-    public Machine valassur(Integer valassur) {
-        this.setValassur(valassur);
+    public Machine val_assur(Integer val_assur) {
+        this.setVal_assur(val_assur);
         return this;
     }
 
-    public void setValassur(Integer valassur) {
-        this.valassur = valassur;
+    public void setVal_assur(Integer val_assur) {
+        this.val_assur = val_assur;
     }
 
-    public Integer getValamort() {
-        return this.valamort;
+    public Integer getVal_amort() {
+        return this.val_amort;
     }
 
-    public Machine valamort(Integer valamort) {
-        this.setValamort(valamort);
+    public Machine val_amort(Integer val_amort) {
+        this.setVal_amort(val_amort);
         return this;
     }
 
-    public void setValamort(Integer valamort) {
-        this.valamort = valamort;
+    public void setVal_amort(Integer val_amort) {
+        this.val_amort = val_amort;
     }
 
-    public Integer getConsommodel() {
-        return this.consommodel;
+    public Integer getConsom_model() {
+        return this.consom_model;
     }
 
-    public Machine consommodel(Integer consommodel) {
-        this.setConsommodel(consommodel);
+    public Machine consom_model(Integer consom_model) {
+        this.setConsom_model(consom_model);
         return this;
     }
 
-    public void setConsommodel(Integer consommodel) {
-        this.consommodel = consommodel;
+    public void setConsom_model(Integer consom_model) {
+        this.consom_model = consom_model;
     }
 
     public String getDecetat() {
@@ -861,30 +761,30 @@ public class Machine implements Serializable {
         this.gps = gps;
     }
 
-    public String getMarquebv() {
-        return this.marquebv;
+    public String getMarque_bv() {
+        return this.marque_bv;
     }
 
-    public Machine marquebv(String marquebv) {
-        this.setMarquebv(marquebv);
+    public Machine marque_bv(String marque_bv) {
+        this.setMarque_bv(marque_bv);
         return this;
     }
 
-    public void setMarquebv(String marquebv) {
-        this.marquebv = marquebv;
+    public void setMarque_bv(String marque_bv) {
+        this.marque_bv = marque_bv;
     }
 
-    public String getTypboite() {
-        return this.typboite;
+    public String getTyp_boite() {
+        return this.typ_boite;
     }
 
-    public Machine typboite(String typboite) {
-        this.setTypboite(typboite);
+    public Machine typ_boite(String typ_boite) {
+        this.setTyp_boite(typ_boite);
         return this;
     }
 
-    public void setTypboite(String typboite) {
-        this.typboite = typboite;
+    public void setTyp_boite(String typ_boite) {
+        this.typ_boite = typ_boite;
     }
 
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here
@@ -915,39 +815,39 @@ public class Machine implements Serializable {
             ", cdmod='" + getCdmod() + "'" +
             ", cdmarque='" + getCdmarque() + "'" +
             ", lbmac='" + getLbmac() + "'" +
-            ", refmac='" + getRefmac() + "'" +
+            ", refmac='" + getRef_mac() + "'" +
             ", serie='" + getSerie() + "'" +
-            ", datfab='" + getDatfab() + "'" +
-            ", datacq='" + getDatacq() + "'" +
-            ", datmes='" + getDatmes() + "'" +
-            ", valacq=" + getValacq() +
+            ", datfab='" + getDat_fab() + "'" +
+            ", datacq='" + getDat_acq() + "'" +
+            ", datmes='" + getDat_mes() + "'" +
+            ", valacq=" + getVal_acq() +
             ", obs='" + getObs() + "'" +
             ", numplan='" + getNumplan() + "'" +
             ", cdlipro='" + getCdlipro() + "'" +
             ", immat='" + getImmat() + "'" +
             ", marque='" + getMarque() + "'" +
-            ", typev='" + getTypev() + "'" +
-            ", numser='" + getNumser() + "'" +
+            ", typev='" + getType_v() + "'" +
+            ", numser='" + getNum_ser() + "'" +
             ", puiss='" + getPuiss() + "'" +
             ", nrj='" + getNrj() + "'" +
             ", genre='" + getGenre() + "'" +
             ", cylind=" + getCylind() +
-            ", pdsvid=" + getPdsvid() +
+            ", pdsvid=" + getPds_vid() +
             ", charge=" + getCharge() +
-            ", plcass=" + getPlcass() +
-            ", plcdeb=" + getPlcdeb() +
+            ", plcass=" + getPlc_ass() +
+            ", plcdeb=" + getPlc_deb() +
             ", cpt=" + getCpt() +
-            ", cptmnt=" + getCptmnt() +
+            ", cptmnt=" + getCpt_mnt() +
             ", actif=" + getActif() +
-            ", datact='" + getDatact() + "'" +
+            ", datact='" + getDat_act() + "'" +
             ", cdcatvh='" + getCdcatvh() + "'" +
             ", taux=" + getTaux() +
-            ", kmmoy=" + getKmmoy() +
+            ", kmmoy=" + getKm_moy() +
             ", codstat=" + getCodstat() +
             ", edition='" + getEdition() + "'" +
-            ", valassur=" + getValassur() +
-            ", valamort=" + getValamort() +
-            ", consommodel=" + getConsommodel() +
+            ", valassur=" + getVal_assur() +
+            ", valamort=" + getVal_amort() +
+            ", consommodel=" + getConsom_model() +
             ", decetat='" + getDecetat() + "'" +
             ", codtypvoit='" + getCodtypvoit() + "'" +
             ", cdtyp='" + getCdtyp() + "'" +
@@ -956,8 +856,8 @@ public class Machine implements Serializable {
             ", cdtypbv='" + getCdtypbv() + "'" +
             ", pneu='" + getPneu() + "'" +
             ", gps='" + getGps() + "'" +
-            ", marquebv='" + getMarquebv() + "'" +
-            ", typboite='" + getTypboite() + "'" +
+            ", marquebv='" + getMarque_bv() + "'" +
+            ", typboite='" + getTyp_boite() + "'" +
             "}";
     }
 }

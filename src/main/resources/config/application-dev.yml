@@ -35,10 +35,11 @@ spring:
       uri: mongodb://localhost:27017/
       database: departdb
   mail:
-    host: localhost
-    port: 25
-    username:
-    password:
+    host: ssl0.ovh.net
+    port: 465
+    username: amin@paradisdesperroquets.com
+    password: ppf52047200
+    protocol: smtp
   messages:
     cache-duration: PT1S # 1 second, see the ISO 8601 standard
   thymeleaf:

@@ -40,26 +40,26 @@ class RotRservResourceIT {
     private static final Integer DEFAULT_DECAGENC = 1;
     private static final Integer UPDATED_DECAGENC = 2;
 
-    private static final LocalDate DEFAULT_DEDATED = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_DEDATED = LocalDate.now(ZoneId.systemDefault());
+    private static final String DEFAULT_DEDATED = "2016-03-21T23:00:00Z";
+    private static final String UPDATED_DEDATED = "2016-03-21T23:00:00Z";
 
     private static final Integer DEFAULT_MATRIC = 1;
     private static final Integer UPDATED_MATRIC = 2;
 
-    private static final ZonedDateTime DEFAULT_HEURDEB = ZonedDateTime.ofInstant(Instant.ofEpochMilli(0L), ZoneOffset.UTC);
-    private static final ZonedDateTime UPDATED_HEURDEB = ZonedDateTime.now(ZoneId.systemDefault()).withNano(0);
+    private static final String DEFAULT_HEURDEB = "2016-03-01T07:00:00Z";
+    private static final String UPDATED_HEURDEB = "2016-03-01T07:00:00Z";
 
-    private static final ZonedDateTime DEFAULT_HEURFIN = ZonedDateTime.ofInstant(Instant.ofEpochMilli(0L), ZoneOffset.UTC);
-    private static final ZonedDateTime UPDATED_HEURFIN = ZonedDateTime.now(ZoneId.systemDefault()).withNano(0);
+    private static final String DEFAULT_HEURFIN = "2016-03-01T12:05:00Z";
+    private static final String UPDATED_HEURFIN = "2016-03-01T12:05:00Z";
 
     private static final String DEFAULT_STATUT = "AAAAAAAAAA";
     private static final String UPDATED_STATUT = "BBBBBBBBBB";
 
-    private static final ZonedDateTime DEFAULT_LIEEDEB = ZonedDateTime.ofInstant(Instant.ofEpochMilli(0L), ZoneOffset.UTC);
-    private static final ZonedDateTime UPDATED_LIEEDEB = ZonedDateTime.now(ZoneId.systemDefault()).withNano(0);
+    private static final String DEFAULT_LIEEDEB = "2016-03-01T12:05:00Z";
+    private static final String UPDATED_LIEEDEB = "2016-03-01T12:05:00Z";
 
-    private static final ZonedDateTime DEFAULT_LIEEFIN = ZonedDateTime.ofInstant(Instant.ofEpochMilli(0L), ZoneOffset.UTC);
-    private static final ZonedDateTime UPDATED_LIEEFIN = ZonedDateTime.now(ZoneId.systemDefault()).withNano(0);
+    private static final String DEFAULT_LIEEFIN = "2016-03-01T12:05:00Z";
+    private static final String UPDATED_LIEEFIN = "2016-03-01T12:05:00Z";
 
     private static final String DEFAULT_PROGRAM = "AAAAAAAAAA";
     private static final String UPDATED_PROGRAM = "BBBBBBBBBB";
@@ -102,11 +102,11 @@ class RotRservResourceIT {
             .decagenc(DEFAULT_DECAGENC)
             .dedated(DEFAULT_DEDATED)
             .matric(DEFAULT_MATRIC)
-            .heurdeb(DEFAULT_HEURDEB)
-            .heurfin(DEFAULT_HEURFIN)
+            .heur_deb(DEFAULT_HEURDEB)
+            .heur_fin(DEFAULT_HEURFIN)
             .statut(DEFAULT_STATUT)
-            .lieedeb(DEFAULT_LIEEDEB)
-            .lieefin(DEFAULT_LIEEFIN)
+            .liee_deb(DEFAULT_LIEEDEB)
+            .liee_fin(DEFAULT_LIEEFIN)
             .program(DEFAULT_PROGRAM)
             .cd1(DEFAULT_CD_1)
             .cd2(DEFAULT_CD_2)
@@ -127,11 +127,11 @@ class RotRservResourceIT {
             .decagenc(UPDATED_DECAGENC)
             .dedated(UPDATED_DEDATED)
             .matric(UPDATED_MATRIC)
-            .heurdeb(UPDATED_HEURDEB)
-            .heurfin(UPDATED_HEURFIN)
+            .heur_deb(UPDATED_HEURDEB)
+            .heur_fin(UPDATED_HEURFIN)
             .statut(UPDATED_STATUT)
-            .lieedeb(UPDATED_LIEEDEB)
-            .lieefin(UPDATED_LIEEFIN)
+            .liee_deb(UPDATED_LIEEDEB)
+            .liee_fin(UPDATED_LIEEFIN)
             .program(UPDATED_PROGRAM)
             .cd1(UPDATED_CD_1)
             .cd2(UPDATED_CD_2)
@@ -163,11 +163,11 @@ class RotRservResourceIT {
         assertThat(testRotRserv.getDecagenc()).isEqualTo(DEFAULT_DECAGENC);
         assertThat(testRotRserv.getDedated()).isEqualTo(DEFAULT_DEDATED);
         assertThat(testRotRserv.getMatric()).isEqualTo(DEFAULT_MATRIC);
-        assertThat(testRotRserv.getHeurdeb()).isEqualTo(DEFAULT_HEURDEB);
-        assertThat(testRotRserv.getHeurfin()).isEqualTo(DEFAULT_HEURFIN);
+        assertThat(testRotRserv.getHeur_deb()).isEqualTo(DEFAULT_HEURDEB);
+        assertThat(testRotRserv.getHeur_fin()).isEqualTo(DEFAULT_HEURFIN);
         assertThat(testRotRserv.getStatut()).isEqualTo(DEFAULT_STATUT);
-        assertThat(testRotRserv.getLieedeb()).isEqualTo(DEFAULT_LIEEDEB);
-        assertThat(testRotRserv.getLieefin()).isEqualTo(DEFAULT_LIEEFIN);
+        assertThat(testRotRserv.getLiee_deb()).isEqualTo(DEFAULT_LIEEDEB);
+        assertThat(testRotRserv.getLiee_fin()).isEqualTo(DEFAULT_LIEEFIN);
         assertThat(testRotRserv.getProgram()).isEqualTo(DEFAULT_PROGRAM);
         assertThat(testRotRserv.getCd1()).isEqualTo(DEFAULT_CD_1);
         assertThat(testRotRserv.getCd2()).isEqualTo(DEFAULT_CD_2);
@@ -265,7 +265,7 @@ class RotRservResourceIT {
     void checkHeurdebIsRequired() throws Exception {
         int databaseSizeBeforeTest = rotRservRepository.findAll().size();
         // set the field null
-        rotRserv.setHeurdeb(null);
+        rotRserv.setHeur_deb(null);
 
         // Create the RotRserv, which fails.
         RotRservDTO rotRservDTO = rotRservMapper.toDto(rotRserv);
@@ -282,7 +282,7 @@ class RotRservResourceIT {
     void checkHeurfinIsRequired() throws Exception {
         int databaseSizeBeforeTest = rotRservRepository.findAll().size();
         // set the field null
-        rotRserv.setHeurfin(null);
+        rotRserv.setHeur_fin(null);
 
         // Create the RotRserv, which fails.
         RotRservDTO rotRservDTO = rotRservMapper.toDto(rotRserv);
@@ -311,11 +311,11 @@ class RotRservResourceIT {
             .andExpect(jsonPath("$.[*].decagenc").value(hasItem(DEFAULT_DECAGENC)))
             .andExpect(jsonPath("$.[*].dedated").value(hasItem(DEFAULT_DEDATED.toString())))
             .andExpect(jsonPath("$.[*].matric").value(hasItem(DEFAULT_MATRIC)))
-            .andExpect(jsonPath("$.[*].heurdeb").value(hasItem(sameInstant(DEFAULT_HEURDEB))))
-            .andExpect(jsonPath("$.[*].heurfin").value(hasItem(sameInstant(DEFAULT_HEURFIN))))
+            .andExpect(jsonPath("$.[*].heurdeb").value("2016-03-01T12:05:00Z"))
+            .andExpect(jsonPath("$.[*].heurfin").value("2016-03-01T12:05:00Z"))
             .andExpect(jsonPath("$.[*].statut").value(hasItem(DEFAULT_STATUT)))
-            .andExpect(jsonPath("$.[*].lieedeb").value(hasItem(sameInstant(DEFAULT_LIEEDEB))))
-            .andExpect(jsonPath("$.[*].lieefin").value(hasItem(sameInstant(DEFAULT_LIEEFIN))))
+            .andExpect(jsonPath("$.[*].lieedeb").value("2016-03-01T12:05:00Z"))
+            .andExpect(jsonPath("$.[*].lieefin").value("2016-03-01T12:05:00Z"))
             .andExpect(jsonPath("$.[*].program").value(hasItem(DEFAULT_PROGRAM)))
             .andExpect(jsonPath("$.[*].cd1").value(hasItem(DEFAULT_CD_1)))
             .andExpect(jsonPath("$.[*].cd2").value(hasItem(DEFAULT_CD_2)))
@@ -339,11 +339,11 @@ class RotRservResourceIT {
             .andExpect(jsonPath("$.decagenc").value(DEFAULT_DECAGENC))
             .andExpect(jsonPath("$.dedated").value(DEFAULT_DEDATED.toString()))
             .andExpect(jsonPath("$.matric").value(DEFAULT_MATRIC))
-            .andExpect(jsonPath("$.heurdeb").value(sameInstant(DEFAULT_HEURDEB)))
-            .andExpect(jsonPath("$.heurfin").value(sameInstant(DEFAULT_HEURFIN)))
+            .andExpect(jsonPath("$.heurdeb").value("2016-03-01T12:05:00Z"))
+            .andExpect(jsonPath("$.heurfin").value("2016-03-01T12:05:00Z"))
             .andExpect(jsonPath("$.statut").value(DEFAULT_STATUT))
-            .andExpect(jsonPath("$.lieedeb").value(sameInstant(DEFAULT_LIEEDEB)))
-            .andExpect(jsonPath("$.lieefin").value(sameInstant(DEFAULT_LIEEFIN)))
+            .andExpect(jsonPath("$.lieedeb").value("2016-03-01T12:05:00Z"))
+            .andExpect(jsonPath("$.lieefin").value("2016-03-01T12:05:00Z"))
             .andExpect(jsonPath("$.program").value(DEFAULT_PROGRAM))
             .andExpect(jsonPath("$.cd1").value(DEFAULT_CD_1))
             .andExpect(jsonPath("$.cd2").value(DEFAULT_CD_2))
@@ -372,11 +372,11 @@ class RotRservResourceIT {
             .decagenc(UPDATED_DECAGENC)
             .dedated(UPDATED_DEDATED)
             .matric(UPDATED_MATRIC)
-            .heurdeb(UPDATED_HEURDEB)
-            .heurfin(UPDATED_HEURFIN)
+            .heur_deb(UPDATED_HEURDEB)
+            .heur_fin(UPDATED_HEURFIN)
             .statut(UPDATED_STATUT)
-            .lieedeb(UPDATED_LIEEDEB)
-            .lieefin(UPDATED_LIEEFIN)
+            .liee_deb(UPDATED_LIEEDEB)
+            .liee_fin(UPDATED_LIEEFIN)
             .program(UPDATED_PROGRAM)
             .cd1(UPDATED_CD_1)
             .cd2(UPDATED_CD_2)
@@ -400,11 +400,11 @@ class RotRservResourceIT {
         assertThat(testRotRserv.getDecagenc()).isEqualTo(UPDATED_DECAGENC);
         assertThat(testRotRserv.getDedated()).isEqualTo(UPDATED_DEDATED);
         assertThat(testRotRserv.getMatric()).isEqualTo(UPDATED_MATRIC);
-        assertThat(testRotRserv.getHeurdeb()).isEqualTo(UPDATED_HEURDEB);
-        assertThat(testRotRserv.getHeurfin()).isEqualTo(UPDATED_HEURFIN);
+        assertThat(testRotRserv.getHeur_deb()).isEqualTo(UPDATED_HEURDEB);
+        assertThat(testRotRserv.getHeur_fin()).isEqualTo(UPDATED_HEURFIN);
         assertThat(testRotRserv.getStatut()).isEqualTo(UPDATED_STATUT);
-        assertThat(testRotRserv.getLieedeb()).isEqualTo(UPDATED_LIEEDEB);
-        assertThat(testRotRserv.getLieefin()).isEqualTo(UPDATED_LIEEFIN);
+        assertThat(testRotRserv.getLiee_deb()).isEqualTo(UPDATED_LIEEDEB);
+        assertThat(testRotRserv.getLiee_fin()).isEqualTo(UPDATED_LIEEFIN);
         assertThat(testRotRserv.getProgram()).isEqualTo(UPDATED_PROGRAM);
         assertThat(testRotRserv.getCd1()).isEqualTo(UPDATED_CD_1);
         assertThat(testRotRserv.getCd2()).isEqualTo(UPDATED_CD_2);
@@ -489,8 +489,8 @@ class RotRservResourceIT {
         partialUpdatedRotRserv
             .deccent(UPDATED_DECCENT)
             .dedated(UPDATED_DEDATED)
-            .lieedeb(UPDATED_LIEEDEB)
-            .lieefin(UPDATED_LIEEFIN)
+            .liee_deb(UPDATED_LIEEDEB)
+            .liee_fin(UPDATED_LIEEFIN)
             .program(UPDATED_PROGRAM)
             .cd1(UPDATED_CD_1)
             .cd3(UPDATED_CD_3);
@@ -511,11 +511,11 @@ class RotRservResourceIT {
         assertThat(testRotRserv.getDecagenc()).isEqualTo(DEFAULT_DECAGENC);
         assertThat(testRotRserv.getDedated()).isEqualTo(UPDATED_DEDATED);
         assertThat(testRotRserv.getMatric()).isEqualTo(DEFAULT_MATRIC);
-        assertThat(testRotRserv.getHeurdeb()).isEqualTo(DEFAULT_HEURDEB);
-        assertThat(testRotRserv.getHeurfin()).isEqualTo(DEFAULT_HEURFIN);
+        assertThat(testRotRserv.getHeur_deb()).isEqualTo(DEFAULT_HEURDEB);
+        assertThat(testRotRserv.getHeur_fin()).isEqualTo(DEFAULT_HEURFIN);
         assertThat(testRotRserv.getStatut()).isEqualTo(DEFAULT_STATUT);
-        assertThat(testRotRserv.getLieedeb()).isEqualTo(UPDATED_LIEEDEB);
-        assertThat(testRotRserv.getLieefin()).isEqualTo(UPDATED_LIEEFIN);
+        assertThat(testRotRserv.getLiee_deb()).isEqualTo(UPDATED_LIEEDEB);
+        assertThat(testRotRserv.getLiee_fin()).isEqualTo(UPDATED_LIEEFIN);
         assertThat(testRotRserv.getProgram()).isEqualTo(UPDATED_PROGRAM);
         assertThat(testRotRserv.getCd1()).isEqualTo(UPDATED_CD_1);
         assertThat(testRotRserv.getCd2()).isEqualTo(DEFAULT_CD_2);
@@ -540,11 +540,11 @@ class RotRservResourceIT {
             .decagenc(UPDATED_DECAGENC)
             .dedated(UPDATED_DEDATED)
             .matric(UPDATED_MATRIC)
-            .heurdeb(UPDATED_HEURDEB)
-            .heurfin(UPDATED_HEURFIN)
+            .heur_deb(UPDATED_HEURDEB)
+            .heur_fin(UPDATED_HEURFIN)
             .statut(UPDATED_STATUT)
-            .lieedeb(UPDATED_LIEEDEB)
-            .lieefin(UPDATED_LIEEFIN)
+            .liee_deb(UPDATED_LIEEDEB)
+            .liee_fin(UPDATED_LIEEFIN)
             .program(UPDATED_PROGRAM)
             .cd1(UPDATED_CD_1)
             .cd2(UPDATED_CD_2)
@@ -567,11 +567,11 @@ class RotRservResourceIT {
         assertThat(testRotRserv.getDecagenc()).isEqualTo(UPDATED_DECAGENC);
         assertThat(testRotRserv.getDedated()).isEqualTo(UPDATED_DEDATED);
         assertThat(testRotRserv.getMatric()).isEqualTo(UPDATED_MATRIC);
-        assertThat(testRotRserv.getHeurdeb()).isEqualTo(UPDATED_HEURDEB);
-        assertThat(testRotRserv.getHeurfin()).isEqualTo(UPDATED_HEURFIN);
+        assertThat(testRotRserv.getHeur_deb()).isEqualTo(UPDATED_HEURDEB);
+        assertThat(testRotRserv.getHeur_fin()).isEqualTo(UPDATED_HEURFIN);
         assertThat(testRotRserv.getStatut()).isEqualTo(UPDATED_STATUT);
-        assertThat(testRotRserv.getLieedeb()).isEqualTo(UPDATED_LIEEDEB);
-        assertThat(testRotRserv.getLieefin()).isEqualTo(UPDATED_LIEEFIN);
+        assertThat(testRotRserv.getLiee_deb()).isEqualTo(UPDATED_LIEEDEB);
+        assertThat(testRotRserv.getLiee_fin()).isEqualTo(UPDATED_LIEEFIN);
         assertThat(testRotRserv.getProgram()).isEqualTo(UPDATED_PROGRAM);
         assertThat(testRotRserv.getCd1()).isEqualTo(UPDATED_CD_1);
         assertThat(testRotRserv.getCd2()).isEqualTo(UPDATED_CD_2);

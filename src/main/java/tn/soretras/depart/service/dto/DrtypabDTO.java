@@ -15,9 +15,9 @@ public class DrtypabDTO implements Serializable {
 
     private String lbtypab;
 
-    private String dabsjt;
+    private String dabs_jt;
 
-    private String dabsjp;
+    private String dabs_jp;
 
     public String getId() {
         return id;
@@ -43,20 +43,20 @@ public class DrtypabDTO implements Serializable {
         this.lbtypab = lbtypab;
     }
 
-    public String getDabsjt() {
-        return dabsjt;
+    public String getDabs_jt() {
+        return dabs_jt;
     }
 
-    public void setDabsjt(String dabsjt) {
-        this.dabsjt = dabsjt;
+    public void setDabs_jt(String dabs_jt) {
+        this.dabs_jt = dabs_jt;
     }
 
-    public String getDabsjp() {
-        return dabsjp;
+    public String getDabs_jp() {
+        return dabs_jp;
     }
 
-    public void setDabsjp(String dabsjp) {
-        this.dabsjp = dabsjp;
+    public void setDabs_jp(String dabs_jp) {
+        this.dabs_jp = dabs_jp;
     }
 
     @Override
@@ -87,8 +87,8 @@ public class DrtypabDTO implements Serializable {
             "id='" + getId() + "'" +
             ", cdtypab='" + getCdtypab() + "'" +
             ", lbtypab='" + getLbtypab() + "'" +
-            ", dabsjt='" + getDabsjt() + "'" +
-            ", dabsjp='" + getDabsjp() + "'" +
+            ", dabsjt='" + getDabs_jt() + "'" +
+            ", dabsjp='" + getDabs_jp() + "'" +
             "}";
     }
 }

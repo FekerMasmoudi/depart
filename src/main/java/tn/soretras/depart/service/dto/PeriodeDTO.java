@@ -17,9 +17,9 @@ public class PeriodeDTO implements Serializable {
 
     private String primaire;
 
-    private String startdate;
+    private String start_date;
 
-    private String enddate;
+    private String end_date;
 
     public String getId() {
         return id;
@@ -53,20 +53,20 @@ public class PeriodeDTO implements Serializable {
         this.primaire = primaire;
     }
 
-    public String getStartdate() {
-        return startdate;
+    public String getStart_date() {
+        return start_date;
     }
 
-    public void setStartdate(String startdate) {
-        this.startdate = startdate;
+    public void setStart_date(String start_date) {
+        this.start_date = start_date;
     }
 
-    public String getEnddate() {
-        return enddate;
+    public String getEnd_date() {
+        return end_date;
     }
 
-    public void setEnddate(String enddate) {
-        this.enddate = enddate;
+    public void setEnd_date(String end_date) {
+        this.end_date = end_date;
     }
 
     @Override
@@ -98,8 +98,8 @@ public class PeriodeDTO implements Serializable {
             ", decoper='" + getDecoper() + "'" +
             ", denoper='" + getDenoper() + "'" +
             ", primaire='" + getPrimaire() + "'" +
-            ", startdate='" + getStartdate() + "'" +
-            ", enddate='" + getEnddate() + "'" +
+            ", startdate='" + getStart_date() + "'" +
+            ", enddate='" + getEnd_date() + "'" +
             "}";
     }
 }

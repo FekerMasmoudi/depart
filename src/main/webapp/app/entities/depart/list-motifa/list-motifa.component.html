@@ -2,13 +2,13 @@
 <h1 mat-dialog-title>{{ data.name }}</h1> -->
 <div class="mat-dialog">
   <mat-dialog-content>
-    <p style="text-align: center"><b>سبب الإلغاء</b></p>
+    <p style="text-align: center; font-size: medium"><b>سبب الإلغــاء</b></p>
 
     <mat-form-field>
       <mat-label class="form-label" jhiTranslate="departdbApp.depart.motifa" for="field_motifa">سبب الإلغاء</mat-label>
       <mat-select [(ngModel)]="data.id">
         <mat-option [value]="null" selected>-- الرّجـاء إختيـار سبب الإلغاء --</mat-option>
-        <mat-option *ngFor="let m of motifas" [value]="m.decmotif">
+        <mat-option *ngFor="let m of motifas" [value]="m.id">
           {{ m.libmotif }}
         </mat-option>
       </mat-select>

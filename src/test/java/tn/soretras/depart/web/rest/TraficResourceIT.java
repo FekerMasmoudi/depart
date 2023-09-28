@@ -36,8 +36,8 @@ class TraficResourceIT {
     private static final Integer DEFAULT_DECAGENC = 1;
     private static final Integer UPDATED_DECAGENC = 2;
 
-    private static final LocalDate DEFAULT_DEDATED = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_DEDATED = LocalDate.now(ZoneId.systemDefault());
+    private static final String DEFAULT_DEDATED = "2023-08-08T22:00:00Z";
+    private static final String UPDATED_DEDATED = "2023-08-08T22:00:00Z";
 
     private static final Integer DEFAULT_ANCIEN = 1;
     private static final Integer UPDATED_ANCIEN = 2;
@@ -74,8 +74,8 @@ class TraficResourceIT {
             .decagenc(DEFAULT_DECAGENC)
             .dedated(DEFAULT_DEDATED)
             .ancien(DEFAULT_ANCIEN)
-            .vldtrafic(DEFAULT_VLDTRAFIC)
-            .clotrafic(DEFAULT_CLOTRAFIC);
+            .vld_trafic(DEFAULT_VLDTRAFIC)
+            .clo_trafic(DEFAULT_CLOTRAFIC);
         return trafic;
     }
 
@@ -91,8 +91,8 @@ class TraficResourceIT {
             .decagenc(UPDATED_DECAGENC)
             .dedated(UPDATED_DEDATED)
             .ancien(UPDATED_ANCIEN)
-            .vldtrafic(UPDATED_VLDTRAFIC)
-            .clotrafic(UPDATED_CLOTRAFIC);
+            .vld_trafic(UPDATED_VLDTRAFIC)
+            .clo_trafic(UPDATED_CLOTRAFIC);
         return trafic;
     }
 
@@ -119,8 +119,8 @@ class TraficResourceIT {
         assertThat(testTrafic.getDecagenc()).isEqualTo(DEFAULT_DECAGENC);
         assertThat(testTrafic.getDedated()).isEqualTo(DEFAULT_DEDATED);
         assertThat(testTrafic.getAncien()).isEqualTo(DEFAULT_ANCIEN);
-        assertThat(testTrafic.getVldtrafic()).isEqualTo(DEFAULT_VLDTRAFIC);
-        assertThat(testTrafic.getClotrafic()).isEqualTo(DEFAULT_CLOTRAFIC);
+        assertThat(testTrafic.getVld_trafic()).isEqualTo(DEFAULT_VLDTRAFIC);
+        assertThat(testTrafic.getClo_trafic()).isEqualTo(DEFAULT_CLOTRAFIC);
     }
 
     @Test
@@ -250,8 +250,8 @@ class TraficResourceIT {
             .decagenc(UPDATED_DECAGENC)
             .dedated(UPDATED_DEDATED)
             .ancien(UPDATED_ANCIEN)
-            .vldtrafic(UPDATED_VLDTRAFIC)
-            .clotrafic(UPDATED_CLOTRAFIC);
+            .vld_trafic(UPDATED_VLDTRAFIC)
+            .clo_trafic(UPDATED_CLOTRAFIC);
         TraficDTO traficDTO = traficMapper.toDto(updatedTrafic);
 
         restTraficMockMvc
@@ -270,8 +270,8 @@ class TraficResourceIT {
         assertThat(testTrafic.getDecagenc()).isEqualTo(UPDATED_DECAGENC);
         assertThat(testTrafic.getDedated()).isEqualTo(UPDATED_DEDATED);
         assertThat(testTrafic.getAncien()).isEqualTo(UPDATED_ANCIEN);
-        assertThat(testTrafic.getVldtrafic()).isEqualTo(UPDATED_VLDTRAFIC);
-        assertThat(testTrafic.getClotrafic()).isEqualTo(UPDATED_CLOTRAFIC);
+        assertThat(testTrafic.getVld_trafic()).isEqualTo(UPDATED_VLDTRAFIC);
+        assertThat(testTrafic.getClo_trafic()).isEqualTo(UPDATED_CLOTRAFIC);
     }
 
     @Test
@@ -351,8 +351,8 @@ class TraficResourceIT {
             .deccent(UPDATED_DECCENT)
             .decagenc(UPDATED_DECAGENC)
             .ancien(UPDATED_ANCIEN)
-            .vldtrafic(UPDATED_VLDTRAFIC)
-            .clotrafic(UPDATED_CLOTRAFIC);
+            .vld_trafic(UPDATED_VLDTRAFIC)
+            .clo_trafic(UPDATED_CLOTRAFIC);
 
         restTraficMockMvc
             .perform(
@@ -370,8 +370,8 @@ class TraficResourceIT {
         assertThat(testTrafic.getDecagenc()).isEqualTo(UPDATED_DECAGENC);
         assertThat(testTrafic.getDedated()).isEqualTo(DEFAULT_DEDATED);
         assertThat(testTrafic.getAncien()).isEqualTo(UPDATED_ANCIEN);
-        assertThat(testTrafic.getVldtrafic()).isEqualTo(UPDATED_VLDTRAFIC);
-        assertThat(testTrafic.getClotrafic()).isEqualTo(UPDATED_CLOTRAFIC);
+        assertThat(testTrafic.getVld_trafic()).isEqualTo(UPDATED_VLDTRAFIC);
+        assertThat(testTrafic.getClo_trafic()).isEqualTo(UPDATED_CLOTRAFIC);
     }
 
     @Test
@@ -390,8 +390,8 @@ class TraficResourceIT {
             .decagenc(UPDATED_DECAGENC)
             .dedated(UPDATED_DEDATED)
             .ancien(UPDATED_ANCIEN)
-            .vldtrafic(UPDATED_VLDTRAFIC)
-            .clotrafic(UPDATED_CLOTRAFIC);
+            .vld_trafic(UPDATED_VLDTRAFIC)
+            .clo_trafic(UPDATED_CLOTRAFIC);
 
         restTraficMockMvc
             .perform(
@@ -409,8 +409,8 @@ class TraficResourceIT {
         assertThat(testTrafic.getDecagenc()).isEqualTo(UPDATED_DECAGENC);
         assertThat(testTrafic.getDedated()).isEqualTo(UPDATED_DEDATED);
         assertThat(testTrafic.getAncien()).isEqualTo(UPDATED_ANCIEN);
-        assertThat(testTrafic.getVldtrafic()).isEqualTo(UPDATED_VLDTRAFIC);
-        assertThat(testTrafic.getClotrafic()).isEqualTo(UPDATED_CLOTRAFIC);
+        assertThat(testTrafic.getVld_trafic()).isEqualTo(UPDATED_VLDTRAFIC);
+        assertThat(testTrafic.getClo_trafic()).isEqualTo(UPDATED_CLOTRAFIC);
     }
 
     @Test

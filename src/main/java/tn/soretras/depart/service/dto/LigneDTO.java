@@ -40,7 +40,7 @@ public class LigneDTO implements Serializable {
 
     private Double depiste;
 
-    private String statlig;
+    private String stat_lig;
 
     private String lig;
 
@@ -55,13 +55,13 @@ public class LigneDTO implements Serializable {
     private String kmlContentType;
     private String description;
 
-    private String mimtype;
+    private String mim_type;
 
-    private String filename;
+    private String file_name;
 
-    private String charset;
+    private String char_set;
 
-    private LocalDate lastupdate;
+    private String last_update;
 
     public String getId() {
         return id;
@@ -183,12 +183,12 @@ public class LigneDTO implements Serializable {
         this.depiste = depiste;
     }
 
-    public String getStatlig() {
-        return statlig;
+    public String getStat_lig() {
+        return stat_lig;
     }
 
-    public void setStatlig(String statlig) {
-        this.statlig = statlig;
+    public void setStat_lig(String stat_lig) {
+        this.stat_lig = stat_lig;
     }
 
     public String getLig() {
@@ -247,36 +247,36 @@ public class LigneDTO implements Serializable {
         this.description = description;
     }
 
-    public String getMimtype() {
-        return mimtype;
+    public String getMim_type() {
+        return mim_type;
     }
 
-    public void setMimtype(String mimtype) {
-        this.mimtype = mimtype;
+    public void setMim_type(String mim_type) {
+        this.mim_type = mim_type;
     }
 
-    public String getFilename() {
-        return filename;
+    public String getFile_name() {
+        return file_name;
     }
 
-    public void setFilename(String filename) {
-        this.filename = filename;
+    public void setFile_name(String file_name) {
+        this.file_name = file_name;
     }
 
-    public String getCharset() {
-        return charset;
+    public String getChar_set() {
+        return char_set;
     }
 
-    public void setCharset(String charset) {
-        this.charset = charset;
+    public void setChar_set(String char_set) {
+        this.char_set = char_set;
     }
 
-    public LocalDate getLastupdate() {
-        return lastupdate;
+    public String getLast_update() {
+        return last_update;
     }
 
-    public void setLastupdate(LocalDate lastupdate) {
-        this.lastupdate = lastupdate;
+    public void setLast_update(String last_update) {
+        this.last_update = last_update;
     }
 
     @Override
@@ -319,17 +319,17 @@ public class LigneDTO implements Serializable {
             ", detrjva=" + getDetrjva() +
             ", detrjvr=" + getDetrjvr() +
             ", depiste=" + getDepiste() +
-            ", statlig='" + getStatlig() + "'" +
+            ", statlig='" + getStat_lig() + "'" +
             ", lig='" + getLig() + "'" +
             ", lig1=" + getLig1() +
             ", valide='" + getValide() + "'" +
             ", denumli2='" + getDenumli2() + "'" +
             ", kml='" + getKml() + "'" +
             ", description='" + getDescription() + "'" +
-            ", mimtype='" + getMimtype() + "'" +
-            ", filename='" + getFilename() + "'" +
-            ", charset='" + getCharset() + "'" +
-            ", lastupdate='" + getLastupdate() + "'" +
+            ", mimtype='" + getMim_type() + "'" +
+            ", filename='" + getFile_name() + "'" +
+            ", charset='" + getChar_set() + "'" +
+            ", lastupdate='" + getLast_update() + "'" +
             "}";
     }
 }

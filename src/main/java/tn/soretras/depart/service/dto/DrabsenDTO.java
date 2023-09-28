@@ -16,15 +16,15 @@ public class DrabsenDTO implements Serializable {
 
     private Integer matric;
 
-    private LocalDate databs;
+    private String dat_abs;
 
-    private Integer numabs;
+    private Integer num_abs;
 
-    private Integer nbrabs;
+    private Integer nbr_abs;
 
-    private Integer validabs;
+    private Integer valid_abs;
 
-    private String observaabs;
+    private String observa_abs;
 
     private Integer cd1;
 
@@ -56,44 +56,44 @@ public class DrabsenDTO implements Serializable {
         this.matric = matric;
     }
 
-    public LocalDate getDatabs() {
-        return databs;
+    public String getDat_abs() {
+        return dat_abs;
     }
 
-    public void setDatabs(LocalDate databs) {
-        this.databs = databs;
+    public void setDat_abs(String dat_abs) {
+        this.dat_abs = dat_abs;
     }
 
-    public Integer getNumabs() {
-        return numabs;
+    public Integer getNum_abs() {
+        return num_abs;
     }
 
-    public void setNumabs(Integer numabs) {
-        this.numabs = numabs;
+    public void setNum_abs(Integer num_abs) {
+        this.num_abs = num_abs;
     }
 
-    public Integer getNbrabs() {
-        return nbrabs;
+    public Integer getNbr_abs() {
+        return nbr_abs;
     }
 
-    public void setNbrabs(Integer nbrabs) {
-        this.nbrabs = nbrabs;
+    public void setNbr_abs(Integer nbr_abs) {
+        this.nbr_abs = nbr_abs;
     }
 
-    public Integer getValidabs() {
-        return validabs;
+    public Integer getValid_abs() {
+        return valid_abs;
     }
 
-    public void setValidabs(Integer validabs) {
-        this.validabs = validabs;
+    public void setValid_abs(Integer valid_abs) {
+        this.valid_abs = valid_abs;
     }
 
-    public String getObservaabs() {
-        return observaabs;
+    public String getObserva_abs() {
+        return observa_abs;
     }
 
-    public void setObservaabs(String observaabs) {
-        this.observaabs = observaabs;
+    public void setObserva_abs(String observa_abs) {
+        this.observa_abs = observa_abs;
     }
 
     public Integer getCd1() {
@@ -148,11 +148,11 @@ public class DrabsenDTO implements Serializable {
             "id='" + getId() + "'" +
             ", cdtypab='" + getCdtypab() + "'" +
             ", matric=" + getMatric() +
-            ", databs='" + getDatabs() + "'" +
-            ", numabs=" + getNumabs() +
-            ", nbrabs=" + getNbrabs() +
-            ", validabs=" + getValidabs() +
-            ", observaabs='" + getObservaabs() + "'" +
+            ", databs='" + getDat_abs() + "'" +
+            ", numabs=" + getNum_abs() +
+            ", nbrabs=" + getNbr_abs() +
+            ", validabs=" + getValid_abs() +
+            ", observaabs='" + getObserva_abs() + "'" +
             ", cd1=" + getCd1() +
             ", cd2=" + getCd2() +
             ", cd3=" + getCd3() +

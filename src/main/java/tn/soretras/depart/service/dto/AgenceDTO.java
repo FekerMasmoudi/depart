@@ -20,7 +20,7 @@ public class AgenceDTO implements Serializable {
 
     private String delagenc;
 
-    private String defaultagenc;
+    private String default_agenc;
 
     public String getId() {
         return id;
@@ -54,12 +54,12 @@ public class AgenceDTO implements Serializable {
         this.delagenc = delagenc;
     }
 
-    public String getDefaultagenc() {
-        return defaultagenc;
+    public String getDefault_agenc() {
+        return default_agenc;
     }
 
-    public void setDefaultagenc(String defaultagenc) {
-        this.defaultagenc = defaultagenc;
+    public void setDefault_agenc(String default_agenc) {
+        this.default_agenc = default_agenc;
     }
 
     @Override
@@ -91,7 +91,7 @@ public class AgenceDTO implements Serializable {
             ", deccent=" + getDeccent() +
             ", decagenc=" + getDecagenc() +
             ", delagenc='" + getDelagenc() + "'" +
-            ", defaultagenc='" + getDefaultagenc() + "'" +
+            ", defaultagenc='" + getDefault_agenc() + "'" +
             "}";
     }
 }

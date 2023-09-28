@@ -61,7 +61,7 @@ public class Ligne implements Serializable {
     private Double depiste;
 
     @Field("statlig")
-    private String statlig;
+    private String stat_lig;
 
     @Field("lig")
     private String lig;
@@ -85,76 +85,18 @@ public class Ligne implements Serializable {
     private String description;
 
     @Field("mimtype")
-    private String mimtype;
+    private String mim_type;
 
     @Field("filename")
-    private String filename;
+    private String file_name;
 
     @Field("charset")
-    private String charset;
+    private String char_set;
 
     @Field("lastupdate")
-    private LocalDate lastupdate;
+    private String last_update;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
-
-    public Ligne(
-        String id,
-        Integer deccent,
-        Integer decagenc,
-        String denumli,
-        String dectyli,
-        String dectyta,
-        String denomli,
-        String dectyeq,
-        Double denbrkm,
-        String detparc,
-        Integer dedural,
-        Integer dedurrt,
-        Integer detrjva,
-        Integer detrjvr,
-        Double depiste,
-        String statlig,
-        String lig,
-        Integer lig1,
-        String valide,
-        String denumli2,
-        byte[] kml,
-        String kmlContentType,
-        String description,
-        String mimtype,
-        String filename,
-        String charset,
-        LocalDate lastupdate
-    ) {
-        this.id = id;
-        this.deccent = deccent;
-        this.decagenc = decagenc;
-        this.denumli = denumli;
-        this.dectyli = dectyli;
-        this.dectyta = dectyta;
-        this.denomli = denomli;
-        this.dectyeq = dectyeq;
-        this.denbrkm = denbrkm;
-        this.detparc = detparc;
-        this.dedural = dedural;
-        this.dedurrt = dedurrt;
-        this.detrjva = detrjva;
-        this.detrjvr = detrjvr;
-        this.depiste = depiste;
-        this.statlig = statlig;
-        this.lig = lig;
-        this.lig1 = lig1;
-        this.valide = valide;
-        this.denumli2 = denumli2;
-        this.kml = kml;
-        this.kmlContentType = kmlContentType;
-        this.description = description;
-        this.mimtype = mimtype;
-        this.filename = filename;
-        this.charset = charset;
-        this.lastupdate = lastupdate;
-    }
 
     public Ligne() {}
 
@@ -353,17 +295,17 @@ public class Ligne implements Serializable {
         this.depiste = depiste;
     }
 
-    public String getStatlig() {
-        return this.statlig;
+    public String getStat_lig() {
+        return this.stat_lig;
     }
 
-    public Ligne statlig(String statlig) {
-        this.setStatlig(statlig);
+    public Ligne stat_lig(String stat_lig) {
+        this.setStat_lig(stat_lig);
         return this;
     }
 
-    public void setStatlig(String statlig) {
-        this.statlig = statlig;
+    public void setStat_lig(String stat_lig) {
+        this.stat_lig = stat_lig;
     }
 
     public String getLig() {
@@ -457,56 +399,56 @@ public class Ligne implements Serializable {
         this.description = description;
     }
 
-    public String getMimtype() {
-        return this.mimtype;
+    public String getMim_type() {
+        return this.mim_type;
     }
 
-    public Ligne mimtype(String mimtype) {
-        this.setMimtype(mimtype);
+    public Ligne mim_type(String mim_type) {
+        this.setMim_type(mim_type);
         return this;
     }
 
-    public void setMimtype(String mimtype) {
-        this.mimtype = mimtype;
+    public void setMim_type(String mim_type) {
+        this.mim_type = mim_type;
     }
 
-    public String getFilename() {
-        return this.filename;
+    public String getFile_name() {
+        return this.file_name;
     }
 
-    public Ligne filename(String filename) {
-        this.setFilename(filename);
+    public Ligne file_name(String file_name) {
+        this.setFile_name(file_name);
         return this;
     }
 
-    public void setFilename(String filename) {
-        this.filename = filename;
+    public void setFile_name(String file_name) {
+        this.file_name = file_name;
     }
 
-    public String getCharset() {
-        return this.charset;
+    public String getChar_set() {
+        return this.char_set;
     }
 
-    public Ligne charset(String charset) {
-        this.setCharset(charset);
+    public Ligne char_set(String char_set) {
+        this.setChar_set(char_set);
         return this;
     }
 
-    public void setCharset(String charset) {
-        this.charset = charset;
+    public void setChar_set(String char_set) {
+        this.char_set = char_set;
     }
 
-    public LocalDate getLastupdate() {
-        return this.lastupdate;
+    public String getLast_update() {
+        return this.last_update;
     }
 
-    public Ligne lastupdate(LocalDate lastupdate) {
-        this.setLastupdate(lastupdate);
+    public Ligne last_update(String last_update) {
+        this.setLast_update(last_update);
         return this;
     }
 
-    public void setLastupdate(LocalDate lastupdate) {
-        this.lastupdate = lastupdate;
+    public void setLast_update(String last_update) {
+        this.last_update = last_update;
     }
 
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here
@@ -547,7 +489,7 @@ public class Ligne implements Serializable {
             ", detrjva=" + getDetrjva() +
             ", detrjvr=" + getDetrjvr() +
             ", depiste=" + getDepiste() +
-            ", statlig='" + getStatlig() + "'" +
+            ", statlig='" + getStat_lig() + "'" +
             ", lig='" + getLig() + "'" +
             ", lig1=" + getLig1() +
             ", valide='" + getValide() + "'" +
@@ -555,10 +497,10 @@ public class Ligne implements Serializable {
             ", kml='" + getKml() + "'" +
             ", kmlContentType='" + getKmlContentType() + "'" +
             ", description='" + getDescription() + "'" +
-            ", mimtype='" + getMimtype() + "'" +
-            ", filename='" + getFilename() + "'" +
-            ", charset='" + getCharset() + "'" +
-            ", lastupdate='" + getLastupdate() + "'" +
+            ", mimtype='" + getMim_type() + "'" +
+            ", filename='" + getFile_name() + "'" +
+            ", charset='" + getChar_set() + "'" +
+            ", lastupdate='" + getLast_update() + "'" +
             "}";
     }
 }

@@ -1,7 +1,7 @@
 {
   "applications": "*",
   "changelogDate": "20230804103421",
-  "dto": "no",
+  "dto": "mapstruct",
   "embedded": false,
   "entityTableName": "deprotat",
   "fields": [
@@ -160,7 +160,7 @@
   "fluentMethods": true,
   "jpaMetamodelFiltering": false,
   "name": "Deprotat",
-  "pagination": "no",
+  "pagination": "pagination",
   "readOnly": false,
   "relationships": [
     {
@@ -170,5 +170,5 @@
       "relationshipType": "many-to-one"
     }
   ],
-  "service": "no"
+  "service": "serviceClass"
 }

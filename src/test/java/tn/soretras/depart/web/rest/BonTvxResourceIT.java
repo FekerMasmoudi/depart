@@ -60,14 +60,14 @@ class BonTvxResourceIT {
     private static final String DEFAULT_REFBT = "AAAAAAAAAA";
     private static final String UPDATED_REFBT = "BBBBBBBBBB";
 
-    private static final LocalDate DEFAULT_DATBT = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_DATBT = LocalDate.now(ZoneId.systemDefault());
+    private static final String DEFAULT_DATBT = "2023-08-08T23:00:00Z";
+    private static final String UPDATED_DATBT = "2023-08-08T23:00:00Z";
 
-    private static final LocalDate DEFAULT_DATDT = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_DATDT = LocalDate.now(ZoneId.systemDefault());
+    private static final String DEFAULT_DATDT = "2023-08-08T23:00:00Z";
+    private static final String UPDATED_DATDT = "2023-08-08T23:00:00Z";
 
-    private static final LocalDate DEFAULT_DATFT = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_DATFT = LocalDate.now(ZoneId.systemDefault());
+    private static final String DEFAULT_DATFT = "2023-08-08T23:00:00Z";
+    private static final String UPDATED_DATFT = "2023-08-08T23:00:00Z";
 
     private static final String DEFAULT_VLD = "AAAAAAAAAA";
     private static final String UPDATED_VLD = "BBBBBBBBBB";
@@ -75,20 +75,20 @@ class BonTvxResourceIT {
     private static final String DEFAULT_TYPTVX = "AAAAAAAAAA";
     private static final String UPDATED_TYPTVX = "BBBBBBBBBB";
 
-    private static final LocalDate DEFAULT_HEURDB = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_HEURDB = LocalDate.now(ZoneId.systemDefault());
+    private static final String DEFAULT_HEURDB = "2023-08-08T23:00:00Z";
+    private static final String UPDATED_HEURDB = "2023-08-08T23:00:00Z";
 
-    private static final LocalDate DEFAULT_HEURFI = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_HEURFI = LocalDate.now(ZoneId.systemDefault());
+    private static final String DEFAULT_HEURFI = "2023-08-08T23:00:00Z";
+    private static final String UPDATED_HEURFI = "2023-08-08T23:00:00Z";
 
     private static final String DEFAULT_OBSERV = "AAAAAAAAAA";
     private static final String UPDATED_OBSERV = "BBBBBBBBBB";
 
-    private static final LocalDate DEFAULT_DATSRT = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_DATSRT = LocalDate.now(ZoneId.systemDefault());
+    private static final String DEFAULT_DATSRT = "2023-08-08T23:00:00Z";
+    private static final String UPDATED_DATSRT = "2023-08-08T23:00:00Z";
 
-    private static final LocalDate DEFAULT_HEURSR = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_HEURSR = LocalDate.now(ZoneId.systemDefault());
+    private static final String DEFAULT_HEURSR = "2023-08-08T23:00:00Z";
+    private static final String UPDATED_HEURSR = "2023-08-08T23:00:00Z";
 
     private static final String DEFAULT_OBSTEST = "AAAAAAAAAA";
     private static final String UPDATED_OBSTEST = "BBBBBBBBBB";
@@ -132,23 +132,23 @@ class BonTvxResourceIT {
     private static final String DEFAULT_CDTYPMNT = "AAAAAAAAAA";
     private static final String UPDATED_CDTYPMNT = "BBBBBBBBBB";
 
-    private static final LocalDate DEFAULT_DATSORPREV = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_DATSORPREV = LocalDate.now(ZoneId.systemDefault());
+    private static final String DEFAULT_DATSORPREV = "2023-08-08T23:00:00Z";
+    private static final String UPDATED_DATSORPREV = "2023-08-08T23:00:00Z";
 
-    private static final LocalDate DEFAULT_DATMNQDU = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_DATMNQDU = LocalDate.now(ZoneId.systemDefault());
+    private static final String DEFAULT_DATMNQDU = "2023-08-08T23:00:00Z";
+    private static final String UPDATED_DATMNQDU = "2023-08-08T23:00:00Z";
 
-    private static final LocalDate DEFAULT_DATMNQAU = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_DATMNQAU = LocalDate.now(ZoneId.systemDefault());
+    private static final String DEFAULT_DATMNQAU = "2023-08-08T23:00:00Z";
+    private static final String UPDATED_DATMNQAU = "2023-08-08T23:00:00Z";
 
-    private static final LocalDate DEFAULT_DATENTANT = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_DATENTANT = LocalDate.now(ZoneId.systemDefault());
+    private static final String DEFAULT_DATENTANT = "2023-08-08T23:00:00Z";
+    private static final String UPDATED_DATENTANT = "2023-08-08T23:00:00Z";
 
     private static final String DEFAULT_CODSTAT = "AAAAAAAAAA";
     private static final String UPDATED_CODSTAT = "BBBBBBBBBB";
 
-    private static final LocalDate DEFAULT_DATVLD = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_DATVLD = LocalDate.now(ZoneId.systemDefault());
+    private static final String DEFAULT_DATVLD = "2023-08-08T23:00:00Z";
+    private static final String UPDATED_DATVLD = "2023-08-08T23:00:00Z";
 
     private static final String DEFAULT_OBSERV_1 = "AAAAAAAAAA";
     private static final String UPDATED_OBSERV_1 = "BBBBBBBBBB";
@@ -159,8 +159,8 @@ class BonTvxResourceIT {
     private static final Integer DEFAULT_VALIDAG = 1;
     private static final Integer UPDATED_VALIDAG = 2;
 
-    private static final LocalDate DEFAULT_DATSAIS = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_DATSAIS = LocalDate.now(ZoneId.systemDefault());
+    private static final String DEFAULT_DATSAIS = "2023-08-08T23:00:00Z";
+    private static final String UPDATED_DATSAIS = "2023-08-08T23:00:00Z";
 
     private static final String ENTITY_API_URL = "/api/bon-tvxes";
     private static final String ENTITY_API_URL_ID = ENTITY_API_URL + "/{id}";
@@ -185,49 +185,49 @@ class BonTvxResourceIT {
     public static BonTvx createEntity() {
         BonTvx bonTvx = new BonTvx()
             .cdexerc(DEFAULT_CDEXERC)
-            .numbt(DEFAULT_NUMBT)
+            .num_bt(DEFAULT_NUMBT)
             .cdtier(DEFAULT_CDTIER)
             .cdmac(DEFAULT_CDMAC)
-            .maccdmac(DEFAULT_MACCDMAC)
+            .mac_cdmac(DEFAULT_MACCDMAC)
             .cdserv(DEFAULT_CDSERV)
             .decagen(DEFAULT_DECAGEN)
-            .dradecagen(DEFAULT_DRADECAGEN)
+            .dra_decagen(DEFAULT_DRADECAGEN)
             .cdorga(DEFAULT_CDORGA)
-            .refbt(DEFAULT_REFBT)
-            .datbt(DEFAULT_DATBT)
-            .datdt(DEFAULT_DATDT)
-            .datft(DEFAULT_DATFT)
+            .ref_bt(DEFAULT_REFBT)
+            .dat_bt(DEFAULT_DATBT)
+            .dat_dt(DEFAULT_DATDT)
+            .dat_ft(DEFAULT_DATFT)
             .vld(DEFAULT_VLD)
-            .typtvx(DEFAULT_TYPTVX)
+            .typ_tvx(DEFAULT_TYPTVX)
             .heurdb(DEFAULT_HEURDB)
             .heurfi(DEFAULT_HEURFI)
             .observ(DEFAULT_OBSERV)
-            .datsrt(DEFAULT_DATSRT)
+            .dat_srt(DEFAULT_DATSRT)
             .heursr(DEFAULT_HEURSR)
-            .obstest(DEFAULT_OBSTEST)
-            .indexdep(DEFAULT_INDEXDEP)
-            .indexarr(DEFAULT_INDEXARR)
-            .immatex(DEFAULT_IMMATEX)
-            .nomchauff(DEFAULT_NOMCHAUFF)
-            .numpermis(DEFAULT_NUMPERMIS)
+            .obs_test(DEFAULT_OBSTEST)
+            .index_dep(DEFAULT_INDEXDEP)
+            .index_arr(DEFAULT_INDEXARR)
+            .immat_ex(DEFAULT_IMMATEX)
+            .nom_chauff(DEFAULT_NOMCHAUFF)
+            .num_permis(DEFAULT_NUMPERMIS)
             .etab(DEFAULT_ETAB)
             .compteur(DEFAULT_COMPTEUR)
-            .cptorg(DEFAULT_CPTORG)
+            .cpt_org(DEFAULT_CPTORG)
             .cdtyptr(DEFAULT_CDTYPTR)
             .decstat(DEFAULT_DECSTAT)
             .testeur(DEFAULT_TESTEUR)
-            .motifdep(DEFAULT_MOTIFDEP)
+            .motif_dep(DEFAULT_MOTIFDEP)
             .cdtypmnt(DEFAULT_CDTYPMNT)
-            .datsorprev(DEFAULT_DATSORPREV)
-            .datmnqdu(DEFAULT_DATMNQDU)
-            .datmnqau(DEFAULT_DATMNQAU)
-            .datentant(DEFAULT_DATENTANT)
+            .dat_sor_prev(DEFAULT_DATSORPREV)
+            .dat_mnq_du(DEFAULT_DATMNQDU)
+            .dat_mnq_au(DEFAULT_DATMNQAU)
+            .dat_ent_ant(DEFAULT_DATENTANT)
             .codstat(DEFAULT_CODSTAT)
-            .datvld(DEFAULT_DATVLD)
+            .dat_vld(DEFAULT_DATVLD)
             .observ1(DEFAULT_OBSERV_1)
             .testeur1(DEFAULT_TESTEUR_1)
-            .validag(DEFAULT_VALIDAG)
-            .datsais(DEFAULT_DATSAIS);
+            .valid_ag(DEFAULT_VALIDAG)
+            .dat_sais(DEFAULT_DATSAIS);
         return bonTvx;
     }
 
@@ -240,49 +240,49 @@ class BonTvxResourceIT {
     public static BonTvx createUpdatedEntity() {
         BonTvx bonTvx = new BonTvx()
             .cdexerc(UPDATED_CDEXERC)
-            .numbt(UPDATED_NUMBT)
+            .num_bt(UPDATED_NUMBT)
             .cdtier(UPDATED_CDTIER)
             .cdmac(UPDATED_CDMAC)
-            .maccdmac(UPDATED_MACCDMAC)
+            .mac_cdmac(UPDATED_MACCDMAC)
             .cdserv(UPDATED_CDSERV)
             .decagen(UPDATED_DECAGEN)
-            .dradecagen(UPDATED_DRADECAGEN)
+            .dra_decagen(UPDATED_DRADECAGEN)
             .cdorga(UPDATED_CDORGA)
-            .refbt(UPDATED_REFBT)
-            .datbt(UPDATED_DATBT)
-            .datdt(UPDATED_DATDT)
-            .datft(UPDATED_DATFT)
+            .ref_bt(UPDATED_REFBT)
+            .dat_bt(UPDATED_DATBT)
+            .dat_dt(UPDATED_DATDT)
+            .dat_ft(UPDATED_DATFT)
             .vld(UPDATED_VLD)
-            .typtvx(UPDATED_TYPTVX)
+            .typ_tvx(UPDATED_TYPTVX)
             .heurdb(UPDATED_HEURDB)
             .heurfi(UPDATED_HEURFI)
             .observ(UPDATED_OBSERV)
-            .datsrt(UPDATED_DATSRT)
+            .dat_srt(UPDATED_DATSRT)
             .heursr(UPDATED_HEURSR)
-            .obstest(UPDATED_OBSTEST)
-            .indexdep(UPDATED_INDEXDEP)
-            .indexarr(UPDATED_INDEXARR)
-            .immatex(UPDATED_IMMATEX)
-            .nomchauff(UPDATED_NOMCHAUFF)
-            .numpermis(UPDATED_NUMPERMIS)
+            .obs_test(UPDATED_OBSTEST)
+            .index_dep(UPDATED_INDEXDEP)
+            .index_arr(UPDATED_INDEXARR)
+            .immat_ex(UPDATED_IMMATEX)
+            .nom_chauff(UPDATED_NOMCHAUFF)
+            .num_permis(UPDATED_NUMPERMIS)
             .etab(UPDATED_ETAB)
             .compteur(UPDATED_COMPTEUR)
-            .cptorg(UPDATED_CPTORG)
+            .cpt_org(UPDATED_CPTORG)
             .cdtyptr(UPDATED_CDTYPTR)
             .decstat(UPDATED_DECSTAT)
             .testeur(UPDATED_TESTEUR)
-            .motifdep(UPDATED_MOTIFDEP)
+            .motif_dep(UPDATED_MOTIFDEP)
             .cdtypmnt(UPDATED_CDTYPMNT)
-            .datsorprev(UPDATED_DATSORPREV)
-            .datmnqdu(UPDATED_DATMNQDU)
-            .datmnqau(UPDATED_DATMNQAU)
-            .datentant(UPDATED_DATENTANT)
+            .dat_sor_prev(UPDATED_DATSORPREV)
+            .dat_mnq_du(UPDATED_DATMNQDU)
+            .dat_mnq_au(UPDATED_DATMNQAU)
+            .dat_ent_ant(UPDATED_DATENTANT)
             .codstat(UPDATED_CODSTAT)
-            .datvld(UPDATED_DATVLD)
+            .dat_vld(UPDATED_DATVLD)
             .observ1(UPDATED_OBSERV_1)
             .testeur1(UPDATED_TESTEUR_1)
-            .validag(UPDATED_VALIDAG)
-            .datsais(UPDATED_DATSAIS);
+            .valid_ag(UPDATED_VALIDAG)
+            .dat_sais(UPDATED_DATSAIS);
         return bonTvx;
     }
 
@@ -306,49 +306,49 @@ class BonTvxResourceIT {
         assertThat(bonTvxList).hasSize(databaseSizeBeforeCreate + 1);
         BonTvx testBonTvx = bonTvxList.get(bonTvxList.size() - 1);
         assertThat(testBonTvx.getCdexerc()).isEqualTo(DEFAULT_CDEXERC);
-        assertThat(testBonTvx.getNumbt()).isEqualTo(DEFAULT_NUMBT);
+        assertThat(testBonTvx.getNum_bt()).isEqualTo(DEFAULT_NUMBT);
         assertThat(testBonTvx.getCdtier()).isEqualTo(DEFAULT_CDTIER);
         assertThat(testBonTvx.getCdmac()).isEqualTo(DEFAULT_CDMAC);
-        assertThat(testBonTvx.getMaccdmac()).isEqualTo(DEFAULT_MACCDMAC);
+        assertThat(testBonTvx.getMac_cdmac()).isEqualTo(DEFAULT_MACCDMAC);
         assertThat(testBonTvx.getCdserv()).isEqualTo(DEFAULT_CDSERV);
         assertThat(testBonTvx.getDecagen()).isEqualTo(DEFAULT_DECAGEN);
-        assertThat(testBonTvx.getDradecagen()).isEqualTo(DEFAULT_DRADECAGEN);
+        assertThat(testBonTvx.getDra_decagen()).isEqualTo(DEFAULT_DRADECAGEN);
         assertThat(testBonTvx.getCdorga()).isEqualTo(DEFAULT_CDORGA);
-        assertThat(testBonTvx.getRefbt()).isEqualTo(DEFAULT_REFBT);
-        assertThat(testBonTvx.getDatbt()).isEqualTo(DEFAULT_DATBT);
-        assertThat(testBonTvx.getDatdt()).isEqualTo(DEFAULT_DATDT);
-        assertThat(testBonTvx.getDatft()).isEqualTo(DEFAULT_DATFT);
+        assertThat(testBonTvx.getRef_bt()).isEqualTo(DEFAULT_REFBT);
+        assertThat(testBonTvx.getDat_bt()).isEqualTo(DEFAULT_DATBT);
+        assertThat(testBonTvx.getDat_dt()).isEqualTo(DEFAULT_DATDT);
+        assertThat(testBonTvx.getDat_ft()).isEqualTo(DEFAULT_DATFT);
         assertThat(testBonTvx.getVld()).isEqualTo(DEFAULT_VLD);
-        assertThat(testBonTvx.getTyptvx()).isEqualTo(DEFAULT_TYPTVX);
+        assertThat(testBonTvx.getTyp_tvx()).isEqualTo(DEFAULT_TYPTVX);
         assertThat(testBonTvx.getHeurdb()).isEqualTo(DEFAULT_HEURDB);
         assertThat(testBonTvx.getHeurfi()).isEqualTo(DEFAULT_HEURFI);
         assertThat(testBonTvx.getObserv()).isEqualTo(DEFAULT_OBSERV);
-        assertThat(testBonTvx.getDatsrt()).isEqualTo(DEFAULT_DATSRT);
+        assertThat(testBonTvx.getDat_srt()).isEqualTo(DEFAULT_DATSRT);
         assertThat(testBonTvx.getHeursr()).isEqualTo(DEFAULT_HEURSR);
-        assertThat(testBonTvx.getObstest()).isEqualTo(DEFAULT_OBSTEST);
-        assertThat(testBonTvx.getIndexdep()).isEqualTo(DEFAULT_INDEXDEP);
-        assertThat(testBonTvx.getIndexarr()).isEqualTo(DEFAULT_INDEXARR);
-        assertThat(testBonTvx.getImmatex()).isEqualTo(DEFAULT_IMMATEX);
-        assertThat(testBonTvx.getNomchauff()).isEqualTo(DEFAULT_NOMCHAUFF);
-        assertThat(testBonTvx.getNumpermis()).isEqualTo(DEFAULT_NUMPERMIS);
+        assertThat(testBonTvx.getObs_test()).isEqualTo(DEFAULT_OBSTEST);
+        assertThat(testBonTvx.getIndex_dep()).isEqualTo(DEFAULT_INDEXDEP);
+        assertThat(testBonTvx.getIndex_arr()).isEqualTo(DEFAULT_INDEXARR);
+        assertThat(testBonTvx.getImmat_ex()).isEqualTo(DEFAULT_IMMATEX);
+        assertThat(testBonTvx.getNom_chauff()).isEqualTo(DEFAULT_NOMCHAUFF);
+        assertThat(testBonTvx.getNum_permis()).isEqualTo(DEFAULT_NUMPERMIS);
         assertThat(testBonTvx.getEtab()).isEqualTo(DEFAULT_ETAB);
         assertThat(testBonTvx.getCompteur()).isEqualTo(DEFAULT_COMPTEUR);
-        assertThat(testBonTvx.getCptorg()).isEqualTo(DEFAULT_CPTORG);
+        assertThat(testBonTvx.getCpt_org()).isEqualTo(DEFAULT_CPTORG);
         assertThat(testBonTvx.getCdtyptr()).isEqualTo(DEFAULT_CDTYPTR);
         assertThat(testBonTvx.getDecstat()).isEqualTo(DEFAULT_DECSTAT);
         assertThat(testBonTvx.getTesteur()).isEqualTo(DEFAULT_TESTEUR);
-        assertThat(testBonTvx.getMotifdep()).isEqualTo(DEFAULT_MOTIFDEP);
+        assertThat(testBonTvx.getMotif_dep()).isEqualTo(DEFAULT_MOTIFDEP);
         assertThat(testBonTvx.getCdtypmnt()).isEqualTo(DEFAULT_CDTYPMNT);
-        assertThat(testBonTvx.getDatsorprev()).isEqualTo(DEFAULT_DATSORPREV);
-        assertThat(testBonTvx.getDatmnqdu()).isEqualTo(DEFAULT_DATMNQDU);
-        assertThat(testBonTvx.getDatmnqau()).isEqualTo(DEFAULT_DATMNQAU);
-        assertThat(testBonTvx.getDatentant()).isEqualTo(DEFAULT_DATENTANT);
+        assertThat(testBonTvx.getDat_sor_prev()).isEqualTo(DEFAULT_DATSORPREV);
+        assertThat(testBonTvx.getDat_mnq_du()).isEqualTo(DEFAULT_DATMNQDU);
+        assertThat(testBonTvx.getDat_mnq_au()).isEqualTo(DEFAULT_DATMNQAU);
+        assertThat(testBonTvx.getDat_ent_ant()).isEqualTo(DEFAULT_DATENTANT);
         assertThat(testBonTvx.getCodstat()).isEqualTo(DEFAULT_CODSTAT);
-        assertThat(testBonTvx.getDatvld()).isEqualTo(DEFAULT_DATVLD);
+        assertThat(testBonTvx.getDat_vld()).isEqualTo(DEFAULT_DATVLD);
         assertThat(testBonTvx.getObserv1()).isEqualTo(DEFAULT_OBSERV_1);
         assertThat(testBonTvx.getTesteur1()).isEqualTo(DEFAULT_TESTEUR_1);
-        assertThat(testBonTvx.getValidag()).isEqualTo(DEFAULT_VALIDAG);
-        assertThat(testBonTvx.getDatsais()).isEqualTo(DEFAULT_DATSAIS);
+        assertThat(testBonTvx.getValid_ag()).isEqualTo(DEFAULT_VALIDAG);
+        assertThat(testBonTvx.getDat_sais()).isEqualTo(DEFAULT_DATSAIS);
     }
 
     @Test
@@ -500,49 +500,49 @@ class BonTvxResourceIT {
         BonTvx updatedBonTvx = bonTvxRepository.findById(bonTvx.getId()).get();
         updatedBonTvx
             .cdexerc(UPDATED_CDEXERC)
-            .numbt(UPDATED_NUMBT)
+            .num_bt(UPDATED_NUMBT)
             .cdtier(UPDATED_CDTIER)
             .cdmac(UPDATED_CDMAC)
-            .maccdmac(UPDATED_MACCDMAC)
+            .mac_cdmac(UPDATED_MACCDMAC)
             .cdserv(UPDATED_CDSERV)
             .decagen(UPDATED_DECAGEN)
-            .dradecagen(UPDATED_DRADECAGEN)
+            .dra_decagen(UPDATED_DRADECAGEN)
             .cdorga(UPDATED_CDORGA)
-            .refbt(UPDATED_REFBT)
-            .datbt(UPDATED_DATBT)
-            .datdt(UPDATED_DATDT)
-            .datft(UPDATED_DATFT)
+            .ref_bt(UPDATED_REFBT)
+            .dat_bt(UPDATED_DATBT)
+            .dat_dt(UPDATED_DATDT)
+            .dat_ft(UPDATED_DATFT)
             .vld(UPDATED_VLD)
-            .typtvx(UPDATED_TYPTVX)
+            .typ_tvx(UPDATED_TYPTVX)
             .heurdb(UPDATED_HEURDB)
             .heurfi(UPDATED_HEURFI)
             .observ(UPDATED_OBSERV)
-            .datsrt(UPDATED_DATSRT)
+            .dat_srt(UPDATED_DATSRT)
             .heursr(UPDATED_HEURSR)
-            .obstest(UPDATED_OBSTEST)
-            .indexdep(UPDATED_INDEXDEP)
-            .indexarr(UPDATED_INDEXARR)
-            .immatex(UPDATED_IMMATEX)
-            .nomchauff(UPDATED_NOMCHAUFF)
-            .numpermis(UPDATED_NUMPERMIS)
+            .obs_test(UPDATED_OBSTEST)
+            .index_dep(UPDATED_INDEXDEP)
+            .index_arr(UPDATED_INDEXARR)
+            .immat_ex(UPDATED_IMMATEX)
+            .nom_chauff(UPDATED_NOMCHAUFF)
+            .num_permis(UPDATED_NUMPERMIS)
             .etab(UPDATED_ETAB)
             .compteur(UPDATED_COMPTEUR)
-            .cptorg(UPDATED_CPTORG)
+            .cpt_org(UPDATED_CPTORG)
             .cdtyptr(UPDATED_CDTYPTR)
             .decstat(UPDATED_DECSTAT)
             .testeur(UPDATED_TESTEUR)
-            .motifdep(UPDATED_MOTIFDEP)
+            .motif_dep(UPDATED_MOTIFDEP)
             .cdtypmnt(UPDATED_CDTYPMNT)
-            .datsorprev(UPDATED_DATSORPREV)
-            .datmnqdu(UPDATED_DATMNQDU)
-            .datmnqau(UPDATED_DATMNQAU)
-            .datentant(UPDATED_DATENTANT)
+            .dat_sor_prev(UPDATED_DATSORPREV)
+            .dat_mnq_du(UPDATED_DATMNQDU)
+            .dat_mnq_au(UPDATED_DATMNQAU)
+            .dat_ent_ant(UPDATED_DATENTANT)
             .codstat(UPDATED_CODSTAT)
-            .datvld(UPDATED_DATVLD)
+            .dat_vld(UPDATED_DATVLD)
             .observ1(UPDATED_OBSERV_1)
             .testeur1(UPDATED_TESTEUR_1)
-            .validag(UPDATED_VALIDAG)
-            .datsais(UPDATED_DATSAIS);
+            .valid_ag(UPDATED_VALIDAG)
+            .dat_sais(UPDATED_DATSAIS);
         BonTvxDTO bonTvxDTO = bonTvxMapper.toDto(updatedBonTvx);
 
         restBonTvxMockMvc
@@ -558,49 +558,49 @@ class BonTvxResourceIT {
         assertThat(bonTvxList).hasSize(databaseSizeBeforeUpdate);
         BonTvx testBonTvx = bonTvxList.get(bonTvxList.size() - 1);
         assertThat(testBonTvx.getCdexerc()).isEqualTo(UPDATED_CDEXERC);
-        assertThat(testBonTvx.getNumbt()).isEqualTo(UPDATED_NUMBT);
+        assertThat(testBonTvx.getNum_bt()).isEqualTo(UPDATED_NUMBT);
         assertThat(testBonTvx.getCdtier()).isEqualTo(UPDATED_CDTIER);
         assertThat(testBonTvx.getCdmac()).isEqualTo(UPDATED_CDMAC);
-        assertThat(testBonTvx.getMaccdmac()).isEqualTo(UPDATED_MACCDMAC);
+        assertThat(testBonTvx.getMac_cdmac()).isEqualTo(UPDATED_MACCDMAC);
         assertThat(testBonTvx.getCdserv()).isEqualTo(UPDATED_CDSERV);
         assertThat(testBonTvx.getDecagen()).isEqualTo(UPDATED_DECAGEN);
-        assertThat(testBonTvx.getDradecagen()).isEqualTo(UPDATED_DRADECAGEN);
+        assertThat(testBonTvx.getDra_decagen()).isEqualTo(UPDATED_DRADECAGEN);
         assertThat(testBonTvx.getCdorga()).isEqualTo(UPDATED_CDORGA);
-        assertThat(testBonTvx.getRefbt()).isEqualTo(UPDATED_REFBT);
-        assertThat(testBonTvx.getDatbt()).isEqualTo(UPDATED_DATBT);
-        assertThat(testBonTvx.getDatdt()).isEqualTo(UPDATED_DATDT);
-        assertThat(testBonTvx.getDatft()).isEqualTo(UPDATED_DATFT);
+        assertThat(testBonTvx.getRef_bt()).isEqualTo(UPDATED_REFBT);
+        assertThat(testBonTvx.getDat_bt()).isEqualTo(UPDATED_DATBT);
+        assertThat(testBonTvx.getDat_dt()).isEqualTo(UPDATED_DATDT);
+        assertThat(testBonTvx.getDat_ft()).isEqualTo(UPDATED_DATFT);
         assertThat(testBonTvx.getVld()).isEqualTo(UPDATED_VLD);
-        assertThat(testBonTvx.getTyptvx()).isEqualTo(UPDATED_TYPTVX);
+        assertThat(testBonTvx.getTyp_tvx()).isEqualTo(UPDATED_TYPTVX);
         assertThat(testBonTvx.getHeurdb()).isEqualTo(UPDATED_HEURDB);
         assertThat(testBonTvx.getHeurfi()).isEqualTo(UPDATED_HEURFI);
         assertThat(testBonTvx.getObserv()).isEqualTo(UPDATED_OBSERV);
-        assertThat(testBonTvx.getDatsrt()).isEqualTo(UPDATED_DATSRT);
+        assertThat(testBonTvx.getDat_srt()).isEqualTo(UPDATED_DATSRT);
         assertThat(testBonTvx.getHeursr()).isEqualTo(UPDATED_HEURSR);
-        assertThat(testBonTvx.getObstest()).isEqualTo(UPDATED_OBSTEST);
-        assertThat(testBonTvx.getIndexdep()).isEqualTo(UPDATED_INDEXDEP);
-        assertThat(testBonTvx.getIndexarr()).isEqualTo(UPDATED_INDEXARR);
-        assertThat(testBonTvx.getImmatex()).isEqualTo(UPDATED_IMMATEX);
-        assertThat(testBonTvx.getNomchauff()).isEqualTo(UPDATED_NOMCHAUFF);
-        assertThat(testBonTvx.getNumpermis()).isEqualTo(UPDATED_NUMPERMIS);
+        assertThat(testBonTvx.getObs_test()).isEqualTo(UPDATED_OBSTEST);
+        assertThat(testBonTvx.getIndex_dep()).isEqualTo(UPDATED_INDEXDEP);
+        assertThat(testBonTvx.getIndex_arr()).isEqualTo(UPDATED_INDEXARR);
+        assertThat(testBonTvx.getImmat_ex()).isEqualTo(UPDATED_IMMATEX);
+        assertThat(testBonTvx.getNom_chauff()).isEqualTo(UPDATED_NOMCHAUFF);
+        assertThat(testBonTvx.getNum_permis()).isEqualTo(UPDATED_NUMPERMIS);
         assertThat(testBonTvx.getEtab()).isEqualTo(UPDATED_ETAB);
         assertThat(testBonTvx.getCompteur()).isEqualTo(UPDATED_COMPTEUR);
-        assertThat(testBonTvx.getCptorg()).isEqualTo(UPDATED_CPTORG);
+        assertThat(testBonTvx.getCpt_org()).isEqualTo(UPDATED_CPTORG);
         assertThat(testBonTvx.getCdtyptr()).isEqualTo(UPDATED_CDTYPTR);
         assertThat(testBonTvx.getDecstat()).isEqualTo(UPDATED_DECSTAT);
         assertThat(testBonTvx.getTesteur()).isEqualTo(UPDATED_TESTEUR);
-        assertThat(testBonTvx.getMotifdep()).isEqualTo(UPDATED_MOTIFDEP);
+        assertThat(testBonTvx.getMotif_dep()).isEqualTo(UPDATED_MOTIFDEP);
         assertThat(testBonTvx.getCdtypmnt()).isEqualTo(UPDATED_CDTYPMNT);
-        assertThat(testBonTvx.getDatsorprev()).isEqualTo(UPDATED_DATSORPREV);
-        assertThat(testBonTvx.getDatmnqdu()).isEqualTo(UPDATED_DATMNQDU);
-        assertThat(testBonTvx.getDatmnqau()).isEqualTo(UPDATED_DATMNQAU);
-        assertThat(testBonTvx.getDatentant()).isEqualTo(UPDATED_DATENTANT);
+        assertThat(testBonTvx.getDat_sor_prev()).isEqualTo(UPDATED_DATSORPREV);
+        assertThat(testBonTvx.getDat_mnq_du()).isEqualTo(UPDATED_DATMNQDU);
+        assertThat(testBonTvx.getDat_mnq_au()).isEqualTo(UPDATED_DATMNQAU);
+        assertThat(testBonTvx.getDat_ent_ant()).isEqualTo(UPDATED_DATENTANT);
         assertThat(testBonTvx.getCodstat()).isEqualTo(UPDATED_CODSTAT);
-        assertThat(testBonTvx.getDatvld()).isEqualTo(UPDATED_DATVLD);
+        assertThat(testBonTvx.getDat_vld()).isEqualTo(UPDATED_DATVLD);
         assertThat(testBonTvx.getObserv1()).isEqualTo(UPDATED_OBSERV_1);
         assertThat(testBonTvx.getTesteur1()).isEqualTo(UPDATED_TESTEUR_1);
-        assertThat(testBonTvx.getValidag()).isEqualTo(UPDATED_VALIDAG);
-        assertThat(testBonTvx.getDatsais()).isEqualTo(UPDATED_DATSAIS);
+        assertThat(testBonTvx.getValid_ag()).isEqualTo(UPDATED_VALIDAG);
+        assertThat(testBonTvx.getDat_sais()).isEqualTo(UPDATED_DATSAIS);
     }
 
     @Test
@@ -678,26 +678,26 @@ class BonTvxResourceIT {
 
         partialUpdatedBonTvx
             .cdexerc(UPDATED_CDEXERC)
-            .numbt(UPDATED_NUMBT)
+            .num_bt(UPDATED_NUMBT)
             .cdserv(UPDATED_CDSERV)
-            .dradecagen(UPDATED_DRADECAGEN)
+            .dra_decagen(UPDATED_DRADECAGEN)
             .cdorga(UPDATED_CDORGA)
-            .refbt(UPDATED_REFBT)
-            .datdt(UPDATED_DATDT)
+            .ref_bt(UPDATED_REFBT)
+            .dat_dt(UPDATED_DATDT)
             .vld(UPDATED_VLD)
             .heurdb(UPDATED_HEURDB)
             .observ(UPDATED_OBSERV)
-            .datsrt(UPDATED_DATSRT)
+            .dat_srt(UPDATED_DATSRT)
             .heursr(UPDATED_HEURSR)
-            .nomchauff(UPDATED_NOMCHAUFF)
+            .nom_chauff(UPDATED_NOMCHAUFF)
             .compteur(UPDATED_COMPTEUR)
-            .cptorg(UPDATED_CPTORG)
+            .cpt_org(UPDATED_CPTORG)
             .cdtyptr(UPDATED_CDTYPTR)
             .decstat(UPDATED_DECSTAT)
-            .motifdep(UPDATED_MOTIFDEP)
+            .motif_dep(UPDATED_MOTIFDEP)
             .cdtypmnt(UPDATED_CDTYPMNT)
-            .datentant(UPDATED_DATENTANT)
-            .datvld(UPDATED_DATVLD)
+            .dat_ent_ant(UPDATED_DATENTANT)
+            .dat_vld(UPDATED_DATVLD)
             .observ1(UPDATED_OBSERV_1)
             .testeur1(UPDATED_TESTEUR_1);
 
@@ -714,49 +714,49 @@ class BonTvxResourceIT {
         assertThat(bonTvxList).hasSize(databaseSizeBeforeUpdate);
         BonTvx testBonTvx = bonTvxList.get(bonTvxList.size() - 1);
         assertThat(testBonTvx.getCdexerc()).isEqualTo(UPDATED_CDEXERC);
-        assertThat(testBonTvx.getNumbt()).isEqualTo(UPDATED_NUMBT);
+        assertThat(testBonTvx.getNum_bt()).isEqualTo(UPDATED_NUMBT);
         assertThat(testBonTvx.getCdtier()).isEqualTo(DEFAULT_CDTIER);
         assertThat(testBonTvx.getCdmac()).isEqualTo(DEFAULT_CDMAC);
-        assertThat(testBonTvx.getMaccdmac()).isEqualTo(DEFAULT_MACCDMAC);
+        assertThat(testBonTvx.getMac_cdmac()).isEqualTo(DEFAULT_MACCDMAC);
         assertThat(testBonTvx.getCdserv()).isEqualTo(UPDATED_CDSERV);
         assertThat(testBonTvx.getDecagen()).isEqualTo(DEFAULT_DECAGEN);
-        assertThat(testBonTvx.getDradecagen()).isEqualTo(UPDATED_DRADECAGEN);
+        assertThat(testBonTvx.getDra_decagen()).isEqualTo(UPDATED_DRADECAGEN);
         assertThat(testBonTvx.getCdorga()).isEqualTo(UPDATED_CDORGA);
-        assertThat(testBonTvx.getRefbt()).isEqualTo(UPDATED_REFBT);
-        assertThat(testBonTvx.getDatbt()).isEqualTo(DEFAULT_DATBT);
-        assertThat(testBonTvx.getDatdt()).isEqualTo(UPDATED_DATDT);
-        assertThat(testBonTvx.getDatft()).isEqualTo(DEFAULT_DATFT);
+        assertThat(testBonTvx.getRef_bt()).isEqualTo(UPDATED_REFBT);
+        assertThat(testBonTvx.getDat_bt()).isEqualTo(DEFAULT_DATBT);
+        assertThat(testBonTvx.getDat_dt()).isEqualTo(UPDATED_DATDT);
+        assertThat(testBonTvx.getDat_ft()).isEqualTo(DEFAULT_DATFT);
         assertThat(testBonTvx.getVld()).isEqualTo(UPDATED_VLD);
-        assertThat(testBonTvx.getTyptvx()).isEqualTo(DEFAULT_TYPTVX);
+        assertThat(testBonTvx.getTyp_tvx()).isEqualTo(DEFAULT_TYPTVX);
         assertThat(testBonTvx.getHeurdb()).isEqualTo(UPDATED_HEURDB);
         assertThat(testBonTvx.getHeurfi()).isEqualTo(DEFAULT_HEURFI);
         assertThat(testBonTvx.getObserv()).isEqualTo(UPDATED_OBSERV);
-        assertThat(testBonTvx.getDatsrt()).isEqualTo(UPDATED_DATSRT);
+        assertThat(testBonTvx.getDat_srt()).isEqualTo(UPDATED_DATSRT);
         assertThat(testBonTvx.getHeursr()).isEqualTo(UPDATED_HEURSR);
-        assertThat(testBonTvx.getObstest()).isEqualTo(DEFAULT_OBSTEST);
-        assertThat(testBonTvx.getIndexdep()).isEqualTo(DEFAULT_INDEXDEP);
-        assertThat(testBonTvx.getIndexarr()).isEqualTo(DEFAULT_INDEXARR);
-        assertThat(testBonTvx.getImmatex()).isEqualTo(DEFAULT_IMMATEX);
-        assertThat(testBonTvx.getNomchauff()).isEqualTo(UPDATED_NOMCHAUFF);
-        assertThat(testBonTvx.getNumpermis()).isEqualTo(DEFAULT_NUMPERMIS);
+        assertThat(testBonTvx.getObs_test()).isEqualTo(DEFAULT_OBSTEST);
+        assertThat(testBonTvx.getIndex_dep()).isEqualTo(DEFAULT_INDEXDEP);
+        assertThat(testBonTvx.getIndex_arr()).isEqualTo(DEFAULT_INDEXARR);
+        assertThat(testBonTvx.getImmat_ex()).isEqualTo(DEFAULT_IMMATEX);
+        assertThat(testBonTvx.getNom_chauff()).isEqualTo(UPDATED_NOMCHAUFF);
+        assertThat(testBonTvx.getNum_permis()).isEqualTo(DEFAULT_NUMPERMIS);
         assertThat(testBonTvx.getEtab()).isEqualTo(DEFAULT_ETAB);
         assertThat(testBonTvx.getCompteur()).isEqualTo(UPDATED_COMPTEUR);
-        assertThat(testBonTvx.getCptorg()).isEqualTo(UPDATED_CPTORG);
+        assertThat(testBonTvx.getCpt_org()).isEqualTo(UPDATED_CPTORG);
         assertThat(testBonTvx.getCdtyptr()).isEqualTo(UPDATED_CDTYPTR);
         assertThat(testBonTvx.getDecstat()).isEqualTo(UPDATED_DECSTAT);
         assertThat(testBonTvx.getTesteur()).isEqualTo(DEFAULT_TESTEUR);
-        assertThat(testBonTvx.getMotifdep()).isEqualTo(UPDATED_MOTIFDEP);
+        assertThat(testBonTvx.getMotif_dep()).isEqualTo(UPDATED_MOTIFDEP);
         assertThat(testBonTvx.getCdtypmnt()).isEqualTo(UPDATED_CDTYPMNT);
-        assertThat(testBonTvx.getDatsorprev()).isEqualTo(DEFAULT_DATSORPREV);
-        assertThat(testBonTvx.getDatmnqdu()).isEqualTo(DEFAULT_DATMNQDU);
-        assertThat(testBonTvx.getDatmnqau()).isEqualTo(DEFAULT_DATMNQAU);
-        assertThat(testBonTvx.getDatentant()).isEqualTo(UPDATED_DATENTANT);
+        assertThat(testBonTvx.getDat_sor_prev()).isEqualTo(DEFAULT_DATSORPREV);
+        assertThat(testBonTvx.getDat_mnq_du()).isEqualTo(DEFAULT_DATMNQDU);
+        assertThat(testBonTvx.getDat_mnq_au()).isEqualTo(DEFAULT_DATMNQAU);
+        assertThat(testBonTvx.getDat_ent_ant()).isEqualTo(UPDATED_DATENTANT);
         assertThat(testBonTvx.getCodstat()).isEqualTo(DEFAULT_CODSTAT);
-        assertThat(testBonTvx.getDatvld()).isEqualTo(UPDATED_DATVLD);
+        assertThat(testBonTvx.getDat_vld()).isEqualTo(UPDATED_DATVLD);
         assertThat(testBonTvx.getObserv1()).isEqualTo(UPDATED_OBSERV_1);
         assertThat(testBonTvx.getTesteur1()).isEqualTo(UPDATED_TESTEUR_1);
-        assertThat(testBonTvx.getValidag()).isEqualTo(DEFAULT_VALIDAG);
-        assertThat(testBonTvx.getDatsais()).isEqualTo(DEFAULT_DATSAIS);
+        assertThat(testBonTvx.getValid_ag()).isEqualTo(DEFAULT_VALIDAG);
+        assertThat(testBonTvx.getDat_sais()).isEqualTo(DEFAULT_DATSAIS);
     }
 
     @Test
@@ -772,49 +772,49 @@ class BonTvxResourceIT {
 
         partialUpdatedBonTvx
             .cdexerc(UPDATED_CDEXERC)
-            .numbt(UPDATED_NUMBT)
+            .num_bt(UPDATED_NUMBT)
             .cdtier(UPDATED_CDTIER)
             .cdmac(UPDATED_CDMAC)
-            .maccdmac(UPDATED_MACCDMAC)
+            .mac_cdmac(UPDATED_MACCDMAC)
             .cdserv(UPDATED_CDSERV)
             .decagen(UPDATED_DECAGEN)
-            .dradecagen(UPDATED_DRADECAGEN)
+            .dra_decagen(UPDATED_DRADECAGEN)
             .cdorga(UPDATED_CDORGA)
-            .refbt(UPDATED_REFBT)
-            .datbt(UPDATED_DATBT)
-            .datdt(UPDATED_DATDT)
-            .datft(UPDATED_DATFT)
+            .ref_bt(UPDATED_REFBT)
+            .dat_bt(UPDATED_DATBT)
+            .dat_dt(UPDATED_DATDT)
+            .dat_ft(UPDATED_DATFT)
             .vld(UPDATED_VLD)
-            .typtvx(UPDATED_TYPTVX)
+            .typ_tvx(UPDATED_TYPTVX)
             .heurdb(UPDATED_HEURDB)
             .heurfi(UPDATED_HEURFI)
             .observ(UPDATED_OBSERV)
-            .datsrt(UPDATED_DATSRT)
+            .dat_srt(UPDATED_DATSRT)
             .heursr(UPDATED_HEURSR)
-            .obstest(UPDATED_OBSTEST)
-            .indexdep(UPDATED_INDEXDEP)
-            .indexarr(UPDATED_INDEXARR)
-            .immatex(UPDATED_IMMATEX)
-            .nomchauff(UPDATED_NOMCHAUFF)
-            .numpermis(UPDATED_NUMPERMIS)
+            .obs_test(UPDATED_OBSTEST)
+            .index_dep(UPDATED_INDEXDEP)
+            .index_arr(UPDATED_INDEXARR)
+            .immat_ex(UPDATED_IMMATEX)
+            .nom_chauff(UPDATED_NOMCHAUFF)
+            .num_permis(UPDATED_NUMPERMIS)
             .etab(UPDATED_ETAB)
             .compteur(UPDATED_COMPTEUR)
-            .cptorg(UPDATED_CPTORG)
+            .cpt_org(UPDATED_CPTORG)
             .cdtyptr(UPDATED_CDTYPTR)
             .decstat(UPDATED_DECSTAT)
             .testeur(UPDATED_TESTEUR)
-            .motifdep(UPDATED_MOTIFDEP)
+            .motif_dep(UPDATED_MOTIFDEP)
             .cdtypmnt(UPDATED_CDTYPMNT)
-            .datsorprev(UPDATED_DATSORPREV)
-            .datmnqdu(UPDATED_DATMNQDU)
-            .datmnqau(UPDATED_DATMNQAU)
-            .datentant(UPDATED_DATENTANT)
+            .dat_sor_prev(UPDATED_DATSORPREV)
+            .dat_mnq_du(UPDATED_DATMNQDU)
+            .dat_mnq_au(UPDATED_DATMNQAU)
+            .dat_ent_ant(UPDATED_DATENTANT)
             .codstat(UPDATED_CODSTAT)
-            .datvld(UPDATED_DATVLD)
+            .dat_vld(UPDATED_DATVLD)
             .observ1(UPDATED_OBSERV_1)
             .testeur1(UPDATED_TESTEUR_1)
-            .validag(UPDATED_VALIDAG)
-            .datsais(UPDATED_DATSAIS);
+            .valid_ag(UPDATED_VALIDAG)
+            .dat_sais(UPDATED_DATSAIS);
 
         restBonTvxMockMvc
             .perform(
@@ -829,49 +829,49 @@ class BonTvxResourceIT {
         assertThat(bonTvxList).hasSize(databaseSizeBeforeUpdate);
         BonTvx testBonTvx = bonTvxList.get(bonTvxList.size() - 1);
         assertThat(testBonTvx.getCdexerc()).isEqualTo(UPDATED_CDEXERC);
-        assertThat(testBonTvx.getNumbt()).isEqualTo(UPDATED_NUMBT);
+        assertThat(testBonTvx.getNum_bt()).isEqualTo(UPDATED_NUMBT);
         assertThat(testBonTvx.getCdtier()).isEqualTo(UPDATED_CDTIER);
         assertThat(testBonTvx.getCdmac()).isEqualTo(UPDATED_CDMAC);
-        assertThat(testBonTvx.getMaccdmac()).isEqualTo(UPDATED_MACCDMAC);
+        assertThat(testBonTvx.getMac_cdmac()).isEqualTo(UPDATED_MACCDMAC);
         assertThat(testBonTvx.getCdserv()).isEqualTo(UPDATED_CDSERV);
         assertThat(testBonTvx.getDecagen()).isEqualTo(UPDATED_DECAGEN);
-        assertThat(testBonTvx.getDradecagen()).isEqualTo(UPDATED_DRADECAGEN);
+        assertThat(testBonTvx.getDra_decagen()).isEqualTo(UPDATED_DRADECAGEN);
         assertThat(testBonTvx.getCdorga()).isEqualTo(UPDATED_CDORGA);
-        assertThat(testBonTvx.getRefbt()).isEqualTo(UPDATED_REFBT);
-        assertThat(testBonTvx.getDatbt()).isEqualTo(UPDATED_DATBT);
-        assertThat(testBonTvx.getDatdt()).isEqualTo(UPDATED_DATDT);
-        assertThat(testBonTvx.getDatft()).isEqualTo(UPDATED_DATFT);
+        assertThat(testBonTvx.getRef_bt()).isEqualTo(UPDATED_REFBT);
+        assertThat(testBonTvx.getDat_bt()).isEqualTo(UPDATED_DATBT);
+        assertThat(testBonTvx.getDat_dt()).isEqualTo(UPDATED_DATDT);
+        assertThat(testBonTvx.getDat_ft()).isEqualTo(UPDATED_DATFT);
         assertThat(testBonTvx.getVld()).isEqualTo(UPDATED_VLD);
-        assertThat(testBonTvx.getTyptvx()).isEqualTo(UPDATED_TYPTVX);
+        assertThat(testBonTvx.getTyp_tvx()).isEqualTo(UPDATED_TYPTVX);
         assertThat(testBonTvx.getHeurdb()).isEqualTo(UPDATED_HEURDB);
         assertThat(testBonTvx.getHeurfi()).isEqualTo(UPDATED_HEURFI);
         assertThat(testBonTvx.getObserv()).isEqualTo(UPDATED_OBSERV);
-        assertThat(testBonTvx.getDatsrt()).isEqualTo(UPDATED_DATSRT);
+        assertThat(testBonTvx.getDat_srt()).isEqualTo(UPDATED_DATSRT);
         assertThat(testBonTvx.getHeursr()).isEqualTo(UPDATED_HEURSR);
-        assertThat(testBonTvx.getObstest()).isEqualTo(UPDATED_OBSTEST);
-        assertThat(testBonTvx.getIndexdep()).isEqualTo(UPDATED_INDEXDEP);
-        assertThat(testBonTvx.getIndexarr()).isEqualTo(UPDATED_INDEXARR);
-        assertThat(testBonTvx.getImmatex()).isEqualTo(UPDATED_IMMATEX);
-        assertThat(testBonTvx.getNomchauff()).isEqualTo(UPDATED_NOMCHAUFF);
-        assertThat(testBonTvx.getNumpermis()).isEqualTo(UPDATED_NUMPERMIS);
+        assertThat(testBonTvx.getObs_test()).isEqualTo(UPDATED_OBSTEST);
+        assertThat(testBonTvx.getIndex_dep()).isEqualTo(UPDATED_INDEXDEP);
+        assertThat(testBonTvx.getIndex_arr()).isEqualTo(UPDATED_INDEXARR);
+        assertThat(testBonTvx.getImmat_ex()).isEqualTo(UPDATED_IMMATEX);
+        assertThat(testBonTvx.getNom_chauff()).isEqualTo(UPDATED_NOMCHAUFF);
+        assertThat(testBonTvx.getNum_permis()).isEqualTo(UPDATED_NUMPERMIS);
         assertThat(testBonTvx.getEtab()).isEqualTo(UPDATED_ETAB);
         assertThat(testBonTvx.getCompteur()).isEqualTo(UPDATED_COMPTEUR);
-        assertThat(testBonTvx.getCptorg()).isEqualTo(UPDATED_CPTORG);
+        assertThat(testBonTvx.getCpt_org()).isEqualTo(UPDATED_CPTORG);
         assertThat(testBonTvx.getCdtyptr()).isEqualTo(UPDATED_CDTYPTR);
         assertThat(testBonTvx.getDecstat()).isEqualTo(UPDATED_DECSTAT);
         assertThat(testBonTvx.getTesteur()).isEqualTo(UPDATED_TESTEUR);
-        assertThat(testBonTvx.getMotifdep()).isEqualTo(UPDATED_MOTIFDEP);
+        assertThat(testBonTvx.getMotif_dep()).isEqualTo(UPDATED_MOTIFDEP);
         assertThat(testBonTvx.getCdtypmnt()).isEqualTo(UPDATED_CDTYPMNT);
-        assertThat(testBonTvx.getDatsorprev()).isEqualTo(UPDATED_DATSORPREV);
-        assertThat(testBonTvx.getDatmnqdu()).isEqualTo(UPDATED_DATMNQDU);
-        assertThat(testBonTvx.getDatmnqau()).isEqualTo(UPDATED_DATMNQAU);
-        assertThat(testBonTvx.getDatentant()).isEqualTo(UPDATED_DATENTANT);
+        assertThat(testBonTvx.getDat_sor_prev()).isEqualTo(UPDATED_DATSORPREV);
+        assertThat(testBonTvx.getDat_mnq_du()).isEqualTo(UPDATED_DATMNQDU);
+        assertThat(testBonTvx.getDat_mnq_au()).isEqualTo(UPDATED_DATMNQAU);
+        assertThat(testBonTvx.getDat_ent_ant()).isEqualTo(UPDATED_DATENTANT);
         assertThat(testBonTvx.getCodstat()).isEqualTo(UPDATED_CODSTAT);
-        assertThat(testBonTvx.getDatvld()).isEqualTo(UPDATED_DATVLD);
+        assertThat(testBonTvx.getDat_vld()).isEqualTo(UPDATED_DATVLD);
         assertThat(testBonTvx.getObserv1()).isEqualTo(UPDATED_OBSERV_1);
         assertThat(testBonTvx.getTesteur1()).isEqualTo(UPDATED_TESTEUR_1);
-        assertThat(testBonTvx.getValidag()).isEqualTo(UPDATED_VALIDAG);
-        assertThat(testBonTvx.getDatsais()).isEqualTo(UPDATED_DATSAIS);
+        assertThat(testBonTvx.getValid_ag()).isEqualTo(UPDATED_VALIDAG);
+        assertThat(testBonTvx.getDat_sais()).isEqualTo(UPDATED_DATSAIS);
     }
 
     @Test

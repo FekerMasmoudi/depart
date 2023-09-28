@@ -31,37 +31,37 @@ public class ExternalApi implements Serializable {
     private String comments;
 
     @Field("idschema")
-    private Integer idschema;
+    private Integer id_schema;
 
     @Field("datecreatedt")
-    private LocalDate datecreatedt;
+    private String date_created_t;
 
     @Field("lastupdatedm")
-    private LocalDate lastupdatedm;
+    private String last_updated_m;
 
     @Field("origin")
     private String origin;
 
     @Field("templateid")
-    private Integer templateid;
+    private Integer template_id;
 
     @Field("idmodule")
-    private Integer idmodule;
+    private Integer id_module;
 
     @Field("uritemplate")
-    private String uritemplate;
+    private String uri_template;
 
     @Field("priority")
     private Integer priority;
 
     @Field("schemaidt")
-    private Integer schemaidt;
+    private Integer schema_id_t;
 
     @Field("createdatet")
-    private LocalDate createdatet;
+    private String create_date_t;
 
     @Field("lastupdatete")
-    private LocalDate lastupdatete;
+    private String lat_update_te;
 
     @Field("entity")
     private String entity;
@@ -151,43 +151,43 @@ public class ExternalApi implements Serializable {
         this.comments = comments;
     }
 
-    public Integer getIdschema() {
-        return this.idschema;
+    public Integer getId_schema() {
+        return this.id_schema;
     }
 
-    public ExternalApi idschema(Integer idschema) {
-        this.setIdschema(idschema);
+    public ExternalApi id_schema(Integer id_schema) {
+        this.setId_schema(id_schema);
         return this;
     }
 
-    public void setIdschema(Integer idschema) {
-        this.idschema = idschema;
+    public void setId_schema(Integer id_schema) {
+        this.id_schema = id_schema;
     }
 
-    public LocalDate getDatecreatedt() {
-        return this.datecreatedt;
+    public String getDate_created_t() {
+        return this.date_created_t;
     }
 
-    public ExternalApi datecreatedt(LocalDate datecreatedt) {
-        this.setDatecreatedt(datecreatedt);
+    public ExternalApi date_created_t(String date_created_t) {
+        this.setDate_created_t(date_created_t);
         return this;
     }
 
-    public void setDatecreatedt(LocalDate datecreatedt) {
-        this.datecreatedt = datecreatedt;
+    public void setDate_created_t(String date_created_t) {
+        this.date_created_t = date_created_t;
     }
 
-    public LocalDate getLastupdatedm() {
-        return this.lastupdatedm;
+    public String getLast_updated_m() {
+        return this.last_updated_m;
     }
 
-    public ExternalApi lastupdatedm(LocalDate lastupdatedm) {
-        this.setLastupdatedm(lastupdatedm);
+    public ExternalApi last_updated_m(String last_updated_m) {
+        this.setLast_updated_m(last_updated_m);
         return this;
     }
 
-    public void setLastupdatedm(LocalDate lastupdatedm) {
-        this.lastupdatedm = lastupdatedm;
+    public void setLast_updated_m(String last_updated_m) {
+        this.last_updated_m = last_updated_m;
     }
 
     public String getOrigin() {
@@ -203,43 +203,43 @@ public class ExternalApi implements Serializable {
         this.origin = origin;
     }
 
-    public Integer getTemplateid() {
-        return this.templateid;
+    public Integer getTemplate_id() {
+        return this.template_id;
     }
 
-    public ExternalApi templateid(Integer templateid) {
-        this.setTemplateid(templateid);
+    public ExternalApi template_id(Integer template_id) {
+        this.setTemplate_id(template_id);
         return this;
     }
 
-    public void setTemplateid(Integer templateid) {
-        this.templateid = templateid;
+    public void setTemplate_id(Integer template_id) {
+        this.template_id = template_id;
     }
 
-    public Integer getIdmodule() {
-        return this.idmodule;
+    public Integer getId_module() {
+        return this.id_module;
     }
 
-    public ExternalApi idmodule(Integer idmodule) {
-        this.setIdmodule(idmodule);
+    public ExternalApi id_module(Integer id_module) {
+        this.setId_module(id_module);
         return this;
     }
 
-    public void setIdmodule(Integer idmodule) {
-        this.idmodule = idmodule;
+    public void setId_module(Integer id_module) {
+        this.id_module = id_module;
     }
 
-    public String getUritemplate() {
-        return this.uritemplate;
+    public String getUri_template() {
+        return this.uri_template;
     }
 
-    public ExternalApi uritemplate(String uritemplate) {
-        this.setUritemplate(uritemplate);
+    public ExternalApi uri_template(String uri_template) {
+        this.setUri_template(uri_template);
         return this;
     }
 
-    public void setUritemplate(String uritemplate) {
-        this.uritemplate = uritemplate;
+    public void setUri_template(String uri_template) {
+        this.uri_template = uri_template;
     }
 
     public Integer getPriority() {
@@ -255,43 +255,43 @@ public class ExternalApi implements Serializable {
         this.priority = priority;
     }
 
-    public Integer getSchemaidt() {
-        return this.schemaidt;
+    public Integer getSchema_id_t() {
+        return this.schema_id_t;
     }
 
-    public ExternalApi schemaidt(Integer schemaidt) {
-        this.setSchemaidt(schemaidt);
+    public ExternalApi schema_id_t(Integer schema_id_t) {
+        this.setSchema_id_t(schema_id_t);
         return this;
     }
 
-    public void setSchemaidt(Integer schemaidt) {
-        this.schemaidt = schemaidt;
+    public void setSchema_id_t(Integer schema_id_t) {
+        this.schema_id_t = schema_id_t;
     }
 
-    public LocalDate getCreatedatet() {
-        return this.createdatet;
+    public String getCreate_date_t() {
+        return this.create_date_t;
     }
 
-    public ExternalApi createdatet(LocalDate createdatet) {
-        this.setCreatedatet(createdatet);
+    public ExternalApi create_date_t(String create_date_t) {
+        this.setCreate_date_t(create_date_t);
         return this;
     }
 
-    public void setCreatedatet(LocalDate createdatet) {
-        this.createdatet = createdatet;
+    public void setCreate_date_t(String create_date_t) {
+        this.create_date_t = create_date_t;
     }
 
-    public LocalDate getLastupdatete() {
-        return this.lastupdatete;
+    public String getLat_update_te() {
+        return this.lat_update_te;
     }
 
-    public ExternalApi lastupdatete(LocalDate lastupdatete) {
-        this.setLastupdatete(lastupdatete);
+    public ExternalApi lat_update_te(String lat_update_te) {
+        this.setLat_update_te(lat_update_te);
         return this;
     }
 
-    public void setLastupdatete(LocalDate lastupdatete) {
-        this.lastupdatete = lastupdatete;
+    public void setLat_update_te(String lat_update_te) {
+        this.lat_update_te = lat_update_te;
     }
 
     public String getEntity() {
@@ -413,17 +413,17 @@ public class ExternalApi implements Serializable {
             ", name='" + getName() + "'" +
             ", status='" + getStatus() + "'" +
             ", comments='" + getComments() + "'" +
-            ", idschema=" + getIdschema() +
-            ", datecreatedt='" + getDatecreatedt() + "'" +
-            ", lastupdatedm='" + getLastupdatedm() + "'" +
+            ", idschema=" + getId_schema() +
+            ", datecreatedt='" + getDate_created_t() + "'" +
+            ", lastupdatedm='" + getLast_updated_m() + "'" +
             ", origin='" + getOrigin() + "'" +
-            ", templateid=" + getTemplateid() +
-            ", idmodule=" + getIdmodule() +
-            ", uritemplate='" + getUritemplate() + "'" +
+            ", templateid=" + getTemplate_id() +
+            ", idmodule=" + getId_module() +
+            ", uritemplate='" + getUri_template() + "'" +
             ", priority=" + getPriority() +
-            ", schemaidt=" + getSchemaidt() +
-            ", createdatet='" + getCreatedatet() + "'" +
-            ", lastupdatete='" + getLastupdatete() + "'" +
+            ", schemaidt=" + getSchema_id_t() +
+            ", createdatet='" + getCreate_date_t() + "'" +
+            ", lastupdatete='" + getLat_update_te() + "'" +
             ", entity='" + getEntity() + "'" +
             ", parametre='" + getParametre() + "'" +
             ", countrowsreq=" + getCountrowsreq() +

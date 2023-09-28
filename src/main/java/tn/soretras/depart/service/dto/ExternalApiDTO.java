@@ -1,7 +1,6 @@
 package tn.soretras.depart.service.dto;
 
 import java.io.Serializable;
-import java.time.LocalDate;
 import java.util.Objects;
 
 /**
@@ -12,6 +11,8 @@ public class ExternalApiDTO implements Serializable {
 
     private String id;
 
+    private String keycomp;
+
     private String idm;
 
     private String name;
@@ -20,27 +21,27 @@ public class ExternalApiDTO implements Serializable {
 
     private String comments;
 
-    private Integer idschema;
+    private Integer id_schema;
 
-    private LocalDate datecreatedt;
+    private String date_created_t;
 
-    private LocalDate lastupdatedm;
+    private String last_updated_m;
 
     private String origin;
 
-    private Integer templateid;
+    private Integer template_id;
 
-    private Integer idmodule;
+    private Integer id_module;
 
-    private String uritemplate;
+    private String uri_template;
 
     private Integer priority;
 
-    private Integer schemaidt;
+    private Integer schema_id_t;
 
-    private LocalDate createdatet;
+    private String create_date_t;
 
-    private LocalDate lastupdatete;
+    private String lat_update_te;
 
     private String entity;
 
@@ -54,7 +55,7 @@ public class ExternalApiDTO implements Serializable {
 
     private String emergencycode;
 
-    private Boolean satausgetapi;
+    private Boolean statusgetapi;
 
     public String getId() {
         return id;
@@ -96,28 +97,28 @@ public class ExternalApiDTO implements Serializable {
         this.comments = comments;
     }
 
-    public Integer getIdschema() {
-        return idschema;
+    public Integer getId_schema() {
+        return id_schema;
     }
 
-    public void setIdschema(Integer idschema) {
-        this.idschema = idschema;
+    public void setId_schema(Integer id_schema) {
+        this.id_schema = id_schema;
     }
 
-    public LocalDate getDatecreatedt() {
-        return datecreatedt;
+    public String getDate_created_t() {
+        return date_created_t;
     }
 
-    public void setDatecreatedt(LocalDate datecreatedt) {
-        this.datecreatedt = datecreatedt;
+    public void setDate_created_t(String date_created_t) {
+        this.date_created_t = date_created_t;
     }
 
-    public LocalDate getLastupdatedm() {
-        return lastupdatedm;
+    public String getLast_updated_m() {
+        return last_updated_m;
     }
 
-    public void setLastupdatedm(LocalDate lastupdatedm) {
-        this.lastupdatedm = lastupdatedm;
+    public void setLast_updated_m(String last_updated_m) {
+        this.last_updated_m = last_updated_m;
     }
 
     public String getOrigin() {
@@ -128,28 +129,28 @@ public class ExternalApiDTO implements Serializable {
         this.origin = origin;
     }
 
-    public Integer getTemplateid() {
-        return templateid;
+    public Integer getTemplate_id() {
+        return template_id;
     }
 
-    public void setTemplateid(Integer templateid) {
-        this.templateid = templateid;
+    public void setTemplate_id(Integer template_id) {
+        this.template_id = template_id;
     }
 
-    public Integer getIdmodule() {
-        return idmodule;
+    public Integer getId_module() {
+        return id_module;
     }
 
-    public void setIdmodule(Integer idmodule) {
-        this.idmodule = idmodule;
+    public void setId_module(Integer id_module) {
+        this.id_module = id_module;
     }
 
-    public String getUritemplate() {
-        return uritemplate;
+    public String getUri_template() {
+        return uri_template;
     }
 
-    public void setUritemplate(String uritemplate) {
-        this.uritemplate = uritemplate;
+    public void setUri_template(String uri_template) {
+        this.uri_template = uri_template;
     }
 
     public Integer getPriority() {
@@ -160,28 +161,28 @@ public class ExternalApiDTO implements Serializable {
         this.priority = priority;
     }
 
-    public Integer getSchemaidt() {
-        return schemaidt;
+    public Integer getSchema_id_t() {
+        return schema_id_t;
     }
 
-    public void setSchemaidt(Integer schemaidt) {
-        this.schemaidt = schemaidt;
+    public void setSchema_id_t(Integer schema_id_t) {
+        this.schema_id_t = schema_id_t;
     }
 
-    public LocalDate getCreatedatet() {
-        return createdatet;
+    public String getCreate_date_t() {
+        return create_date_t;
     }
 
-    public void setCreatedatet(LocalDate createdatet) {
-        this.createdatet = createdatet;
+    public void setCreate_date_t(String create_date_t) {
+        this.create_date_t = create_date_t;
     }
 
-    public LocalDate getLastupdatete() {
-        return lastupdatete;
+    public String getLat_update_te() {
+        return lat_update_te;
     }
 
-    public void setLastupdatete(LocalDate lastupdatete) {
-        this.lastupdatete = lastupdatete;
+    public void setLat_update_te(String lat_update_te) {
+        this.lat_update_te = lat_update_te;
     }
 
     public String getEntity() {
@@ -232,12 +233,12 @@ public class ExternalApiDTO implements Serializable {
         this.emergencycode = emergencycode;
     }
 
-    public Boolean getSatausgetapi() {
-        return satausgetapi;
+    public Boolean getStatusgetapi() {
+        return statusgetapi;
     }
 
-    public void setSatausgetapi(Boolean satausgetapi) {
-        this.satausgetapi = satausgetapi;
+    public void setStatusgetapi(Boolean statusgetapi) {
+        this.statusgetapi = statusgetapi;
     }
 
     @Override
@@ -270,24 +271,32 @@ public class ExternalApiDTO implements Serializable {
             ", name='" + getName() + "'" +
             ", status='" + getStatus() + "'" +
             ", comments='" + getComments() + "'" +
-            ", idschema=" + getIdschema() +
-            ", datecreatedt='" + getDatecreatedt() + "'" +
-            ", lastupdatedm='" + getLastupdatedm() + "'" +
+            ", idschema=" + getId_schema() +
+            ", datecreatedt='" + getDate_created_t() + "'" +
+            ", lastupdatedm='" + getLast_updated_m() + "'" +
             ", origin='" + getOrigin() + "'" +
-            ", templateid=" + getTemplateid() +
-            ", idmodule=" + getIdmodule() +
-            ", uritemplate='" + getUritemplate() + "'" +
+            ", templateid=" + getTemplate_id() +
+            ", idmodule=" + getId_module() +
+            ", uritemplate='" + getUri_template() + "'" +
             ", priority=" + getPriority() +
-            ", schemaidt=" + getSchemaidt() +
-            ", createdatet='" + getCreatedatet() + "'" +
-            ", lastupdatete='" + getLastupdatete() + "'" +
+            ", schemaidt=" + getSchema_id_t() +
+            ", createdatet='" + getCreate_date_t() + "'" +
+            ", lastupdatete='" + getLat_update_te() + "'" +
             ", entity='" + getEntity() + "'" +
             ", parametre='" + getParametre() + "'" +
             ", countrowsreq=" + getCountrowsreq() +
             ", countrowsres=" + getCountrowsres() +
             ", frequency='" + getFrequency() + "'" +
             ", emergencycode='" + getEmergencycode() + "'" +
-            ", satausgetapi='" + getSatausgetapi() + "'" +
+            ", satausgetapi='" + getStatusgetapi() + "'" +
             "}";
+    }
+
+    public String getKeycomp() {
+        return keycomp;
+    }
+
+    public void setKeycomp(String keycomp) {
+        this.keycomp = keycomp;
     }
 }

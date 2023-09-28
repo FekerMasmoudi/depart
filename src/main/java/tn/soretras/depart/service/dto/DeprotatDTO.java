@@ -20,7 +20,7 @@ public class DeprotatDTO implements Serializable {
     private Integer decagenc;
 
     @NotNull
-    private LocalDate dedated;
+    private String dedated;
 
     @NotNull
     private Integer denumdp;
@@ -36,9 +36,9 @@ public class DeprotatDTO implements Serializable {
 
     private Integer numrotat;
 
-    private Integer ligdeccent;
+    private Integer lig_deccent;
 
-    private Integer ligdecagenc;
+    private Integer lig_decagenc;
 
     private String denumli;
 
@@ -52,25 +52,25 @@ public class DeprotatDTO implements Serializable {
 
     private String cdmac;
 
-    private LocalDate hdeparte;
+    private String hdeparte;
 
-    private LocalDate hretoure;
+    private String hretoure;
 
-    private LocalDate harralle;
+    private String harralle;
 
-    private LocalDate harrrete;
+    private String harrrete;
 
-    private String rannul;
+    private String r_annul;
 
     private Double km;
 
-    private Integer motifa;
+    private Integer motif_a;
 
     private String observ;
 
-    private Integer recettesvoy;
+    private Integer recettes_voy;
 
-    private Integer nbrevoy;
+    private Integer nbre_voy;
 
     private Integer paye;
 
@@ -84,13 +84,15 @@ public class DeprotatDTO implements Serializable {
 
     private Integer decmotifrea;
 
-    private Integer idapex;
+    private Integer id_apex;
 
-    private String plusmoins;
+    private String plus_moins;
 
     private String a;
 
     private String r;
+
+    private DepartDTO depart;
 
     public String getId() {
         return id;
@@ -116,11 +118,11 @@ public class DeprotatDTO implements Serializable {
         this.decagenc = decagenc;
     }
 
-    public LocalDate getDedated() {
+    public String getDedated() {
         return dedated;
     }
 
-    public void setDedated(LocalDate dedated) {
+    public void setDedated(String dedated) {
         this.dedated = dedated;
     }
 
@@ -164,20 +166,20 @@ public class DeprotatDTO implements Serializable {
         this.numrotat = numrotat;
     }
 
-    public Integer getLigdeccent() {
-        return ligdeccent;
+    public Integer getLig_deccent() {
+        return lig_deccent;
     }
 
-    public void setLigdeccent(Integer ligdeccent) {
-        this.ligdeccent = ligdeccent;
+    public void setLig_deccent(Integer lig_deccent) {
+        this.lig_deccent = lig_deccent;
     }
 
-    public Integer getLigdecagenc() {
-        return ligdecagenc;
+    public Integer getLig_decagenc() {
+        return lig_decagenc;
     }
 
-    public void setLigdecagenc(Integer ligdecagenc) {
-        this.ligdecagenc = ligdecagenc;
+    public void setLig_decagenc(Integer lig_decagenc) {
+        this.lig_decagenc = lig_decagenc;
     }
 
     public String getDenumli() {
@@ -228,44 +230,44 @@ public class DeprotatDTO implements Serializable {
         this.cdmac = cdmac;
     }
 
-    public LocalDate getHdeparte() {
+    public String getHdeparte() {
         return hdeparte;
     }
 
-    public void setHdeparte(LocalDate hdeparte) {
+    public void setHdeparte(String hdeparte) {
         this.hdeparte = hdeparte;
     }
 
-    public LocalDate getHretoure() {
+    public String getHretoure() {
         return hretoure;
     }
 
-    public void setHretoure(LocalDate hretoure) {
+    public void setHretoure(String hretoure) {
         this.hretoure = hretoure;
     }
 
-    public LocalDate getHarralle() {
+    public String getHarralle() {
         return harralle;
     }
 
-    public void setHarralle(LocalDate harralle) {
+    public void setHarralle(String harralle) {
         this.harralle = harralle;
     }
 
-    public LocalDate getHarrrete() {
+    public String getHarrrete() {
         return harrrete;
     }
 
-    public void setHarrrete(LocalDate harrrete) {
+    public void setHarrrete(String harrrete) {
         this.harrrete = harrrete;
     }
 
-    public String getRannul() {
-        return rannul;
+    public String getR_annul() {
+        return r_annul;
     }
 
-    public void setRannul(String rannul) {
-        this.rannul = rannul;
+    public void set_Rannul(String r_annul) {
+        this.r_annul = r_annul;
     }
 
     public Double getKm() {
@@ -276,12 +278,12 @@ public class DeprotatDTO implements Serializable {
         this.km = km;
     }
 
-    public Integer getMotifa() {
-        return motifa;
+    public Integer getMotif_a() {
+        return motif_a;
     }
 
-    public void setMotifa(Integer motifa) {
-        this.motifa = motifa;
+    public void setMotif_a(Integer motif_a) {
+        this.motif_a = motif_a;
     }
 
     public String getObserv() {
@@ -292,20 +294,20 @@ public class DeprotatDTO implements Serializable {
         this.observ = observ;
     }
 
-    public Integer getRecettesvoy() {
-        return recettesvoy;
+    public Integer getRecettes_voy() {
+        return recettes_voy;
     }
 
-    public void setRecettesvoy(Integer recettesvoy) {
-        this.recettesvoy = recettesvoy;
+    public void setRecettes_voy(Integer recettes_voy) {
+        this.recettes_voy = recettes_voy;
     }
 
-    public Integer getNbrevoy() {
-        return nbrevoy;
+    public Integer getNbre_voy() {
+        return nbre_voy;
     }
 
-    public void setNbrevoy(Integer nbrevoy) {
-        this.nbrevoy = nbrevoy;
+    public void setNbre_voy(Integer nbre_voy) {
+        this.nbre_voy = nbre_voy;
     }
 
     public Integer getPaye() {
@@ -356,20 +358,20 @@ public class DeprotatDTO implements Serializable {
         this.decmotifrea = decmotifrea;
     }
 
-    public Integer getIdapex() {
-        return idapex;
+    public Integer getId_apex() {
+        return id_apex;
     }
 
-    public void setIdapex(Integer idapex) {
-        this.idapex = idapex;
+    public void setId_apex(Integer id_apex) {
+        this.id_apex = id_apex;
     }
 
-    public String getPlusmoins() {
-        return plusmoins;
+    public String getPlus_moins() {
+        return plus_moins;
     }
 
-    public void setPlusmoins(String plusmoins) {
-        this.plusmoins = plusmoins;
+    public void setPlus_moins(String plus_moins) {
+        this.plus_moins = plus_moins;
     }
 
     public String getA() {
@@ -386,6 +388,14 @@ public class DeprotatDTO implements Serializable {
 
     public void setR(String r) {
         this.r = r;
+    }
+
+    public DepartDTO getDepart() {
+        return depart;
+    }
+
+    public void setDepart(DepartDTO depart) {
+        this.depart = depart;
     }
 
     @Override
@@ -422,8 +432,8 @@ public class DeprotatDTO implements Serializable {
             ", decoper='" + getDecoper() + "'" +
             ", decsean='" + getDecsean() + "'" +
             ", numrotat=" + getNumrotat() +
-            ", ligdeccent=" + getLigdeccent() +
-            ", ligdecagenc=" + getLigdecagenc() +
+            ", ligdeccent=" + getLig_deccent() +
+            ", ligdecagenc=" + getLig_decagenc() +
             ", denumli='" + getDenumli() + "'" +
             ", decstat='" + getDecstat() + "'" +
             ", decsta1='" + getDecsta1() + "'" +
@@ -434,20 +444,20 @@ public class DeprotatDTO implements Serializable {
             ", hretoure='" + getHretoure() + "'" +
             ", harralle='" + getHarralle() + "'" +
             ", harrrete='" + getHarrrete() + "'" +
-            ", rannul='" + getRannul() + "'" +
+            ", rannul='" + getR_annul() + "'" +
             ", km=" + getKm() +
-            ", motifa=" + getMotifa() +
+            ", motifa=" + getMotif_a() +
             ", observ='" + getObserv() + "'" +
-            ", recettesvoy=" + getRecettesvoy() +
-            ", nbrevoy=" + getNbrevoy() +
+            ", recettesvoy=" + getRecettes_voy() +
+            ", nbrevoy=" + getNbre_voy() +
             ", paye=" + getPaye() +
             ", cd1=" + getCd1() +
             ", cd2=" + getCd2() +
             ", cd3=" + getCd3() +
             ", decmotifcha=" + getDecmotifcha() +
             ", decmotifrea=" + getDecmotifrea() +
-            ", idapex=" + getIdapex() +
-            ", plusmoins='" + getPlusmoins() + "'" +
+            ", idapex=" + getId_apex() +
+            ", plusmoins='" + getPlus_moins() + "'" +
             ", a='" + getA() + "'" +
             ", r='" + getR() + "'" +
             "}";

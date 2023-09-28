@@ -34,8 +34,8 @@ class DeprotatResourceIT {
     private static final Integer DEFAULT_DECAGENC = 1;
     private static final Integer UPDATED_DECAGENC = 2;
 
-    private static final LocalDate DEFAULT_DEDATED = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_DEDATED = LocalDate.now(ZoneId.systemDefault());
+    private static final String DEFAULT_DEDATED = "06/08/2023";
+    private static final String UPDATED_DEDATED = "06/08/2023";
 
     private static final Integer DEFAULT_DENUMDP = 1;
     private static final Integer UPDATED_DENUMDP = 2;
@@ -76,17 +76,17 @@ class DeprotatResourceIT {
     private static final String DEFAULT_CDMAC = "AAAAAAAAAA";
     private static final String UPDATED_CDMAC = "BBBBBBBBBB";
 
-    private static final LocalDate DEFAULT_HDEPARTE = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_HDEPARTE = LocalDate.now(ZoneId.systemDefault());
+    private static final String DEFAULT_HDEPARTE = "00:00";
+    private static final String UPDATED_HDEPARTE = "00:00";
 
-    private static final LocalDate DEFAULT_HRETOURE = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_HRETOURE = LocalDate.now(ZoneId.systemDefault());
+    private static final String DEFAULT_HRETOURE = "00:00";
+    private static final String UPDATED_HRETOURE = "00:00";
 
-    private static final LocalDate DEFAULT_HARRALLE = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_HARRALLE = LocalDate.now(ZoneId.systemDefault());
+    private static final String DEFAULT_HARRALLE = "00:00";
+    private static final String UPDATED_HARRALLE = "00:00";
 
-    private static final LocalDate DEFAULT_HARRRETE = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_HARRRETE = LocalDate.now(ZoneId.systemDefault());
+    private static final String DEFAULT_HARRRETE = "00:00";
+    private static final String UPDATED_HARRRETE = "00:00";
 
     private static final String DEFAULT_RANNUL = "AAAAAAAAAA";
     private static final String UPDATED_RANNUL = "BBBBBBBBBB";
@@ -163,8 +163,8 @@ class DeprotatResourceIT {
             .decoper(DEFAULT_DECOPER)
             .decsean(DEFAULT_DECSEAN)
             .numrotat(DEFAULT_NUMROTAT)
-            .ligdeccent(DEFAULT_LIGDECCENT)
-            .ligdecagenc(DEFAULT_LIGDECAGENC)
+            .lig_deccent(DEFAULT_LIGDECCENT)
+            .lig_decagenc(DEFAULT_LIGDECAGENC)
             .denumli(DEFAULT_DENUMLI)
             .decstat(DEFAULT_DECSTAT)
             .decsta1(DEFAULT_DECSTA_1)
@@ -175,20 +175,20 @@ class DeprotatResourceIT {
             .hretoure(DEFAULT_HRETOURE)
             .harralle(DEFAULT_HARRALLE)
             .harrrete(DEFAULT_HARRRETE)
-            .rannul(DEFAULT_RANNUL)
+            .r_annul(DEFAULT_RANNUL)
             .km(DEFAULT_KM)
-            .motifa(DEFAULT_MOTIFA)
+            .motif_a(DEFAULT_MOTIFA)
             .observ(DEFAULT_OBSERV)
-            .recettesvoy(DEFAULT_RECETTESVOY)
-            .nbrevoy(DEFAULT_NBREVOY)
+            .recettes_voy(DEFAULT_RECETTESVOY)
+            .nbre_voy(DEFAULT_NBREVOY)
             .paye(DEFAULT_PAYE)
             .cd1(DEFAULT_CD_1)
             .cd2(DEFAULT_CD_2)
             .cd3(DEFAULT_CD_3)
             .decmotifcha(DEFAULT_DECMOTIFCHA)
             .decmotifrea(DEFAULT_DECMOTIFREA)
-            .idapex(DEFAULT_IDAPEX)
-            .plusmoins(DEFAULT_PLUSMOINS)
+            .id_apex(DEFAULT_IDAPEX)
+            .plus_moins(DEFAULT_PLUSMOINS)
             .a(DEFAULT_A)
             .r(DEFAULT_R);
         return deprotat;
@@ -210,8 +210,8 @@ class DeprotatResourceIT {
             .decoper(UPDATED_DECOPER)
             .decsean(UPDATED_DECSEAN)
             .numrotat(UPDATED_NUMROTAT)
-            .ligdeccent(UPDATED_LIGDECCENT)
-            .ligdecagenc(UPDATED_LIGDECAGENC)
+            .lig_deccent(UPDATED_LIGDECCENT)
+            .lig_decagenc(UPDATED_LIGDECAGENC)
             .denumli(UPDATED_DENUMLI)
             .decstat(UPDATED_DECSTAT)
             .decsta1(UPDATED_DECSTA_1)
@@ -222,20 +222,20 @@ class DeprotatResourceIT {
             .hretoure(UPDATED_HRETOURE)
             .harralle(UPDATED_HARRALLE)
             .harrrete(UPDATED_HARRRETE)
-            .rannul(UPDATED_RANNUL)
+            .r_annul(UPDATED_RANNUL)
             .km(UPDATED_KM)
-            .motifa(UPDATED_MOTIFA)
+            .motif_a(UPDATED_MOTIFA)
             .observ(UPDATED_OBSERV)
-            .recettesvoy(UPDATED_RECETTESVOY)
-            .nbrevoy(UPDATED_NBREVOY)
+            .recettes_voy(UPDATED_RECETTESVOY)
+            .nbre_voy(UPDATED_NBREVOY)
             .paye(UPDATED_PAYE)
             .cd1(UPDATED_CD_1)
             .cd2(UPDATED_CD_2)
             .cd3(UPDATED_CD_3)
             .decmotifcha(UPDATED_DECMOTIFCHA)
             .decmotifrea(UPDATED_DECMOTIFREA)
-            .idapex(UPDATED_IDAPEX)
-            .plusmoins(UPDATED_PLUSMOINS)
+            .id_apex(UPDATED_IDAPEX)
+            .plus_moins(UPDATED_PLUSMOINS)
             .a(UPDATED_A)
             .r(UPDATED_R);
         return deprotat;
@@ -267,8 +267,8 @@ class DeprotatResourceIT {
         assertThat(testDeprotat.getDecoper()).isEqualTo(DEFAULT_DECOPER);
         assertThat(testDeprotat.getDecsean()).isEqualTo(DEFAULT_DECSEAN);
         assertThat(testDeprotat.getNumrotat()).isEqualTo(DEFAULT_NUMROTAT);
-        assertThat(testDeprotat.getLigdeccent()).isEqualTo(DEFAULT_LIGDECCENT);
-        assertThat(testDeprotat.getLigdecagenc()).isEqualTo(DEFAULT_LIGDECAGENC);
+        assertThat(testDeprotat.getLig_deccent()).isEqualTo(DEFAULT_LIGDECCENT);
+        assertThat(testDeprotat.getLig_decagenc()).isEqualTo(DEFAULT_LIGDECAGENC);
         assertThat(testDeprotat.getDenumli()).isEqualTo(DEFAULT_DENUMLI);
         assertThat(testDeprotat.getDecstat()).isEqualTo(DEFAULT_DECSTAT);
         assertThat(testDeprotat.getDecsta1()).isEqualTo(DEFAULT_DECSTA_1);
@@ -279,20 +279,20 @@ class DeprotatResourceIT {
         assertThat(testDeprotat.getHretoure()).isEqualTo(DEFAULT_HRETOURE);
         assertThat(testDeprotat.getHarralle()).isEqualTo(DEFAULT_HARRALLE);
         assertThat(testDeprotat.getHarrrete()).isEqualTo(DEFAULT_HARRRETE);
-        assertThat(testDeprotat.getRannul()).isEqualTo(DEFAULT_RANNUL);
+        assertThat(testDeprotat.getR_annul()).isEqualTo(DEFAULT_RANNUL);
         assertThat(testDeprotat.getKm()).isEqualTo(DEFAULT_KM);
-        assertThat(testDeprotat.getMotifa()).isEqualTo(DEFAULT_MOTIFA);
+        assertThat(testDeprotat.getMotif_a()).isEqualTo(DEFAULT_MOTIFA);
         assertThat(testDeprotat.getObserv()).isEqualTo(DEFAULT_OBSERV);
-        assertThat(testDeprotat.getRecettesvoy()).isEqualTo(DEFAULT_RECETTESVOY);
-        assertThat(testDeprotat.getNbrevoy()).isEqualTo(DEFAULT_NBREVOY);
+        assertThat(testDeprotat.getRecettes_voy()).isEqualTo(DEFAULT_RECETTESVOY);
+        assertThat(testDeprotat.getNbre_voy()).isEqualTo(DEFAULT_NBREVOY);
         assertThat(testDeprotat.getPaye()).isEqualTo(DEFAULT_PAYE);
         assertThat(testDeprotat.getCd1()).isEqualTo(DEFAULT_CD_1);
         assertThat(testDeprotat.getCd2()).isEqualTo(DEFAULT_CD_2);
         assertThat(testDeprotat.getCd3()).isEqualTo(DEFAULT_CD_3);
         assertThat(testDeprotat.getDecmotifcha()).isEqualTo(DEFAULT_DECMOTIFCHA);
         assertThat(testDeprotat.getDecmotifrea()).isEqualTo(DEFAULT_DECMOTIFREA);
-        assertThat(testDeprotat.getIdapex()).isEqualTo(DEFAULT_IDAPEX);
-        assertThat(testDeprotat.getPlusmoins()).isEqualTo(DEFAULT_PLUSMOINS);
+        assertThat(testDeprotat.getId_apex()).isEqualTo(DEFAULT_IDAPEX);
+        assertThat(testDeprotat.getPlus_moins()).isEqualTo(DEFAULT_PLUSMOINS);
         assertThat(testDeprotat.getA()).isEqualTo(DEFAULT_A);
         assertThat(testDeprotat.getR()).isEqualTo(DEFAULT_R);
     }
@@ -548,8 +548,8 @@ class DeprotatResourceIT {
             .decoper(UPDATED_DECOPER)
             .decsean(UPDATED_DECSEAN)
             .numrotat(UPDATED_NUMROTAT)
-            .ligdeccent(UPDATED_LIGDECCENT)
-            .ligdecagenc(UPDATED_LIGDECAGENC)
+            .lig_deccent(UPDATED_LIGDECCENT)
+            .lig_decagenc(UPDATED_LIGDECAGENC)
             .denumli(UPDATED_DENUMLI)
             .decstat(UPDATED_DECSTAT)
             .decsta1(UPDATED_DECSTA_1)
@@ -560,20 +560,20 @@ class DeprotatResourceIT {
             .hretoure(UPDATED_HRETOURE)
             .harralle(UPDATED_HARRALLE)
             .harrrete(UPDATED_HARRRETE)
-            .rannul(UPDATED_RANNUL)
+            .r_annul(UPDATED_RANNUL)
             .km(UPDATED_KM)
-            .motifa(UPDATED_MOTIFA)
+            .motif_a(UPDATED_MOTIFA)
             .observ(UPDATED_OBSERV)
-            .recettesvoy(UPDATED_RECETTESVOY)
-            .nbrevoy(UPDATED_NBREVOY)
+            .recettes_voy(UPDATED_RECETTESVOY)
+            .nbre_voy(UPDATED_NBREVOY)
             .paye(UPDATED_PAYE)
             .cd1(UPDATED_CD_1)
             .cd2(UPDATED_CD_2)
             .cd3(UPDATED_CD_3)
             .decmotifcha(UPDATED_DECMOTIFCHA)
             .decmotifrea(UPDATED_DECMOTIFREA)
-            .idapex(UPDATED_IDAPEX)
-            .plusmoins(UPDATED_PLUSMOINS)
+            .id_apex(UPDATED_IDAPEX)
+            .plus_moins(UPDATED_PLUSMOINS)
             .a(UPDATED_A)
             .r(UPDATED_R);
 
@@ -597,8 +597,8 @@ class DeprotatResourceIT {
         assertThat(testDeprotat.getDecoper()).isEqualTo(UPDATED_DECOPER);
         assertThat(testDeprotat.getDecsean()).isEqualTo(UPDATED_DECSEAN);
         assertThat(testDeprotat.getNumrotat()).isEqualTo(UPDATED_NUMROTAT);
-        assertThat(testDeprotat.getLigdeccent()).isEqualTo(UPDATED_LIGDECCENT);
-        assertThat(testDeprotat.getLigdecagenc()).isEqualTo(UPDATED_LIGDECAGENC);
+        assertThat(testDeprotat.getLig_deccent()).isEqualTo(UPDATED_LIGDECCENT);
+        assertThat(testDeprotat.getLig_decagenc()).isEqualTo(UPDATED_LIGDECAGENC);
         assertThat(testDeprotat.getDenumli()).isEqualTo(UPDATED_DENUMLI);
         assertThat(testDeprotat.getDecstat()).isEqualTo(UPDATED_DECSTAT);
         assertThat(testDeprotat.getDecsta1()).isEqualTo(UPDATED_DECSTA_1);
@@ -609,20 +609,20 @@ class DeprotatResourceIT {
         assertThat(testDeprotat.getHretoure()).isEqualTo(UPDATED_HRETOURE);
         assertThat(testDeprotat.getHarralle()).isEqualTo(UPDATED_HARRALLE);
         assertThat(testDeprotat.getHarrrete()).isEqualTo(UPDATED_HARRRETE);
-        assertThat(testDeprotat.getRannul()).isEqualTo(UPDATED_RANNUL);
+        assertThat(testDeprotat.getR_annul()).isEqualTo(UPDATED_RANNUL);
         assertThat(testDeprotat.getKm()).isEqualTo(UPDATED_KM);
-        assertThat(testDeprotat.getMotifa()).isEqualTo(UPDATED_MOTIFA);
+        assertThat(testDeprotat.getMotif_a()).isEqualTo(UPDATED_MOTIFA);
         assertThat(testDeprotat.getObserv()).isEqualTo(UPDATED_OBSERV);
-        assertThat(testDeprotat.getRecettesvoy()).isEqualTo(UPDATED_RECETTESVOY);
-        assertThat(testDeprotat.getNbrevoy()).isEqualTo(UPDATED_NBREVOY);
+        assertThat(testDeprotat.getRecettes_voy()).isEqualTo(UPDATED_RECETTESVOY);
+        assertThat(testDeprotat.getNbre_voy()).isEqualTo(UPDATED_NBREVOY);
         assertThat(testDeprotat.getPaye()).isEqualTo(UPDATED_PAYE);
         assertThat(testDeprotat.getCd1()).isEqualTo(UPDATED_CD_1);
         assertThat(testDeprotat.getCd2()).isEqualTo(UPDATED_CD_2);
         assertThat(testDeprotat.getCd3()).isEqualTo(UPDATED_CD_3);
         assertThat(testDeprotat.getDecmotifcha()).isEqualTo(UPDATED_DECMOTIFCHA);
         assertThat(testDeprotat.getDecmotifrea()).isEqualTo(UPDATED_DECMOTIFREA);
-        assertThat(testDeprotat.getIdapex()).isEqualTo(UPDATED_IDAPEX);
-        assertThat(testDeprotat.getPlusmoins()).isEqualTo(UPDATED_PLUSMOINS);
+        assertThat(testDeprotat.getId_apex()).isEqualTo(UPDATED_IDAPEX);
+        assertThat(testDeprotat.getPlus_moins()).isEqualTo(UPDATED_PLUSMOINS);
         assertThat(testDeprotat.getA()).isEqualTo(UPDATED_A);
         assertThat(testDeprotat.getR()).isEqualTo(UPDATED_R);
     }
@@ -696,22 +696,22 @@ class DeprotatResourceIT {
             .decoper(UPDATED_DECOPER)
             .decsean(UPDATED_DECSEAN)
             .numrotat(UPDATED_NUMROTAT)
-            .ligdeccent(UPDATED_LIGDECCENT)
-            .ligdecagenc(UPDATED_LIGDECAGENC)
+            .lig_deccent(UPDATED_LIGDECCENT)
+            .lig_decagenc(UPDATED_LIGDECAGENC)
             .denumli(UPDATED_DENUMLI)
             .decsta1(UPDATED_DECSTA_1)
             .matric(UPDATED_MATRIC)
             .cdmac(UPDATED_CDMAC)
             .hretoure(UPDATED_HRETOURE)
             .harralle(UPDATED_HARRALLE)
-            .rannul(UPDATED_RANNUL)
+            .r_annul(UPDATED_RANNUL)
             .km(UPDATED_KM)
-            .motifa(UPDATED_MOTIFA)
-            .recettesvoy(UPDATED_RECETTESVOY)
-            .nbrevoy(UPDATED_NBREVOY)
+            .motif_a(UPDATED_MOTIFA)
+            .recettes_voy(UPDATED_RECETTESVOY)
+            .nbre_voy(UPDATED_NBREVOY)
             .paye(UPDATED_PAYE)
             .cd3(UPDATED_CD_3)
-            .idapex(UPDATED_IDAPEX);
+            .id_apex(UPDATED_IDAPEX);
 
         restDeprotatMockMvc
             .perform(
@@ -733,8 +733,8 @@ class DeprotatResourceIT {
         assertThat(testDeprotat.getDecoper()).isEqualTo(UPDATED_DECOPER);
         assertThat(testDeprotat.getDecsean()).isEqualTo(UPDATED_DECSEAN);
         assertThat(testDeprotat.getNumrotat()).isEqualTo(UPDATED_NUMROTAT);
-        assertThat(testDeprotat.getLigdeccent()).isEqualTo(UPDATED_LIGDECCENT);
-        assertThat(testDeprotat.getLigdecagenc()).isEqualTo(UPDATED_LIGDECAGENC);
+        assertThat(testDeprotat.getLig_deccent()).isEqualTo(UPDATED_LIGDECCENT);
+        assertThat(testDeprotat.getLig_decagenc()).isEqualTo(UPDATED_LIGDECAGENC);
         assertThat(testDeprotat.getDenumli()).isEqualTo(UPDATED_DENUMLI);
         assertThat(testDeprotat.getDecstat()).isEqualTo(DEFAULT_DECSTAT);
         assertThat(testDeprotat.getDecsta1()).isEqualTo(UPDATED_DECSTA_1);
@@ -745,20 +745,20 @@ class DeprotatResourceIT {
         assertThat(testDeprotat.getHretoure()).isEqualTo(UPDATED_HRETOURE);
         assertThat(testDeprotat.getHarralle()).isEqualTo(UPDATED_HARRALLE);
         assertThat(testDeprotat.getHarrrete()).isEqualTo(DEFAULT_HARRRETE);
-        assertThat(testDeprotat.getRannul()).isEqualTo(UPDATED_RANNUL);
+        assertThat(testDeprotat.getR_annul()).isEqualTo(UPDATED_RANNUL);
         assertThat(testDeprotat.getKm()).isEqualTo(UPDATED_KM);
-        assertThat(testDeprotat.getMotifa()).isEqualTo(UPDATED_MOTIFA);
+        assertThat(testDeprotat.getMotif_a()).isEqualTo(UPDATED_MOTIFA);
         assertThat(testDeprotat.getObserv()).isEqualTo(DEFAULT_OBSERV);
-        assertThat(testDeprotat.getRecettesvoy()).isEqualTo(UPDATED_RECETTESVOY);
-        assertThat(testDeprotat.getNbrevoy()).isEqualTo(UPDATED_NBREVOY);
+        assertThat(testDeprotat.getRecettes_voy()).isEqualTo(UPDATED_RECETTESVOY);
+        assertThat(testDeprotat.getNbre_voy()).isEqualTo(UPDATED_NBREVOY);
         assertThat(testDeprotat.getPaye()).isEqualTo(UPDATED_PAYE);
         assertThat(testDeprotat.getCd1()).isEqualTo(DEFAULT_CD_1);
         assertThat(testDeprotat.getCd2()).isEqualTo(DEFAULT_CD_2);
         assertThat(testDeprotat.getCd3()).isEqualTo(UPDATED_CD_3);
         assertThat(testDeprotat.getDecmotifcha()).isEqualTo(DEFAULT_DECMOTIFCHA);
         assertThat(testDeprotat.getDecmotifrea()).isEqualTo(DEFAULT_DECMOTIFREA);
-        assertThat(testDeprotat.getIdapex()).isEqualTo(UPDATED_IDAPEX);
-        assertThat(testDeprotat.getPlusmoins()).isEqualTo(DEFAULT_PLUSMOINS);
+        assertThat(testDeprotat.getId_apex()).isEqualTo(UPDATED_IDAPEX);
+        assertThat(testDeprotat.getPlus_moins()).isEqualTo(DEFAULT_PLUSMOINS);
         assertThat(testDeprotat.getA()).isEqualTo(DEFAULT_A);
         assertThat(testDeprotat.getR()).isEqualTo(DEFAULT_R);
     }
@@ -783,8 +783,8 @@ class DeprotatResourceIT {
             .decoper(UPDATED_DECOPER)
             .decsean(UPDATED_DECSEAN)
             .numrotat(UPDATED_NUMROTAT)
-            .ligdeccent(UPDATED_LIGDECCENT)
-            .ligdecagenc(UPDATED_LIGDECAGENC)
+            .lig_deccent(UPDATED_LIGDECCENT)
+            .lig_decagenc(UPDATED_LIGDECAGENC)
             .denumli(UPDATED_DENUMLI)
             .decstat(UPDATED_DECSTAT)
             .decsta1(UPDATED_DECSTA_1)
@@ -795,20 +795,20 @@ class DeprotatResourceIT {
             .hretoure(UPDATED_HRETOURE)
             .harralle(UPDATED_HARRALLE)
             .harrrete(UPDATED_HARRRETE)
-            .rannul(UPDATED_RANNUL)
+            .r_annul(UPDATED_RANNUL)
             .km(UPDATED_KM)
-            .motifa(UPDATED_MOTIFA)
+            .motif_a(UPDATED_MOTIFA)
             .observ(UPDATED_OBSERV)
-            .recettesvoy(UPDATED_RECETTESVOY)
-            .nbrevoy(UPDATED_NBREVOY)
+            .recettes_voy(UPDATED_RECETTESVOY)
+            .nbre_voy(UPDATED_NBREVOY)
             .paye(UPDATED_PAYE)
             .cd1(UPDATED_CD_1)
             .cd2(UPDATED_CD_2)
             .cd3(UPDATED_CD_3)
             .decmotifcha(UPDATED_DECMOTIFCHA)
             .decmotifrea(UPDATED_DECMOTIFREA)
-            .idapex(UPDATED_IDAPEX)
-            .plusmoins(UPDATED_PLUSMOINS)
+            .id_apex(UPDATED_IDAPEX)
+            .plus_moins(UPDATED_PLUSMOINS)
             .a(UPDATED_A)
             .r(UPDATED_R);
 
@@ -832,8 +832,8 @@ class DeprotatResourceIT {
         assertThat(testDeprotat.getDecoper()).isEqualTo(UPDATED_DECOPER);
         assertThat(testDeprotat.getDecsean()).isEqualTo(UPDATED_DECSEAN);
         assertThat(testDeprotat.getNumrotat()).isEqualTo(UPDATED_NUMROTAT);
-        assertThat(testDeprotat.getLigdeccent()).isEqualTo(UPDATED_LIGDECCENT);
-        assertThat(testDeprotat.getLigdecagenc()).isEqualTo(UPDATED_LIGDECAGENC);
+        assertThat(testDeprotat.getLig_deccent()).isEqualTo(UPDATED_LIGDECCENT);
+        assertThat(testDeprotat.getLig_decagenc()).isEqualTo(UPDATED_LIGDECAGENC);
         assertThat(testDeprotat.getDenumli()).isEqualTo(UPDATED_DENUMLI);
         assertThat(testDeprotat.getDecstat()).isEqualTo(UPDATED_DECSTAT);
         assertThat(testDeprotat.getDecsta1()).isEqualTo(UPDATED_DECSTA_1);
@@ -844,20 +844,20 @@ class DeprotatResourceIT {
         assertThat(testDeprotat.getHretoure()).isEqualTo(UPDATED_HRETOURE);
         assertThat(testDeprotat.getHarralle()).isEqualTo(UPDATED_HARRALLE);
         assertThat(testDeprotat.getHarrrete()).isEqualTo(UPDATED_HARRRETE);
-        assertThat(testDeprotat.getRannul()).isEqualTo(UPDATED_RANNUL);
+        assertThat(testDeprotat.getR_annul()).isEqualTo(UPDATED_RANNUL);
         assertThat(testDeprotat.getKm()).isEqualTo(UPDATED_KM);
-        assertThat(testDeprotat.getMotifa()).isEqualTo(UPDATED_MOTIFA);
+        assertThat(testDeprotat.getMotif_a()).isEqualTo(UPDATED_MOTIFA);
         assertThat(testDeprotat.getObserv()).isEqualTo(UPDATED_OBSERV);
-        assertThat(testDeprotat.getRecettesvoy()).isEqualTo(UPDATED_RECETTESVOY);
-        assertThat(testDeprotat.getNbrevoy()).isEqualTo(UPDATED_NBREVOY);
+        assertThat(testDeprotat.getRecettes_voy()).isEqualTo(UPDATED_RECETTESVOY);
+        assertThat(testDeprotat.getNbre_voy()).isEqualTo(UPDATED_NBREVOY);
         assertThat(testDeprotat.getPaye()).isEqualTo(UPDATED_PAYE);
         assertThat(testDeprotat.getCd1()).isEqualTo(UPDATED_CD_1);
         assertThat(testDeprotat.getCd2()).isEqualTo(UPDATED_CD_2);
         assertThat(testDeprotat.getCd3()).isEqualTo(UPDATED_CD_3);
         assertThat(testDeprotat.getDecmotifcha()).isEqualTo(UPDATED_DECMOTIFCHA);
         assertThat(testDeprotat.getDecmotifrea()).isEqualTo(UPDATED_DECMOTIFREA);
-        assertThat(testDeprotat.getIdapex()).isEqualTo(UPDATED_IDAPEX);
-        assertThat(testDeprotat.getPlusmoins()).isEqualTo(UPDATED_PLUSMOINS);
+        assertThat(testDeprotat.getId_apex()).isEqualTo(UPDATED_IDAPEX);
+        assertThat(testDeprotat.getPlus_moins()).isEqualTo(UPDATED_PLUSMOINS);
         assertThat(testDeprotat.getA()).isEqualTo(UPDATED_A);
         assertThat(testDeprotat.getR()).isEqualTo(UPDATED_R);
     }

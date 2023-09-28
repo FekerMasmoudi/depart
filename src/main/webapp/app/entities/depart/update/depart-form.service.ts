@@ -41,7 +41,7 @@ type DepartFormGroupContent = {
   deannul: FormControl<IDepart['deannul']>;
   decclot: FormControl<IDepart['decclot']>;
   execute: FormControl<IDepart['execute']>;
-  motifa: FormControl<IDepart['motifa']>;
+  motifa: FormControl<IDepart['motif_a']>;
   observ: FormControl<IDepart['observ']>;
   recettes: FormControl<IDepart['recettes']>;
   nbrevoy: FormControl<IDepart['nbrevoy']>;
@@ -108,7 +108,7 @@ export class DepartFormService {
       deannul: new FormControl(departRawValue.deannul),
       decclot: new FormControl(departRawValue.decclot),
       execute: new FormControl(departRawValue.execute),
-      motifa: new FormControl(departRawValue.motifa),
+      motifa: new FormControl(departRawValue.motif_a),
       observ: new FormControl(departRawValue.observ),
       recettes: new FormControl(departRawValue.recettes),
       nbrevoy: new FormControl(departRawValue.nbrevoy),

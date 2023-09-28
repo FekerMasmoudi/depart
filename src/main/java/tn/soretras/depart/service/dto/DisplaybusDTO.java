@@ -13,6 +13,10 @@ public class DisplaybusDTO implements Serializable {
 
     private String lang;
 
+    private String depart;
+
+    private String arrivee;
+
     private String vehicule;
 
     private Integer num_appel;
@@ -41,6 +45,22 @@ public class DisplaybusDTO implements Serializable {
 
     public void setLang(String lang) {
         this.lang = lang;
+    }
+
+    public String getDepart() {
+        return depart;
+    }
+
+    public void setDepart(String depart) {
+        this.depart = depart;
+    }
+
+    public String getArrivee() {
+        return arrivee;
+    }
+
+    public void setArrivee(String arrivee) {
+        this.arrivee = arrivee;
     }
 
     public String getVehicule() {
@@ -126,6 +146,8 @@ public class DisplaybusDTO implements Serializable {
         return "DisplaybusDTO{" +
             "id='" + getId() + "'" +
             ", lang='" + getLang() + "'" +
+            ", lang='" + getDepart() + "'" +
+            ", lang='" + getArrivee() + "'" +
             ", vehicule='" + getVehicule() + "'" +
             ", num_appel=" + getNum_appel() +
             ", detail_ligne='" + getDetail_ligne() + "'" +

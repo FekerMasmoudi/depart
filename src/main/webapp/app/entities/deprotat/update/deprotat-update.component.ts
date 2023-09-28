@@ -56,7 +56,7 @@ export class DeprotatUpdateComponent implements OnInit {
     }
   }
 
-  protected subscribeToSaveResponse(result: Observable<HttpResponse<IDeprotat>>): void {
+  public subscribeToSaveResponse(result: Observable<HttpResponse<IDeprotat>>): void {
     result.pipe(finalize(() => this.onSaveFinalize())).subscribe({
       next: () => this.onSaveSuccess(),
       error: () => this.onSaveError(),

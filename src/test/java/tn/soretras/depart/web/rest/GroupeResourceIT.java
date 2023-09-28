@@ -73,7 +73,7 @@ class GroupeResourceIT {
             .codgrp(DEFAULT_CODGRP)
             .libgrp(DEFAULT_LIBGRP)
             .dectyli(DEFAULT_DECTYLI)
-            .libgrpfr(DEFAULT_LIBGRPFR);
+            .libgrp_fr(DEFAULT_LIBGRPFR);
         return groupe;
     }
 
@@ -90,7 +90,7 @@ class GroupeResourceIT {
             .codgrp(UPDATED_CODGRP)
             .libgrp(UPDATED_LIBGRP)
             .dectyli(UPDATED_DECTYLI)
-            .libgrpfr(UPDATED_LIBGRPFR);
+            .libgrp_fr(UPDATED_LIBGRPFR);
         return groupe;
     }
 
@@ -118,7 +118,7 @@ class GroupeResourceIT {
         assertThat(testGroupe.getCodgrp()).isEqualTo(DEFAULT_CODGRP);
         assertThat(testGroupe.getLibgrp()).isEqualTo(DEFAULT_LIBGRP);
         assertThat(testGroupe.getDectyli()).isEqualTo(DEFAULT_DECTYLI);
-        assertThat(testGroupe.getLibgrpfr()).isEqualTo(DEFAULT_LIBGRPFR);
+        assertThat(testGroupe.getLibgrp_fr()).isEqualTo(DEFAULT_LIBGRPFR);
     }
 
     @Test
@@ -249,7 +249,7 @@ class GroupeResourceIT {
             .codgrp(UPDATED_CODGRP)
             .libgrp(UPDATED_LIBGRP)
             .dectyli(UPDATED_DECTYLI)
-            .libgrpfr(UPDATED_LIBGRPFR);
+            .libgrp_fr(UPDATED_LIBGRPFR);
         GroupeDTO groupeDTO = groupeMapper.toDto(updatedGroupe);
 
         restGroupeMockMvc
@@ -269,7 +269,7 @@ class GroupeResourceIT {
         assertThat(testGroupe.getCodgrp()).isEqualTo(UPDATED_CODGRP);
         assertThat(testGroupe.getLibgrp()).isEqualTo(UPDATED_LIBGRP);
         assertThat(testGroupe.getDectyli()).isEqualTo(UPDATED_DECTYLI);
-        assertThat(testGroupe.getLibgrpfr()).isEqualTo(UPDATED_LIBGRPFR);
+        assertThat(testGroupe.getLibgrp_fr()).isEqualTo(UPDATED_LIBGRPFR);
     }
 
     @Test
@@ -345,7 +345,7 @@ class GroupeResourceIT {
         Groupe partialUpdatedGroupe = new Groupe();
         partialUpdatedGroupe.setId(groupe.getId());
 
-        partialUpdatedGroupe.decagenc(UPDATED_DECAGENC).codgrp(UPDATED_CODGRP).dectyli(UPDATED_DECTYLI).libgrpfr(UPDATED_LIBGRPFR);
+        partialUpdatedGroupe.decagenc(UPDATED_DECAGENC).codgrp(UPDATED_CODGRP).dectyli(UPDATED_DECTYLI).libgrp_fr(UPDATED_LIBGRPFR);
 
         restGroupeMockMvc
             .perform(
@@ -364,7 +364,7 @@ class GroupeResourceIT {
         assertThat(testGroupe.getCodgrp()).isEqualTo(UPDATED_CODGRP);
         assertThat(testGroupe.getLibgrp()).isEqualTo(DEFAULT_LIBGRP);
         assertThat(testGroupe.getDectyli()).isEqualTo(UPDATED_DECTYLI);
-        assertThat(testGroupe.getLibgrpfr()).isEqualTo(UPDATED_LIBGRPFR);
+        assertThat(testGroupe.getLibgrp_fr()).isEqualTo(UPDATED_LIBGRPFR);
     }
 
     @Test
@@ -384,7 +384,7 @@ class GroupeResourceIT {
             .codgrp(UPDATED_CODGRP)
             .libgrp(UPDATED_LIBGRP)
             .dectyli(UPDATED_DECTYLI)
-            .libgrpfr(UPDATED_LIBGRPFR);
+            .libgrp_fr(UPDATED_LIBGRPFR);
 
         restGroupeMockMvc
             .perform(
@@ -403,7 +403,7 @@ class GroupeResourceIT {
         assertThat(testGroupe.getCodgrp()).isEqualTo(UPDATED_CODGRP);
         assertThat(testGroupe.getLibgrp()).isEqualTo(UPDATED_LIBGRP);
         assertThat(testGroupe.getDectyli()).isEqualTo(UPDATED_DECTYLI);
-        assertThat(testGroupe.getLibgrpfr()).isEqualTo(UPDATED_LIBGRPFR);
+        assertThat(testGroupe.getLibgrp_fr()).isEqualTo(UPDATED_LIBGRPFR);
     }
 
     @Test

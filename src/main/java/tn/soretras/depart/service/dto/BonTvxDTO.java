@@ -14,61 +14,61 @@ public class BonTvxDTO implements Serializable {
 
     private Integer cdexerc;
 
-    private Integer numbt;
+    private Integer num_bt;
 
     private String cdtier;
 
     private String cdmac;
 
-    private String maccdmac;
+    private String mac_cdmac;
 
     private String cdserv;
 
     private Integer decagen;
 
-    private Integer dradecagen;
+    private Integer dra_decagen;
 
     private String cdorga;
 
-    private String refbt;
+    private String ref_bt;
 
-    private LocalDate datbt;
+    private String dat_bt;
 
-    private LocalDate datdt;
+    private String dat_dt;
 
-    private LocalDate datft;
+    private String dat_ft;
 
     private String vld;
 
-    private String typtvx;
+    private String typ_tvx;
 
-    private LocalDate heurdb;
+    private String heurdb;
 
-    private LocalDate heurfi;
+    private String heurfi;
 
     private String observ;
 
-    private LocalDate datsrt;
+    private String dat_srt;
 
-    private LocalDate heursr;
+    private String heursr;
 
-    private String obstest;
+    private String obs_test;
 
-    private Integer indexdep;
+    private Integer index_dep;
 
-    private Integer indexarr;
+    private Integer index_arr;
 
-    private String immatex;
+    private String immat_ex;
 
-    private String nomchauff;
+    private String nom_chauff;
 
-    private String numpermis;
+    private String num_permis;
 
     private String etab;
 
     private Integer compteur;
 
-    private Integer cptorg;
+    private Integer cpt_org;
 
     private String cdtyptr;
 
@@ -76,29 +76,29 @@ public class BonTvxDTO implements Serializable {
 
     private Integer testeur;
 
-    private String motifdep;
+    private String motif_dep;
 
     private String cdtypmnt;
 
-    private LocalDate datsorprev;
+    private String dat_sor_prev;
 
-    private LocalDate datmnqdu;
+    private String dat_mnq_du;
 
-    private LocalDate datmnqau;
+    private String dat_mnq_au;
 
-    private LocalDate datentant;
+    private String dat_ent_ant;
 
     private String codstat;
 
-    private LocalDate datvld;
+    private String dat_vld;
 
     private String observ1;
 
     private Integer testeur1;
 
-    private Integer validag;
+    private Integer valid_ag;
 
-    private LocalDate datsais;
+    private String dat_sais;
 
     public String getId() {
         return id;
@@ -116,12 +116,12 @@ public class BonTvxDTO implements Serializable {
         this.cdexerc = cdexerc;
     }
 
-    public Integer getNumbt() {
-        return numbt;
+    public Integer getNum_bt() {
+        return num_bt;
     }
 
-    public void setNumbt(Integer numbt) {
-        this.numbt = numbt;
+    public void setNum_bt(Integer num_bt) {
+        this.num_bt = num_bt;
     }
 
     public String getCdtier() {
@@ -140,12 +140,12 @@ public class BonTvxDTO implements Serializable {
         this.cdmac = cdmac;
     }
 
-    public String getMaccdmac() {
-        return maccdmac;
+    public String getMac_cdmac() {
+        return mac_cdmac;
     }
 
-    public void setMaccdmac(String maccdmac) {
-        this.maccdmac = maccdmac;
+    public void setMac_cdmac(String mac_cdmac) {
+        this.mac_cdmac = mac_cdmac;
     }
 
     public String getCdserv() {
@@ -164,12 +164,12 @@ public class BonTvxDTO implements Serializable {
         this.decagen = decagen;
     }
 
-    public Integer getDradecagen() {
-        return dradecagen;
+    public Integer getDra_decagen() {
+        return dra_decagen;
     }
 
-    public void setDradecagen(Integer dradecagen) {
-        this.dradecagen = dradecagen;
+    public void setDra_decagen(Integer dra_decagen) {
+        this.dra_decagen = dra_decagen;
     }
 
     public String getCdorga() {
@@ -180,36 +180,36 @@ public class BonTvxDTO implements Serializable {
         this.cdorga = cdorga;
     }
 
-    public String getRefbt() {
-        return refbt;
+    public String getRef_bt() {
+        return ref_bt;
     }
 
-    public void setRefbt(String refbt) {
-        this.refbt = refbt;
+    public void setRef_bt(String ref_bt) {
+        this.ref_bt = ref_bt;
     }
 
-    public LocalDate getDatbt() {
-        return datbt;
+    public String getDat_bt() {
+        return dat_bt;
     }
 
-    public void setDatbt(LocalDate datbt) {
-        this.datbt = datbt;
+    public void setDat_bt(String dat_bt) {
+        this.dat_bt = dat_bt;
     }
 
-    public LocalDate getDatdt() {
-        return datdt;
+    public String getDat_dt() {
+        return dat_dt;
     }
 
-    public void setDatdt(LocalDate datdt) {
-        this.datdt = datdt;
+    public void setDat_dt(String dat_dt) {
+        this.dat_dt = dat_dt;
     }
 
-    public LocalDate getDatft() {
-        return datft;
+    public String getDat_ft() {
+        return dat_ft;
     }
 
-    public void setDatft(LocalDate datft) {
-        this.datft = datft;
+    public void setDat_ft(String dat_ft) {
+        this.dat_ft = dat_ft;
     }
 
     public String getVld() {
@@ -220,27 +220,27 @@ public class BonTvxDTO implements Serializable {
         this.vld = vld;
     }
 
-    public String getTyptvx() {
-        return typtvx;
+    public String getTyp_tvx() {
+        return typ_tvx;
     }
 
-    public void setTyptvx(String typtvx) {
-        this.typtvx = typtvx;
+    public void setTyp_tvx(String typ_tvx) {
+        this.typ_tvx = typ_tvx;
     }
 
-    public LocalDate getHeurdb() {
+    public String getHeurdb() {
         return heurdb;
     }
 
-    public void setHeurdb(LocalDate heurdb) {
+    public void setHeurdb(String heurdb) {
         this.heurdb = heurdb;
     }
 
-    public LocalDate getHeurfi() {
+    public String getHeurfi() {
         return heurfi;
     }
 
-    public void setHeurfi(LocalDate heurfi) {
+    public void setHeurfi(String heurfi) {
         this.heurfi = heurfi;
     }
 
@@ -252,68 +252,68 @@ public class BonTvxDTO implements Serializable {
         this.observ = observ;
     }
 
-    public LocalDate getDatsrt() {
-        return datsrt;
+    public String getDat_srt() {
+        return dat_srt;
     }
 
-    public void setDatsrt(LocalDate datsrt) {
-        this.datsrt = datsrt;
+    public void setDat_srt(String dat_srt) {
+        this.dat_srt = dat_srt;
     }
 
-    public LocalDate getHeursr() {
+    public String getHeursr() {
         return heursr;
     }
 
-    public void setHeursr(LocalDate heursr) {
+    public void setHeursr(String heursr) {
         this.heursr = heursr;
     }
 
-    public String getObstest() {
-        return obstest;
+    public String getObs_test() {
+        return obs_test;
     }
 
-    public void setObstest(String obstest) {
-        this.obstest = obstest;
+    public void setObs_test(String obs_test) {
+        this.obs_test = obs_test;
     }
 
-    public Integer getIndexdep() {
-        return indexdep;
+    public Integer getIndex_dep() {
+        return index_dep;
     }
 
-    public void setIndexdep(Integer indexdep) {
-        this.indexdep = indexdep;
+    public void setIndex_dep(Integer index_dep) {
+        this.index_dep = index_dep;
     }
 
-    public Integer getIndexarr() {
-        return indexarr;
+    public Integer getIndex_arr() {
+        return index_arr;
     }
 
-    public void setIndexarr(Integer indexarr) {
-        this.indexarr = indexarr;
+    public void setIndex_arr(Integer index_arr) {
+        this.index_arr = index_arr;
     }
 
-    public String getImmatex() {
-        return immatex;
+    public String getImmat_ex() {
+        return immat_ex;
     }
 
-    public void setImmatex(String immatex) {
-        this.immatex = immatex;
+    public void setImmat_ex(String immat_ex) {
+        this.immat_ex = immat_ex;
     }
 
-    public String getNomchauff() {
-        return nomchauff;
+    public String getNom_chauff() {
+        return nom_chauff;
     }
 
-    public void setNomchauff(String nomchauff) {
-        this.nomchauff = nomchauff;
+    public void setNom_chauff(String nom_chauff) {
+        this.nom_chauff = nom_chauff;
     }
 
-    public String getNumpermis() {
-        return numpermis;
+    public String getNum_permis() {
+        return num_permis;
     }
 
-    public void setNumpermis(String numpermis) {
-        this.numpermis = numpermis;
+    public void setNum_permis(String num_permis) {
+        this.num_permis = num_permis;
     }
 
     public String getEtab() {
@@ -332,12 +332,12 @@ public class BonTvxDTO implements Serializable {
         this.compteur = compteur;
     }
 
-    public Integer getCptorg() {
-        return cptorg;
+    public Integer getCpt_org() {
+        return cpt_org;
     }
 
-    public void setCptorg(Integer cptorg) {
-        this.cptorg = cptorg;
+    public void setCpt_org(Integer cpt_org) {
+        this.cpt_org = cpt_org;
     }
 
     public String getCdtyptr() {
@@ -364,12 +364,12 @@ public class BonTvxDTO implements Serializable {
         this.testeur = testeur;
     }
 
-    public String getMotifdep() {
-        return motifdep;
+    public String getMotif_dep() {
+        return motif_dep;
     }
 
-    public void setMotifdep(String motifdep) {
-        this.motifdep = motifdep;
+    public void setMotif_dep(String motif_dep) {
+        this.motif_dep = motif_dep;
     }
 
     public String getCdtypmnt() {
@@ -380,36 +380,36 @@ public class BonTvxDTO implements Serializable {
         this.cdtypmnt = cdtypmnt;
     }
 
-    public LocalDate getDatsorprev() {
-        return datsorprev;
+    public String getDat_sor_prev() {
+        return dat_sor_prev;
     }
 
-    public void setDatsorprev(LocalDate datsorprev) {
-        this.datsorprev = datsorprev;
+    public void setDat_sor_prev(String dat_sor_prev) {
+        this.dat_sor_prev = dat_sor_prev;
     }
 
-    public LocalDate getDatmnqdu() {
-        return datmnqdu;
+    public String getDat_mnq_du() {
+        return dat_mnq_du;
     }
 
-    public void setDatmnqdu(LocalDate datmnqdu) {
-        this.datmnqdu = datmnqdu;
+    public void setDat_mnq_du(String dat_mnq_du) {
+        this.dat_mnq_du = dat_mnq_du;
     }
 
-    public LocalDate getDatmnqau() {
-        return datmnqau;
+    public String getDat_mnq_au() {
+        return dat_mnq_au;
     }
 
-    public void setDatmnqau(LocalDate datmnqau) {
-        this.datmnqau = datmnqau;
+    public void setDat_mnq_au(String dat_mnq_au) {
+        this.dat_mnq_au = dat_mnq_au;
     }
 
-    public LocalDate getDatentant() {
-        return datentant;
+    public String getDat_ent_ant() {
+        return dat_ent_ant;
     }
 
-    public void setDatentant(LocalDate datentant) {
-        this.datentant = datentant;
+    public void setDat_ent_ant(String dat_ent_ant) {
+        this.dat_ent_ant = dat_ent_ant;
     }
 
     public String getCodstat() {
@@ -420,12 +420,12 @@ public class BonTvxDTO implements Serializable {
         this.codstat = codstat;
     }
 
-    public LocalDate getDatvld() {
-        return datvld;
+    public String getDat_vld() {
+        return dat_vld;
     }
 
-    public void setDatvld(LocalDate datvld) {
-        this.datvld = datvld;
+    public void setDat_vld(String dat_vld) {
+        this.dat_vld = dat_vld;
     }
 
     public String getObserv1() {
@@ -444,20 +444,20 @@ public class BonTvxDTO implements Serializable {
         this.testeur1 = testeur1;
     }
 
-    public Integer getValidag() {
-        return validag;
+    public Integer getValid_ag() {
+        return valid_ag;
     }
 
-    public void setValidag(Integer validag) {
-        this.validag = validag;
+    public void setValid_ag(Integer valid_ag) {
+        this.valid_ag = valid_ag;
     }
 
-    public LocalDate getDatsais() {
-        return datsais;
+    public String getDat_sais() {
+        return dat_sais;
     }
 
-    public void setDatsais(LocalDate datsais) {
-        this.datsais = datsais;
+    public void setDat_sais(String dat_sais) {
+        this.dat_sais = dat_sais;
     }
 
     @Override
@@ -487,49 +487,49 @@ public class BonTvxDTO implements Serializable {
         return "BonTvxDTO{" +
             "id='" + getId() + "'" +
             ", cdexerc=" + getCdexerc() +
-            ", numbt=" + getNumbt() +
+            ", numbt=" + getNum_bt() +
             ", cdtier='" + getCdtier() + "'" +
             ", cdmac='" + getCdmac() + "'" +
-            ", maccdmac='" + getMaccdmac() + "'" +
+            ", maccdmac='" + getMac_cdmac() + "'" +
             ", cdserv='" + getCdserv() + "'" +
             ", decagen=" + getDecagen() +
-            ", dradecagen=" + getDradecagen() +
+            ", dradecagen=" + getDra_decagen() +
             ", cdorga='" + getCdorga() + "'" +
-            ", refbt='" + getRefbt() + "'" +
-            ", datbt='" + getDatbt() + "'" +
-            ", datdt='" + getDatdt() + "'" +
-            ", datft='" + getDatft() + "'" +
+            ", refbt='" + getRef_bt() + "'" +
+            ", datbt='" + getDat_bt() + "'" +
+            ", datdt='" + getDat_dt() + "'" +
+            ", datft='" + getDat_ft() + "'" +
             ", vld='" + getVld() + "'" +
-            ", typtvx='" + getTyptvx() + "'" +
+            ", typtvx='" + getTyp_tvx() + "'" +
             ", heurdb='" + getHeurdb() + "'" +
             ", heurfi='" + getHeurfi() + "'" +
             ", observ='" + getObserv() + "'" +
-            ", datsrt='" + getDatsrt() + "'" +
+            ", datsrt='" + getDat_srt() + "'" +
             ", heursr='" + getHeursr() + "'" +
-            ", obstest='" + getObstest() + "'" +
-            ", indexdep=" + getIndexdep() +
-            ", indexarr=" + getIndexarr() +
-            ", immatex='" + getImmatex() + "'" +
-            ", nomchauff='" + getNomchauff() + "'" +
-            ", numpermis='" + getNumpermis() + "'" +
+            ", obstest='" + getObs_test() + "'" +
+            ", indexdep=" + getIndex_dep() +
+            ", indexarr=" + getIndex_arr() +
+            ", immatex='" + getImmat_ex() + "'" +
+            ", nomchauff='" + getNom_chauff() + "'" +
+            ", numpermis='" + getNum_permis() + "'" +
             ", etab='" + getEtab() + "'" +
             ", compteur=" + getCompteur() +
-            ", cptorg=" + getCptorg() +
+            ", cptorg=" + getCpt_org() +
             ", cdtyptr='" + getCdtyptr() + "'" +
             ", decstat='" + getDecstat() + "'" +
             ", testeur=" + getTesteur() +
-            ", motifdep='" + getMotifdep() + "'" +
+            ", motifdep='" + getMotif_dep() + "'" +
             ", cdtypmnt='" + getCdtypmnt() + "'" +
-            ", datsorprev='" + getDatsorprev() + "'" +
-            ", datmnqdu='" + getDatmnqdu() + "'" +
-            ", datmnqau='" + getDatmnqau() + "'" +
-            ", datentant='" + getDatentant() + "'" +
+            ", datsorprev='" + getDat_sor_prev() + "'" +
+            ", datmnqdu='" + getDat_mnq_du() + "'" +
+            ", datmnqau='" + getDat_mnq_au() + "'" +
+            ", datentant='" + getDat_ent_ant() + "'" +
             ", codstat='" + getCodstat() + "'" +
-            ", datvld='" + getDatvld() + "'" +
+            ", datvld='" + getDat_vld() + "'" +
             ", observ1='" + getObserv1() + "'" +
             ", testeur1=" + getTesteur1() +
-            ", validag=" + getValidag() +
-            ", datsais='" + getDatsais() + "'" +
+            ", validag=" + getValid_ag() +
+            ", datsais='" + getDat_sais() + "'" +
             "}";
     }
 }

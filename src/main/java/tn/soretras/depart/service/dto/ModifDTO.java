@@ -16,7 +16,7 @@ public class ModifDTO implements Serializable {
 
     private Integer decagenc;
 
-    private LocalDate dedated;
+    private String dedated;
 
     private Integer denumdp;
 
@@ -34,7 +34,7 @@ public class ModifDTO implements Serializable {
 
     private Integer decmotif;
 
-    private LocalDate heur;
+    private String heur;
 
     private String chre;
 
@@ -64,11 +64,11 @@ public class ModifDTO implements Serializable {
         this.decagenc = decagenc;
     }
 
-    public LocalDate getDedated() {
+    public String getDedated() {
         return dedated;
     }
 
-    public void setDedated(LocalDate dedated) {
+    public void setDedated(String dedated) {
         this.dedated = dedated;
     }
 
@@ -136,11 +136,11 @@ public class ModifDTO implements Serializable {
         this.decmotif = decmotif;
     }
 
-    public LocalDate getHeur() {
+    public String getHeur() {
         return heur;
     }
 
-    public void setHeur(LocalDate heur) {
+    public void setHeur(String heur) {
         this.heur = heur;
     }
 

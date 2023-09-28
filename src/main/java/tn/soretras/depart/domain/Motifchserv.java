@@ -18,9 +18,9 @@ public class Motifchserv implements Serializable {
     @Id
     private String id;
 
-    @NotNull
+    /*@NotNull
     @Field("decmotif")
-    private Integer decmotif;
+    private Integer decmotif;*/
 
     @Field("delmotif")
     private String delmotif;
@@ -37,14 +37,6 @@ public class Motifchserv implements Serializable {
         return this.id;
     }
 
-    public Motifchserv(String id, @NotNull Integer decmotif, String delmotif, String x, String vs) {
-        this.id = id;
-        this.decmotif = decmotif;
-        this.delmotif = delmotif;
-        this.x = x;
-        this.vs = vs;
-    }
-
     public Motifchserv() {}
 
     public Motifchserv id(String id) {
@@ -56,7 +48,7 @@ public class Motifchserv implements Serializable {
         this.id = id;
     }
 
-    public Integer getDecmotif() {
+    /*  public Integer getDecmotif() {
         return this.decmotif;
     }
 
@@ -67,7 +59,7 @@ public class Motifchserv implements Serializable {
 
     public void setDecmotif(Integer decmotif) {
         this.decmotif = decmotif;
-    }
+    }*/
 
     public String getDelmotif() {
         return this.delmotif;
@@ -132,7 +124,7 @@ public class Motifchserv implements Serializable {
     public String toString() {
         return "Motifchserv{" +
             "id=" + getId() +
-            ", decmotif=" + getDecmotif() +
+            
             ", delmotif='" + getDelmotif() + "'" +
             ", x='" + getX() + "'" +
             ", vs='" + getVs() + "'" +

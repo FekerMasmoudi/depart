@@ -20,13 +20,13 @@ public class TraficDTO implements Serializable {
     private Integer decagenc;
 
     @NotNull
-    private LocalDate dedated;
+    private String dedated;
 
     private Integer ancien;
 
-    private String vldtrafic;
+    private String vld_trafic;
 
-    private String clotrafic;
+    private String clo_trafic;
 
     public String getId() {
         return id;
@@ -52,11 +52,11 @@ public class TraficDTO implements Serializable {
         this.decagenc = decagenc;
     }
 
-    public LocalDate getDedated() {
+    public String getDedated() {
         return dedated;
     }
 
-    public void setDedated(LocalDate dedated) {
+    public void setDedated(String dedated) {
         this.dedated = dedated;
     }
 
@@ -68,20 +68,20 @@ public class TraficDTO implements Serializable {
         this.ancien = ancien;
     }
 
-    public String getVldtrafic() {
-        return vldtrafic;
+    public String getVld_trafic() {
+        return vld_trafic;
     }
 
-    public void setVldtrafic(String vldtrafic) {
-        this.vldtrafic = vldtrafic;
+    public void setVld_trafic(String vld_trafic) {
+        this.vld_trafic = vld_trafic;
     }
 
-    public String getClotrafic() {
-        return clotrafic;
+    public String getClo_trafic() {
+        return clo_trafic;
     }
 
-    public void setClotrafic(String clotrafic) {
-        this.clotrafic = clotrafic;
+    public void setClo_trafic(String clo_trafic) {
+        this.clo_trafic = clo_trafic;
     }
 
     @Override
@@ -114,8 +114,8 @@ public class TraficDTO implements Serializable {
             ", decagenc=" + getDecagenc() +
             ", dedated='" + getDedated() + "'" +
             ", ancien=" + getAncien() +
-            ", vldtrafic='" + getVldtrafic() + "'" +
-            ", clotrafic='" + getClotrafic() + "'" +
+            ", vldtrafic='" + getVld_trafic() + "'" +
+            ", clotrafic='" + getClo_trafic() + "'" +
             "}";
     }
 }

@@ -30,7 +30,6 @@ public class ServiceRot implements Serializable {
     @Field("decserv")
     private Integer decserv;
 
-    @NotNull
     @Field("codgrp")
     private Integer codgrp;
 
@@ -45,6 +44,8 @@ public class ServiceRot implements Serializable {
     public String getId() {
         return this.id;
     }
+
+    public ServiceRot() {}
 
     public ServiceRot id(String id) {
         this.setId(id);

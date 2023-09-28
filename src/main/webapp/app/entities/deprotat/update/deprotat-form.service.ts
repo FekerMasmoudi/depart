@@ -38,9 +38,9 @@ type DeprotatFormGroupContent = {
   hretoure: FormControl<IDeprotat['hretoure']>;
   harralle: FormControl<IDeprotat['harralle']>;
   harrrete: FormControl<IDeprotat['harrrete']>;
-  rannul: FormControl<IDeprotat['rannul']>;
+  rannul: FormControl<IDeprotat['r_annul']>;
   km: FormControl<IDeprotat['km']>;
-  motifa: FormControl<IDeprotat['motifa']>;
+  motifa: FormControl<IDeprotat['motif_a']>;
   observ: FormControl<IDeprotat['observ']>;
   recettesvoy: FormControl<IDeprotat['recettesvoy']>;
   nbrevoy: FormControl<IDeprotat['nbrevoy']>;
@@ -50,7 +50,7 @@ type DeprotatFormGroupContent = {
   cd3: FormControl<IDeprotat['cd3']>;
   decmotifcha: FormControl<IDeprotat['decmotifcha']>;
   decmotifrea: FormControl<IDeprotat['decmotifrea']>;
-  idapex: FormControl<IDeprotat['idapex']>;
+  idapex: FormControl<IDeprotat['id_apex']>;
   plusmoins: FormControl<IDeprotat['plusmoins']>;
   a: FormControl<IDeprotat['a']>;
   r: FormControl<IDeprotat['r']>;
@@ -108,9 +108,9 @@ export class DeprotatFormService {
       hretoure: new FormControl(deprotatRawValue.hretoure),
       harralle: new FormControl(deprotatRawValue.harralle),
       harrrete: new FormControl(deprotatRawValue.harrrete),
-      rannul: new FormControl(deprotatRawValue.rannul),
+      rannul: new FormControl(deprotatRawValue.r_annul),
       km: new FormControl(deprotatRawValue.km),
-      motifa: new FormControl(deprotatRawValue.motifa),
+      motifa: new FormControl(deprotatRawValue.motif_a),
       observ: new FormControl(deprotatRawValue.observ),
       recettesvoy: new FormControl(deprotatRawValue.recettesvoy),
       nbrevoy: new FormControl(deprotatRawValue.nbrevoy),
@@ -120,7 +120,7 @@ export class DeprotatFormService {
       cd3: new FormControl(deprotatRawValue.cd3),
       decmotifcha: new FormControl(deprotatRawValue.decmotifcha),
       decmotifrea: new FormControl(deprotatRawValue.decmotifrea),
-      idapex: new FormControl(deprotatRawValue.idapex),
+      idapex: new FormControl(deprotatRawValue.id_apex),
       plusmoins: new FormControl(deprotatRawValue.plusmoins),
       a: new FormControl(deprotatRawValue.a),
       r: new FormControl(deprotatRawValue.r),

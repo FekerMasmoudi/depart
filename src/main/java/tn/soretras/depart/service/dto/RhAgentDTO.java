@@ -16,7 +16,7 @@ public class RhAgentDTO implements Serializable {
 
     private String decjour;
 
-    private LocalDate dateffrh;
+    private String dat_eff_rh;
 
     private String decoper;
 
@@ -48,12 +48,12 @@ public class RhAgentDTO implements Serializable {
         this.decjour = decjour;
     }
 
-    public LocalDate getDateffrh() {
-        return dateffrh;
+    public String getDat_eff_rh() {
+        return dat_eff_rh;
     }
 
-    public void setDateffrh(LocalDate dateffrh) {
-        this.dateffrh = dateffrh;
+    public void setDat_eff_rh(String dat_eff_rh) {
+        this.dat_eff_rh = dat_eff_rh;
     }
 
     public String getDecoper() {
@@ -108,7 +108,7 @@ public class RhAgentDTO implements Serializable {
             "id='" + getId() + "'" +
             ", matric=" + getMatric() +
             ", decjour='" + getDecjour() + "'" +
-            ", dateffrh='" + getDateffrh() + "'" +
+            ", dateffrh='" + getDat_eff_rh() + "'" +
             ", decoper='" + getDecoper() + "'" +
             ", deccent=" + getDeccent() +
             ", decagenc=" + getDecagenc() +

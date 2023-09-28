@@ -26,7 +26,7 @@ public class ServiceRotDTO implements Serializable {
 
     private String delserv;
 
-    private Integer ordserv;
+    private Integer ord_serv;
 
     public String getId() {
         return id;
@@ -76,12 +76,12 @@ public class ServiceRotDTO implements Serializable {
         this.delserv = delserv;
     }
 
-    public Integer getOrdserv() {
-        return ordserv;
+    public Integer getOrd_serv() {
+        return ord_serv;
     }
 
-    public void setOrdserv(Integer ordserv) {
-        this.ordserv = ordserv;
+    public void setOrd_serv(Integer ord_serv) {
+        this.ord_serv = ord_serv;
     }
 
     @Override
@@ -115,7 +115,7 @@ public class ServiceRotDTO implements Serializable {
             ", decserv=" + getDecserv() +
             ", codgrp=" + getCodgrp() +
             ", delserv='" + getDelserv() + "'" +
-            ", ordserv=" + getOrdserv() +
+            ", ordserv=" + getOrd_serv() +
             "}";
     }
 }

@@ -74,6 +74,11 @@ export class DepartComponent implements OnInit {
     this.load();
   }
 
+  badgevisible = false;
+  badgevisibility() {
+    this.badgevisible = true;
+  }
+
   delete(depart: IDepart): void {
     const modalRef = this.modalService.open(DepartDeleteDialogComponent, { size: 'lg', backdrop: 'static' });
     modalRef.componentInstance.depart = depart;
@@ -124,7 +129,7 @@ export class DepartComponent implements OnInit {
       deetat: event.deetat,
       denbrro: event.denbrro,
       execute: event.execute,
-      motifa: event.motifa,
+      motif_a: event.motifa,
       nbrevoy: event.nbrevoy,
       observ: event.observ,
       obsind: event.obsind,
@@ -256,17 +261,19 @@ export class DepartComponent implements OnInit {
       if (result.id != null) {
         this.takaza.deannul = '1';
         this.takaza.execute = '0';
-        //this.takaza1.rannul = '1';
-        //this.takaza1.motifa = 1;
-        this.takaza.motifa = result.id;
+
+        this.takaza.motif_a = result.id;
+
+        //this.takaza1.r_annul = '1';
+        //this.takaza1.motif_a = result.id;
         if (this.takaza.id != null) {
-          //&& this.takaza1.id != null
           this.subscribeToSaveResponse(this.departService.update(this.takaza));
           //this.y.subscribeToSaveResponse(this.deprotatService.update(this.takaza1));
         }
         this.ngOnInit();
+
+        console.log(this.takaza);
       }
-      console.log(result);
     });
   }
 
@@ -276,7 +283,7 @@ export class DepartComponent implements OnInit {
     if (this.takaza.id != null) {
       this.takaza.deannul = '0';
       this.takaza.execute = '1';
-      this.takaza.motifa = null;
+      this.takaza.motif_a = null;
       this.subscribeToSaveResponse(this.departService.update(this.takaza));
       this.ngOnInit();
     }

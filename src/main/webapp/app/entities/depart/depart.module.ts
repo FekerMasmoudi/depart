@@ -13,6 +13,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { CommonModule } from '@angular/common';
 import { MatSelectModule } from '@angular/material/select';
+import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { ListMotifaModule } from './list-motifa/list-motifa.module';
@@ -24,9 +25,9 @@ const MaterialComponents = [
   MatDialogModule,
   MatInputModule,
   FormsModule,
-  MatButtonModule,
   CommonModule,
   MatSelectModule,
+  MatIconModule,
 ];
 
 @NgModule({

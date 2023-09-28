@@ -31,7 +31,7 @@ public class Deprotat implements Serializable {
 
     @NotNull
     @Field("dedated")
-    private LocalDate dedated;
+    private String dedated;
 
     @NotNull
     @Field("denumdp")
@@ -53,10 +53,10 @@ public class Deprotat implements Serializable {
     private Integer numrotat;
 
     @Field("ligdeccent")
-    private Integer ligdeccent;
+    private Integer lig_deccent;
 
     @Field("ligdecagenc")
-    private Integer ligdecagenc;
+    private Integer lig_decagenc;
 
     @Field("denumli")
     private String denumli;
@@ -77,34 +77,34 @@ public class Deprotat implements Serializable {
     private String cdmac;
 
     @Field("hdeparte")
-    private LocalDate hdeparte;
+    private String hdeparte;
 
     @Field("hretoure")
-    private LocalDate hretoure;
+    private String hretoure;
 
     @Field("harralle")
-    private LocalDate harralle;
+    private String harralle;
 
     @Field("harrrete")
-    private LocalDate harrrete;
+    private String harrrete;
 
     @Field("rannul")
-    private String rannul;
+    private String r_annul;
 
     @Field("km")
     private Double km;
 
     @Field("motifa")
-    private Integer motifa;
+    private Integer motif_a;
 
     @Field("observ")
     private String observ;
 
     @Field("recettesvoy")
-    private Integer recettesvoy;
+    private Integer recettes_voy;
 
     @Field("nbrevoy")
-    private Integer nbrevoy;
+    private Integer nbre_voy;
 
     @Field("paye")
     private Integer paye;
@@ -125,10 +125,10 @@ public class Deprotat implements Serializable {
     private Integer decmotifrea;
 
     @Field("idapex")
-    private Integer idapex;
+    private Integer id_apex;
 
     @Field("plusmoins")
-    private String plusmoins;
+    private String plus_moins;
 
     @Field("a")
     private String a;
@@ -142,84 +142,6 @@ public class Deprotat implements Serializable {
     private Depart depart;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
-
-    public Deprotat(
-        String id,
-        @NotNull Integer deccent,
-        @NotNull Integer decagenc,
-        @NotNull LocalDate dedated,
-        @NotNull Integer denumdp,
-        @NotNull Integer decserv,
-        @NotNull String decoper,
-        @NotNull String decsean,
-        Integer numrotat,
-        Integer ligdeccent,
-        Integer ligdecagenc,
-        String denumli,
-        String decstat,
-        String decsta1,
-        Integer matric,
-        Integer matric1,
-        String cdmac,
-        LocalDate hdeparte,
-        LocalDate hretoure,
-        LocalDate harralle,
-        LocalDate harrrete,
-        String rannul,
-        Double km,
-        Integer motifa,
-        String observ,
-        Integer recettesvoy,
-        Integer nbrevoy,
-        Integer paye,
-        Integer cd1,
-        Integer cd2,
-        Integer cd3,
-        Integer decmotifcha,
-        Integer decmotifrea,
-        Integer idapex,
-        String plusmoins,
-        String a,
-        String r
-    ) {
-        this.id = id;
-        this.deccent = deccent;
-        this.decagenc = decagenc;
-        this.dedated = dedated;
-        this.denumdp = denumdp;
-        this.decserv = decserv;
-        this.decoper = decoper;
-        this.decsean = decsean;
-        this.numrotat = numrotat;
-        this.ligdeccent = ligdeccent;
-        this.ligdecagenc = ligdecagenc;
-        this.denumli = denumli;
-        this.decstat = decstat;
-        this.decsta1 = decsta1;
-        this.matric = matric;
-        this.matric1 = matric1;
-        this.cdmac = cdmac;
-        this.hdeparte = hdeparte;
-        this.hretoure = hretoure;
-        this.harralle = harralle;
-        this.harrrete = harrrete;
-        this.rannul = rannul;
-        this.km = km;
-        this.motifa = motifa;
-        this.observ = observ;
-        this.recettesvoy = recettesvoy;
-        this.nbrevoy = nbrevoy;
-        this.paye = paye;
-        this.cd1 = cd1;
-        this.cd2 = cd2;
-        this.cd3 = cd3;
-        this.decmotifcha = decmotifcha;
-        this.decmotifrea = decmotifrea;
-        this.idapex = idapex;
-        this.plusmoins = plusmoins;
-        this.a = a;
-        this.r = r;
-    }
 
     public Deprotat() {}
 
@@ -262,16 +184,16 @@ public class Deprotat implements Serializable {
         this.decagenc = decagenc;
     }
 
-    public LocalDate getDedated() {
+    public String getDedated() {
         return this.dedated;
     }
 
-    public Deprotat dedated(LocalDate dedated) {
+    public Deprotat dedated(String dedated) {
         this.setDedated(dedated);
         return this;
     }
 
-    public void setDedated(LocalDate dedated) {
+    public void setDedated(String dedated) {
         this.dedated = dedated;
     }
 
@@ -340,30 +262,30 @@ public class Deprotat implements Serializable {
         this.numrotat = numrotat;
     }
 
-    public Integer getLigdeccent() {
-        return this.ligdeccent;
+    public Integer getLig_deccent() {
+        return this.lig_deccent;
     }
 
-    public Deprotat ligdeccent(Integer ligdeccent) {
-        this.setLigdeccent(ligdeccent);
+    public Deprotat lig_deccent(Integer lig_deccent) {
+        this.setLig_deccent(lig_deccent);
         return this;
     }
 
-    public void setLigdeccent(Integer ligdeccent) {
-        this.ligdeccent = ligdeccent;
+    public void setLig_deccent(Integer lig_deccent) {
+        this.lig_deccent = lig_deccent;
     }
 
-    public Integer getLigdecagenc() {
-        return this.ligdecagenc;
+    public Integer getLig_decagenc() {
+        return this.lig_decagenc;
     }
 
-    public Deprotat ligdecagenc(Integer ligdecagenc) {
-        this.setLigdecagenc(ligdecagenc);
+    public Deprotat lig_decagenc(Integer lig_decagenc) {
+        this.setLig_decagenc(lig_decagenc);
         return this;
     }
 
-    public void setLigdecagenc(Integer ligdecagenc) {
-        this.ligdecagenc = ligdecagenc;
+    public void setLig_decagenc(Integer lig_decagenc) {
+        this.lig_decagenc = lig_decagenc;
     }
 
     public String getDenumli() {
@@ -444,69 +366,69 @@ public class Deprotat implements Serializable {
         this.cdmac = cdmac;
     }
 
-    public LocalDate getHdeparte() {
+    public String getHdeparte() {
         return this.hdeparte;
     }
 
-    public Deprotat hdeparte(LocalDate hdeparte) {
+    public Deprotat hdeparte(String hdeparte) {
         this.setHdeparte(hdeparte);
         return this;
     }
 
-    public void setHdeparte(LocalDate hdeparte) {
+    public void setHdeparte(String hdeparte) {
         this.hdeparte = hdeparte;
     }
 
-    public LocalDate getHretoure() {
+    public String getHretoure() {
         return this.hretoure;
     }
 
-    public Deprotat hretoure(LocalDate hretoure) {
+    public Deprotat hretoure(String hretoure) {
         this.setHretoure(hretoure);
         return this;
     }
 
-    public void setHretoure(LocalDate hretoure) {
+    public void setHretoure(String hretoure) {
         this.hretoure = hretoure;
     }
 
-    public LocalDate getHarralle() {
+    public String getHarralle() {
         return this.harralle;
     }
 
-    public Deprotat harralle(LocalDate harralle) {
+    public Deprotat harralle(String harralle) {
         this.setHarralle(harralle);
         return this;
     }
 
-    public void setHarralle(LocalDate harralle) {
+    public void setHarralle(String harralle) {
         this.harralle = harralle;
     }
 
-    public LocalDate getHarrrete() {
+    public String getHarrrete() {
         return this.harrrete;
     }
 
-    public Deprotat harrrete(LocalDate harrrete) {
+    public Deprotat harrrete(String harrrete) {
         this.setHarrrete(harrrete);
         return this;
     }
 
-    public void setHarrrete(LocalDate harrrete) {
+    public void setHarrrete(String harrrete) {
         this.harrrete = harrrete;
     }
 
-    public String getRannul() {
-        return this.rannul;
+    public String getR_annul() {
+        return this.r_annul;
     }
 
-    public Deprotat rannul(String rannul) {
-        this.setRannul(rannul);
+    public Deprotat r_annul(String r_annul) {
+        this.setR_annul(r_annul);
         return this;
     }
 
-    public void setRannul(String rannul) {
-        this.rannul = rannul;
+    public void setR_annul(String r_annul) {
+        this.r_annul = r_annul;
     }
 
     public Double getKm() {
@@ -522,17 +444,17 @@ public class Deprotat implements Serializable {
         this.km = km;
     }
 
-    public Integer getMotifa() {
-        return this.motifa;
+    public Integer getMotif_a() {
+        return this.motif_a;
     }
 
-    public Deprotat motifa(Integer motifa) {
-        this.setMotifa(motifa);
+    public Deprotat motif_a(Integer motif_a) {
+        this.setMotif_a(motif_a);
         return this;
     }
 
-    public void setMotifa(Integer motifa) {
-        this.motifa = motifa;
+    public void setMotif_a(Integer motif_a) {
+        this.motif_a = motif_a;
     }
 
     public String getObserv() {
@@ -548,30 +470,30 @@ public class Deprotat implements Serializable {
         this.observ = observ;
     }
 
-    public Integer getRecettesvoy() {
-        return this.recettesvoy;
+    public Integer getRecettes_voy() {
+        return this.recettes_voy;
     }
 
-    public Deprotat recettesvoy(Integer recettesvoy) {
-        this.setRecettesvoy(recettesvoy);
+    public Deprotat recettes_voy(Integer recettes_voy) {
+        this.setRecettes_voy(recettes_voy);
         return this;
     }
 
-    public void setRecettesvoy(Integer recettesvoy) {
-        this.recettesvoy = recettesvoy;
+    public void setRecettes_voy(Integer recettes_voy) {
+        this.recettes_voy = recettes_voy;
     }
 
-    public Integer getNbrevoy() {
-        return this.nbrevoy;
+    public Integer getNbre_voy() {
+        return this.nbre_voy;
     }
 
-    public Deprotat nbrevoy(Integer nbrevoy) {
-        this.setNbrevoy(nbrevoy);
+    public Deprotat nbre_voy(Integer nbre_voy) {
+        this.setNbre_voy(nbre_voy);
         return this;
     }
 
-    public void setNbrevoy(Integer nbrevoy) {
-        this.nbrevoy = nbrevoy;
+    public void setNbre_voy(Integer nbre_voy) {
+        this.nbre_voy = nbre_voy;
     }
 
     public Integer getPaye() {
@@ -652,30 +574,30 @@ public class Deprotat implements Serializable {
         this.decmotifrea = decmotifrea;
     }
 
-    public Integer getIdapex() {
-        return this.idapex;
+    public Integer getId_apex() {
+        return this.id_apex;
     }
 
-    public Deprotat idapex(Integer idapex) {
-        this.setIdapex(idapex);
+    public Deprotat id_apex(Integer id_apex) {
+        this.setId_apex(id_apex);
         return this;
     }
 
-    public void setIdapex(Integer idapex) {
-        this.idapex = idapex;
+    public void setId_apex(Integer id_apex) {
+        this.id_apex = id_apex;
     }
 
-    public String getPlusmoins() {
-        return this.plusmoins;
+    public String getPlus_moins() {
+        return this.plus_moins;
     }
 
-    public Deprotat plusmoins(String plusmoins) {
-        this.setPlusmoins(plusmoins);
+    public Deprotat plus_moins(String plus_moins) {
+        this.setPlus_moins(plus_moins);
         return this;
     }
 
-    public void setPlusmoins(String plusmoins) {
-        this.plusmoins = plusmoins;
+    public void setPlus_moins(String plus_moins) {
+        this.plus_moins = plus_moins;
     }
 
     public String getA() {
@@ -749,8 +671,8 @@ public class Deprotat implements Serializable {
             ", decoper='" + getDecoper() + "'" +
             ", decsean='" + getDecsean() + "'" +
             ", numrotat=" + getNumrotat() +
-            ", ligdeccent=" + getLigdeccent() +
-            ", ligdecagenc=" + getLigdecagenc() +
+            ", ligdeccent=" + getLig_deccent() +
+            ", ligdecagenc=" + getLig_decagenc() +
             ", denumli='" + getDenumli() + "'" +
             ", decstat='" + getDecstat() + "'" +
             ", decsta1='" + getDecsta1() + "'" +
@@ -761,20 +683,20 @@ public class Deprotat implements Serializable {
             ", hretoure='" + getHretoure() + "'" +
             ", harralle='" + getHarralle() + "'" +
             ", harrrete='" + getHarrrete() + "'" +
-            ", rannul='" + getRannul() + "'" +
+            ", rannul='" + getR_annul() + "'" +
             ", km=" + getKm() +
-            ", motifa=" + getMotifa() +
+            ", motifa=" + getMotif_a() +
             ", observ='" + getObserv() + "'" +
-            ", recettesvoy=" + getRecettesvoy() +
-            ", nbrevoy=" + getNbrevoy() +
+            ", recettesvoy=" + getRecettes_voy() +
+            ", nbrevoy=" + getNbre_voy() +
             ", paye=" + getPaye() +
             ", cd1=" + getCd1() +
             ", cd2=" + getCd2() +
             ", cd3=" + getCd3() +
             ", decmotifcha=" + getDecmotifcha() +
             ", decmotifrea=" + getDecmotifrea() +
-            ", idapex=" + getIdapex() +
-            ", plusmoins='" + getPlusmoins() + "'" +
+            ", idapex=" + getId_apex() +
+            ", plusmoins='" + getPlus_moins() + "'" +
             ", a='" + getA() + "'" +
             ", r='" + getR() + "'" +
             "}";

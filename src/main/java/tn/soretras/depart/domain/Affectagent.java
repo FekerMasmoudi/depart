@@ -42,23 +42,18 @@ public class Affectagent implements Serializable {
     @Field("cdmois")
     private Integer cdmois;
 
-    @NotNull
     @Field("cdsocie")
     private String cdsocie;
 
-    @NotNull
     @Field("decexer")
     private Integer decexer;
 
-    @NotNull
     @Field("matric")
     private Integer matric;
 
-    @NotNull
     @Field("matric_2")
     private Integer matric2;
 
-    @NotNull
     @Field("cdmac")
     private String cdmac;
 
@@ -66,34 +61,6 @@ public class Affectagent implements Serializable {
 
     public String getId() {
         return this.id;
-    }
-
-    public Affectagent(
-        String id,
-        @NotNull Integer deccent,
-        @NotNull Integer decagenc,
-        @NotNull Integer decserv,
-        @NotNull String decoper,
-        @NotNull String decsean,
-        @NotNull Integer cdmois,
-        @NotNull String cdsocie,
-        @NotNull Integer decexer,
-        @NotNull Integer matric,
-        @NotNull Integer matric2,
-        @NotNull String cdmac
-    ) {
-        this.id = id;
-        this.deccent = deccent;
-        this.decagenc = decagenc;
-        this.decserv = decserv;
-        this.decoper = decoper;
-        this.decsean = decsean;
-        this.cdmois = cdmois;
-        this.cdsocie = cdsocie;
-        this.decexer = decexer;
-        this.matric = matric;
-        this.matric2 = matric2;
-        this.cdmac = cdmac;
     }
 
     public Affectagent() {}

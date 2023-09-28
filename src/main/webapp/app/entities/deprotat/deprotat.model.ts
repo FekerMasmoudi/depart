@@ -23,9 +23,9 @@ export interface IDeprotat {
   hretoure?: dayjs.Dayjs | null;
   harralle?: dayjs.Dayjs | null;
   harrrete?: dayjs.Dayjs | null;
-  rannul?: string | null;
+  r_annul?: string | null;
   km?: number | null;
-  motifa?: number | null;
+  motif_a?: number | null;
   observ?: string | null;
   recettesvoy?: number | null;
   nbrevoy?: number | null;
@@ -35,7 +35,7 @@ export interface IDeprotat {
   cd3?: number | null;
   decmotifcha?: number | null;
   decmotifrea?: number | null;
-  idapex?: number | null;
+  id_apex?: number | null;
   plusmoins?: string | null;
   a?: string | null;
   r?: string | null;

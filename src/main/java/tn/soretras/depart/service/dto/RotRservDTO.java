@@ -15,26 +15,23 @@ public class RotRservDTO implements Serializable {
     @NotNull
     private Integer deccent;
 
-    @NotNull
     private Integer decagenc;
 
     @NotNull
-    private LocalDate dedated;
+    private String dedated;
 
     @NotNull
     private Integer matric;
 
-    @NotNull
-    private ZonedDateTime heurdeb;
+    private String heur_deb;
 
-    @NotNull
-    private ZonedDateTime heurfin;
+    private String heur_fin;
 
     private String statut;
 
-    private ZonedDateTime lieedeb;
+    private String liee_deb;
 
-    private ZonedDateTime lieefin;
+    private String liee_fin;
 
     private String program;
 
@@ -64,11 +61,11 @@ public class RotRservDTO implements Serializable {
         this.decagenc = decagenc;
     }
 
-    public LocalDate getDedated() {
+    public String getDedated() {
         return dedated;
     }
 
-    public void setDedated(LocalDate dedated) {
+    public void setDedated(String dedated) {
         this.dedated = dedated;
     }
 
@@ -80,20 +77,20 @@ public class RotRservDTO implements Serializable {
         this.matric = matric;
     }
 
-    public ZonedDateTime getHeurdeb() {
-        return heurdeb;
+    public String getHeur_deb() {
+        return heur_deb;
     }
 
-    public void setHeurdeb(ZonedDateTime heurdeb) {
-        this.heurdeb = heurdeb;
+    public void setHeur_deb(String heur_deb) {
+        this.heur_deb = heur_deb;
     }
 
-    public ZonedDateTime getHeurfin() {
-        return heurfin;
+    public String getHeur_fin() {
+        return heur_fin;
     }
 
-    public void setHeurfin(ZonedDateTime heurfin) {
-        this.heurfin = heurfin;
+    public void setHeur_fin(String heur_fin) {
+        this.heur_fin = heur_fin;
     }
 
     public String getStatut() {
@@ -104,20 +101,20 @@ public class RotRservDTO implements Serializable {
         this.statut = statut;
     }
 
-    public ZonedDateTime getLieedeb() {
-        return lieedeb;
+    public String getLiee_deb() {
+        return liee_deb;
     }
 
-    public void setLieedeb(ZonedDateTime lieedeb) {
-        this.lieedeb = lieedeb;
+    public void setLieedeb(String liee_deb) {
+        this.liee_deb = liee_deb;
     }
 
-    public ZonedDateTime getLieefin() {
-        return lieefin;
+    public String getLiee_fin() {
+        return liee_fin;
     }
 
-    public void setLieefin(ZonedDateTime lieefin) {
-        this.lieefin = lieefin;
+    public void setLiee_fin(String liee_fin) {
+        this.liee_fin = liee_fin;
     }
 
     public String getProgram() {
@@ -197,11 +194,11 @@ public class RotRservDTO implements Serializable {
             ", decagenc=" + getDecagenc() +
             ", dedated='" + getDedated() + "'" +
             ", matric=" + getMatric() +
-            ", heurdeb='" + getHeurdeb() + "'" +
-            ", heurfin='" + getHeurfin() + "'" +
+            ", heurdeb='" + getHeur_deb() + "'" +
+            ", heurfin='" + getHeur_fin() + "'" +
             ", statut='" + getStatut() + "'" +
-            ", lieedeb='" + getLieedeb() + "'" +
-            ", lieefin='" + getLieefin() + "'" +
+            ", lieedeb='" + getLiee_deb() + "'" +
+            ", lieefin='" + getLiee_fin() + "'" +
             ", program='" + getProgram() + "'" +
             ", cd1=" + getCd1() +
             ", cd2=" + getCd2() +

@@ -37,30 +37,12 @@ public class Groupe implements Serializable {
     private String dectyli;
 
     @Field("libgrpfr")
-    private String libgrpfr;
+    private String libgrp_fr;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
 
     public String getId() {
         return this.id;
-    }
-
-    public Groupe(
-        String id,
-        @NotNull Integer deccent,
-        @NotNull Integer decagenc,
-        @NotNull Integer codgrp,
-        String libgrp,
-        String dectyli,
-        String libgrpfr
-    ) {
-        this.id = id;
-        this.deccent = deccent;
-        this.decagenc = decagenc;
-        this.codgrp = codgrp;
-        this.libgrp = libgrp;
-        this.dectyli = dectyli;
-        this.libgrpfr = libgrpfr;
     }
 
     public Groupe() {}
@@ -139,17 +121,17 @@ public class Groupe implements Serializable {
         this.dectyli = dectyli;
     }
 
-    public String getLibgrpfr() {
-        return this.libgrpfr;
+    public String getLibgrp_fr() {
+        return this.libgrp_fr;
     }
 
-    public Groupe libgrpfr(String libgrpfr) {
-        this.setLibgrpfr(libgrpfr);
+    public Groupe libgrp_fr(String libgrp_fr) {
+        this.setLibgrp_fr(libgrp_fr);
         return this;
     }
 
-    public void setLibgrpfr(String libgrpfr) {
-        this.libgrpfr = libgrpfr;
+    public void setLibgrp_fr(String libgrp_fr) {
+        this.libgrp_fr = libgrp_fr;
     }
 
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here
@@ -181,7 +163,7 @@ public class Groupe implements Serializable {
             ", codgrp=" + getCodgrp() +
             ", libgrp='" + getLibgrp() + "'" +
             ", dectyli='" + getDectyli() + "'" +
-            ", libgrpfr='" + getLibgrpfr() + "'" +
+            ", libgrpfr='" + getLibgrp_fr() + "'" +
             "}";
     }
 }

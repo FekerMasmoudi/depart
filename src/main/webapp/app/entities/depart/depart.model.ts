@@ -1,4 +1,4 @@
-import dayjs from 'dayjs/esm';
+import dayjs, { Dayjs } from 'dayjs/esm';
 
 export interface IDepart {
   id: string;
@@ -25,7 +25,7 @@ export interface IDepart {
   deannul?: string | null;
   decclot?: string | null;
   execute?: string | null;
-  motifa?: string | null;
+  motif_a?: string | null;
   observ?: string | null;
   recettes?: number | null;
   nbrevoy?: number | null;

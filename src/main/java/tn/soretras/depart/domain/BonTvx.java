@@ -22,7 +22,7 @@ public class BonTvx implements Serializable {
     private Integer cdexerc;
 
     @Field("numbt")
-    private Integer numbt;
+    private Integer num_bt;
 
     @Field("cdtier")
     private String cdtier;
@@ -31,7 +31,7 @@ public class BonTvx implements Serializable {
     private String cdmac;
 
     @Field("maccdmac")
-    private String maccdmac;
+    private String mac_cdmac;
 
     @Field("cdserv")
     private String cdserv;
@@ -40,61 +40,61 @@ public class BonTvx implements Serializable {
     private Integer decagen;
 
     @Field("dradecagen")
-    private Integer dradecagen;
+    private Integer dra_decagen;
 
     @Field("cdorga")
     private String cdorga;
 
     @Field("refbt")
-    private String refbt;
+    private String ref_bt;
 
     @Field("datbt")
-    private LocalDate datbt;
+    private String dat_bt;
 
     @Field("datdt")
-    private LocalDate datdt;
+    private String dat_dt;
 
     @Field("datft")
-    private LocalDate datft;
+    private String dat_ft;
 
     @Field("vld")
     private String vld;
 
     @Field("typtvx")
-    private String typtvx;
+    private String typ_tvx;
 
     @Field("heurdb")
-    private LocalDate heurdb;
+    private String heurdb;
 
     @Field("heurfi")
-    private LocalDate heurfi;
+    private String heurfi;
 
     @Field("observ")
     private String observ;
 
     @Field("datsrt")
-    private LocalDate datsrt;
+    private String dat_srt;
 
     @Field("heursr")
-    private LocalDate heursr;
+    private String heursr;
 
     @Field("obstest")
-    private String obstest;
+    private String obs_test;
 
     @Field("indexdep")
-    private Integer indexdep;
+    private Integer index_dep;
 
     @Field("indexarr")
-    private Integer indexarr;
+    private Integer index_arr;
 
     @Field("immatex")
-    private String immatex;
+    private String immat_ex;
 
     @Field("nomchauff")
-    private String nomchauff;
+    private String nom_chauff;
 
     @Field("numpermis")
-    private String numpermis;
+    private String num_permis;
 
     @Field("etab")
     private String etab;
@@ -103,7 +103,7 @@ public class BonTvx implements Serializable {
     private Integer compteur;
 
     @Field("cptorg")
-    private Integer cptorg;
+    private Integer cpt_org;
 
     @Field("cdtyptr")
     private String cdtyptr;
@@ -115,28 +115,28 @@ public class BonTvx implements Serializable {
     private Integer testeur;
 
     @Field("motifdep")
-    private String motifdep;
+    private String motif_dep;
 
     @Field("cdtypmnt")
     private String cdtypmnt;
 
     @Field("datsorprev")
-    private LocalDate datsorprev;
+    private String dat_sor_prev;
 
     @Field("datmnqdu")
-    private LocalDate datmnqdu;
+    private String dat_mnq_du;
 
     @Field("datmnqau")
-    private LocalDate datmnqau;
+    private String dat_mnq_au;
 
     @Field("datentant")
-    private LocalDate datentant;
+    private String dat_ent_ant;
 
     @Field("codstat")
     private String codstat;
 
     @Field("datvld")
-    private LocalDate datvld;
+    private String dat_vld;
 
     @Field("observ_1")
     private String observ1;
@@ -145,120 +145,26 @@ public class BonTvx implements Serializable {
     private Integer testeur1;
 
     @Field("validag")
-    private Integer validag;
+    private Integer valid_ag;
 
     @Field("datsais")
-    private LocalDate datsais;
+    private String dat_sais;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
 
-    public String getId() {
-        return this.id;
-    }
-
-    public BonTvx(
-        String id,
-        Integer cdexerc,
-        Integer numbt,
-        String cdtier,
-        String cdmac,
-        String maccdmac,
-        String cdserv,
-        Integer decagen,
-        Integer dradecagen,
-        String cdorga,
-        String refbt,
-        LocalDate datbt,
-        LocalDate datdt,
-        LocalDate datft,
-        String vld,
-        String typtvx,
-        LocalDate heurdb,
-        LocalDate heurfi,
-        String observ,
-        LocalDate datsrt,
-        LocalDate heursr,
-        String obstest,
-        Integer indexdep,
-        Integer indexarr,
-        String immatex,
-        String nomchauff,
-        String numpermis,
-        String etab,
-        Integer compteur,
-        Integer cptorg,
-        String cdtyptr,
-        String decstat,
-        Integer testeur,
-        String motifdep,
-        String cdtypmnt,
-        LocalDate datsorprev,
-        LocalDate datmnqdu,
-        LocalDate datmnqau,
-        LocalDate datentant,
-        String codstat,
-        LocalDate datvld,
-        String observ1,
-        Integer testeur1,
-        Integer validag,
-        LocalDate datsais
-    ) {
-        this.id = id;
-        this.cdexerc = cdexerc;
-        this.numbt = numbt;
-        this.cdtier = cdtier;
-        this.cdmac = cdmac;
-        this.maccdmac = maccdmac;
-        this.cdserv = cdserv;
-        this.decagen = decagen;
-        this.dradecagen = dradecagen;
-        this.cdorga = cdorga;
-        this.refbt = refbt;
-        this.datbt = datbt;
-        this.datdt = datdt;
-        this.datft = datft;
-        this.vld = vld;
-        this.typtvx = typtvx;
-        this.heurdb = heurdb;
-        this.heurfi = heurfi;
-        this.observ = observ;
-        this.datsrt = datsrt;
-        this.heursr = heursr;
-        this.obstest = obstest;
-        this.indexdep = indexdep;
-        this.indexarr = indexarr;
-        this.immatex = immatex;
-        this.nomchauff = nomchauff;
-        this.numpermis = numpermis;
-        this.etab = etab;
-        this.compteur = compteur;
-        this.cptorg = cptorg;
-        this.cdtyptr = cdtyptr;
-        this.decstat = decstat;
-        this.testeur = testeur;
-        this.motifdep = motifdep;
-        this.cdtypmnt = cdtypmnt;
-        this.datsorprev = datsorprev;
-        this.datmnqdu = datmnqdu;
-        this.datmnqau = datmnqau;
-        this.datentant = datentant;
-        this.codstat = codstat;
-        this.datvld = datvld;
-        this.observ1 = observ1;
-        this.testeur1 = testeur1;
-        this.validag = validag;
-        this.datsais = datsais;
-    }
-
     public BonTvx() {}
 
-    public BonTvx id(String id) {
-        this.setId(id);
-        return this;
+    public String getId() {
+        return id;
     }
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public BonTvx id(String id) {
+        this.setId(id);
+        return this;
     }
 
     public Integer getCdexerc() {
@@ -274,17 +180,17 @@ public class BonTvx implements Serializable {
         this.cdexerc = cdexerc;
     }
 
-    public Integer getNumbt() {
-        return this.numbt;
+    public Integer getNum_bt() {
+        return num_bt;
     }
 
-    public BonTvx numbt(Integer numbt) {
-        this.setNumbt(numbt);
+    public void setNum_bt(Integer num_bt) {
+        this.num_bt = num_bt;
+    }
+
+    public BonTvx num_bt(Integer num_bt) {
+        this.setNum_bt(num_bt);
         return this;
-    }
-
-    public void setNumbt(Integer numbt) {
-        this.numbt = numbt;
     }
 
     public String getCdtier() {
@@ -313,17 +219,17 @@ public class BonTvx implements Serializable {
         this.cdmac = cdmac;
     }
 
-    public String getMaccdmac() {
-        return this.maccdmac;
+    public String getMac_cdmac() {
+        return this.mac_cdmac;
     }
 
-    public BonTvx maccdmac(String maccdmac) {
-        this.setMaccdmac(maccdmac);
+    public BonTvx mac_cdmac(String mac_cdmac) {
+        this.setMac_cdmac(mac_cdmac);
         return this;
     }
 
-    public void setMaccdmac(String maccdmac) {
-        this.maccdmac = maccdmac;
+    public void setMac_cdmac(String mac_cdmac) {
+        this.mac_cdmac = mac_cdmac;
     }
 
     public String getCdserv() {
@@ -352,17 +258,17 @@ public class BonTvx implements Serializable {
         this.decagen = decagen;
     }
 
-    public Integer getDradecagen() {
-        return this.dradecagen;
+    public Integer getDra_decagen() {
+        return this.dra_decagen;
     }
 
-    public BonTvx dradecagen(Integer dradecagen) {
-        this.setDradecagen(dradecagen);
+    public BonTvx dra_decagen(Integer dra_decagen) {
+        this.setDra_decagen(dra_decagen);
         return this;
     }
 
-    public void setDradecagen(Integer dradecagen) {
-        this.dradecagen = dradecagen;
+    public void setDra_decagen(Integer dra_decagen) {
+        this.dra_decagen = dra_decagen;
     }
 
     public String getCdorga() {
@@ -378,56 +284,56 @@ public class BonTvx implements Serializable {
         this.cdorga = cdorga;
     }
 
-    public String getRefbt() {
-        return this.refbt;
+    public String getRef_bt() {
+        return this.ref_bt;
     }
 
-    public BonTvx refbt(String refbt) {
-        this.setRefbt(refbt);
+    public BonTvx ref_bt(String ref_bt) {
+        this.setRef_bt(ref_bt);
         return this;
     }
 
-    public void setRefbt(String refbt) {
-        this.refbt = refbt;
+    public void setRef_bt(String ref_bt) {
+        this.ref_bt = ref_bt;
     }
 
-    public LocalDate getDatbt() {
-        return this.datbt;
+    public String getDat_bt() {
+        return this.dat_bt;
     }
 
-    public BonTvx datbt(LocalDate datbt) {
-        this.setDatbt(datbt);
+    public BonTvx dat_bt(String dat_bt) {
+        this.setDat_bt(dat_bt);
         return this;
     }
 
-    public void setDatbt(LocalDate datbt) {
-        this.datbt = datbt;
+    public void setDat_bt(String dat_bt) {
+        this.dat_bt = dat_bt;
     }
 
-    public LocalDate getDatdt() {
-        return this.datdt;
+    public String getDat_dt() {
+        return this.dat_dt;
     }
 
-    public BonTvx datdt(LocalDate datdt) {
-        this.setDatdt(datdt);
+    public BonTvx dat_dt(String dat_dt) {
+        this.setDat_dt(dat_dt);
         return this;
     }
 
-    public void setDatdt(LocalDate datdt) {
-        this.datdt = datdt;
+    public void setDat_dt(String dat_dt) {
+        this.dat_dt = dat_dt;
     }
 
-    public LocalDate getDatft() {
-        return this.datft;
+    public String getDat_ft() {
+        return this.dat_ft;
     }
 
-    public BonTvx datft(LocalDate datft) {
-        this.setDatft(datft);
+    public BonTvx dat_ft(String dat_ft) {
+        this.setDat_ft(dat_ft);
         return this;
     }
 
-    public void setDatft(LocalDate datft) {
-        this.datft = datft;
+    public void setDat_ft(String dat_ft) {
+        this.dat_ft = dat_ft;
     }
 
     public String getVld() {
@@ -443,42 +349,42 @@ public class BonTvx implements Serializable {
         this.vld = vld;
     }
 
-    public String getTyptvx() {
-        return this.typtvx;
+    public String getTyp_tvx() {
+        return this.typ_tvx;
     }
 
-    public BonTvx typtvx(String typtvx) {
-        this.setTyptvx(typtvx);
+    public BonTvx typ_tvx(String typ_tvx) {
+        this.setTyp_tvx(typ_tvx);
         return this;
     }
 
-    public void setTyptvx(String typtvx) {
-        this.typtvx = typtvx;
+    public void setTyp_tvx(String typ_tvx) {
+        this.typ_tvx = typ_tvx;
     }
 
-    public LocalDate getHeurdb() {
+    public String getHeurdb() {
         return this.heurdb;
     }
 
-    public BonTvx heurdb(LocalDate heurdb) {
+    public BonTvx heurdb(String heurdb) {
         this.setHeurdb(heurdb);
         return this;
     }
 
-    public void setHeurdb(LocalDate heurdb) {
+    public void setHeurdb(String heurdb) {
         this.heurdb = heurdb;
     }
 
-    public LocalDate getHeurfi() {
+    public String getHeurfi() {
         return this.heurfi;
     }
 
-    public BonTvx heurfi(LocalDate heurfi) {
+    public BonTvx heurfi(String heurfi) {
         this.setHeurfi(heurfi);
         return this;
     }
 
-    public void setHeurfi(LocalDate heurfi) {
+    public void setHeurfi(String heurfi) {
         this.heurfi = heurfi;
     }
 
@@ -495,108 +401,108 @@ public class BonTvx implements Serializable {
         this.observ = observ;
     }
 
-    public LocalDate getDatsrt() {
-        return this.datsrt;
+    public String getDat_srt() {
+        return this.dat_srt;
     }
 
-    public BonTvx datsrt(LocalDate datsrt) {
-        this.setDatsrt(datsrt);
+    public BonTvx dat_srt(String dat_srt) {
+        this.setDat_srt(dat_srt);
         return this;
     }
 
-    public void setDatsrt(LocalDate datsrt) {
-        this.datsrt = datsrt;
+    public void setDat_srt(String dat_srt) {
+        this.dat_srt = dat_srt;
     }
 
-    public LocalDate getHeursr() {
+    public String getHeursr() {
         return this.heursr;
     }
 
-    public BonTvx heursr(LocalDate heursr) {
+    public BonTvx heursr(String heursr) {
         this.setHeursr(heursr);
         return this;
     }
 
-    public void setHeursr(LocalDate heursr) {
+    public void setHeursr(String heursr) {
         this.heursr = heursr;
     }
 
-    public String getObstest() {
-        return this.obstest;
+    public String getObs_test() {
+        return this.obs_test;
     }
 
-    public BonTvx obstest(String obstest) {
-        this.setObstest(obstest);
+    public BonTvx obs_test(String obs_test) {
+        this.setObs_test(obs_test);
         return this;
     }
 
-    public void setObstest(String obstest) {
-        this.obstest = obstest;
+    public void setObs_test(String obs_test) {
+        this.obs_test = obs_test;
     }
 
-    public Integer getIndexdep() {
-        return this.indexdep;
+    public Integer getIndex_dep() {
+        return this.index_dep;
     }
 
-    public BonTvx indexdep(Integer indexdep) {
-        this.setIndexdep(indexdep);
+    public BonTvx index_dep(Integer index_dep) {
+        this.setIndex_dep(index_dep);
         return this;
     }
 
-    public void setIndexdep(Integer indexdep) {
-        this.indexdep = indexdep;
+    public void setIndex_dep(Integer index_dep) {
+        this.index_dep = index_dep;
     }
 
-    public Integer getIndexarr() {
-        return this.indexarr;
+    public Integer getIndex_arr() {
+        return this.index_arr;
     }
 
-    public BonTvx indexarr(Integer indexarr) {
-        this.setIndexarr(indexarr);
+    public BonTvx index_arr(Integer index_arr) {
+        this.setIndex_arr(index_arr);
         return this;
     }
 
-    public void setIndexarr(Integer indexarr) {
-        this.indexarr = indexarr;
+    public void setIndex_arr(Integer index_arr) {
+        this.index_arr = index_arr;
     }
 
-    public String getImmatex() {
-        return this.immatex;
+    public String getImmat_ex() {
+        return this.immat_ex;
     }
 
-    public BonTvx immatex(String immatex) {
-        this.setImmatex(immatex);
+    public BonTvx immat_ex(String immat_ex) {
+        this.setImmat_ex(immat_ex);
         return this;
     }
 
-    public void setImmatex(String immatex) {
-        this.immatex = immatex;
+    public void setImmat_ex(String immat_ex) {
+        this.immat_ex = immat_ex;
     }
 
-    public String getNomchauff() {
-        return this.nomchauff;
+    public String getNom_chauff() {
+        return this.nom_chauff;
     }
 
-    public BonTvx nomchauff(String nomchauff) {
-        this.setNomchauff(nomchauff);
+    public BonTvx nom_chauff(String nom_chauff) {
+        this.setNom_chauff(nom_chauff);
         return this;
     }
 
-    public void setNomchauff(String nomchauff) {
-        this.nomchauff = nomchauff;
+    public void setNom_chauff(String nom_chauff) {
+        this.nom_chauff = nom_chauff;
     }
 
-    public String getNumpermis() {
-        return this.numpermis;
+    public String getNum_permis() {
+        return this.num_permis;
     }
 
-    public BonTvx numpermis(String numpermis) {
-        this.setNumpermis(numpermis);
+    public BonTvx num_permis(String num_permis) {
+        this.setNum_permis(num_permis);
         return this;
     }
 
-    public void setNumpermis(String numpermis) {
-        this.numpermis = numpermis;
+    public void setNum_permis(String num_permis) {
+        this.num_permis = num_permis;
     }
 
     public String getEtab() {
@@ -625,17 +531,17 @@ public class BonTvx implements Serializable {
         this.compteur = compteur;
     }
 
-    public Integer getCptorg() {
-        return this.cptorg;
+    public Integer getCpt_org() {
+        return this.cpt_org;
     }
 
-    public BonTvx cptorg(Integer cptorg) {
-        this.setCptorg(cptorg);
+    public BonTvx cpt_org(Integer cpt_org) {
+        this.setCpt_org(cpt_org);
         return this;
     }
 
-    public void setCptorg(Integer cptorg) {
-        this.cptorg = cptorg;
+    public void setCpt_org(Integer cpt_org) {
+        this.cpt_org = cpt_org;
     }
 
     public String getCdtyptr() {
@@ -677,17 +583,17 @@ public class BonTvx implements Serializable {
         this.testeur = testeur;
     }
 
-    public String getMotifdep() {
-        return this.motifdep;
+    public String getMotif_dep() {
+        return this.motif_dep;
     }
 
-    public BonTvx motifdep(String motifdep) {
-        this.setMotifdep(motifdep);
+    public BonTvx motif_dep(String motif_dep) {
+        this.setMotif_dep(motif_dep);
         return this;
     }
 
-    public void setMotifdep(String motifdep) {
-        this.motifdep = motifdep;
+    public void setMotif_dep(String motif_dep) {
+        this.motif_dep = motif_dep;
     }
 
     public String getCdtypmnt() {
@@ -703,56 +609,56 @@ public class BonTvx implements Serializable {
         this.cdtypmnt = cdtypmnt;
     }
 
-    public LocalDate getDatsorprev() {
-        return this.datsorprev;
+    public String getDat_sor_prev() {
+        return this.dat_sor_prev;
     }
 
-    public BonTvx datsorprev(LocalDate datsorprev) {
-        this.setDatsorprev(datsorprev);
+    public BonTvx dat_sor_prev(String dat_sor_prev) {
+        this.setDat_sor_prev(dat_sor_prev);
         return this;
     }
 
-    public void setDatsorprev(LocalDate datsorprev) {
-        this.datsorprev = datsorprev;
+    public void setDat_sor_prev(String dat_sor_prev) {
+        this.dat_sor_prev = dat_sor_prev;
     }
 
-    public LocalDate getDatmnqdu() {
-        return this.datmnqdu;
+    public String getDat_mnq_du() {
+        return this.dat_mnq_du;
     }
 
-    public BonTvx datmnqdu(LocalDate datmnqdu) {
-        this.setDatmnqdu(datmnqdu);
+    public BonTvx dat_mnq_du(String datmnqdu) {
+        this.setDat_mnq_du(dat_mnq_du);
         return this;
     }
 
-    public void setDatmnqdu(LocalDate datmnqdu) {
-        this.datmnqdu = datmnqdu;
+    public void setDat_mnq_du(String dat_mnq_du) {
+        this.dat_mnq_du = dat_mnq_du;
     }
 
-    public LocalDate getDatmnqau() {
-        return this.datmnqau;
+    public String getDat_mnq_au() {
+        return this.dat_mnq_au;
     }
 
-    public BonTvx datmnqau(LocalDate datmnqau) {
-        this.setDatmnqau(datmnqau);
+    public BonTvx dat_mnq_au(String dat_mnq_au) {
+        this.setDat_mnq_au(dat_mnq_au);
         return this;
     }
 
-    public void setDatmnqau(LocalDate datmnqau) {
-        this.datmnqau = datmnqau;
+    public void setDat_mnq_au(String dat_mnq_au) {
+        this.dat_mnq_au = dat_mnq_au;
     }
 
-    public LocalDate getDatentant() {
-        return this.datentant;
+    public String getDat_ent_ant() {
+        return this.dat_ent_ant;
     }
 
-    public BonTvx datentant(LocalDate datentant) {
-        this.setDatentant(datentant);
+    public BonTvx dat_ent_ant(String dat_ent_ant) {
+        this.setDat_ent_ant(dat_ent_ant);
         return this;
     }
 
-    public void setDatentant(LocalDate datentant) {
-        this.datentant = datentant;
+    public void setDat_ent_ant(String dat_ent_ant) {
+        this.dat_ent_ant = dat_ent_ant;
     }
 
     public String getCodstat() {
@@ -768,17 +674,17 @@ public class BonTvx implements Serializable {
         this.codstat = codstat;
     }
 
-    public LocalDate getDatvld() {
-        return this.datvld;
+    public String getDat_vld() {
+        return this.dat_vld;
     }
 
-    public BonTvx datvld(LocalDate datvld) {
-        this.setDatvld(datvld);
+    public BonTvx dat_vld(String dat_vld) {
+        this.setDat_vld(dat_vld);
         return this;
     }
 
-    public void setDatvld(LocalDate datvld) {
-        this.datvld = datvld;
+    public void setDat_vld(String dat_vld) {
+        this.dat_vld = dat_vld;
     }
 
     public String getObserv1() {
@@ -807,30 +713,30 @@ public class BonTvx implements Serializable {
         this.testeur1 = testeur1;
     }
 
-    public Integer getValidag() {
-        return this.validag;
+    public Integer getValid_ag() {
+        return this.valid_ag;
     }
 
-    public BonTvx validag(Integer validag) {
-        this.setValidag(validag);
+    public BonTvx valid_ag(Integer valid_ag) {
+        this.setValid_ag(valid_ag);
         return this;
     }
 
-    public void setValidag(Integer validag) {
-        this.validag = validag;
+    public void setValid_ag(Integer valid_ag) {
+        this.valid_ag = valid_ag;
     }
 
-    public LocalDate getDatsais() {
-        return this.datsais;
+    public String getDat_sais() {
+        return this.dat_sais;
     }
 
-    public BonTvx datsais(LocalDate datsais) {
-        this.setDatsais(datsais);
+    public BonTvx dat_sais(String dat_sais) {
+        this.setDat_sais(dat_sais);
         return this;
     }
 
-    public void setDatsais(LocalDate datsais) {
-        this.datsais = datsais;
+    public void setDat_sais(String dat_sais) {
+        this.dat_sais = dat_sais;
     }
 
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here
@@ -858,49 +764,49 @@ public class BonTvx implements Serializable {
         return "BonTvx{" +
             "id=" + getId() +
             ", cdexerc=" + getCdexerc() +
-            ", numbt=" + getNumbt() +
+            ", numbt=" + getNum_bt() +
             ", cdtier='" + getCdtier() + "'" +
             ", cdmac='" + getCdmac() + "'" +
-            ", maccdmac='" + getMaccdmac() + "'" +
+            ", maccdmac='" + getMac_cdmac() + "'" +
             ", cdserv='" + getCdserv() + "'" +
             ", decagen=" + getDecagen() +
-            ", dradecagen=" + getDradecagen() +
+            ", dradecagen=" + getDra_decagen() +
             ", cdorga='" + getCdorga() + "'" +
-            ", refbt='" + getRefbt() + "'" +
-            ", datbt='" + getDatbt() + "'" +
-            ", datdt='" + getDatdt() + "'" +
-            ", datft='" + getDatft() + "'" +
+            ", refbt='" + getRef_bt() + "'" +
+            ", datbt='" + getDat_bt() + "'" +
+            ", datdt='" + getDat_dt() + "'" +
+            ", datft='" + getDat_ft() + "'" +
             ", vld='" + getVld() + "'" +
-            ", typtvx='" + getTyptvx() + "'" +
+            ", typtvx='" + getTyp_tvx() + "'" +
             ", heurdb='" + getHeurdb() + "'" +
             ", heurfi='" + getHeurfi() + "'" +
             ", observ='" + getObserv() + "'" +
-            ", datsrt='" + getDatsrt() + "'" +
+            ", datsrt='" + getDat_srt() + "'" +
             ", heursr='" + getHeursr() + "'" +
-            ", obstest='" + getObstest() + "'" +
-            ", indexdep=" + getIndexdep() +
-            ", indexarr=" + getIndexarr() +
-            ", immatex='" + getImmatex() + "'" +
-            ", nomchauff='" + getNomchauff() + "'" +
-            ", numpermis='" + getNumpermis() + "'" +
+            ", obstest='" + getObs_test() + "'" +
+            ", indexdep=" + getIndex_dep() +
+            ", indexarr=" + getIndex_arr() +
+            ", immatex='" + getImmat_ex() + "'" +
+            ", nomchauff='" + getNom_chauff() + "'" +
+            ", numpermis='" + getNum_permis() + "'" +
             ", etab='" + getEtab() + "'" +
             ", compteur=" + getCompteur() +
-            ", cptorg=" + getCptorg() +
+            ", cptorg=" + getCpt_org() +
             ", cdtyptr='" + getCdtyptr() + "'" +
             ", decstat='" + getDecstat() + "'" +
             ", testeur=" + getTesteur() +
-            ", motifdep='" + getMotifdep() + "'" +
+            ", motifdep='" + getMotif_dep() + "'" +
             ", cdtypmnt='" + getCdtypmnt() + "'" +
-            ", datsorprev='" + getDatsorprev() + "'" +
-            ", datmnqdu='" + getDatmnqdu() + "'" +
-            ", datmnqau='" + getDatmnqau() + "'" +
-            ", datentant='" + getDatentant() + "'" +
+            ", datsorprev='" + getDat_sor_prev() + "'" +
+            ", datmnqdu='" + getDat_mnq_du() + "'" +
+            ", datmnqau='" + getDat_mnq_au() + "'" +
+            ", datentant='" + getDat_ent_ant() + "'" +
             ", codstat='" + getCodstat() + "'" +
-            ", datvld='" + getDatvld() + "'" +
+            ", datvld='" + getDat_vld() + "'" +
             ", observ1='" + getObserv1() + "'" +
             ", testeur1=" + getTesteur1() +
-            ", validag=" + getValidag() +
-            ", datsais='" + getDatsais() + "'" +
+            ", validag=" + getValid_ag() +
+            ", datsais='" + getDat_sais() + "'" +
             "}";
     }
 }

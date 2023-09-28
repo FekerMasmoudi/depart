@@ -43,8 +43,8 @@ class DepartResourceIT {
     private static final String DEFAULT_DECSEAN = "AAAAAAAAAA";
     private static final String UPDATED_DECSEAN = "BBBBBBBBBB";
 
-    private static final LocalDate DEFAULT_DEDATED = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_DEDATED = LocalDate.now(ZoneId.systemDefault());
+    private static final String DEFAULT_DEDATED = "08/08/2023";
+    private static final String UPDATED_DEDATED = "08/08/2023";
 
     private static final Integer DEFAULT_DENUMDP = 1;
     private static final Integer UPDATED_DENUMDP = 2;
@@ -58,26 +58,26 @@ class DepartResourceIT {
     private static final Integer DEFAULT_CDMAC = 1;
     private static final Integer UPDATED_CDMAC = 2;
 
-    private static final LocalDate DEFAULT_DEHEUPS = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_DEHEUPS = LocalDate.now(ZoneId.systemDefault());
+    private static final String DEFAULT_DEHEUPS = "23:00";
+    private static final String UPDATED_DEHEUPS = "23:00";
 
-    private static final LocalDate DEFAULT_DEHEUFS = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_DEHEUFS = LocalDate.now(ZoneId.systemDefault());
+    private static final String DEFAULT_DEHEUFS = "23:00";
+    private static final String UPDATED_DEHEUFS = "23:00";
 
     private static final Integer DEFAULT_DENBRRO = 1;
     private static final Integer UPDATED_DENBRRO = 2;
 
-    private static final LocalDate DEFAULT_DEHEUAA = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_DEHEUAA = LocalDate.now(ZoneId.systemDefault());
+    private static final String DEFAULT_DEHEUAA = "23:00";
+    private static final String UPDATED_DEHEUAA = "23:00";
 
-    private static final LocalDate DEFAULT_DEHEUDR = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_DEHEUDR = LocalDate.now(ZoneId.systemDefault());
+    private static final String DEFAULT_DEHEUDR = "23:00";
+    private static final String UPDATED_DEHEUDR = "23:00";
 
-    private static final LocalDate DEFAULT_DEHEUPD = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_DEHEUPD = LocalDate.now(ZoneId.systemDefault());
+    private static final String DEFAULT_DEHEUPD = "23:00";
+    private static final String UPDATED_DEHEUPD = "23:00";
 
-    private static final LocalDate DEFAULT_DEAMPLI = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_DEAMPLI = LocalDate.now(ZoneId.systemDefault());
+    private static final String DEFAULT_DEAMPLI = "23:00";
+    private static final String UPDATED_DEAMPLI = "23:00";
 
     private static final String DEFAULT_OBSIND = "AAAAAAAAAA";
     private static final String UPDATED_OBSIND = "BBBBBBBBBB";
@@ -166,16 +166,16 @@ class DepartResourceIT {
             .deheudr(DEFAULT_DEHEUDR)
             .deheupd(DEFAULT_DEHEUPD)
             .deampli(DEFAULT_DEAMPLI)
-            .obsind(DEFAULT_OBSIND)
-            .vldroul(DEFAULT_VLDROUL)
+            .obs_ind(DEFAULT_OBSIND)
+            .vld_roul(DEFAULT_VLDROUL)
             .deetat(DEFAULT_DEETAT)
             .deannul(DEFAULT_DEANNUL)
             .decclot(DEFAULT_DECCLOT)
             .execute(DEFAULT_EXECUTE)
-            .motifa(DEFAULT_MOTIFA)
+            .motif_a(DEFAULT_MOTIFA)
             .observ(DEFAULT_OBSERV)
             .recettes(DEFAULT_RECETTES)
-            .nbrevoy(DEFAULT_NBREVOY)
+            .nbre_voy(DEFAULT_NBREVOY)
             .decmotifch(DEFAULT_DECMOTIFCH)
             .decmotifre(DEFAULT_DECMOTIFRE)
             .cd1(DEFAULT_CD_1)
@@ -211,16 +211,16 @@ class DepartResourceIT {
             .deheudr(UPDATED_DEHEUDR)
             .deheupd(UPDATED_DEHEUPD)
             .deampli(UPDATED_DEAMPLI)
-            .obsind(UPDATED_OBSIND)
-            .vldroul(UPDATED_VLDROUL)
+            .obs_ind(UPDATED_OBSIND)
+            .vld_roul(UPDATED_VLDROUL)
             .deetat(UPDATED_DEETAT)
             .deannul(UPDATED_DEANNUL)
             .decclot(UPDATED_DECCLOT)
             .execute(UPDATED_EXECUTE)
-            .motifa(UPDATED_MOTIFA)
+            .motif_a(UPDATED_MOTIFA)
             .observ(UPDATED_OBSERV)
             .recettes(UPDATED_RECETTES)
-            .nbrevoy(UPDATED_NBREVOY)
+            .nbre_voy(UPDATED_NBREVOY)
             .decmotifch(UPDATED_DECMOTIFCH)
             .decmotifre(UPDATED_DECMOTIFRE)
             .cd1(UPDATED_CD_1)
@@ -266,16 +266,16 @@ class DepartResourceIT {
         assertThat(testDepart.getDeheudr()).isEqualTo(DEFAULT_DEHEUDR);
         assertThat(testDepart.getDeheupd()).isEqualTo(DEFAULT_DEHEUPD);
         assertThat(testDepart.getDeampli()).isEqualTo(DEFAULT_DEAMPLI);
-        assertThat(testDepart.getObsind()).isEqualTo(DEFAULT_OBSIND);
-        assertThat(testDepart.getVldroul()).isEqualTo(DEFAULT_VLDROUL);
+        assertThat(testDepart.getObs_ind()).isEqualTo(DEFAULT_OBSIND);
+        assertThat(testDepart.getVld_roul()).isEqualTo(DEFAULT_VLDROUL);
         assertThat(testDepart.getDeetat()).isEqualTo(DEFAULT_DEETAT);
         assertThat(testDepart.getDeannul()).isEqualTo(DEFAULT_DEANNUL);
         assertThat(testDepart.getDecclot()).isEqualTo(DEFAULT_DECCLOT);
         assertThat(testDepart.getExecute()).isEqualTo(DEFAULT_EXECUTE);
-        assertThat(testDepart.getMotifa()).isEqualTo(DEFAULT_MOTIFA);
+        assertThat(testDepart.getMotif_a()).isEqualTo(DEFAULT_MOTIFA);
         assertThat(testDepart.getObserv()).isEqualTo(DEFAULT_OBSERV);
         assertThat(testDepart.getRecettes()).isEqualTo(DEFAULT_RECETTES);
-        assertThat(testDepart.getNbrevoy()).isEqualTo(DEFAULT_NBREVOY);
+        assertThat(testDepart.getNbre_voy()).isEqualTo(DEFAULT_NBREVOY);
         assertThat(testDepart.getDecmotifch()).isEqualTo(DEFAULT_DECMOTIFCH);
         assertThat(testDepart.getDecmotifre()).isEqualTo(DEFAULT_DECMOTIFRE);
         assertThat(testDepart.getCd1()).isEqualTo(DEFAULT_CD_1);
@@ -541,16 +541,16 @@ class DepartResourceIT {
             .deheudr(UPDATED_DEHEUDR)
             .deheupd(UPDATED_DEHEUPD)
             .deampli(UPDATED_DEAMPLI)
-            .obsind(UPDATED_OBSIND)
-            .vldroul(UPDATED_VLDROUL)
+            .obs_ind(UPDATED_OBSIND)
+            .vld_roul(UPDATED_VLDROUL)
             .deetat(UPDATED_DEETAT)
             .deannul(UPDATED_DEANNUL)
             .decclot(UPDATED_DECCLOT)
             .execute(UPDATED_EXECUTE)
-            .motifa(UPDATED_MOTIFA)
+            .motif_a(UPDATED_MOTIFA)
             .observ(UPDATED_OBSERV)
             .recettes(UPDATED_RECETTES)
-            .nbrevoy(UPDATED_NBREVOY)
+            .nbre_voy(UPDATED_NBREVOY)
             .decmotifch(UPDATED_DECMOTIFCH)
             .decmotifre(UPDATED_DECMOTIFRE)
             .cd1(UPDATED_CD_1)
@@ -588,16 +588,16 @@ class DepartResourceIT {
         assertThat(testDepart.getDeheudr()).isEqualTo(UPDATED_DEHEUDR);
         assertThat(testDepart.getDeheupd()).isEqualTo(UPDATED_DEHEUPD);
         assertThat(testDepart.getDeampli()).isEqualTo(UPDATED_DEAMPLI);
-        assertThat(testDepart.getObsind()).isEqualTo(UPDATED_OBSIND);
-        assertThat(testDepart.getVldroul()).isEqualTo(UPDATED_VLDROUL);
+        assertThat(testDepart.getObs_ind()).isEqualTo(UPDATED_OBSIND);
+        assertThat(testDepart.getVld_roul()).isEqualTo(UPDATED_VLDROUL);
         assertThat(testDepart.getDeetat()).isEqualTo(UPDATED_DEETAT);
         assertThat(testDepart.getDeannul()).isEqualTo(UPDATED_DEANNUL);
         assertThat(testDepart.getDecclot()).isEqualTo(UPDATED_DECCLOT);
         assertThat(testDepart.getExecute()).isEqualTo(UPDATED_EXECUTE);
-        assertThat(testDepart.getMotifa()).isEqualTo(UPDATED_MOTIFA);
+        assertThat(testDepart.getMotif_a()).isEqualTo(UPDATED_MOTIFA);
         assertThat(testDepart.getObserv()).isEqualTo(UPDATED_OBSERV);
         assertThat(testDepart.getRecettes()).isEqualTo(UPDATED_RECETTES);
-        assertThat(testDepart.getNbrevoy()).isEqualTo(UPDATED_NBREVOY);
+        assertThat(testDepart.getNbre_voy()).isEqualTo(UPDATED_NBREVOY);
         assertThat(testDepart.getDecmotifch()).isEqualTo(UPDATED_DECMOTIFCH);
         assertThat(testDepart.getDecmotifre()).isEqualTo(UPDATED_DECMOTIFRE);
         assertThat(testDepart.getCd1()).isEqualTo(UPDATED_CD_1);
@@ -681,9 +681,9 @@ class DepartResourceIT {
             .denbrro(UPDATED_DENBRRO)
             .deetat(UPDATED_DEETAT)
             .execute(UPDATED_EXECUTE)
-            .motifa(UPDATED_MOTIFA)
+            .motif_a(UPDATED_MOTIFA)
             .observ(UPDATED_OBSERV)
-            .nbrevoy(UPDATED_NBREVOY)
+            .nbre_voy(UPDATED_NBREVOY)
             .decmotifch(UPDATED_DECMOTIFCH)
             .decmotifre(UPDATED_DECMOTIFRE)
             .cd1(UPDATED_CD_1)
@@ -719,16 +719,16 @@ class DepartResourceIT {
         assertThat(testDepart.getDeheudr()).isEqualTo(DEFAULT_DEHEUDR);
         assertThat(testDepart.getDeheupd()).isEqualTo(DEFAULT_DEHEUPD);
         assertThat(testDepart.getDeampli()).isEqualTo(DEFAULT_DEAMPLI);
-        assertThat(testDepart.getObsind()).isEqualTo(DEFAULT_OBSIND);
-        assertThat(testDepart.getVldroul()).isEqualTo(DEFAULT_VLDROUL);
+        assertThat(testDepart.getObs_ind()).isEqualTo(DEFAULT_OBSIND);
+        assertThat(testDepart.getVld_roul()).isEqualTo(DEFAULT_VLDROUL);
         assertThat(testDepart.getDeetat()).isEqualTo(UPDATED_DEETAT);
         assertThat(testDepart.getDeannul()).isEqualTo(DEFAULT_DEANNUL);
         assertThat(testDepart.getDecclot()).isEqualTo(DEFAULT_DECCLOT);
         assertThat(testDepart.getExecute()).isEqualTo(UPDATED_EXECUTE);
-        assertThat(testDepart.getMotifa()).isEqualTo(UPDATED_MOTIFA);
+        assertThat(testDepart.getMotif_a()).isEqualTo(UPDATED_MOTIFA);
         assertThat(testDepart.getObserv()).isEqualTo(UPDATED_OBSERV);
         assertThat(testDepart.getRecettes()).isEqualTo(DEFAULT_RECETTES);
-        assertThat(testDepart.getNbrevoy()).isEqualTo(UPDATED_NBREVOY);
+        assertThat(testDepart.getNbre_voy()).isEqualTo(UPDATED_NBREVOY);
         assertThat(testDepart.getDecmotifch()).isEqualTo(UPDATED_DECMOTIFCH);
         assertThat(testDepart.getDecmotifre()).isEqualTo(UPDATED_DECMOTIFRE);
         assertThat(testDepart.getCd1()).isEqualTo(UPDATED_CD_1);
@@ -767,16 +767,16 @@ class DepartResourceIT {
             .deheudr(UPDATED_DEHEUDR)
             .deheupd(UPDATED_DEHEUPD)
             .deampli(UPDATED_DEAMPLI)
-            .obsind(UPDATED_OBSIND)
-            .vldroul(UPDATED_VLDROUL)
+            .obs_ind(UPDATED_OBSIND)
+            .vld_roul(UPDATED_VLDROUL)
             .deetat(UPDATED_DEETAT)
             .deannul(UPDATED_DEANNUL)
             .decclot(UPDATED_DECCLOT)
             .execute(UPDATED_EXECUTE)
-            .motifa(UPDATED_MOTIFA)
+            .motif_a(UPDATED_MOTIFA)
             .observ(UPDATED_OBSERV)
             .recettes(UPDATED_RECETTES)
-            .nbrevoy(UPDATED_NBREVOY)
+            .nbre_voy(UPDATED_NBREVOY)
             .decmotifch(UPDATED_DECMOTIFCH)
             .decmotifre(UPDATED_DECMOTIFRE)
             .cd1(UPDATED_CD_1)
@@ -814,16 +814,16 @@ class DepartResourceIT {
         assertThat(testDepart.getDeheudr()).isEqualTo(UPDATED_DEHEUDR);
         assertThat(testDepart.getDeheupd()).isEqualTo(UPDATED_DEHEUPD);
         assertThat(testDepart.getDeampli()).isEqualTo(UPDATED_DEAMPLI);
-        assertThat(testDepart.getObsind()).isEqualTo(UPDATED_OBSIND);
-        assertThat(testDepart.getVldroul()).isEqualTo(UPDATED_VLDROUL);
+        assertThat(testDepart.getObs_ind()).isEqualTo(UPDATED_OBSIND);
+        assertThat(testDepart.getVld_roul()).isEqualTo(UPDATED_VLDROUL);
         assertThat(testDepart.getDeetat()).isEqualTo(UPDATED_DEETAT);
         assertThat(testDepart.getDeannul()).isEqualTo(UPDATED_DEANNUL);
         assertThat(testDepart.getDecclot()).isEqualTo(UPDATED_DECCLOT);
         assertThat(testDepart.getExecute()).isEqualTo(UPDATED_EXECUTE);
-        assertThat(testDepart.getMotifa()).isEqualTo(UPDATED_MOTIFA);
+        assertThat(testDepart.getMotif_a()).isEqualTo(UPDATED_MOTIFA);
         assertThat(testDepart.getObserv()).isEqualTo(UPDATED_OBSERV);
         assertThat(testDepart.getRecettes()).isEqualTo(UPDATED_RECETTES);
-        assertThat(testDepart.getNbrevoy()).isEqualTo(UPDATED_NBREVOY);
+        assertThat(testDepart.getNbre_voy()).isEqualTo(UPDATED_NBREVOY);
         assertThat(testDepart.getDecmotifch()).isEqualTo(UPDATED_DECMOTIFCH);
         assertThat(testDepart.getDecmotifre()).isEqualTo(UPDATED_DECMOTIFRE);
         assertThat(testDepart.getCd1()).isEqualTo(UPDATED_CD_1);

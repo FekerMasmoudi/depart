@@ -36,8 +36,8 @@ class DrabsenResourceIT {
     private static final Integer DEFAULT_MATRIC = 1;
     private static final Integer UPDATED_MATRIC = 2;
 
-    private static final LocalDate DEFAULT_DATABS = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_DATABS = LocalDate.now(ZoneId.systemDefault());
+    private static final String DEFAULT_DATABS = "2023-08-08T22:00:00Z";
+    private static final String UPDATED_DATABS = "2023-08-08T22:00:00Z";
 
     private static final Integer DEFAULT_NUMABS = 1;
     private static final Integer UPDATED_NUMABS = 2;
@@ -84,11 +84,11 @@ class DrabsenResourceIT {
         Drabsen drabsen = new Drabsen()
             .cdtypab(DEFAULT_CDTYPAB)
             .matric(DEFAULT_MATRIC)
-            .databs(DEFAULT_DATABS)
-            .numabs(DEFAULT_NUMABS)
-            .nbrabs(DEFAULT_NBRABS)
-            .validabs(DEFAULT_VALIDABS)
-            .observaabs(DEFAULT_OBSERVAABS)
+            .dat_abs(DEFAULT_DATABS)
+            .num_abs(DEFAULT_NUMABS)
+            .nbr_abs(DEFAULT_NBRABS)
+            .valid_abs(DEFAULT_VALIDABS)
+            .observa_abs(DEFAULT_OBSERVAABS)
             .cd1(DEFAULT_CD_1)
             .cd2(DEFAULT_CD_2)
             .cd3(DEFAULT_CD_3);
@@ -105,11 +105,11 @@ class DrabsenResourceIT {
         Drabsen drabsen = new Drabsen()
             .cdtypab(UPDATED_CDTYPAB)
             .matric(UPDATED_MATRIC)
-            .databs(UPDATED_DATABS)
-            .numabs(UPDATED_NUMABS)
-            .nbrabs(UPDATED_NBRABS)
-            .validabs(UPDATED_VALIDABS)
-            .observaabs(UPDATED_OBSERVAABS)
+            .dat_abs(UPDATED_DATABS)
+            .num_abs(UPDATED_NUMABS)
+            .nbr_abs(UPDATED_NBRABS)
+            .valid_abs(UPDATED_VALIDABS)
+            .observa_abs(UPDATED_OBSERVAABS)
             .cd1(UPDATED_CD_1)
             .cd2(UPDATED_CD_2)
             .cd3(UPDATED_CD_3);
@@ -137,11 +137,11 @@ class DrabsenResourceIT {
         Drabsen testDrabsen = drabsenList.get(drabsenList.size() - 1);
         assertThat(testDrabsen.getCdtypab()).isEqualTo(DEFAULT_CDTYPAB);
         assertThat(testDrabsen.getMatric()).isEqualTo(DEFAULT_MATRIC);
-        assertThat(testDrabsen.getDatabs()).isEqualTo(DEFAULT_DATABS);
-        assertThat(testDrabsen.getNumabs()).isEqualTo(DEFAULT_NUMABS);
-        assertThat(testDrabsen.getNbrabs()).isEqualTo(DEFAULT_NBRABS);
-        assertThat(testDrabsen.getValidabs()).isEqualTo(DEFAULT_VALIDABS);
-        assertThat(testDrabsen.getObservaabs()).isEqualTo(DEFAULT_OBSERVAABS);
+        assertThat(testDrabsen.getDat_abs()).isEqualTo(DEFAULT_DATABS);
+        assertThat(testDrabsen.getNum_abs()).isEqualTo(DEFAULT_NUMABS);
+        assertThat(testDrabsen.getNbr_abs()).isEqualTo(DEFAULT_NBRABS);
+        assertThat(testDrabsen.getValid_abs()).isEqualTo(DEFAULT_VALIDABS);
+        assertThat(testDrabsen.getObserva_abs()).isEqualTo(DEFAULT_OBSERVAABS);
         assertThat(testDrabsen.getCd1()).isEqualTo(DEFAULT_CD_1);
         assertThat(testDrabsen.getCd2()).isEqualTo(DEFAULT_CD_2);
         assertThat(testDrabsen.getCd3()).isEqualTo(DEFAULT_CD_3);
@@ -229,11 +229,11 @@ class DrabsenResourceIT {
         updatedDrabsen
             .cdtypab(UPDATED_CDTYPAB)
             .matric(UPDATED_MATRIC)
-            .databs(UPDATED_DATABS)
-            .numabs(UPDATED_NUMABS)
-            .nbrabs(UPDATED_NBRABS)
-            .validabs(UPDATED_VALIDABS)
-            .observaabs(UPDATED_OBSERVAABS)
+            .dat_abs(UPDATED_DATABS)
+            .num_abs(UPDATED_NUMABS)
+            .nbr_abs(UPDATED_NBRABS)
+            .valid_abs(UPDATED_VALIDABS)
+            .observa_abs(UPDATED_OBSERVAABS)
             .cd1(UPDATED_CD_1)
             .cd2(UPDATED_CD_2)
             .cd3(UPDATED_CD_3);
@@ -253,11 +253,11 @@ class DrabsenResourceIT {
         Drabsen testDrabsen = drabsenList.get(drabsenList.size() - 1);
         assertThat(testDrabsen.getCdtypab()).isEqualTo(UPDATED_CDTYPAB);
         assertThat(testDrabsen.getMatric()).isEqualTo(UPDATED_MATRIC);
-        assertThat(testDrabsen.getDatabs()).isEqualTo(UPDATED_DATABS);
-        assertThat(testDrabsen.getNumabs()).isEqualTo(UPDATED_NUMABS);
-        assertThat(testDrabsen.getNbrabs()).isEqualTo(UPDATED_NBRABS);
-        assertThat(testDrabsen.getValidabs()).isEqualTo(UPDATED_VALIDABS);
-        assertThat(testDrabsen.getObservaabs()).isEqualTo(UPDATED_OBSERVAABS);
+        assertThat(testDrabsen.getDat_abs()).isEqualTo(UPDATED_DATABS);
+        assertThat(testDrabsen.getNum_abs()).isEqualTo(UPDATED_NUMABS);
+        assertThat(testDrabsen.getNbr_abs()).isEqualTo(UPDATED_NBRABS);
+        assertThat(testDrabsen.getValid_abs()).isEqualTo(UPDATED_VALIDABS);
+        assertThat(testDrabsen.getObserva_abs()).isEqualTo(UPDATED_OBSERVAABS);
         assertThat(testDrabsen.getCd1()).isEqualTo(UPDATED_CD_1);
         assertThat(testDrabsen.getCd2()).isEqualTo(UPDATED_CD_2);
         assertThat(testDrabsen.getCd3()).isEqualTo(UPDATED_CD_3);
@@ -338,10 +338,10 @@ class DrabsenResourceIT {
 
         partialUpdatedDrabsen
             .matric(UPDATED_MATRIC)
-            .databs(UPDATED_DATABS)
-            .numabs(UPDATED_NUMABS)
-            .validabs(UPDATED_VALIDABS)
-            .observaabs(UPDATED_OBSERVAABS)
+            .dat_abs(UPDATED_DATABS)
+            .num_abs(UPDATED_NUMABS)
+            .valid_abs(UPDATED_VALIDABS)
+            .observa_abs(UPDATED_OBSERVAABS)
             .cd2(UPDATED_CD_2);
 
         restDrabsenMockMvc
@@ -358,11 +358,11 @@ class DrabsenResourceIT {
         Drabsen testDrabsen = drabsenList.get(drabsenList.size() - 1);
         assertThat(testDrabsen.getCdtypab()).isEqualTo(DEFAULT_CDTYPAB);
         assertThat(testDrabsen.getMatric()).isEqualTo(UPDATED_MATRIC);
-        assertThat(testDrabsen.getDatabs()).isEqualTo(UPDATED_DATABS);
-        assertThat(testDrabsen.getNumabs()).isEqualTo(UPDATED_NUMABS);
-        assertThat(testDrabsen.getNbrabs()).isEqualTo(DEFAULT_NBRABS);
-        assertThat(testDrabsen.getValidabs()).isEqualTo(UPDATED_VALIDABS);
-        assertThat(testDrabsen.getObservaabs()).isEqualTo(UPDATED_OBSERVAABS);
+        assertThat(testDrabsen.getDat_abs()).isEqualTo(UPDATED_DATABS);
+        assertThat(testDrabsen.getNum_abs()).isEqualTo(UPDATED_NUMABS);
+        assertThat(testDrabsen.getNbr_abs()).isEqualTo(DEFAULT_NBRABS);
+        assertThat(testDrabsen.getValid_abs()).isEqualTo(UPDATED_VALIDABS);
+        assertThat(testDrabsen.getObserva_abs()).isEqualTo(UPDATED_OBSERVAABS);
         assertThat(testDrabsen.getCd1()).isEqualTo(DEFAULT_CD_1);
         assertThat(testDrabsen.getCd2()).isEqualTo(UPDATED_CD_2);
         assertThat(testDrabsen.getCd3()).isEqualTo(DEFAULT_CD_3);
@@ -382,11 +382,11 @@ class DrabsenResourceIT {
         partialUpdatedDrabsen
             .cdtypab(UPDATED_CDTYPAB)
             .matric(UPDATED_MATRIC)
-            .databs(UPDATED_DATABS)
-            .numabs(UPDATED_NUMABS)
-            .nbrabs(UPDATED_NBRABS)
-            .validabs(UPDATED_VALIDABS)
-            .observaabs(UPDATED_OBSERVAABS)
+            .dat_abs(UPDATED_DATABS)
+            .num_abs(UPDATED_NUMABS)
+            .nbr_abs(UPDATED_NBRABS)
+            .valid_abs(UPDATED_VALIDABS)
+            .observa_abs(UPDATED_OBSERVAABS)
             .cd1(UPDATED_CD_1)
             .cd2(UPDATED_CD_2)
             .cd3(UPDATED_CD_3);
@@ -405,11 +405,11 @@ class DrabsenResourceIT {
         Drabsen testDrabsen = drabsenList.get(drabsenList.size() - 1);
         assertThat(testDrabsen.getCdtypab()).isEqualTo(UPDATED_CDTYPAB);
         assertThat(testDrabsen.getMatric()).isEqualTo(UPDATED_MATRIC);
-        assertThat(testDrabsen.getDatabs()).isEqualTo(UPDATED_DATABS);
-        assertThat(testDrabsen.getNumabs()).isEqualTo(UPDATED_NUMABS);
-        assertThat(testDrabsen.getNbrabs()).isEqualTo(UPDATED_NBRABS);
-        assertThat(testDrabsen.getValidabs()).isEqualTo(UPDATED_VALIDABS);
-        assertThat(testDrabsen.getObservaabs()).isEqualTo(UPDATED_OBSERVAABS);
+        assertThat(testDrabsen.getDat_abs()).isEqualTo(UPDATED_DATABS);
+        assertThat(testDrabsen.getNum_abs()).isEqualTo(UPDATED_NUMABS);
+        assertThat(testDrabsen.getNbr_abs()).isEqualTo(UPDATED_NBRABS);
+        assertThat(testDrabsen.getValid_abs()).isEqualTo(UPDATED_VALIDABS);
+        assertThat(testDrabsen.getObserva_abs()).isEqualTo(UPDATED_OBSERVAABS);
         assertThat(testDrabsen.getCd1()).isEqualTo(UPDATED_CD_1);
         assertThat(testDrabsen.getCd2()).isEqualTo(UPDATED_CD_2);
         assertThat(testDrabsen.getCd3()).isEqualTo(UPDATED_CD_3);

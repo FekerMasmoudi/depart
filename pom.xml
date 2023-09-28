@@ -1114,10 +1114,11 @@
                                             </pluginExecutionFilter>
                                             <action>
                                                 <ignore/>
-                                            </action>
+                                            </action> 
                                         </pluginExecution>
                                     </pluginExecutions>
                                 </lifecycleMappingMetadata>
+                                
                             </configuration>
                         </plugin>
                     </plugins>

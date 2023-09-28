@@ -25,7 +25,7 @@ public class GroupeDTO implements Serializable {
 
     private String dectyli;
 
-    private String libgrpfr;
+    private String libgrp_fr;
 
     public String getId() {
         return id;
@@ -75,12 +75,12 @@ public class GroupeDTO implements Serializable {
         this.dectyli = dectyli;
     }
 
-    public String getLibgrpfr() {
-        return libgrpfr;
+    public String getLibgrp_fr() {
+        return libgrp_fr;
     }
 
-    public void setLibgrpfr(String libgrpfr) {
-        this.libgrpfr = libgrpfr;
+    public void setLibgrp_fr(String libgrp_fr) {
+        this.libgrp_fr = libgrp_fr;
     }
 
     @Override
@@ -114,7 +114,7 @@ public class GroupeDTO implements Serializable {
             ", codgrp=" + getCodgrp() +
             ", libgrp='" + getLibgrp() + "'" +
             ", dectyli='" + getDectyli() + "'" +
-            ", libgrpfr='" + getLibgrpfr() + "'" +
+            ", libgrpfr='" + getLibgrp_fr() + "'" +
             "}";
     }
 }

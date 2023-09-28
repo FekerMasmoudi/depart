@@ -18,6 +18,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import tech.jhipster.web.util.HeaderUtil;
 import tech.jhipster.web.util.PaginationUtil;
 import tech.jhipster.web.util.ResponseUtil;
+import tn.soretras.depart.domain.Displaybus;
 import tn.soretras.depart.repository.DisplaybusRepository;
 import tn.soretras.depart.service.DisplaybusService;
 import tn.soretras.depart.service.dto.DisplaybusDTO;
@@ -161,6 +162,13 @@ public class DisplaybusResource {
         log.debug("REST request to get Displaybus : {}", id);
         Optional<DisplaybusDTO> displaybusDTO = displaybusService.findOne(id);
         return ResponseUtil.wrapOrNotFound(displaybusDTO);
+    }
+
+    @GetMapping("/displaybusnum/{id}")
+    public Optional<Displaybus> getDisplaybusNum(@PathVariable String id) {
+        log.debug("REST request to get Displaybus : {}", id);
+
+        return displaybusRepository.findById(id);
     }
 
     /**

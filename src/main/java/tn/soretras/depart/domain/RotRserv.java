@@ -21,34 +21,31 @@ public class RotRserv implements Serializable {
     @Field("deccent")
     private Integer deccent;
 
-    @NotNull
     @Field("decagenc")
     private Integer decagenc;
 
     @NotNull
     @Field("dedated")
-    private LocalDate dedated;
+    private String dedated;
 
     @NotNull
     @Field("matric")
     private Integer matric;
 
-    @NotNull
     @Field("heurdeb")
-    private ZonedDateTime heurdeb;
+    private String heur_deb;
 
-    @NotNull
     @Field("heurfin")
-    private ZonedDateTime heurfin;
+    private String heur_fin;
 
     @Field("statut")
     private String statut;
 
     @Field("lieedeb")
-    private ZonedDateTime lieedeb;
+    private String liee_deb;
 
     @Field("lieefin")
-    private ZonedDateTime lieefin;
+    private String liee_fin;
 
     @Field("program")
     private String program;
@@ -96,16 +93,16 @@ public class RotRserv implements Serializable {
         this.decagenc = decagenc;
     }
 
-    public LocalDate getDedated() {
+    public String getDedated() {
         return this.dedated;
     }
 
-    public RotRserv dedated(LocalDate dedated) {
+    public RotRserv dedated(String dedated) {
         this.setDedated(dedated);
         return this;
     }
 
-    public void setDedated(LocalDate dedated) {
+    public void setDedated(String dedated) {
         this.dedated = dedated;
     }
 
@@ -122,30 +119,30 @@ public class RotRserv implements Serializable {
         this.matric = matric;
     }
 
-    public ZonedDateTime getHeurdeb() {
-        return this.heurdeb;
+    public String getHeur_deb() {
+        return this.heur_deb;
     }
 
-    public RotRserv heurdeb(ZonedDateTime heurdeb) {
-        this.setHeurdeb(heurdeb);
+    public RotRserv heur_deb(String heur_deb) {
+        this.setHeur_deb(heur_deb);
         return this;
     }
 
-    public void setHeurdeb(ZonedDateTime heurdeb) {
-        this.heurdeb = heurdeb;
+    public void setHeur_deb(String heur_deb) {
+        this.heur_deb = heur_deb;
     }
 
-    public ZonedDateTime getHeurfin() {
-        return this.heurfin;
+    public String getHeur_fin() {
+        return this.heur_fin;
     }
 
-    public RotRserv heurfin(ZonedDateTime heurfin) {
-        this.setHeurfin(heurfin);
+    public RotRserv heur_fin(String heur_fin) {
+        this.setHeur_fin(heur_fin);
         return this;
     }
 
-    public void setHeurfin(ZonedDateTime heurfin) {
-        this.heurfin = heurfin;
+    public void setHeur_fin(String heur_fin) {
+        this.heur_fin = heur_fin;
     }
 
     public String getStatut() {
@@ -161,30 +158,30 @@ public class RotRserv implements Serializable {
         this.statut = statut;
     }
 
-    public ZonedDateTime getLieedeb() {
-        return this.lieedeb;
+    public String getLiee_deb() {
+        return this.liee_deb;
     }
 
-    public RotRserv lieedeb(ZonedDateTime lieedeb) {
-        this.setLieedeb(lieedeb);
+    public RotRserv liee_deb(String liee_deb) {
+        this.setLiee_deb(liee_deb);
         return this;
     }
 
-    public void setLieedeb(ZonedDateTime lieedeb) {
-        this.lieedeb = lieedeb;
+    public void setLiee_deb(String liee_deb) {
+        this.liee_deb = liee_deb;
     }
 
-    public ZonedDateTime getLieefin() {
-        return this.lieefin;
+    public String getLiee_fin() {
+        return this.liee_fin;
     }
 
-    public RotRserv lieefin(ZonedDateTime lieefin) {
-        this.setLieefin(lieefin);
+    public RotRserv liee_fin(String liee_fin) {
+        this.setLiee_fin(liee_fin);
         return this;
     }
 
-    public void setLieefin(ZonedDateTime lieefin) {
-        this.lieefin = lieefin;
+    public void setLiee_fin(String liee_fin) {
+        this.liee_fin = liee_fin;
     }
 
     public String getProgram() {
@@ -293,11 +290,11 @@ public class RotRserv implements Serializable {
             ", decagenc=" + getDecagenc() +
             ", dedated='" + getDedated() + "'" +
             ", matric=" + getMatric() +
-            ", heurdeb='" + getHeurdeb() + "'" +
-            ", heurfin='" + getHeurfin() + "'" +
+            ", heurdeb='" + getHeur_deb() + "'" +
+            ", heurfin='" + getHeur_fin() + "'" +
             ", statut='" + getStatut() + "'" +
-            ", lieedeb='" + getLieedeb() + "'" +
-            ", lieefin='" + getLieefin() + "'" +
+            ", lieedeb='" + getLiee_deb() + "'" +
+            ", lieefin='" + getLiee_fin() + "'" +
             ", program='" + getProgram() + "'" +
             ", cd1=" + getCd1() +
             ", cd2=" + getCd2() +

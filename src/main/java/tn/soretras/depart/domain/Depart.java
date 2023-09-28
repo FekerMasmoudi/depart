@@ -45,7 +45,7 @@ public class Depart implements Serializable {
 
     @NotNull
     @Field("dedated")
-    private LocalDate dedated;
+    private String dedated;
 
     @NotNull
     @Field("denumdp")
@@ -61,31 +61,31 @@ public class Depart implements Serializable {
     private Integer cdmac;
 
     @Field("deheups")
-    private LocalDate deheups;
+    private String deheups;
 
     @Field("deheufs")
-    private LocalDate deheufs;
+    private String deheufs;
 
     @Field("denbrro")
     private Integer denbrro;
 
     @Field("deheuaa")
-    private LocalDate deheuaa;
+    private String deheuaa;
 
     @Field("deheudr")
-    private LocalDate deheudr;
+    private String deheudr;
 
     @Field("deheupd")
-    private LocalDate deheupd;
+    private String deheupd;
 
     @Field("deampli")
-    private LocalDate deampli;
+    private String deampli;
 
     @Field("obsind")
-    private String obsind;
+    private String obs_ind;
 
     @Field("vldroul")
-    private String vldroul;
+    private String vld_roul;
 
     @Field("deetat")
     private String deetat;
@@ -100,7 +100,7 @@ public class Depart implements Serializable {
     private String execute;
 
     @Field("motifa")
-    private String motifa;
+    private String motif_a;
 
     @Field("observ")
     private String observ;
@@ -109,7 +109,7 @@ public class Depart implements Serializable {
     private Float recettes;
 
     @Field("nbrevoy")
-    private Integer nbrevoy;
+    private Integer nbre_voy;
 
     @Field("decmotifch")
     private Integer decmotifch;
@@ -132,86 +132,15 @@ public class Depart implements Serializable {
     @Field("decmotifrea")
     private Integer decmotifrea;
 
+    @Field("idapex")
+    private Integer id_apex;
+
     @DBRef
     @Field("deprotat")
     @JsonIgnoreProperties(value = { "depart" }, allowSetters = true)
     private Set<Deprotat> deprotats = new HashSet<>();
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
-
-    public Depart(
-        String id,
-        @NotNull Integer deccent,
-        @NotNull Integer decagenc,
-        @NotNull Integer decserv,
-        @NotNull String decoper,
-        @NotNull String decsean,
-        @NotNull LocalDate dedated,
-        @NotNull Integer denumdp,
-        Integer matric,
-        Integer matric1,
-        Integer cdmac,
-        LocalDate deheups,
-        LocalDate deheufs,
-        Integer denbrro,
-        LocalDate deheuaa,
-        LocalDate deheudr,
-        LocalDate deheupd,
-        LocalDate deampli,
-        String obsind,
-        String vldroul,
-        String deetat,
-        String deannul,
-        String decclot,
-        String execute,
-        String motifa,
-        String observ,
-        Float recettes,
-        Integer nbrevoy,
-        Integer decmotifch,
-        Integer decmotifre,
-        Integer cd1,
-        Integer cd2,
-        Integer cd3,
-        Integer decmotifcha,
-        Integer decmotifrea
-    ) {
-        this.id = id;
-        this.deccent = deccent;
-        this.decagenc = decagenc;
-        this.decserv = decserv;
-        this.decoper = decoper;
-        this.decsean = decsean;
-        this.dedated = dedated;
-        this.denumdp = denumdp;
-        this.matric = matric;
-        this.matric1 = matric1;
-        this.cdmac = cdmac;
-        this.deheups = deheups;
-        this.deheufs = deheufs;
-        this.denbrro = denbrro;
-        this.deheuaa = deheuaa;
-        this.deheudr = deheudr;
-        this.deheupd = deheupd;
-        this.deampli = deampli;
-        this.obsind = obsind;
-        this.vldroul = vldroul;
-        this.deetat = deetat;
-        this.deannul = deannul;
-        this.decclot = decclot;
-        this.execute = execute;
-        this.motifa = motifa;
-        this.observ = observ;
-        this.recettes = recettes;
-        this.nbrevoy = nbrevoy;
-        this.decmotifch = decmotifch;
-        this.decmotifre = decmotifre;
-        this.cd1 = cd1;
-        this.cd2 = cd2;
-        this.cd3 = cd3;
-        this.decmotifcha = decmotifcha;
-        this.decmotifrea = decmotifrea;
-    }
 
     public Depart() {}
 
@@ -293,16 +222,16 @@ public class Depart implements Serializable {
         this.decsean = decsean;
     }
 
-    public LocalDate getDedated() {
+    public String getDedated() {
         return this.dedated;
     }
 
-    public Depart dedated(LocalDate dedated) {
+    public Depart dedated(String dedated) {
         this.setDedated(dedated);
         return this;
     }
 
-    public void setDedated(LocalDate dedated) {
+    public void setDedated(String dedated) {
         this.dedated = dedated;
     }
 
@@ -358,29 +287,29 @@ public class Depart implements Serializable {
         this.cdmac = cdmac;
     }
 
-    public LocalDate getDeheups() {
+    public String getDeheups() {
         return this.deheups;
     }
 
-    public Depart deheups(LocalDate deheups) {
+    public Depart deheups(String deheups) {
         this.setDeheups(deheups);
         return this;
     }
 
-    public void setDeheups(LocalDate deheups) {
+    public void setDeheups(String deheups) {
         this.deheups = deheups;
     }
 
-    public LocalDate getDeheufs() {
+    public String getDeheufs() {
         return this.deheufs;
     }
 
-    public Depart deheufs(LocalDate deheufs) {
+    public Depart deheufs(String deheufs) {
         this.setDeheufs(deheufs);
         return this;
     }
 
-    public void setDeheufs(LocalDate deheufs) {
+    public void setDeheufs(String deheufs) {
         this.deheufs = deheufs;
     }
 
@@ -397,82 +326,82 @@ public class Depart implements Serializable {
         this.denbrro = denbrro;
     }
 
-    public LocalDate getDeheuaa() {
+    public String getDeheuaa() {
         return this.deheuaa;
     }
 
-    public Depart deheuaa(LocalDate deheuaa) {
+    public Depart deheuaa(String deheuaa) {
         this.setDeheuaa(deheuaa);
         return this;
     }
 
-    public void setDeheuaa(LocalDate deheuaa) {
+    public void setDeheuaa(String deheuaa) {
         this.deheuaa = deheuaa;
     }
 
-    public LocalDate getDeheudr() {
+    public String getDeheudr() {
         return this.deheudr;
     }
 
-    public Depart deheudr(LocalDate deheudr) {
+    public Depart deheudr(String deheudr) {
         this.setDeheudr(deheudr);
         return this;
     }
 
-    public void setDeheudr(LocalDate deheudr) {
+    public void setDeheudr(String deheudr) {
         this.deheudr = deheudr;
     }
 
-    public LocalDate getDeheupd() {
+    public String getDeheupd() {
         return this.deheupd;
     }
 
-    public Depart deheupd(LocalDate deheupd) {
+    public Depart deheupd(String deheupd) {
         this.setDeheupd(deheupd);
         return this;
     }
 
-    public void setDeheupd(LocalDate deheupd) {
+    public void setDeheupd(String deheupd) {
         this.deheupd = deheupd;
     }
 
-    public LocalDate getDeampli() {
+    public String getDeampli() {
         return this.deampli;
     }
 
-    public Depart deampli(LocalDate deampli) {
+    public Depart deampli(String deampli) {
         this.setDeampli(deampli);
         return this;
     }
 
-    public void setDeampli(LocalDate deampli) {
+    public void setDeampli(String deampli) {
         this.deampli = deampli;
     }
 
-    public String getObsind() {
-        return this.obsind;
+    public String getObs_ind() {
+        return this.obs_ind;
     }
 
-    public Depart obsind(String obsind) {
-        this.setObsind(obsind);
+    public Depart obs_ind(String obs_ind) {
+        this.setObs_ind(obs_ind);
         return this;
     }
 
-    public void setObsind(String obsind) {
-        this.obsind = obsind;
+    public void setObs_ind(String obs_ind) {
+        this.obs_ind = obs_ind;
     }
 
-    public String getVldroul() {
-        return this.vldroul;
+    public String getVld_roul() {
+        return this.vld_roul;
     }
 
-    public Depart vldroul(String vldroul) {
-        this.setVldroul(vldroul);
+    public Depart vld_roul(String vld_roul) {
+        this.setVld_roul(vld_roul);
         return this;
     }
 
-    public void setVldroul(String vldroul) {
-        this.vldroul = vldroul;
+    public void setVld_roul(String vld_roul) {
+        this.vld_roul = vld_roul;
     }
 
     public String getDeetat() {
@@ -527,17 +456,17 @@ public class Depart implements Serializable {
         this.execute = execute;
     }
 
-    public String getMotifa() {
-        return this.motifa;
+    public String getMotif_a() {
+        return this.motif_a;
     }
 
-    public Depart motifa(String motifa) {
-        this.setMotifa(motifa);
+    public Depart motif_a(String motif_a) {
+        this.setMotif_a(motif_a);
         return this;
     }
 
-    public void setMotifa(String motifa) {
-        this.motifa = motifa;
+    public void setMotif_a(String motif_a) {
+        this.motif_a = motif_a;
     }
 
     public String getObserv() {
@@ -566,17 +495,17 @@ public class Depart implements Serializable {
         this.recettes = recettes;
     }
 
-    public Integer getNbrevoy() {
-        return this.nbrevoy;
+    public Integer getNbre_voy() {
+        return this.nbre_voy;
     }
 
-    public Depart nbrevoy(Integer nbrevoy) {
-        this.setNbrevoy(nbrevoy);
+    public Depart nbre_voy(Integer nbre_voy) {
+        this.setNbre_voy(nbre_voy);
         return this;
     }
 
-    public void setNbrevoy(Integer nbrevoy) {
-        this.nbrevoy = nbrevoy;
+    public void setNbre_voy(Integer nbre_voy) {
+        this.nbre_voy = nbre_voy;
     }
 
     public Integer getDecmotifch() {
@@ -670,6 +599,19 @@ public class Depart implements Serializable {
         this.decmotifrea = decmotifrea;
     }
 
+    public void setId_apex(Integer id_apex) {
+        this.id_apex = id_apex;
+    }
+
+    public Integer getId_apex() {
+        return this.id_apex;
+    }
+
+    public Depart id_apex(Integer id_apex) {
+        this.setId_apex(id_apex);
+        return this;
+    }
+
     public Set<Deprotat> getDeprotats() {
         return this.deprotats;
     }
@@ -742,16 +684,16 @@ public class Depart implements Serializable {
             ", deheudr='" + getDeheudr() + "'" +
             ", deheupd='" + getDeheupd() + "'" +
             ", deampli='" + getDeampli() + "'" +
-            ", obsind='" + getObsind() + "'" +
-            ", vldroul='" + getVldroul() + "'" +
+            ", obsind='" + getObs_ind() + "'" +
+            ", vldroul='" + getVld_roul() + "'" +
             ", deetat='" + getDeetat() + "'" +
             ", deannul='" + getDeannul() + "'" +
             ", decclot='" + getDecclot() + "'" +
             ", execute='" + getExecute() + "'" +
-            ", motifa='" + getMotifa() + "'" +
+            ", motifa='" + getMotif_a() + "'" +
             ", observ='" + getObserv() + "'" +
             ", recettes=" + getRecettes() +
-            ", nbrevoy=" + getNbrevoy() +
+            ", nbrevoy=" + getNbre_voy() +
             ", decmotifch=" + getDecmotifch() +
             ", decmotifre=" + getDecmotifre() +
             ", cd1=" + getCd1() +
@@ -759,6 +701,7 @@ public class Depart implements Serializable {
             ", cd3=" + getCd3() +
             ", decmotifcha=" + getDecmotifcha() +
             ", decmotifrea=" + getDecmotifrea() +
+            ", id_apex=" + getId_apex() +
             "}";
     }
 }

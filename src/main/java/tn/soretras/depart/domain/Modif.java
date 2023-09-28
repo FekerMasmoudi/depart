@@ -25,7 +25,7 @@ public class Modif implements Serializable {
     private Integer decagenc;
 
     @Field("dedated")
-    private LocalDate dedated;
+    private String dedated;
 
     @Field("denumdp")
     private Integer denumdp;
@@ -52,7 +52,7 @@ public class Modif implements Serializable {
     private Integer decmotif;
 
     @Field("heur")
-    private LocalDate heur;
+    private String heur;
 
     @Field("chre")
     private String chre;
@@ -101,16 +101,16 @@ public class Modif implements Serializable {
         this.decagenc = decagenc;
     }
 
-    public LocalDate getDedated() {
+    public String getDedated() {
         return this.dedated;
     }
 
-    public Modif dedated(LocalDate dedated) {
+    public Modif dedated(String dedated) {
         this.setDedated(dedated);
         return this;
     }
 
-    public void setDedated(LocalDate dedated) {
+    public void setDedated(String dedated) {
         this.dedated = dedated;
     }
 
@@ -218,16 +218,16 @@ public class Modif implements Serializable {
         this.decmotif = decmotif;
     }
 
-    public LocalDate getHeur() {
+    public String getHeur() {
         return this.heur;
     }
 
-    public Modif heur(LocalDate heur) {
+    public Modif heur(String heur) {
         this.setHeur(heur);
         return this;
     }
 
-    public void setHeur(LocalDate heur) {
+    public void setHeur(String heur) {
         this.heur = heur;
     }
 
@@ -268,40 +268,6 @@ public class Modif implements Serializable {
             return false;
         }
         return id != null && id.equals(((Modif) o).id);
-    }
-
-    public Modif(
-        String id,
-        Integer deccent,
-        Integer decagenc,
-        LocalDate dedated,
-        Integer denumdp,
-        Integer decserv,
-        String decoper,
-        String decsean,
-        Integer numrotat,
-        Integer matric,
-        Integer cd1,
-        Integer decmotif,
-        LocalDate heur,
-        String chre,
-        String typ
-    ) {
-        this.id = id;
-        this.deccent = deccent;
-        this.decagenc = decagenc;
-        this.dedated = dedated;
-        this.denumdp = denumdp;
-        this.decserv = decserv;
-        this.decoper = decoper;
-        this.decsean = decsean;
-        this.numrotat = numrotat;
-        this.matric = matric;
-        this.cd1 = cd1;
-        this.decmotif = decmotif;
-        this.heur = heur;
-        this.chre = chre;
-        this.typ = typ;
     }
 
     public Modif() {}

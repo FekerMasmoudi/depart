@@ -1,7 +1,7 @@
 {
   "applications": "*",
   "changelogDate": "20230804093443",
-  "dto": "no",
+  "dto": "mapstruct",
   "embedded": false,
   "entityTableName": "depart",
   "fields": [
@@ -152,15 +152,17 @@
   "fluentMethods": true,
   "jpaMetamodelFiltering": false,
   "name": "Depart",
-  "pagination": "no",
+  "pagination": "pagination",
   "readOnly": false,
   "relationships": [
     {
+      "otherEntityField": "id",
       "otherEntityName": "deprotat",
       "otherEntityRelationshipName": "depart",
+      "ownerSide": true,
       "relationshipName": "deprotat",
       "relationshipType": "one-to-many"
     }
   ],
-  "service": "no"
+  "service": "serviceClass"
 }

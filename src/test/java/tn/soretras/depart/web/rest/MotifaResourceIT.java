@@ -55,7 +55,7 @@ class MotifaResourceIT {
      * if they test an entity which requires the current entity.
      */
     public static Motifa createEntity() {
-        Motifa motifa = new Motifa().decmotif(DEFAULT_DECMOTIF).libmotif(DEFAULT_LIBMOTIF);
+        Motifa motifa = new Motifa().libmotif(DEFAULT_LIBMOTIF);
         return motifa;
     }
 
@@ -66,7 +66,7 @@ class MotifaResourceIT {
      * if they test an entity which requires the current entity.
      */
     public static Motifa createUpdatedEntity() {
-        Motifa motifa = new Motifa().decmotif(UPDATED_DECMOTIF).libmotif(UPDATED_LIBMOTIF);
+        Motifa motifa = new Motifa().libmotif(UPDATED_LIBMOTIF);
         return motifa;
     }
 
@@ -89,7 +89,7 @@ class MotifaResourceIT {
         List<Motifa> motifaList = motifaRepository.findAll();
         assertThat(motifaList).hasSize(databaseSizeBeforeCreate + 1);
         Motifa testMotifa = motifaList.get(motifaList.size() - 1);
-        assertThat(testMotifa.getDecmotif()).isEqualTo(DEFAULT_DECMOTIF);
+
         assertThat(testMotifa.getLibmotif()).isEqualTo(DEFAULT_LIBMOTIF);
     }
 
@@ -115,7 +115,7 @@ class MotifaResourceIT {
     void checkDecmotifIsRequired() throws Exception {
         int databaseSizeBeforeTest = motifaRepository.findAll().size();
         // set the field null
-        motifa.setDecmotif(null);
+        //motifa.setDecmotif(null);
 
         // Create the Motifa, which fails.
         MotifaDTO motifaDTO = motifaMapper.toDto(motifa);
@@ -173,7 +173,7 @@ class MotifaResourceIT {
 
         // Update the motifa
         Motifa updatedMotifa = motifaRepository.findById(motifa.getId()).get();
-        updatedMotifa.decmotif(UPDATED_DECMOTIF).libmotif(UPDATED_LIBMOTIF);
+        updatedMotifa.libmotif(UPDATED_LIBMOTIF);
         MotifaDTO motifaDTO = motifaMapper.toDto(updatedMotifa);
 
         restMotifaMockMvc
@@ -188,7 +188,7 @@ class MotifaResourceIT {
         List<Motifa> motifaList = motifaRepository.findAll();
         assertThat(motifaList).hasSize(databaseSizeBeforeUpdate);
         Motifa testMotifa = motifaList.get(motifaList.size() - 1);
-        assertThat(testMotifa.getDecmotif()).isEqualTo(UPDATED_DECMOTIF);
+        //assertThat(testMotifa.getDecmotif()).isEqualTo(UPDATED_DECMOTIF);
         assertThat(testMotifa.getLibmotif()).isEqualTo(UPDATED_LIBMOTIF);
     }
 
@@ -277,7 +277,7 @@ class MotifaResourceIT {
         List<Motifa> motifaList = motifaRepository.findAll();
         assertThat(motifaList).hasSize(databaseSizeBeforeUpdate);
         Motifa testMotifa = motifaList.get(motifaList.size() - 1);
-        assertThat(testMotifa.getDecmotif()).isEqualTo(DEFAULT_DECMOTIF);
+        //assertThat(testMotifa.getDecmotif()).isEqualTo(DEFAULT_DECMOTIF);
         assertThat(testMotifa.getLibmotif()).isEqualTo(DEFAULT_LIBMOTIF);
     }
 
@@ -292,7 +292,7 @@ class MotifaResourceIT {
         Motifa partialUpdatedMotifa = new Motifa();
         partialUpdatedMotifa.setId(motifa.getId());
 
-        partialUpdatedMotifa.decmotif(UPDATED_DECMOTIF).libmotif(UPDATED_LIBMOTIF);
+        partialUpdatedMotifa.libmotif(UPDATED_LIBMOTIF);
 
         restMotifaMockMvc
             .perform(
@@ -306,7 +306,7 @@ class MotifaResourceIT {
         List<Motifa> motifaList = motifaRepository.findAll();
         assertThat(motifaList).hasSize(databaseSizeBeforeUpdate);
         Motifa testMotifa = motifaList.get(motifaList.size() - 1);
-        assertThat(testMotifa.getDecmotif()).isEqualTo(UPDATED_DECMOTIF);
+        //assertThat(testMotifa.getDecmotif()).isEqualTo(UPDATED_DECMOTIF);
         assertThat(testMotifa.getLibmotif()).isEqualTo(UPDATED_LIBMOTIF);
     }
 

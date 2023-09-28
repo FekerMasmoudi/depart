@@ -2,8 +2,8 @@
   "departdbApp": {
     "depart": {
       "home": {
-        "title": "Departs",
-        "refreshListLabel": "Refresh list",
+        "title": "الإنــطلاق",
+        "refreshListLabel": "تحديث القائمة",
         "createLabel": "Create a new Depart",
         "createOrEditLabel": "Create or edit a Depart",
         "notFound": "No Departs found"

@@ -12,8 +12,8 @@ public class MotifchservDTO implements Serializable {
 
     private String id;
 
-    @NotNull
-    private Integer decmotif;
+    /* @NotNull
+    private Integer decmotif;*/
 
     private String delmotif;
 
@@ -29,13 +29,13 @@ public class MotifchservDTO implements Serializable {
         this.id = id;
     }
 
-    public Integer getDecmotif() {
+    /*  public Integer getDecmotif() {
         return decmotif;
     }
 
     public void setDecmotif(Integer decmotif) {
         this.decmotif = decmotif;
-    }
+    }*/
 
     public String getDelmotif() {
         return delmotif;
@@ -87,7 +87,7 @@ public class MotifchservDTO implements Serializable {
     public String toString() {
         return "MotifchservDTO{" +
             "id='" + getId() + "'" +
-            ", decmotif=" + getDecmotif() +
+           
             ", delmotif='" + getDelmotif() + "'" +
             ", x='" + getX() + "'" +
             ", vs='" + getVs() + "'" +

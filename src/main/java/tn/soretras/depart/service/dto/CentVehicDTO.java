@@ -14,7 +14,7 @@ public class CentVehicDTO implements Serializable {
 
     private String cdmac;
 
-    private LocalDate dateff;
+    private String dat_eff;
 
     private Integer deccent;
 
@@ -36,12 +36,12 @@ public class CentVehicDTO implements Serializable {
         this.cdmac = cdmac;
     }
 
-    public LocalDate getDateff() {
-        return dateff;
+    public String getDat_eff() {
+        return dat_eff;
     }
 
-    public void setDateff(LocalDate dateff) {
-        this.dateff = dateff;
+    public void setDateff(String dat_eff) {
+        this.dat_eff = dat_eff;
     }
 
     public Integer getDeccent() {
@@ -87,7 +87,7 @@ public class CentVehicDTO implements Serializable {
         return "CentVehicDTO{" +
             "id='" + getId() + "'" +
             ", cdmac='" + getCdmac() + "'" +
-            ", dateff='" + getDateff() + "'" +
+            ", dateff='" + getDat_eff() + "'" +
             ", deccent=" + getDeccent() +
             ", decagenc=" + getDecagenc() +
             "}";

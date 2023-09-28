@@ -30,20 +30,12 @@ public class Agence implements Serializable {
     private String delagenc;
 
     @Field("defaultagenc")
-    private String defaultagenc;
+    private String default_agenc;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
 
     public String getId() {
         return this.id;
-    }
-
-    public Agence(String id, @NotNull Integer deccent, @NotNull Integer decagenc, String delagenc, String defaultagenc) {
-        this.id = id;
-        this.deccent = deccent;
-        this.decagenc = decagenc;
-        this.delagenc = delagenc;
-        this.defaultagenc = defaultagenc;
     }
 
     public Agence() {}
@@ -96,17 +88,17 @@ public class Agence implements Serializable {
         this.delagenc = delagenc;
     }
 
-    public String getDefaultagenc() {
-        return this.defaultagenc;
+    public String getDefault_agenc() {
+        return this.default_agenc;
     }
 
-    public Agence defaultagenc(String defaultagenc) {
-        this.setDefaultagenc(defaultagenc);
+    public Agence default_agenc(String default_agenc) {
+        this.setDefault_agenc(default_agenc);
         return this;
     }
 
-    public void setDefaultagenc(String defaultagenc) {
-        this.defaultagenc = defaultagenc;
+    public void setDefault_agenc(String default_agenc) {
+        this.default_agenc = default_agenc;
     }
 
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here
@@ -136,7 +128,7 @@ public class Agence implements Serializable {
             ", deccent=" + getDeccent() +
             ", decagenc=" + getDecagenc() +
             ", delagenc='" + getDelagenc() + "'" +
-            ", defaultagenc='" + getDefaultagenc() + "'" +
+            ", defaultagenc='" + getDefault_agenc() + "'" +
             "}";
     }
 }

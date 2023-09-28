@@ -172,7 +172,7 @@
           </th>
           <th scope="col" jhiSortBy="motifa">
             <div class="d-flex">
-              <span jhiTranslate="departdbApp.deprotat.motifa">Motifa</span>
+              <span jhiTranslate="departdbApp.deprotat.motif_a">Motifa</span>
               <fa-icon class="p-1" icon="sort"></fa-icon>
             </div>
           </th>
@@ -232,7 +232,7 @@
           </th>
           <th scope="col" jhiSortBy="idapex">
             <div class="d-flex">
-              <span jhiTranslate="departdbApp.deprotat.idapex">Idapex</span>
+              <span jhiTranslate="departdbApp.deprotat.id_apex">Idapex</span>
               <fa-icon class="p-1" icon="sort"></fa-icon>
             </div>
           </th>
@@ -251,12 +251,6 @@
           <th scope="col" jhiSortBy="r">
             <div class="d-flex">
               <span jhiTranslate="departdbApp.deprotat.r">R</span>
-              <fa-icon class="p-1" icon="sort"></fa-icon>
-            </div>
-          </th>
-          <th scope="col" jhiSortBy="depart.id">
-            <div class="d-flex">
-              <span jhiTranslate="departdbApp.deprotat.depart">Depart</span>
               <fa-icon class="p-1" icon="sort"></fa-icon>
             </div>
           </th>
@@ -284,13 +278,13 @@
           <td>{{ deprotat.matric }}</td>
           <td>{{ deprotat.matric1 }}</td>
           <td>{{ deprotat.cdmac }}</td>
-          <td>{{ deprotat.hdeparte | formatMediumDate }}</td>
-          <td>{{ deprotat.hretoure | formatMediumDate }}</td>
-          <td>{{ deprotat.harralle | formatMediumDate }}</td>
-          <td>{{ deprotat.harrrete | formatMediumDate }}</td>
-          <td>{{ deprotat.rannul }}</td>
+          <td>{{ deprotat.hdeparte | formatMediumDatetime }}</td>
+          <td>{{ deprotat.hretoure | formatMediumDatetime }}</td>
+          <td>{{ deprotat.harralle | formatMediumDatetime }}</td>
+          <td>{{ deprotat.harrrete | formatMediumDatetime }}</td>
+          <td>{{ deprotat.r_annul }}</td>
           <td>{{ deprotat.km }}</td>
-          <td>{{ deprotat.motifa }}</td>
+          <td>{{ deprotat.motif_a }}</td>
           <td>{{ deprotat.observ }}</td>
           <td>{{ deprotat.recettesvoy }}</td>
           <td>{{ deprotat.nbrevoy }}</td>
@@ -300,15 +294,10 @@
           <td>{{ deprotat.cd3 }}</td>
           <td>{{ deprotat.decmotifcha }}</td>
           <td>{{ deprotat.decmotifrea }}</td>
-          <td>{{ deprotat.idapex }}</td>
+          <td>{{ deprotat.id_apex }}</td>
           <td>{{ deprotat.plusmoins }}</td>
           <td>{{ deprotat.a }}</td>
           <td>{{ deprotat.r }}</td>
-          <td>
-            <div *ngIf="deprotat.depart">
-              <a [routerLink]="['/depart', deprotat.depart.id, 'view']">{{ deprotat.depart.id }}</a>
-            </div>
-          </td>
           <td class="text-end">
             <div class="btn-group">
               <button
@@ -340,5 +329,23 @@
         </tr>
       </tbody>
     </table>
+  </div>
+
+  <div *ngIf="deprotats && deprotats.length > 0">
+    <div class="d-flex justify-content-center">
+      <jhi-item-count [params]="{ page: page, totalItems: totalItems, itemsPerPage: itemsPerPage }"></jhi-item-count>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <ngb-pagination
+        [collectionSize]="totalItems"
+        [page]="page"
+        [pageSize]="itemsPerPage"
+        [maxSize]="5"
+        [rotate]="true"
+        [boundaryLinks]="true"
+        (pageChange)="navigateToPage($event)"
+      ></ngb-pagination>
+    </div>
   </div>
 </div>

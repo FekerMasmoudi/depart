@@ -25,19 +25,19 @@ public class Drabsen implements Serializable {
     private Integer matric;
 
     @Field("databs")
-    private LocalDate databs;
+    private String dat_abs;
 
     @Field("numabs")
-    private Integer numabs;
+    private Integer num_abs;
 
     @Field("nbrabs")
-    private Integer nbrabs;
+    private Integer nbr_abs;
 
     @Field("validabs")
-    private Integer validabs;
+    private Integer valid_abs;
 
     @Field("observaabs")
-    private String observaabs;
+    private String observa_abs;
 
     @Field("cd_1")
     private Integer cd1;
@@ -52,32 +52,6 @@ public class Drabsen implements Serializable {
 
     public String getId() {
         return this.id;
-    }
-
-    public Drabsen(
-        String id,
-        String cdtypab,
-        Integer matric,
-        LocalDate databs,
-        Integer numabs,
-        Integer nbrabs,
-        Integer validabs,
-        String observaabs,
-        Integer cd1,
-        Integer cd2,
-        Integer cd3
-    ) {
-        this.id = id;
-        this.cdtypab = cdtypab;
-        this.matric = matric;
-        this.databs = databs;
-        this.numabs = numabs;
-        this.nbrabs = nbrabs;
-        this.validabs = validabs;
-        this.observaabs = observaabs;
-        this.cd1 = cd1;
-        this.cd2 = cd2;
-        this.cd3 = cd3;
     }
 
     public Drabsen() {}
@@ -117,69 +91,69 @@ public class Drabsen implements Serializable {
         this.matric = matric;
     }
 
-    public LocalDate getDatabs() {
-        return this.databs;
+    public String getDat_abs() {
+        return this.dat_abs;
     }
 
-    public Drabsen databs(LocalDate databs) {
-        this.setDatabs(databs);
+    public Drabsen dat_abs(String dat_abs) {
+        this.setDat_abs(dat_abs);
         return this;
     }
 
-    public void setDatabs(LocalDate databs) {
-        this.databs = databs;
+    public void setDat_abs(String dat_abs) {
+        this.dat_abs = dat_abs;
     }
 
-    public Integer getNumabs() {
-        return this.numabs;
+    public Integer getNum_abs() {
+        return this.num_abs;
     }
 
-    public Drabsen numabs(Integer numabs) {
-        this.setNumabs(numabs);
+    public Drabsen num_abs(Integer num_abs) {
+        this.setNum_abs(num_abs);
         return this;
     }
 
-    public void setNumabs(Integer numabs) {
-        this.numabs = numabs;
+    public void setNum_abs(Integer num_abs) {
+        this.num_abs = num_abs;
     }
 
-    public Integer getNbrabs() {
-        return this.nbrabs;
+    public Integer getNbr_abs() {
+        return this.nbr_abs;
     }
 
-    public Drabsen nbrabs(Integer nbrabs) {
-        this.setNbrabs(nbrabs);
+    public Drabsen nbr_abs(Integer nbr_abs) {
+        this.setNbr_abs(nbr_abs);
         return this;
     }
 
-    public void setNbrabs(Integer nbrabs) {
-        this.nbrabs = nbrabs;
+    public void setNbr_abs(Integer nbr_abs) {
+        this.nbr_abs = nbr_abs;
     }
 
-    public Integer getValidabs() {
-        return this.validabs;
+    public Integer getValid_abs() {
+        return this.valid_abs;
     }
 
-    public Drabsen validabs(Integer validabs) {
-        this.setValidabs(validabs);
+    public Drabsen valid_abs(Integer valid_abs) {
+        this.setValid_abs(valid_abs);
         return this;
     }
 
-    public void setValidabs(Integer validabs) {
-        this.validabs = validabs;
+    public void setValid_abs(Integer valid_abs) {
+        this.valid_abs = valid_abs;
     }
 
-    public String getObservaabs() {
-        return this.observaabs;
+    public String getObserva_abs() {
+        return this.observa_abs;
     }
 
-    public Drabsen observaabs(String observaabs) {
-        this.setObservaabs(observaabs);
+    public Drabsen observa_abs(String observa_abs) {
+        this.setObserva_abs(observa_abs);
         return this;
     }
 
-    public void setObservaabs(String observaabs) {
-        this.observaabs = observaabs;
+    public void setObserva_abs(String observa_abs) {
+        this.observa_abs = observa_abs;
     }
 
     public Integer getCd1() {
@@ -247,11 +221,11 @@ public class Drabsen implements Serializable {
             "id=" + getId() +
             ", cdtypab='" + getCdtypab() + "'" +
             ", matric=" + getMatric() +
-            ", databs='" + getDatabs() + "'" +
-            ", numabs=" + getNumabs() +
-            ", nbrabs=" + getNbrabs() +
-            ", validabs=" + getValidabs() +
-            ", observaabs='" + getObservaabs() + "'" +
+            ", databs='" + getDat_abs() + "'" +
+            ", numabs=" + getNum_abs() +
+            ", nbrabs=" + getNbr_abs() +
+            ", validabs=" + getValid_abs() +
+            ", observaabs='" + getObserva_abs() + "'" +
             ", cd1=" + getCd1() +
             ", cd2=" + getCd2() +
             ", cd3=" + getCd3() +

@@ -78,7 +78,7 @@ class StationResourceIT {
             .dectyst(DEFAULT_DECTYST)
             .decrout(DEFAULT_DECROUT)
             .delstat(DEFAULT_DELSTAT)
-            .delstatfr(DEFAULT_DELSTATFR)
+            .delstat_fr(DEFAULT_DELSTATFR)
             .lattitude(DEFAULT_LATTITUDE)
             .longitude(DEFAULT_LONGITUDE)
             .valide(DEFAULT_VALIDE);
@@ -97,7 +97,7 @@ class StationResourceIT {
             .dectyst(UPDATED_DECTYST)
             .decrout(UPDATED_DECROUT)
             .delstat(UPDATED_DELSTAT)
-            .delstatfr(UPDATED_DELSTATFR)
+            .delstat_fr(UPDATED_DELSTATFR)
             .lattitude(UPDATED_LATTITUDE)
             .longitude(UPDATED_LONGITUDE)
             .valide(UPDATED_VALIDE);
@@ -127,7 +127,7 @@ class StationResourceIT {
         assertThat(testStation.getDectyst()).isEqualTo(DEFAULT_DECTYST);
         assertThat(testStation.getDecrout()).isEqualTo(DEFAULT_DECROUT);
         assertThat(testStation.getDelstat()).isEqualTo(DEFAULT_DELSTAT);
-        assertThat(testStation.getDelstatfr()).isEqualTo(DEFAULT_DELSTATFR);
+        assertThat(testStation.getDelstat_fr()).isEqualTo(DEFAULT_DELSTATFR);
         assertThat(testStation.getLattitude()).isEqualTo(DEFAULT_LATTITUDE);
         assertThat(testStation.getLongitude()).isEqualTo(DEFAULT_LONGITUDE);
         assertThat(testStation.getValide()).isEqualTo(DEFAULT_VALIDE);
@@ -230,7 +230,7 @@ class StationResourceIT {
             .dectyst(UPDATED_DECTYST)
             .decrout(UPDATED_DECROUT)
             .delstat(UPDATED_DELSTAT)
-            .delstatfr(UPDATED_DELSTATFR)
+            .delstat_fr(UPDATED_DELSTATFR)
             .lattitude(UPDATED_LATTITUDE)
             .longitude(UPDATED_LONGITUDE)
             .valide(UPDATED_VALIDE);
@@ -252,7 +252,7 @@ class StationResourceIT {
         assertThat(testStation.getDectyst()).isEqualTo(UPDATED_DECTYST);
         assertThat(testStation.getDecrout()).isEqualTo(UPDATED_DECROUT);
         assertThat(testStation.getDelstat()).isEqualTo(UPDATED_DELSTAT);
-        assertThat(testStation.getDelstatfr()).isEqualTo(UPDATED_DELSTATFR);
+        assertThat(testStation.getDelstat_fr()).isEqualTo(UPDATED_DELSTATFR);
         assertThat(testStation.getLattitude()).isEqualTo(UPDATED_LATTITUDE);
         assertThat(testStation.getLongitude()).isEqualTo(UPDATED_LONGITUDE);
         assertThat(testStation.getValide()).isEqualTo(UPDATED_VALIDE);
@@ -354,7 +354,7 @@ class StationResourceIT {
         assertThat(testStation.getDectyst()).isEqualTo(UPDATED_DECTYST);
         assertThat(testStation.getDecrout()).isEqualTo(UPDATED_DECROUT);
         assertThat(testStation.getDelstat()).isEqualTo(UPDATED_DELSTAT);
-        assertThat(testStation.getDelstatfr()).isEqualTo(DEFAULT_DELSTATFR);
+        assertThat(testStation.getDelstat_fr()).isEqualTo(DEFAULT_DELSTATFR);
         assertThat(testStation.getLattitude()).isEqualTo(UPDATED_LATTITUDE);
         assertThat(testStation.getLongitude()).isEqualTo(DEFAULT_LONGITUDE);
         assertThat(testStation.getValide()).isEqualTo(DEFAULT_VALIDE);
@@ -376,7 +376,7 @@ class StationResourceIT {
             .dectyst(UPDATED_DECTYST)
             .decrout(UPDATED_DECROUT)
             .delstat(UPDATED_DELSTAT)
-            .delstatfr(UPDATED_DELSTATFR)
+            .delstat_fr(UPDATED_DELSTATFR)
             .lattitude(UPDATED_LATTITUDE)
             .longitude(UPDATED_LONGITUDE)
             .valide(UPDATED_VALIDE);
@@ -397,7 +397,7 @@ class StationResourceIT {
         assertThat(testStation.getDectyst()).isEqualTo(UPDATED_DECTYST);
         assertThat(testStation.getDecrout()).isEqualTo(UPDATED_DECROUT);
         assertThat(testStation.getDelstat()).isEqualTo(UPDATED_DELSTAT);
-        assertThat(testStation.getDelstatfr()).isEqualTo(UPDATED_DELSTATFR);
+        assertThat(testStation.getDelstat_fr()).isEqualTo(UPDATED_DELSTATFR);
         assertThat(testStation.getLattitude()).isEqualTo(UPDATED_LATTITUDE);
         assertThat(testStation.getLongitude()).isEqualTo(UPDATED_LONGITUDE);
         assertThat(testStation.getValide()).isEqualTo(UPDATED_VALIDE);

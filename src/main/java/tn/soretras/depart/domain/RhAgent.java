@@ -25,7 +25,7 @@ public class RhAgent implements Serializable {
     private String decjour;
 
     @Field("dateffrh")
-    private LocalDate dateffrh;
+    private String dat_eff_rh;
 
     @Field("decoper")
     private String decoper;
@@ -40,16 +40,6 @@ public class RhAgent implements Serializable {
 
     public String getId() {
         return this.id;
-    }
-
-    public RhAgent(String id, Integer matric, String decjour, LocalDate dateffrh, String decoper, Integer deccent, Integer decagenc) {
-        this.id = id;
-        this.matric = matric;
-        this.decjour = decjour;
-        this.dateffrh = dateffrh;
-        this.decoper = decoper;
-        this.deccent = deccent;
-        this.decagenc = decagenc;
     }
 
     public RhAgent() {}
@@ -89,17 +79,17 @@ public class RhAgent implements Serializable {
         this.decjour = decjour;
     }
 
-    public LocalDate getDateffrh() {
-        return this.dateffrh;
+    public String getDat_eff_rh() {
+        return this.dat_eff_rh;
     }
 
-    public RhAgent dateffrh(LocalDate dateffrh) {
-        this.setDateffrh(dateffrh);
+    public RhAgent dat_eff_rh(String dat_eff_rh) {
+        this.setDat_eff_rh(dat_eff_rh);
         return this;
     }
 
-    public void setDateffrh(LocalDate dateffrh) {
-        this.dateffrh = dateffrh;
+    public void setDat_eff_rh(String dat_eff_rh) {
+        this.dat_eff_rh = dat_eff_rh;
     }
 
     public String getDecoper() {
@@ -167,7 +157,7 @@ public class RhAgent implements Serializable {
             "id=" + getId() +
             ", matric=" + getMatric() +
             ", decjour='" + getDecjour() + "'" +
-            ", dateffrh='" + getDateffrh() + "'" +
+            ", dateffrh='" + getDat_eff_rh() + "'" +
             ", decoper='" + getDecoper() + "'" +
             ", deccent=" + getDeccent() +
             ", decagenc=" + getDecagenc() +

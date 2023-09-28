@@ -1,14 +1,20 @@
 package tn.soretras.depart.service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import tn.soretras.depart.domain.Deprotat;
+import tn.soretras.depart.repository.DepartRepository;
 import tn.soretras.depart.repository.DeprotatRepository;
+import tn.soretras.depart.service.dto.DepartDTO;
 import tn.soretras.depart.service.dto.DeprotatDTO;
+import tn.soretras.depart.service.mapper.DepartMapper;
 import tn.soretras.depart.service.mapper.DeprotatMapper;
 
 /**
@@ -23,9 +29,21 @@ public class DeprotatService {
 
     private final DeprotatMapper deprotatMapper;
 
-    public DeprotatService(DeprotatRepository deprotatRepository, DeprotatMapper deprotatMapper) {
+    private final DepartRepository departRepository;
+
+    private final DepartMapper departMapper;
+
+    public DeprotatService(
+        DeprotatRepository deprotatRepository,
+        DeprotatMapper deprotatMapper,
+        DepartRepository departRepository,
+        DepartMapper departMapper
+    ) {
         this.deprotatRepository = deprotatRepository;
         this.deprotatMapper = deprotatMapper;
+
+        this.departRepository = departRepository;
+        this.departMapper = departMapper;
     }
 
     /**
@@ -82,7 +100,19 @@ public class DeprotatService {
      */
     public Page<DeprotatDTO> findAll(Pageable pageable) {
         log.debug("Request to get all Deprotats");
-        return deprotatRepository.findAll(pageable).map(deprotatMapper::toDto);
+        Page<DeprotatDTO> deprdto = deprotatRepository.findAll(pageable).map(deprotatMapper::toDto);
+        List<DeprotatDTO> listdepr = new ArrayList<>();
+        if (deprdto != null && deprdto.hasContent()) {
+            listdepr = deprdto.getContent();
+            for (int i = 0; i < listdepr.size(); i++) {
+                String iddepa = listdepr.get(i).getId_apex().toString();
+                DepartDTO depdto = departRepository.findById(iddepa).map(departMapper::toDto).orElse(null);
+                listdepr.get(i).setDepart(depdto);
+            }
+            Long Totpage = (long) listdepr.size();
+            Page<DeprotatDTO> page = new PageImpl<DeprotatDTO>(listdepr, pageable, Totpage);
+        }
+        return deprdto;
     }
 
     /**

@@ -18,10 +18,6 @@ public class Motifa implements Serializable {
     @Id
     private String id;
 
-    @NotNull
-    @Field("decmotif")
-    private Integer decmotif;
-
     @Field("libmotif")
     private String libmotif;
 
@@ -29,12 +25,6 @@ public class Motifa implements Serializable {
 
     public String getId() {
         return this.id;
-    }
-
-    public Motifa(String id, @NotNull Integer decmotif, String libmotif) {
-        this.id = id;
-        this.decmotif = decmotif;
-        this.libmotif = libmotif;
     }
 
     public Motifa() {}
@@ -46,19 +36,6 @@ public class Motifa implements Serializable {
 
     public void setId(String id) {
         this.id = id;
-    }
-
-    public Integer getDecmotif() {
-        return this.decmotif;
-    }
-
-    public Motifa decmotif(Integer decmotif) {
-        this.setDecmotif(decmotif);
-        return this;
-    }
-
-    public void setDecmotif(Integer decmotif) {
-        this.decmotif = decmotif;
     }
 
     public String getLibmotif() {
@@ -98,7 +75,6 @@ public class Motifa implements Serializable {
     public String toString() {
         return "Motifa{" +
             "id=" + getId() +
-            ", decmotif=" + getDecmotif() +
             ", libmotif='" + getLibmotif() + "'" +
             "}";
     }
